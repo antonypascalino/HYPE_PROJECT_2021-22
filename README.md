@@ -13,7 +13,6 @@ Group name: DARD
   <br>
   
   ## **Usability Evaluation**
-![Picture1](https://user-images.githubusercontent.com/51851749/161026945-8f50a69f-84b0-4218-a29c-d81aba97d690.svg)
 
 This part of the project consists in evaluating the usability of the [CourmayeurMontBlanc.it](https://www.courmayeurmontblanc.it/it) web application.
 
