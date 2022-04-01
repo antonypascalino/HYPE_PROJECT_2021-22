@@ -18,6 +18,7 @@ Group name: DARD
 This part of the project consists in evaluating the usability of the [CourmayeurMontBlanc.it](https://www.courmayeurmontblanc.it/it) web application.
  <br>
  
- ![Courmayeur_logo](https://github.com/davidecarini/HYPE_PROJECT21-22/blob/main/Usability%20Report/courmayeur_logo.jpg)
+ <img src="https://github.com/davidecarini/HYPE_PROJECT21-22/blob/main/Usability%20Report/courmayeur_logo.jpg" width="300" height="200">
+
  
 The file of the final **Usability Report** can be found in the [Usability Delivery Folder](https://github.com/davidecarini/HYPE_PROJECT21-22/tree/main/Usability%20Report).
