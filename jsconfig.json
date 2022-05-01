@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../../Downloads/lesson-15-14-04-22-master/lesson-15-14-04-22-master",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~~/*": ["./*"],
+      "@@/*": ["./*"]
+    }
+  },
+  "exclude": ["node_modules", ".nuxt", "dist"]
+}
