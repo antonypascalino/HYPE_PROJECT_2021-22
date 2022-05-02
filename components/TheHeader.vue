@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light px-3 header">
-    <a class="navbar-brand" href="/">The Cat Shelter</a>
+    <a class="navbar-brand" href="/">insideBO</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -46,15 +46,27 @@ export default {
     return {
       headerList: [
         {
-          name: 'Home',
-          path: '/',
-        },
-        {
-          name: 'Punti di Interesse',
+          name: 'PUNTI DI INTERESSE',
           path: '/list',
         },
         {
-          name: 'Eventi',
+          name: 'EVENTI',
+          path: '/about',
+        },
+        {
+          name: 'ITINERARI',
+          path: '/about',
+        },
+        {
+          name: 'SERVIZI',
+          path: '/about',
+        },
+        {
+          name: 'CONTATTI',
+          path: '/about',
+        },
+        {
+          name: 'ABOUT',
           path: '/about',
         },
       ],

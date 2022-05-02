@@ -10,7 +10,7 @@ export default {
   head: {
     title: 'insideBO',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'it',
     },
     meta: [
       { charset: 'utf-8' },

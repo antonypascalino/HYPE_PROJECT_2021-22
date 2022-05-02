@@ -1,5 +1,3 @@
-
-
 export default async (models) => {
     const catList = [
         {
