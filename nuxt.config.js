@@ -8,7 +8,7 @@ export default {
     }
   ],
   head: {
-    title: 'lesson15',
+    title: 'insideBO',
     htmlAttrs: {
       lang: 'en',
     },
