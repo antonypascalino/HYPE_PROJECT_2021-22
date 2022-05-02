@@ -30,6 +30,12 @@ export default async (models) => {
             description: "Details about cat 5",
             img: "https://fs.i3lab.group/hypermedia/cats/maine-coon.jpg",
         },
+      {
+        name: "Cat 5",
+        breed: "Maine Coon",
+        description: "Details about cat 5",
+        img: "https://fs.i3lab.group/hypermedia/cats/maine-coon.jpg",
+      },
     ]
     await models.Cat.bulkCreate(catList)
 }
