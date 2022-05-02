@@ -31,7 +31,7 @@
 
 <style scoped>
 .header {
-  background: orange;
+  background: #FFFFFF;
 }
 .logo {
   color: white;
@@ -50,11 +50,11 @@ export default {
           path: '/',
         },
         {
-          name: 'List',
+          name: 'Punti di Interesse',
           path: '/list',
         },
         {
-          name: 'About',
+          name: 'Eventi',
           path: '/about',
         },
       ],
