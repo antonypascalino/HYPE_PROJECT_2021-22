@@ -4,7 +4,14 @@ const { Sequelize, DataTypes } = require("sequelize")
 const initialize = require('./initialize').default
 app.use(express.json())
 
-const database = new Sequelize("postgres://postgres:postgres@localhost:5432/hyp")
+//const database = new Sequelize("postgres://postgres:postgres@localhost:5432/hyp")
+
+const pg =require('pg')
+pg.defaults.ssl = true
+const database =new Sequelize(process.env.DATABASE_URL,{
+  ssl:true,
+  dialectOptions:{ ssl: {require: true, rejectUnauthorized:false}},
+})
 
 
 // Function that will initialize the connection to the database
@@ -72,8 +79,8 @@ async function runMainApi() {
         return res.json(filtered)
     })
 
-    // HTTP POST apio that will push (and therefore create) a new element in 
-    // our fake database 
+    // HTTP POST apio that will push (and therefore create) a new element in
+    // our fake database
     app.post("/cats", (req, res) => {
         const { body } = req
         catList.push(body)
