@@ -1,5 +1,5 @@
 # Hypermedia Applications Project
-Project for the Hypermedia Applications (Web and Multimedia) course at Politecnico di Milano.
+Project for the Hypermedia Applications (Web and Multimedia) course A.Y. 2021-2022 : Politecnico di Milano.
 
 Group name: DARD
 
