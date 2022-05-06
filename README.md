@@ -7,7 +7,7 @@ Group name: DARD
 | Name     | Surname    | Person Code | Email
 |------------|-------------| ----------| ----------|
 | Davide | Carini | 10568649| davide.carini@mail.polimi.it
-| Antony | Pascalino |10652630 antony.pascalino|@mail.polimi.it
+| Antony | Pascalino |10652630 |antony.pascalino@mail.polimi.it
 | Daniele | Casciani |10638165|daniele.casciani@mail.polimi.it
 | Riccardo | Pestrin |10617370|riccardo.pestrin@mail.polimi.it
   <br>
