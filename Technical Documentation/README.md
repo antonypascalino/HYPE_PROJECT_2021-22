@@ -6,7 +6,7 @@ We developed the project by defining common guidelines for development. Each mem
 
 | Member          | Main focus                                            |
 | --------------- | ----------------------------------------------------- |
-| Davide Carini      | F|
+| Davide Carini      | |
 | Daniele Casciani  |         |
 | Riccardo Pestrin|         |
 | Antony Pascalino|           |
@@ -17,7 +17,6 @@ We developed the project by defining common guidelines for development. Each mem
 
 ## **Technologies and Motivations**
 
-- For the _server side_ development we have used **NodeJS with Express**.
 - For the _hosting_ our application we have used **Heroku**. The website is accessible at [plug-it.herokuapp.com](https://insidebo.herokuapp.com/).
 - Since the website is data-base driven, for the _database implementation_ we have used **PostgreeSQL**.
 
