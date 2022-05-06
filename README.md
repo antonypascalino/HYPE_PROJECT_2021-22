@@ -4,12 +4,12 @@ Project for the Hypermedia Applications (Web and Multimedia) course A.Y. 2021-20
 Group name: DARD
 
 ### **Authors** 
-| Name     | Surname    | Person Code |
-|------------|-------------| ----------|
-| Davide | Carini | 10568649|
-| Antony | Pascalino |10652630 |
-| Daniele | Casciani |10638165|
-| Riccardo | Pestrin |10617370|
+| Name     | Surname    | Person Code | Email
+|------------|-------------| ----------| ----------|
+| Davide | Carini | 10568649| davide.carini@mail.polimi.it
+| Antony | Pascalino |10652630 antony.pascalino|@mail.polimi.it
+| Daniele | Casciani |10638165|daniele.casciani@mail.polimi.it
+| Riccardo | Pestrin |10617370|riccardo.pestrin@mail.polimi.it
   <br>
   
 ## **Usability Evaluation**
