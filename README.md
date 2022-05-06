@@ -21,7 +21,7 @@ This part of the project consists in evaluating the usability of the [Courmayeur
  
 The file of the final **Usability Report** can be found in the [Usability Delivery Folder](https://github.com/davidecarini/HYPE_PROJECT21-22/tree/main/Usability%20Report).
   <br>
-  
+  <br>
   
   
 ## **Web Application Design**
