@@ -1,5 +1,6 @@
 # Hypermedia Applications Project
 Project for the Hypermedia Applications (Web and Multimedia) course A.Y. 2021-2022 : Politecnico di Milano.
+Professor: Franca Garzotto
 
 **Group name: DARD**
 
