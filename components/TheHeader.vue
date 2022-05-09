@@ -31,7 +31,7 @@
 
 <style scoped>
 .header {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 .logo {
   color: white;
@@ -55,15 +55,15 @@ export default {
         },
         {
           name: 'ITINERARI',
-          path: '/about',
+          path: '/itineraries',
         },
         {
           name: 'SERVIZI',
-          path: '/about',
+          path: '/services',
         },
         {
           name: 'CONTATTI',
-          path: '/about',
+          path: '/contacts',
         },
         {
           name: 'ABOUT',
