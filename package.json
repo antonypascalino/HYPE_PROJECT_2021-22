@@ -34,5 +34,18 @@
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
     "prettier": "^2.5.1"
-  }
+  },
+  "description": "Project for the Hypermedia Applications (Web and Multimedia) course A.Y. 2021-2022 : Politecnico di Milano.\r Professor: Franca Garzotto",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidecarini/HYPE_PROJECT21-22.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidecarini/HYPE_PROJECT21-22/issues"
+  },
+  "homepage": "https://github.com/davidecarini/HYPE_PROJECT21-22#readme"
 }
