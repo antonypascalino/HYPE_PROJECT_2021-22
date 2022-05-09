@@ -1,5 +1,6 @@
+
 {
-  "name": "nuxt-website",
+  "name": "final-project-template",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,10 +8,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext \\\".js,.vue\\\" --ignore-path .gitignore .",
-    "lint:prettier": "prettier --check ../../Downloads/lesson-15-14-04-22-master/lesson-15-14-04-22-master",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:prettier",
-    "lintfix": "prettier --write --list-different ../../Downloads/lesson-15-14-04-22-master/lesson-15-14-04-22-master && npm run lint:js -- --fix"
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
@@ -34,18 +35,5 @@
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
     "prettier": "^2.5.1"
-  },
-  "description": "Project for the Hypermedia Applications (Web and Multimedia) course A.Y. 2021-2022 : Politecnico di Milano.\r Professor: Franca Garzotto",
-  "main": ".eslintrc.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidecarini/HYPE_PROJECT21-22.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/davidecarini/HYPE_PROJECT21-22/issues"
-  },
-  "homepage": "https://github.com/davidecarini/HYPE_PROJECT21-22#readme"
+  }
 }

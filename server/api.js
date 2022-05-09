@@ -35,7 +35,7 @@ async function initializeDatabaseConnection() {
 const pageContentObject = {
     index: {
         title: "SCOPRI BOLOGNA ",
-        image: "Design Document/images/background2.jpg",
+        image: "",
         description: ``
     },
     about: {
