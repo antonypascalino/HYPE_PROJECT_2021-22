@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "../../Downloads/lesson-15-14-04-22-master/lesson-15-14-04-22-master",
+    "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"],
