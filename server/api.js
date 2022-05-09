@@ -35,7 +35,7 @@ async function initializeDatabaseConnection() {
 const pageContentObject = {
     index: {
         title: "SCOPRI BOLOGNA ",
-        image: "https://fs.i3lab.group/hypermedia/images/index.jpeg",
+        image: "Design Document/images/background2.jpg",
         description: ``
     },
     about: {
