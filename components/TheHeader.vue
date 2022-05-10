@@ -47,11 +47,11 @@ export default {
       headerList: [
         {
           name: 'PUNTI DI INTERESSE',
-          path: '/list',
+          path: '/poi',
         },
         {
           name: 'EVENTI',
-          path: '/about',
+          path: '/events',
         },
         {
           name: 'ITINERARI',

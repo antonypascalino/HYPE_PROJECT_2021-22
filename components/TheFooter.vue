@@ -7,7 +7,7 @@
   <footer class="footer">
     <div class="footer-content">
       <!-- Company Icon -->
-     <div class="footer-label">&copy; 2021 Plug-IT</div>
+     <div class="footer-label">&copy; 2022 insideBO</div>
 
       <!-- Social list -->
       <div class="icon-list">
@@ -50,7 +50,7 @@ export default {
         },
         {
           name: 'Linkedin',
-          icon: 'mdi mdi-linkedin',
+          icon: 'mdi-linkedin',
           link: 'http://www.linkedin.com/',
         },
       ],
@@ -63,9 +63,9 @@ export default {
 /* Positioning and colors of the whole component */
 .footer {
   width: 100vw;
-  background: rgba(211, 16, 16, 0.9);
-  height: 65px;
-  bottom: 0;
+  background: rgb(193, 57, 57);
+  height: 165px;
+  bottom: 0px;
 }
 /* Foreground components black */
 .footer * {
@@ -92,14 +92,15 @@ export default {
   float: right;
 }
 /* Colored social icons on mouse hover */
+
 .mdi-twitter:hover {
   color: #00d9ff;
 }
-.mdi-facebook:hover {
-  color: #005eff;
-}
 .mdi-linkedin:hover {
   color: #137ffa;
+}
+.mdi-facebook :hover {
+  color: #005eff;
 }
 /* Footer logo layout */
 img.logo {
