@@ -6,6 +6,7 @@ app.use(express.json())
 
 //const database = new Sequelize("postgres://postgres:postgres@localhost:5432/hyp")
 
+//Production in Heroku
 const pg =require('pg')
 pg.defaults.ssl = true
 const database =new Sequelize(process.env.DATABASE_URL,{
@@ -34,7 +35,7 @@ async function initializeDatabaseConnection() {
 
 const pageContentObject = {
     index: {
-        title: "SCOPRI BOLOGNA..",
+        title: "SCOPRI BOLOGNA...",
         image: "https://fs.i3lab.group/hypermedia/images/index.jpeg",
         description: ``
     },

@@ -6,8 +6,8 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <!-- Company Icon -->
-     <div class="footer-label">&copy; 2022 insideBO</div>
+      <!-- Company Icon and Copyright-->
+     <div class="footer-label"> &copy;{{ new Date().getFullYear() }} insideBO</div>
 
       <!-- Social list -->
       <div class="icon-list">
@@ -50,7 +50,7 @@ export default {
         },
         {
           name: 'Linkedin',
-          icon: 'mdi-linkedin',
+          icon: 'mdi mdi-linkedin',
           link: 'http://www.linkedin.com/',
         },
       ],
@@ -62,7 +62,7 @@ export default {
 <style scoped>
 /* Positioning and colors of the whole component */
 .footer {
-  width: 100vw;
+  width: 98vw;
   background: rgb(193, 57, 57);
   height: 165px;
   bottom: 0px;
@@ -74,7 +74,7 @@ export default {
 /* Main footer containers */
 .footer-content {
   margin-left: 8vw;
-  width: 84vw;
+  width: 82vw;
   height: inherit;
   margin-right: 8vw;
 }
@@ -91,6 +91,7 @@ export default {
 .icon-list {
   float: right;
 }
+
 /* Colored social icons on mouse hover */
 
 .mdi-twitter:hover {
