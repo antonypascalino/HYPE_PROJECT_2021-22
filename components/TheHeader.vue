@@ -116,7 +116,7 @@ export default {
 .header {
   position: fixed;
   width: 100vw;
-  background: white;
+  background: lightblue;
   height: 70px;
   top: 0;
   z-index: 90;
