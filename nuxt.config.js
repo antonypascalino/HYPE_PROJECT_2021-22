@@ -15,12 +15,23 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'insideBO è il sito informativo riguardo la splendida città di Bologna' +
+          '' },
       { name: 'format-detection', content: 'telephone=no' },
+      { name:"msapplication-TileColor" , content:"#da532c"},
+      {name:"theme-color", content:"#ffffff"},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon-16x16.png' },
-      { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" }
+      { rel: 'icon', type: 'image/x-icon', href: 'Favicon/favicon.ico' },
+      { rel:'apple-touch-icon', sizes:"180x180", href:'Favicon/apple-touch-icon.png'},
+      { rel:"icon", type:"image/png", sizes:"32x32", href:'Favicon/favicon-32x32.png'},
+      { rel:"icon" ,type:"image/png", sizes:"16x16", href:'Favicon/favicon-16x16.png'},
+      { rel:"manifest", href:'Favicon/site.webmanifest'},
+      { rel:"mask-icon", href:'Favicon/safari-pinned-tab.svg', color:"#5bbad5"},
+      { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" },
+      { rel: "stylesheet", href:"https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css"},
+
+
     ],
     script: [
       { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" }

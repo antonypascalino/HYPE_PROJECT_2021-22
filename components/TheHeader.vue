@@ -8,7 +8,7 @@
     <div class="header-content">
       <!-- Company Logo -->
       <nuxt-link to="/" class="logo">
-        <img src="~/static/insideBO_logo2.png" alt="Plug-IT" />
+        <img src="~/static/logo_rosso.png" alt="insideBO logo" />
       </nuxt-link>
 
       <!-- Desktop Navbar -->
