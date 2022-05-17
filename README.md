@@ -28,7 +28,4 @@ The file of the final **Usability Report** can be found in the [Usability Delive
 ## **Web Application Design**
 This part of the project consists in the design and development of **insideBO** that is is the web site for the tourist office of the cultural tourism of Bologna.
  <br>
- 
- <img src="https://github.com/davidecarini/HYPE_PROJECT21-22/blob/main/static/logo_rosso.png" width="200" height="50">
 
- 
