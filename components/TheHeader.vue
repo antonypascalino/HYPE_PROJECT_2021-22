@@ -68,34 +68,29 @@ export default {
       /** Names and paths of the navbar elements */
       menuOptions: [
         {
-          name: 'About',
+          name: 'PUNTI DI INTERESSE',
           icon: 'mdi mdi-book-open-page-variant',
           path: '/about/',
         },
         {
-          name: 'People',
+          name: 'EVENTI',
           icon: 'mdi mdi-account-group',
           path: '/people/',
         },
         {
-          name: 'Events',
+          name: 'ITINERARI',
           icon: 'mdi mdi-calendar-month',
           path: '/events/',
         },
         {
-          name: 'Areas',
+          name: 'SERVIZI',
           icon: 'mdi mdi-shape',
           path: '/areas/',
         },
         {
-          name: 'Our Services',
+          name: 'ABOUT',
           icon: 'mdi mdi-view-grid',
           path: '/services/',
-        },
-        {
-          name: 'Contacts',
-          icon: 'mdi mdi-email',
-          path: '/contacts/',
         },
       ],
       /** Expansion status of the mobile navbar menu */
@@ -116,7 +111,7 @@ export default {
 .header {
   position: fixed;
   width: 100vw;
-  background: lightblue;
+  background: #ffffff;
   height: 70px;
   top: 0;
   z-index: 90;
@@ -128,8 +123,8 @@ export default {
 /* Main header containers */
 .header-content {
   height: inherit;
-  margin-left: 8vw;
-  margin-right: 8vw;
+  margin-left: 2vw;
+  margin-right: 30vw;
 }
 .header-content .mdi {
   font-size: 36px;
@@ -146,6 +141,8 @@ nav {
   float: right;
   display: flex;
   font-size: 20px;
+  font-family: "Josefin Sans";
+  font-weight: 600;
 }
 /* Appearance of the mobile navbar elements */
 .dropdown-list {

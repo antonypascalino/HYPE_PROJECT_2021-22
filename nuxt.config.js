@@ -30,7 +30,7 @@ export default {
       { rel:"mask-icon", href:'Favicon/safari-pinned-tab.svg', color:"#5bbad5"},
       { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" },
       { rel: "stylesheet", href:"https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css"},
-
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
 
     ],
     script: [
