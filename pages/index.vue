@@ -1,16 +1,12 @@
 <template>
 
-  <div
-    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-    style="background-image: url('static/Bologna_Homepage_1.jpg');"
-  >
-    <h1 class="mb-3 h2">Jumbotron</h1>
-
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus praesentium
-      labore accusamus sequi, voluptate debitis tenetur in deleniti possimus modi voluptatum
-      neque maiores dolorem unde? Aut dolorum quod excepturi fugit.
-    </p>
+  <div class="container">
+    <img class="image-container" src="/Bologna_Homepage_1.jpg">
+    <div class="bottom-left">Bottom Left</div>
+    <div class="top-left">Top Left</div>
+    <div class="top-right">Top Right</div>
+    <div class="bottom-right">Bottom Right</div>
+    <div class="centered">Centered</div>
   </div>
 </template>
 
