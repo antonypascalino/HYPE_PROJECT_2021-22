@@ -17,7 +17,7 @@ We developed the project by defining common guidelines for development. Each mem
 
 ## **Technologies and Motivations**
 
-- For the _hosting_ our application we have used **Heroku**. The website is accessible at [plug-it.herokuapp.com](https://insidebo.herokuapp.com/).
+- For the _hosting_ our application we have used **Heroku**. The website is accessible at [insideBO.herokuapp.com](https://insidebo.herokuapp.com/).
 - Since the website is data-base driven, for the _database implementation_ we have used **PostgreeSQL**.
 
 <br>
