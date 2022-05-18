@@ -1,43 +1,175 @@
-<template>
-  <nav class="navbar navbar-expand-lg navbar-light px-3 header">
-    <nuxt-link to="/" class="logo">
-      <img src="~/static/logo_rosso.png" alt="Plug-IT" />
-    </nuxt-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarToggler"
-      aria-controls="navbarToggler"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!--
+  Component: TheHeader
+  Description: Header of the website with company logo and responsive navbar
+-->
 
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li
-          v-for="(navItem, navItemIndex) of headerList"
-          :key="`navItem${navItemIndex}`"
-          class="nav-item"
+<template>
+  <header class="header">
+    <div class="header-content">
+      <!-- Company Logo -->
+      <nuxt-link to="/" class="logo">
+        <img src="~/static/logo_rosso.png" alt="insideBO" />
+      </nuxt-link>
+
+      <!-- Desktop Navbar -->
+      <nav class="desktop-nav">
+        <div
+          v-for="(item, itemIndex) of menuOptions"
+          :key="'menu-item-' + itemIndex"
+          class="menu-item"
         >
-          <nuxt-link :to="navItem.path" class="nav-link">
-            {{ navItem.name }}
+          <nuxt-link :to="item.path">
+            {{ item.name }}
           </nuxt-link>
-        </li>
-      </ul>
+        </div>
+      </nav>
+
+      <!-- Mobile Navbar Commands -->
+      <nav class="mobile-nav">
+        <span
+          v-if="!mobileMenuVisibility"
+          class="mdi mdi-menu"
+          title="Open menù"
+          @click="changeMobileMenuVisibility"
+        ></span>
+        <span
+          v-else
+          class="mdi mdi-close"
+          title="Close menù"
+          @click="changeMobileMenuVisibility"
+        ></span>
+      </nav>
     </div>
-  </nav>
+
+    <!-- Mobile Navbar -->
+    <nav
+      v-if="mobileMenuVisibility"
+      class="mobile-nav dropdown-list"
+      @click="changeMobileMenuVisibility"
+    >
+      <div
+        v-for="(item, itemIndex) of menuOptions"
+        :key="'menu-item-' + itemIndex"
+        class="menu-item"
+      >
+        <nuxt-link :to="item.path">
+          {{ item.name }}
+          <span :class="item.icon"></span>
+        </nuxt-link>
+      </div>
+    </nav>
+  </header>
 </template>
 
-<style scoped>
-.header {
-  background: white;
-  font-family: "Josefin Sans";
-  font-weight: 550;
+<script>
+export default {
+  data() {
+    return {
+      /** Names and paths of the navbar elements */
+      menuOptions: [
+        {
+          name: 'ABOUTZ',
+          icon: 'mdi mdi-book-open-page-variant',
+          path: '/about/',
+        },
+        {
+          name: 'People',
+          icon: 'mdi mdi-account-group',
+          path: '/people/',
+        },
+        {
+          name: 'Events',
+          icon: 'mdi mdi-calendar-month',
+          path: '/events/',
+        },
+        {
+          name: 'Areas',
+          icon: 'mdi mdi-shape',
+          path: '/areas/',
+        },
+        {
+          name: 'Our Services',
+          icon: 'mdi mdi-view-grid',
+          path: '/services/',
+        },
+        {
+          name: 'Contacts',
+          icon: 'mdi mdi-email',
+          path: '/contacts/',
+        },
+      ],
+      /** Expansion status of the mobile navbar menu */
+      mobileMenuVisibility: false,
+    }
+  },
+  methods: {
+    /** Reduce/expand the dropdown menu of the mobile navbar */
+    changeMobileMenuVisibility() {
+      this.mobileMenuVisibility = !this.mobileMenuVisibility
+    },
+  },
 }
+</script>
 
+<style scoped>
+/* Positioning and colors of the whole component */
+.header {
+  position: fixed;
+  width: 100vw;
+  background: white;
+  height: 70px;
+  top: 0;
+  z-index: 90;
+}
+/* Foreground components black */
+.header * {
+  color: black;
+
+}
+/* Main header containers */
+.header-content {
+  height: inherit;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  font-family: "Josefin Sans";
+}
+.header-content .mdi {
+  font-size: 36px;
+}
+.header-content .menu-item {
+  margin-left: 1.5vw;
+}
+.menu-item :hover {
+  color: #47494e;
+}
+nav {
+  align-items: center;
+  height: inherit;
+  float: right;
+  display: flex;
+  font-size: 20px;
+}
+/* Appearance of the mobile navbar elements */
+.dropdown-list {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(238, 238, 238, 0.9);
+  font-size: 28px;
+}
+.dropdown-list .mdi {
+  vertical-align: bottom;
+  margin-left: 5px;
+}
+.dropdown-list .menu-item {
+  text-align: right;
+  margin-right: 8vw;
+  margin-top: 10px;
+}
+/* Appearance of the landmark to current page */
+.nuxt-link-active {
+  font-weight: 800;
+}
 /* Logo layout */
 img {
   height: 45px;
@@ -49,36 +181,16 @@ img {
 .logo {
   display: block;
 }
-</style>
-
-<script>
-export default {
-  name: 'TheHeader',
-  data() {
-    return {
-      headerList: [
-        {
-          name: 'PUNTI DI INTERESSE',
-          path: '/poi',
-        },
-        {
-          name: 'EVENTI',
-          path: '/eventi',
-        },
-        {
-          name: 'ITINERARI',
-          path: '/itinerari',
-        },
-        {
-          name: 'SERVIZI',
-          path: '/servizi',
-        },
-        {
-          name: 'ABOUT',
-          path: '/about',
-        },
-      ],
-    }
-  },
+/* Mobile navbar if viewport <=825 px */
+@media screen and (max-width: 825px) {
+  .desktop-nav {
+    display: none;
+  }
 }
-</script>
+/* Desktop navbar if viewport >=826 px */
+@media screen and (min-width: 826px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+</style>

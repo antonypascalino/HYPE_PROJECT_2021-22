@@ -31,6 +31,8 @@ export default {
       { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" },
       { rel: "stylesheet", href:"https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css"},
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Josefin+Sans' },
 
     ],
     script: [
