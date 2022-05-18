@@ -67,4 +67,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Loading bar
+  loading: {
+    continuous: true,
+  },
 }

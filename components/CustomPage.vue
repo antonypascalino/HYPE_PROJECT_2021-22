@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5" >
     <div class="jumbotron">
       <h1 class="display-4">{{ title }}</h1>
       <img :src="image" alt="" />
@@ -17,10 +17,12 @@ img {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  background: rgb(193, 57, 57);
 }
 p {
   text-align: left;
 }
+
 </style>
 
 <script>

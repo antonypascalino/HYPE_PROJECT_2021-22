@@ -18,3 +18,10 @@ export default {
   },
 }
 </script>
+
+<style>
+.main-page{
+  background: #F2F2F2;
+}
+
+</style>

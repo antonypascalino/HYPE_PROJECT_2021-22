@@ -1,5 +1,4 @@
 <template>
-  <custom-page :title="title" :image="image" :description="description" />
 </template>
 
 <script>

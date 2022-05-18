@@ -62,7 +62,7 @@ export default {
 <style scoped>
 /* Positioning and colors of the whole component */
 .footer {
-  width: 98vw;
+  width: 100vw;
   background: rgb(193, 57, 57);
   height: 165px;
   bottom: 0px;
