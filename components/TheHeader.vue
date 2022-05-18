@@ -35,6 +35,7 @@
 .header {
   background: white;
   font-family: "Josefin Sans";
+  font-weight: 550;
 }
 
 /* Logo layout */
