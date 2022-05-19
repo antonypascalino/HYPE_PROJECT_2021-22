@@ -7,7 +7,8 @@
   <footer class="footer">
     <div class="footer-content">
       <!-- Company Icon and Copyright-->
-     <div class="footer-label"> &copy;{{ new Date().getFullYear() }} insideBO</div>
+     <div class="footer-label">
+       &copy;{{ new Date().getFullYear() }} insideBO</div>
 
       <!-- Social list -->
       <div class="icon-list">
@@ -27,7 +28,9 @@
           </a>
         </div>
       </div>
+
     </div>
+
   </footer>
 </template>
 
@@ -49,9 +52,9 @@ export default {
           link: 'http://www.twitter.com/',
         },
         {
-          name: 'Linkedin',
-          icon: 'mdi mdi-linkedin',
-          link: 'http://www.linkedin.com/',
+          name: 'Instagram',
+          icon: 'mdi mdi-instagram',
+          link: 'http://www.instagram.com/',
         },
       ],
     }
@@ -64,7 +67,7 @@ export default {
 .footer {
   width: 100%;
   background: rgb(193, 57, 57);
-  height: 165px;
+  height: 180px;
   bottom: 0px;
 }
 /* Foreground components black */
@@ -95,13 +98,13 @@ export default {
 /* Colored social icons on mouse hover */
 
 .mdi-twitter:hover {
-  color: #00d9ff;
+  color: #ffffff;
 }
-.mdi-linkedin:hover {
-  color: #137ffa;
+.mdi-instagram:hover {
+  color: #ffffff;
 }
-.mdi-facebook :hover {
-  color: #005eff;
+.mdi-facebook:hover {
+  color: #ffffff;
 }
 /* Footer logo layout */
 img.logo {
@@ -110,5 +113,17 @@ img.logo {
   float: left;
   margin-top: 7.5px;
   margin-bottom: 7.5px;
+}
+
+.logo-container{
+ align: left;
+
+}
+.image-container {
+  color: #ff0000;
+  height: 100%;
+  weight: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>
