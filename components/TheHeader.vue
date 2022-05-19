@@ -2,10 +2,10 @@
   Component: TheHeader
   Description: Header of the website with company logo and responsive navbar
 -->
-
 <template>
   <header class="header">
     <div class="header-content">
+
       <!-- Company Logo -->
       <nuxt-link to="/" class="logo">
         <img src="~/static/logo_rosso.png" alt="insideBO" />
@@ -68,34 +68,30 @@ export default {
       /** Names and paths of the navbar elements */
       menuOptions: [
         {
-          name: 'ABOUTZ',
-          icon: 'mdi mdi-book-open-page-variant',
-          path: '/about/',
+          name: 'PUNTI DI INTERESSE',
+          icon: 'mdi mdi-sign-direction',
+          path: '/poi/',
         },
         {
-          name: 'People',
+          name: 'SERVIZI',
           icon: 'mdi mdi-account-group',
-          path: '/people/',
+          path: '/servizi',
         },
         {
-          name: 'Events',
+          name: 'EVENTI',
           icon: 'mdi mdi-calendar-month',
-          path: '/events/',
+          path: '/eventi/',
         },
+
         {
-          name: 'Areas',
-          icon: 'mdi mdi-shape',
-          path: '/areas/',
-        },
-        {
-          name: 'Our Services',
+          name: 'ITINERARI',
           icon: 'mdi mdi-view-grid',
-          path: '/services/',
+          path: '/itinerari/',
         },
         {
-          name: 'Contacts',
+          name: 'ABOUT',
           icon: 'mdi mdi-email',
-          path: '/contacts/',
+          path: '/about/',
         },
       ],
       /** Expansion status of the mobile navbar menu */
@@ -111,7 +107,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
 /* Positioning and colors of the whole component */
 .header {
   position: fixed;
@@ -121,27 +118,36 @@ export default {
   top: 0;
   z-index: 90;
 }
-/* Foreground components black */
-.header * {
-  color: black;
+
+/*Color of the text inside the menu and elimination of the underline*/
+.header *{
+  color:black;
+  text-decoration: none;
+  font-size: 15px;
 
 }
+
 /* Main header containers */
 .header-content {
   height: inherit;
   margin-left: 8vw;
-  margin-right: 8vw;
+  margin-right: 2vw;
   font-family: "Josefin Sans";
 }
+
 .header-content .mdi {
   font-size: 36px;
 }
 .header-content .menu-item {
   margin-left: 1.5vw;
 }
+
+/**/
 .menu-item :hover {
-  color: #47494e;
+  border-bottom: 4px solid #c13939;
+  color: #c13939 ;
 }
+
 nav {
   align-items: center;
   height: inherit;
@@ -153,7 +159,7 @@ nav {
 .dropdown-list {
   display: block;
   width: 100vw;
-  height: 100vh;
+  height: 100vw;
   background: rgba(238, 238, 238, 0.9);
   font-size: 28px;
 }
@@ -168,11 +174,11 @@ nav {
 }
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
-  font-weight: 800;
+  font-weight: bold;
 }
 /* Logo layout */
 img {
-  height: 45px;
+  height: 50px;
   width: 144px;
   float: left;
   margin-top: 12.5px;
