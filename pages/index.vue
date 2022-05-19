@@ -1,12 +1,12 @@
 <template>
 
-  <div class="container">
+  <div class="container" >
     <img class="image-container" src="/Bologna_Homepage_1.jpg">
-    <div class="bottom-left">Bottom Left</div>
-    <div class="top-left">Top Left</div>
-    <div class="top-right">Top Right</div>
-    <div class="bottom-right">Bottom Right</div>
-    <div class="centered">Centered</div>
+    <div class="bottom-left"> </div>
+    <div class="top-left"> </div>
+    <div class="top-right"> </div>
+    <div class="bottom-right">dsa </div>
+    <div class="centered"> </div>
   </div>
 </template>
 

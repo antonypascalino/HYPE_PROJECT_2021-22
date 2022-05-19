@@ -28,7 +28,7 @@
       <nav class="mobile-nav">
         <span
           v-if="!mobileMenuVisibility"
-          class="mdi mdi-menu"
+          class="mdi mdi-menu-open"
           title="Open menù"
           @click="changeMobileMenuVisibility"
         ></span>
@@ -111,8 +111,7 @@ export default {
 
 /* Positioning and colors of the whole component */
 .header {
-  position: fixed;
-  width: 100vw;
+  width: 100%;
   background: white;
   height:50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -122,29 +121,32 @@ export default {
 
 /*Color of the text inside the menu and elimination of the underline*/
 .header *{
-  color:black;
   text-decoration: none;
   color:black;
   text-align: center;
   font-size: 15px;
-
+  padding-bottom:9px
 }
 
 /* Main header containers */
 .header-content {
   height: inherit;
-  margin-left: 8vw;
-  margin-right: 2vw;
   font-family: "Josefin Sans";
   text-align: center;
 }
+
+.menu-item{
+  /*padding-left:0 px;*/
+  padding-right:20px;
+ }
 
 .header-content .mdi {
   font-size: 50px;
   margin-right: 25px;
 }
 .header-content .menu-item {
-  margin-left: 1.5vw;
+  padding-right: 120px;
+
 }
 
 /**/
@@ -172,6 +174,7 @@ nav {
 .dropdown-list .mdi {
   vertical-align: bottom;
   margin-left: 5px;
+  float: right;
 }
 .dropdown-list .menu-item {
   text-align: right;
@@ -186,20 +189,20 @@ nav {
 img {
   width: 150px;
   float: left;
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
+  margin-top: 6px;
+  margin-left:100px;
 }
 .logo {
   display: block;
 }
 /* Mobile navbar if viewport <=825 px */
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 1425px) {
   .desktop-nav {
     display: none;
   }
 }
 /* Desktop navbar if viewport >=826 px */
-@media screen and (min-width: 826px) {
+@media screen and (min-width: 1426px) {
   .mobile-nav {
     display: none;
   }
