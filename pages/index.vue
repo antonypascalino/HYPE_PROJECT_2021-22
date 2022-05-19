@@ -12,41 +12,18 @@
 
 
 <style scoped>
+
 /* Container holding the image and the text */
 .container {
-  margin: 20px;
-  text-align: center;
   color: white;
-  width: 100%;
   height: 100%;
-
-}
-
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
+  weight: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+ }
 
 
 
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
 .image-container {
   background-repeat: no-repeat;
   background-size: cover;

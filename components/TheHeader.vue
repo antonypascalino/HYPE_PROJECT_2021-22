@@ -114,15 +114,18 @@ export default {
   position: fixed;
   width: 100vw;
   background: white;
-  height: 70px;
-  top: 0;
-  z-index: 90;
+  height:50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
 }
 
 /*Color of the text inside the menu and elimination of the underline*/
 .header *{
   color:black;
   text-decoration: none;
+  color:black;
+  text-align: center;
   font-size: 15px;
 
 }
@@ -133,10 +136,12 @@ export default {
   margin-left: 8vw;
   margin-right: 2vw;
   font-family: "Josefin Sans";
+  text-align: center;
 }
 
 .header-content .mdi {
-  font-size: 36px;
+  font-size: 50px;
+  margin-right: 25px;
 }
 .header-content .menu-item {
   margin-left: 1.5vw;
@@ -144,7 +149,7 @@ export default {
 
 /**/
 .menu-item :hover {
-  border-bottom: 4px solid #c13939;
+  border-bottom: 9px solid #c13939;
   color: #c13939 ;
 }
 
@@ -154,6 +159,7 @@ nav {
   float: right;
   display: flex;
   font-size: 20px;
+  text-align: center;
 }
 /* Appearance of the mobile navbar elements */
 .dropdown-list {
@@ -178,8 +184,7 @@ nav {
 }
 /* Logo layout */
 img {
-  height: 50px;
-  width: 144px;
+  width: 150px;
   float: left;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
