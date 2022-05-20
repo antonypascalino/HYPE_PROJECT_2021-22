@@ -12,6 +12,8 @@
         :breed="cat.breed"
       />
     </div>
+    <h1 class="display-4">List page</h1>
+    dadassa
   </div>
 </template>
 

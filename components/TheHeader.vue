@@ -70,7 +70,7 @@ export default {
         {
           name: 'PUNTI DI INTERESSE',
           icon: 'mdi mdi-sign-direction',
-          path: '/poi/',
+          path: '/list/',
         },
         {
           name: 'SERVIZI',

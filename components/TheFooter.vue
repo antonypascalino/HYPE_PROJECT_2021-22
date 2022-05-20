@@ -66,13 +66,10 @@ export default {
 <style scoped>
 /* Positioning and colors of the whole component */
 .footer {
-  position: relative;
   width: 100%;
   background: rgb(193, 57, 57);
   height: 180px;
-  bottom: 0px;
- clear: both;
-  margin-top: -200px;
+  bottom: 0;
 }
 /* Foreground components black */
 .footer * {
