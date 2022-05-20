@@ -6,11 +6,17 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
+      <div class="footer-logo">
+        <img class ="image-container" src="/logoCompatto_bianco.png" alt="logo-bianco-compatto">
 
+      </div>
+    <br>
       <!-- Company Icon and Copyright-->
      <div class="footer-label">
-       &copy;{{ new Date().getFullYear() }} insideBO</div>
-
+       <hr>
+       &copy;{{ new Date().getFullYear() }} insideBO Tutti i diritti sono riservati.     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <a href="url">Informativa sulla privacy</a> &nbsp;&nbsp;| &nbsp;&nbsp; <a href="url">Area Legale</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="url">Cookie</a>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <!-- Social list -->
       <div class="icon-list">
         Follow us:
@@ -29,7 +35,7 @@
           </a>
         </div>
       </div>
-
+     </div>
     </div>
 
   </footer>
@@ -69,62 +75,55 @@ export default {
   width: 100%;
   background: rgb(193, 57, 57);
   height: 180px;
-  bottom: 0;
+  position: absolute;
+
 }
 /* Foreground components black */
 .footer * {
-  color: black;
+  color: white;
+
 }
 /* Main footer containers */
 .footer-content {
   margin-left: 8vw;
   width: 82vw;
-  height: inherit;
+
   margin-right: 8vw;
 }
-.footer-label,
+.footer-label {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 11px;
+}
+
 .icon-list {
   display: inline-flex;
   align-items: center;
-  height: inherit;
 }
 .icon-item {
-  margin-left: 1.5vw;
-  font-size: 25px;
+  margin-left: 1vw;
+  font-size: 20px;
 }
 .icon-list {
-  float: right;
+
 }
+
 
 /* Colored social icons on mouse hover */
-
 .mdi-twitter:hover {
-  color: #ffffff;
+  color: #9a9a9a;
 }
 .mdi-instagram:hover {
-  color: #ffffff;
+  color: #9a9a9a;
 }
 .mdi-facebook:hover {
-  color: #ffffff;
-}
-/* Footer logo layout */
-img.logo {
-  height: 50px;
-  width: 50px;
-  float: left;
-  margin-top: 7.5px;
-  margin-bottom: 7.5px;
+  color: #9a9a9a;
 }
 
-.logo-container{
- align: left;
 
-}
 .image-container {
-  color: #ff0000;
-  height: 100%;
-  weight: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  margin-top:30px;
+  width:10%
 }
+
 </style>

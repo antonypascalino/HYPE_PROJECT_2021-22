@@ -4,11 +4,6 @@
     <img class="image-container" src="/Bologna_Homepage_1.jpg">
     <div class="top-left1">SCOPRI</div>
     <div class="top-left2">BOLOGNA</div>
-  <br>
-    <br>
-  <section class="section-container">
-    In Primo Piano
-  </section>
   </div>
 </template>
 <script>
@@ -53,14 +48,6 @@
   font-size: 50px;
   color: #C13939;
 }
-.section-container{
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 80px;
-  color: #C13939;
-  text-align: center;
-}
+
 
 </style>
