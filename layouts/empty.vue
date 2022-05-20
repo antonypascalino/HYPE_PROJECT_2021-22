@@ -1,11 +1,10 @@
 <template>
-  <div class="main-page">
-    <nuxt />
-  </div>
+  <nuxt />
 </template>
 
 <script>
 export default {
-  name: 'EmptyLayout',
+  name: "empty"
 }
 </script>
+

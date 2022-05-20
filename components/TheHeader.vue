@@ -91,7 +91,7 @@ export default {
         {
           name: 'ABOUT',
           icon: 'mdi mdi-email',
-          path: '/about/',
+          path: '/aboutUs/',
         },
       ],
       /** Expansion status of the mobile navbar menu */
@@ -185,6 +185,8 @@ nav {
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
   font-weight: bold;
+  color: #c13939 ;
+
 }
 /* Logo layout */
 img {
