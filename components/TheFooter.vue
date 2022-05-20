@@ -6,6 +6,7 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
+
       <!-- Company Icon and Copyright-->
      <div class="footer-label">
        &copy;{{ new Date().getFullYear() }} insideBO</div>
