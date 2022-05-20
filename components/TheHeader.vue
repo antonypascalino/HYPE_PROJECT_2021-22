@@ -117,6 +117,8 @@ export default {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
+  overflow: hidden;
+  z-index: 2;
 }
 
 /*Color of the text inside the menu and elimination of the underline*/
