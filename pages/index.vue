@@ -12,7 +12,12 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  layout: 'default'
+  // page component definitions
+}
+</script>
 
 <style scoped>
 .section-container{
