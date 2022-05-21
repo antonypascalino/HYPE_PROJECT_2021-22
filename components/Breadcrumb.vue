@@ -31,8 +31,10 @@ export default {
       if(crumb==='HOME'){
         location.href = '/';
       }
-     else location.href='/'+crumb.toLowerCase()+'/';
-
+     else {
+        const text = crumb.replace(/ /g, "");
+        location.href = '/' + text.toLowerCase() + '/';
+      }
     },
   },
 };

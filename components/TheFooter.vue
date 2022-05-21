@@ -80,7 +80,7 @@
               LINK UTILI
             </h6>
             <p>
-              <a href="#!" class="text-reset">Area Legale</a>
+              <a href="/arealegale" class="text-reset">Area Legale</a>
             </p>
             <p>
               <a href="#!" class="text-reset">Informativa sulla Privacy</a>
@@ -143,7 +143,9 @@ export default {
   color:black
 }
 .logo{
-
   margin: auto;
+}
+.page-footer{
+  bottom:0;
 }
 </style>
