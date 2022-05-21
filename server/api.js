@@ -39,6 +39,12 @@ const pageContentObject = {
         image: "https://fs.i3lab.group/hypermedia/images/index.jpeg",
         description: ``
     },
+    puntidiinteresse: {
+      title: "Punti di Interesse",
+      image: "https://fs.i3lab.group/hypermedia/images/about.jpeg",
+      description: ''
+
+    },
     about: {
         title: "About",
         image: "https://fs.i3lab.group/hypermedia/images/about.jpeg",

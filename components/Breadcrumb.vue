@@ -43,10 +43,21 @@ export default {
 <style scoped>
   .breadcrumb {
     margin-top: 50px;
-    background-color: #F2F2F2;
+    /*background-color: #F2F2F2;*/
+  }
+
+  .breadcrumb *{
+    font-family: "Josefin Sans";
+    font-weight: bold;
+    color: black;
+  }
+
+  .breadcrumb :hover{
+    color: #c13939;
   }
 
   .breadcrumb-item+.breadcrumb-item::before {
-  content:">";
+    content:">";
+    color: #c13939;
   }
 </style>
