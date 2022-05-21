@@ -23,7 +23,7 @@
           <!-- Grid column -->
 
           <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
 
@@ -52,10 +52,10 @@
               <a href="/arealegale" class="text-reset"> > Area Legale</a>
             </p>
             <p>
-              <a  href="#!" class="text-reset">> Informativa sulla Privacy</a>
+              <a  href="/privacy" class="text-reset">> Informativa sulla Privacy</a>
             </p>
             <p>
-              <a href="#!" class="text-reset"> > Cookie e Pubblicità</a>
+              <a href="/cookie" class="text-reset"> > Cookie e Pubblicità</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -133,7 +133,7 @@ a{
 }
 
 a:hover{
-  background-color: #9a9a9a;
+  color: #9a9a9a;
 }
 
 img{

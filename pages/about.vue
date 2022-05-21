@@ -3,7 +3,7 @@
     <div class ="app-container">
       <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
     </div>
-
+ <div class="chi-siamo-container"> <h1>f</h1></div>
   </div>
 
 </template>
@@ -29,11 +29,16 @@ export default {
 </script>
 <style>
 
+.page-container{
+}
+
 .app-container {
   float: left;
   position: fixed;
-  margin-top: 100px;
   margin-left: 40px;
-  z-index: 2;
+  z-index: 90;
+}
+.chi-siamo-container{
+  margin-top: 100px;
 }
 </style>

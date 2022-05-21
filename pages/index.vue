@@ -13,13 +13,15 @@
 </template>
 
 <script>
-export default {
-  layout: 'default'
-  // page component definitions
-}
+  export default {
+    layout: 'default'
+  }
 </script>
 
 <style scoped>
+.page-container{
+  margin-top: 45px; /*allow partially overlap between header and the photo */
+}
 
 .section-container{
   font-family: 'Josefin Sans';

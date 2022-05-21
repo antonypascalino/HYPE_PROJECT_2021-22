@@ -13,8 +13,6 @@
 <style scoped>
 /* Component containers  */
 .slider-container {
-  height: 90vh;
-  min-height: 520px;
   position: relative;
 }
 
@@ -25,7 +23,6 @@
   width: 100%;
   margin-left: 0;
   padding-left: 0;
-  margin-top:50px;
 }
 
 .top-left1{

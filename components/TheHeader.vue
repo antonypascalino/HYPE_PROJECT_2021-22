@@ -54,7 +54,6 @@
       >
         <nuxt-link :to="item.path">
           {{ item.name }}
-          <span :class="item.icon"></span>
         </nuxt-link>
       </div>
     </nav>
@@ -69,28 +68,24 @@ export default {
       menuOptions: [
         {
           name: 'PUNTI DI INTERESSE',
-          icon: 'mdi mdi-sign-direction',
+
           path: '/list/',
         },
         {
           name: 'SERVIZI',
-          icon: 'mdi mdi-account-group',
           path: '/servizi',
         },
         {
           name: 'EVENTI',
-          icon: 'mdi mdi-calendar-month',
           path: '/eventi/',
         },
 
         {
           name: 'ITINERARI',
-          icon: 'mdi mdi-view-grid',
           path: '/itinerari/',
         },
         {
           name: 'ABOUT',
-          icon: 'mdi mdi-email',
           path: '/about/',
         },
       ],
@@ -117,7 +112,7 @@ export default {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  z-index: 2;
+  z-index: 90;
 }
 
 /*Color of the text inside the menu and elimination of the underline*/
@@ -146,11 +141,10 @@ export default {
   margin-right: 25px;
 }
 .header-content .menu-item {
-  padding-right: 120px;
+  padding-right: 40px;
 
 }
 
-/**/
 .menu-item :hover {
   border-bottom: 9px solid #c13939;
   color: #c13939 ;
@@ -173,20 +167,16 @@ nav {
   font-size: 28px;
 }
 .dropdown-list .mdi {
-  vertical-align: bottom;
-  margin-left: 5px;
-  float: right;
+  text-align: center;
 }
 .dropdown-list .menu-item {
-  text-align: right;
-  margin-right: 8vw;
+  text-align: center;
   margin-top: 10px;
 }
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
   font-weight: bold;
   color: #c13939 ;
-
 }
 /* Logo layout */
 img {
@@ -199,13 +189,13 @@ img {
   display: block;
 }
 /* Mobile navbar if viewport <=825 px */
-@media screen and (max-width: 1425px) {
+@media screen and (max-width: 900px) {
   .desktop-nav {
     display: none;
   }
 }
 /* Desktop navbar if viewport >=826 px */
-@media screen and (min-width: 1426px) {
+@media screen and (min-width: 901px) {
   .mobile-nav {
     display: none;
   }
