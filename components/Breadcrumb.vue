@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <ol class="breadcrumb">
+    <ol class="breadcrumb ">
       <li
         v-for="(crumb, ci) in crumbs"
         :key="ci"
@@ -46,4 +46,7 @@ export default {
     margin-top: 70px;
   }
 
+  .breadcrumb-item+.breadcrumb-item::before {
+  content:">";
+  }
 </style>
