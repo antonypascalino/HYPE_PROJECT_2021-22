@@ -29,16 +29,16 @@
 
             </h6>
             <p>
-              <a href="/about" class="text-reset">Chi siamo </a>
+              <a href="/about" class="text-reset">> Chi siamo </a>
             </p>
             <p>
-              <a href="/contatti" class="text-reset">Contattaci</a>
+              <a href="/contatti" class="text-reset">> Contattaci</a>
             </p>
             <p>
-              <a href="/bolognainbreve" class="text-reset">Bologna in Breve</a>
+              <a href="/bolognainbreve" class="text-reset">> Bologna in Breve</a>
             </p>
             <p>
-              <a href="https://www.bolognatoday.it/meteo/" class="text-reset">Meteo</a>
+              <a href="https://www.bolognatoday.it/meteo/" class="text-reset">> Meteo</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -49,13 +49,13 @@
             <h6 class="text-uppercase fw-bold mb-4">
             </h6>
             <p>
-              <a href="/arealegale" class="text-reset">Area Legale</a>
+              <a href="/arealegale" class="text-reset"> > Area Legale</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Informativa sulla Privacy</a>
+              <a  href="#!" class="text-reset">> Informativa sulla Privacy</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Cookie e Pubblicità</a>
+              <a href="#!" class="text-reset"> > Cookie e Pubblicità</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -81,16 +81,16 @@
 
       <!-- Right -->
       <div>
-        <a href="https://www.facebook.com" class="me-4 text-reset">
+        <a href="https://www.facebook.com" class="me-1 text-reset">
           <i class="mdi mdi-facebook"></i>
         </a>
-        <a href="https://www.twitter.com" class="me-4 text-reset">
+        <a href="https://www.twitter.com" class="me-1 text-reset">
           <i class="mdi mdi-twitter"></i>
         </a>
-        <a href="https://www.linkedin.com" class="me-4 text-reset">
+        <a href="https://www.linkedin.com" class="me-1 text-reset">
           <i class="mdi mdi-linkedin"></i>
         </a>
-        <a href="https://www.instagram.com" class="me-4 text-reset">
+        <a href="https://www.instagram.com" class="me-1 text-reset">
           <i class="mdi mdi-instagram"></i>
         </a>
       </div>
@@ -103,10 +103,9 @@
 </template>
 
 <script>
-
-export default {
-  name: 'TheFooter',
-}
+  export default {
+    name: 'TheFooter',
+  }
 </script>
 
 <style scoped>
@@ -114,8 +113,7 @@ export default {
 .container1{
   background-color: #c13939;
   color: white;
-  text-decoration: none;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid #F2F2F2;
 }
 .container2{
   background-color: #c13939;
@@ -125,6 +123,8 @@ export default {
   margin: auto;
 }
 .page-footer{
+  width: 100%;
+  position:inherit ;
   bottom:0;
 }
 
@@ -132,8 +132,27 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  background-color: #9a9a9a;
+}
+
 img{
   float:inherit;
-  width:10vw
+  width:150px;
 }
+
+/* Colored social icons on mouse hover */
+.mdi-twitter:hover {
+  color: #00d9ff;
+}
+.mdi-facebook:hover {
+  color: #005eff;
+}
+.mdi-linkedin:hover {
+  color: #137ffa;
+}
+.mdi-instagram:hover {
+  color: #e95950;
+}
+
 </style>
