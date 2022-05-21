@@ -42,8 +42,8 @@ export default {
 
 <style scoped>
   .breadcrumb {
-    background-color: white;
-    margin-top: 70px;
+    margin-top: 50px;
+    background-color: #F2F2F2;
   }
 
   .breadcrumb-item+.breadcrumb-item::before {

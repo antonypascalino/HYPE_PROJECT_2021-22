@@ -8,7 +8,6 @@
     <section class="section-container">
       Prossimi Eventi
     </section>
-
   </div>
 </template>
 
