@@ -2,8 +2,6 @@
 <template>
   <div class="slider-container">
     <img class="image-container" src="/Bologna_Homepage_1.jpg">
-    <div class="top-left1">SCOPRI</div>
-    <div class="top-left2">BOLOGNA</div>
   </div>
 </template>
 <script>
