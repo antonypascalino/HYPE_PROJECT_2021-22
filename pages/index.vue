@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style scoped>
+
 .section-container{
   font-family: 'Josefin Sans';
   font-style: normal;

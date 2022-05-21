@@ -25,6 +25,7 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.18.0",
     "vue": "^2.6.14",
+    "vue-fab": "^2.3.1",
     "vue-material-design-icons": "^5.0.0",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",

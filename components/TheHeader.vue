@@ -91,7 +91,7 @@ export default {
         {
           name: 'ABOUT',
           icon: 'mdi mdi-email',
-          path: '/aboutUs/',
+          path: '/about/',
         },
       ],
       /** Expansion status of the mobile navbar menu */

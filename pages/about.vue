@@ -1,28 +1,39 @@
 <template>
-  <custom-page :title="title" :image="image" :description="description" />
+  <div class="page-container">
+    <div class ="app-container">
+      <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
+    </div>
+
+  </div>
 
 </template>
 
 <script>
-import CustomPage from '~/components/CustomPage.vue'
+import Breadcrumb from '~/components/Breadcrumb.vue';
+
 export default {
-  name: 'AboutPage',
-  components: {
-    CustomPage,
-  },
+  layout: 'default',
+  components: {Breadcrumb},
+
   data() {
-    return {}
-  },
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/page-info/about')
-    const title = data.title
-    const image = data.image
-    const description = data.description
     return {
-      title,
-      description,
-      image,
-    }
+      crumbs: ['HOME', 'ABOUT'],
+    };
+  },
+  methods: {
+    selected(crumb) {
+      console.log(crumb);
+    },
   },
 }
 </script>
+<style>
+
+.app-container {
+  float: left;
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 40px;
+  z-index: 2;
+}
+</style>

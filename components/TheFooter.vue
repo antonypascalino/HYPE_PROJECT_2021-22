@@ -4,126 +4,146 @@
 -->
 
 <template>
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img class ="image-container" src="/logoCompatto_bianco.png" alt="logo-bianco-compatto">
-
+  <!-- Footer -->
+  <footer class="page-footer text-center text-lg-start text-muted">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Rimani connesso sui nostri social Network: </span>
       </div>
-    <br>
-      <!-- Company Icon and Copyright-->
-     <div class="footer-label">
-       <hr>
-       &copy;{{ new Date().getFullYear() }} insideBO Tutti i diritti sono riservati.     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <a href="url">Informativa sulla privacy</a> &nbsp;&nbsp;| &nbsp;&nbsp; <a href="url">Area Legale</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="url">Cookie</a>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <!-- Social list -->
-      <div class="icon-list">
-        Follow us:
-        <div
-          v-for="(item, itemIndex) of socialList"
-          :key="'icon-item-' + itemIndex"
-          class="icon-item"
-        >
-          <a
-            :href="item.link"
-            target="_blank"
-            rel="noopener"
-            :aria-label="item.name"
-          >
-            <span :class="item.icon"></span>
-          </a>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="https://www.facebook.com" class="me-4 text-reset">
+          <i class="mdi mdi-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" class="me-4 text-reset">
+          <i class="mdi mdi-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com" class="me-4 text-reset">
+          <i class="mdi mdi-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com" class="me-4 text-reset">
+          <i class="mdi mdi-instagram"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="container1">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>
+            </h6>
+            <p>
+              <img class="logo" src="~/static/logoCompatto_rosso.png" alt="logo_compatto_rosso">
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+
+            </h6>
+            <p>
+              <a href="/about" class="text-reset">  Chi siamo </a>
+            </p>
+            <p>
+              <a href="/contatti" class="text-reset">Contattaci</a>
+            </p>
+            <p>
+              <a href="/bolognainbreve" class="text-reset">Bologna in Breve</a>
+            </p>
+            <p>
+              <a href="https://www.bolognatoday.it/meteo/" class="text-reset">Meteo</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              LINK UTILI
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Area Legale</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Informativa sulla Privacy</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Cookie e Pubblicità</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+             &nbsp; &nbsp; CONTATTI
+            </h6>
+            <p><i class="fas fa-home me-3"></i> Via Mecenate 12, Bologna</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              insidebo@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i>TEL: +39 3319212318</p>
+            <p><i class="fas fa-print me-3"></i>FAX: +39 011 7234011</p>
+          </div>
+          <!-- Grid column -->
         </div>
+        <!-- Grid row -->
       </div>
-     </div>
-    </div>
+    </section>
+    <!-- Section: Links  -->
 
+    <!-- Copyright -->
+    <div class="copyright text-center p-4">
+      © 2022 Tutti i diritti sono riservati:
+      <a class="text-reset fw-bold" href="https://insidebo.herokuapp.com/">insideBO</a>
+    </div>
+    <!-- Copyright -->
   </footer>
+  <!-- Footer -->
 </template>
 
 <script>
+
 export default {
   name: 'TheFooter',
-  data() {
-    return {
-      /** Social names and usernames */
-      socialList: [
-        {
-          name: 'Facebook',
-          icon: 'mdi mdi-facebook',
-          link: 'http://www.facebook.com/',
-        },
-        {
-          name: 'Twitter',
-          icon: 'mdi mdi-twitter',
-          link: 'http://www.twitter.com/',
-        },
-        {
-          name: 'Instagram',
-          icon: 'mdi mdi-instagram',
-          link: 'http://www.instagram.com/',
-        },
-      ],
-    }
-  },
 }
 </script>
 
 <style scoped>
-/* Positioning and colors of the whole component */
-.footer {
-  width: 100%;
-  background: rgb(193, 57, 57);
-  height: 180px;
-  position: absolute;
 
+.copyright{
+  background-color: #C13939;
+  color:white
 }
-/* Foreground components black */
-.footer * {
-  color: white;
+.page-footer{
+  background-color: white;
+}
+.container1{
+  background-color: white;
+  color:black
+}
+.logo{
 
+  margin: auto;
 }
-/* Main footer containers */
-.footer-content {
-  margin-left: 8vw;
-  width: 82vw;
-
-  margin-right: 8vw;
-}
-.footer-label {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 11px;
-}
-
-.icon-list {
-  display: inline-flex;
-  align-items: center;
-}
-.icon-item {
-  margin-left: 1vw;
-  font-size: 20px;
-}
-.icon-list {
-
-}
-
-
-/* Colored social icons on mouse hover */
-.mdi-twitter:hover {
-  color: #9a9a9a;
-}
-.mdi-instagram:hover {
-  color: #9a9a9a;
-}
-.mdi-facebook:hover {
-  color: #9a9a9a;
-}
-
-
-.image-container {
-  margin-top:30px;
-  width:10%
-}
-
 </style>
