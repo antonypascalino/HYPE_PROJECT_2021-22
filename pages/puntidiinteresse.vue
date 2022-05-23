@@ -1,6 +1,7 @@
 <template>
   <div class="page-container">
     <div class ="app-container">
+      <img src="@/static/puntidiinteresse/1.jpg"/>
       <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
     </div>
     <br>
