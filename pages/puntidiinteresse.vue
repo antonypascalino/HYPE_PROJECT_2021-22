@@ -2,12 +2,16 @@
   <div class="page-container">
     <div class ="app-container">
       <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
-      <div v-for="image in carousel" :key="image.id">
-        <h1>{{ image.title }}</h1>
-        <img :src="require(`@/static/puntidiinteresse/${image.img}.jpg`)" alt=""/>
+      <div class = "PDI">
+        <div class = "title" v-for="image in carousel" :key="image.id">
+          <h1>{{ image.title }}</h1>
+          <div class = "image">
+          <img :src="require(`@/static/puntidiinteresse/${image.img}.jpg`)" alt=""/>
+            </div>
         <button type="button">Click Me!</button>
       </div>
     </div>
+      </div>
   </div>
 </template>
 
@@ -31,16 +35,9 @@ export default {
 </script>
 
 <style scoped>
-.button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+
+.title{
+  font-family: "Josefin Sans";
 }
 
 
