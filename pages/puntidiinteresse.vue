@@ -19,16 +19,11 @@ export default {
     return {
       crumbs: ['HOME', 'PUNTI DI INTERESSE'],
       carousel: [
-        [{id: 1, title: "Piazza Maggiore", img: "1"},
-          {id: 2, title: "Piazza Maggiore", img: "2"}]
+        {id: 1, title: "Piazza Maggiore", img: "1"},
+        {id: 2, title: "Nettuno", img: "2"}
       ]
     };
-  },
-  methods: {
-    selected(crumb) {
-      console.log(crumb);
-    },
-  },
+  }
 };
 
 
