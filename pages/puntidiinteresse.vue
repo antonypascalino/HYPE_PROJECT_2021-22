@@ -1,29 +1,27 @@
 <template>
   <div class="page-container">
     <div class ="app-container">
-      <img src="@/static/puntidiinteresse/1.jpg"/>
       <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
+      <div v-for="image in carousel" :key="image.id">
+        <h1>{{ image.title }}</h1>
+        <img :src="require(`@/static/puntidiinteresse/${image.img}.jpg`)" alt=""/>
+      </div>
     </div>
-    <br>
-
-    <section class="section-1">
-      <div class="punti-di-interesse-container"> Punti di Interesse</div>
-      <br>
-      <p>Figa
-      </p>
-    </section>
   </div>
 </template>
 
 <script>
-import Breadcrumb from "~/components/Breadcrumb";
-
+ import Breadcrumb from '~/components/Breadcrumb.vue';
 export default {
-  layout: 'default',
+  layout: "default",
   components: {Breadcrumb},
   data() {
     return {
       crumbs: ['HOME', 'PUNTI DI INTERESSE'],
+      carousel: [
+        [{id: 1, title: "Piazza Maggiore", img: "1"},
+          {id: 2, title: "Piazza Maggiore", img: "2"}]
+      ]
     };
   },
   methods: {
@@ -31,7 +29,7 @@ export default {
       console.log(crumb);
     },
   },
-}
+};
 
 
 </script>

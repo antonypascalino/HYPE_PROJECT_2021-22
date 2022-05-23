@@ -1,0 +1,24 @@
+{
+  "puntidiinteresse": [
+    {
+      "index": 0,
+      "title": "PIAZZA MAGGIORE",
+      "description": "suca",
+      "menu": "Piazza Maggiore",
+      "image": "@/static/puntidiinteresse/1.jpg"
+    },
+    {
+      "index": 1,
+      "title": "FONTANA DEL NETTUNO",
+      "description": "nettuno",
+      "menu": "Fontana del Nettuno",
+      "image": "@/static/puntidiinteresse/2.jpg"
+    }
+
+  ]
+
+}
+
+
+
+
