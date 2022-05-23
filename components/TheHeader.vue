@@ -131,10 +131,7 @@ export default {
   text-align: center;
 }
 
-.menu-item{
-  /*padding-left:0 px;*/
-  padding-right:20px;
- }
+
 
 .header-content .mdi {
   font-size: 50px;
@@ -145,9 +142,16 @@ export default {
 
 }
 
+.menu-item{
+  padding-right:20px;
+  padding-top: 19px;
+  height: inherit;
+}
+
 .menu-item :hover {
   border-bottom: 9px solid #c13939;
   color: #c13939 ;
+  transition: linear 300ms;
 }
 
 nav {
@@ -184,9 +188,6 @@ img {
   float: left;
   margin-top: 6px;
   margin-left:100px;
-}
-.logo {
-  display: block;
 }
 /* Mobile navbar if viewport <=825 px */
 @media screen and (max-width: 900px) {
