@@ -5,6 +5,7 @@
       <div v-for="image in carousel" :key="image.id">
         <h1>{{ image.title }}</h1>
         <img :src="require(`@/static/puntidiinteresse/${image.img}.jpg`)" alt=""/>
+        <button type="button">Click Me!</button>
       </div>
     </div>
   </div>
@@ -13,7 +14,7 @@
 <script>
  import Breadcrumb from '~/components/Breadcrumb.vue';
 export default {
-  layout: "default",
+  layout: "empty",
   components: {Breadcrumb},
   data() {
     return {
@@ -30,5 +31,21 @@ export default {
 </script>
 
 <style scoped>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+
+
 
 </style>
