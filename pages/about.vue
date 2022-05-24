@@ -2,6 +2,7 @@
 
 <template>
   <main class="page-container">
+
     <section class="breadcrumb-section">
       <Breadcrumb   :crumbs="crumbs" @selected="selected"/>
     </section>
@@ -34,10 +35,12 @@
 <script>
 import Breadcrumb from '~/components/Breadcrumb.vue';
 
-
 export default {
   layout: 'default',
-  components: {Breadcrumb},
+  components: {
+    Breadcrumb,
+
+  },
 
   data() {
     return {

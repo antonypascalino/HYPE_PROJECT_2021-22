@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-container">
-    <ol class="breadcrumb ">
+    <ol class="breadcrumb">
       <li
         v-for="(crumb, ci) in crumbs"
         :key="ci"
@@ -47,13 +47,11 @@ export default {
     font-family: "Josefin Sans";
     font-size: 25px;
     display: compact;
-
     width: 100%;
   }
   .nav-container{
     float:left;
     width: 100%;
-
     margin-top: 70px;
   }
 

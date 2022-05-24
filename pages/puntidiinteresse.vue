@@ -6,10 +6,9 @@
     <li v-for="(pointOfInterest, pointOfInterestIndex) of pointOfInterestList"
         class="col-sm-2 m-2"
         :key="`pointOfInterest-index-${pointOfInterestIndex}`"
-        :id="pointOfInterest.id"
+
         :name="pointOfInterest.name"
-        :img="pointOfInterest.img"
-        :description="pointOfInterest.description"
+
     />
   </div>
 </template>
