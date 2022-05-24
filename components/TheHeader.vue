@@ -199,13 +199,13 @@ img {
   margin-left:100px;
 }
 /* Mobile navbar if viewport <=825 px */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1070px) {
   .desktop-nav {
     display: none;
   }
 }
 /* Desktop navbar if viewport >=826 px */
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 1070px) {
   .mobile-nav {
     display: none;
   }
