@@ -29,13 +29,13 @@
         <span
           v-if="!mobileMenuVisibility"
           class="mdi mdi-menu"
-          title="Open menù"
+          title="Apri menu"
           @click="changeMobileMenuVisibility"
         ></span>
         <span
           v-else
           class="mdi mdi-close-box"
-          title="Close menù"
+          title="Chiudi menu"
           @click="changeMobileMenuVisibility"
         ></span>
       </nav>
@@ -136,33 +136,6 @@ export default {
   padding-left: 40px ;
 }
 
-.menu-item {
-  position: relative;
-  padding-right:20px;
-  padding-top: 19px;
-  height: inherit;
-}
-.menu-item::after {
-  content: ' ';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 0;
-  background: #C13939;
-  transition: height 0.3s, color 0.3s;
-  -webkit-transition: height 0.3s, color 0.3s;
-}
-.menu-item:hover::after {
-  height: 9px;
-  transition: height 0.3s, color 0.3s;
-}
-
-.menu-item:hover {
-  color: #C13939;
-  -webkit-text-decoration-color: #C13939;
-}
-
 nav {
   align-items: center;
   height: inherit;
@@ -176,19 +149,26 @@ nav {
   display: block;
   width: 100vw;
   height: 100vw;
-  background: rgba(238, 238, 238, 0.9);
-  font-size: 28px;
+  background: rgb(255, 255, 255,0.8);
 }
 .dropdown-list .mdi {
   text-align: center;
+  vertical-align: bottom;
+  margin-left: 0px;
 }
-
+.mdi-menu{
+  padding-top: 16px;
+}
+.mdi-close-box{
+  padding-top: 16px;
+}
 .dropdown-list .menu-item {
   text-align: center;
   margin-top: 10px;
+
 }
 .mobile-nav{
-  margin-top: 12px;
+  margin-top: 0px;
 }
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
@@ -207,11 +187,47 @@ img {
   .desktop-nav {
     display: none;
   }
+  img{
+    margin-left: 36%;
+  }
+
+  .menu-item:hover {
+    color: #C13939;
+  }
+
+
 }
 /* Desktop navbar if viewport >=826 px */
 @media screen and (min-width: 1071px) {
   .mobile-nav {
     display: none;
+  }
+  .menu-item {
+    position: relative;
+    padding-right:20px;
+    padding-top: 19px;
+    height: inherit;
+  }
+
+  .menu-item::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 0;
+    background: #C13939;
+    transition: height 0.3s, color 0.3s;
+    -webkit-transition: height 0.3s, color 0.3s;
+  }
+  .menu-item:hover::after {
+    height: 9px;
+    transition: height 0.3s, color 0.3s;
+  }
+
+  .menu-item:hover {
+    color: #C13939;
+    -webkit-text-decoration-color: #C13939;
   }
 }
 </style>
