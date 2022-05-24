@@ -2,7 +2,7 @@
   <div class="page-container">
     <div class ="app-container">
       <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
-      <div class = "PDI">
+      <div class = "PDI" :carousel="carousel" @selected="selected">
         <div class = "title" v-for="image in carousel" :key="image.id">
           <h1>{{ image.title }}</h1>
           <div class = "image">
@@ -40,7 +40,9 @@ export default {
   font-family: "Josefin Sans";
 }
 
-
+.image{
+  size: A4;
+}
 
 
 
