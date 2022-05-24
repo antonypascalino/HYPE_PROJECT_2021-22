@@ -68,8 +68,7 @@ export default {
       menuOptions: [
         {
           name: 'PUNTI DI INTERESSE',
-
-          path: '/list/',
+          path: '/puntidiinteresse',
         },
         {
           name: 'SERVIZI',

@@ -1,37 +1,19 @@
 
 
 export default async (models) => {
-    const catList = [
+    const pointOfInterestList = [
         {
-            name: "Cat 1",
-            breed: "Siberian",
-            description: "Details about cat 1",
-            img: "https://fs.i3lab.group/hypermedia/cats/siberian.jpg",
+            POI_ID: 0,
+            name: "Piazza Maggiore",
+            description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.\n" +
+              "\n" +
+              "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere).\n" +
+              "\n" +
+              "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
+            img: ["@/static/puntidiinteresse/piazzamaggiorefoto/piazzamaggiore01", "@/static/puntidiinteresse/piazzamaggiorefoto/piazzamaggiore02"],
+            visitInfo: "Orario: aperto sempre"
         },
-        {
-            name: "Cat 2",
-            breed: "Birman",
-            description: "Details about cat 2",
-            img: "https://fs.i3lab.group/hypermedia/cats/birman.jpg",
-        },
-        {
-            name: "Cat 3",
-            breed: "Bombay",
-            description: "Details about cat 3",
-            img: "https://fs.i3lab.group/hypermedia/cats/bombay.jpg",
-        },
-        {
-            name: "Cat 4",
-            breed: "Calico",
-            description: "Details about cat 4",
-            img: "https://fs.i3lab.group/hypermedia/cats/calico.jpg",
-        },
-        {
-            name: "Cat 5",
-            breed: "Maine Coon",
-            description: "Details about cat 5",
-            img: "https://fs.i3lab.group/hypermedia/cats/maine-coon.jpg",
-        },
+
     ]
-    await models.Cat.bulkCreate(catList)
+    await models.pointOfInterest.bulkCreate(pointOfInterestList)
 }
