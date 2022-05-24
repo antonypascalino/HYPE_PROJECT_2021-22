@@ -18,7 +18,7 @@
           :key="'menu-item-' + itemIndex"
           class="menu-item"
         >
-          <nuxt-link :to="item.path">
+          <nuxt-link style="text-decoration: none; color: inherit;" to="item.path">
             {{ item.name }}
           </nuxt-link>
         </div>
@@ -115,7 +115,7 @@ export default {
 /*Color of the text inside the menu and elimination of the underline*/
 .header *{
   text-decoration: none;
-  color:black;
+  color:inherit;
   text-align: center;
   font-size: 15px;
   padding-bottom:9px
@@ -160,6 +160,7 @@ export default {
 
 .menu-item:hover {
   color: #C13939;
+  -webkit-text-decoration-color: #C13939;
 }
 
 nav {
