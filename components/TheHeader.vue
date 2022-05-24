@@ -111,8 +111,8 @@ export default {
   height:50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  z-index: 90;
+  top: 5px; /* Position the navbar at the top of the page */
+  z-index: 2;
 }
 
 /*Color of the text inside the menu and elimination of the underline*/
@@ -121,7 +121,8 @@ export default {
   color:black;
   text-align: center;
   font-size: 15px;
-  padding-bottom:9px
+  padding-bottom:9px;
+
 }
 
 /* Main header containers */
@@ -130,8 +131,6 @@ export default {
   font-family: "Josefin Sans";
   text-align: center;
 }
-
-
 
 .header-content .mdi {
   font-size: 50px;
@@ -152,6 +151,7 @@ export default {
   border-bottom: 9px solid #c13939;
   color: #c13939 ;
   transition: linear 300ms;
+
 }
 
 nav {
@@ -170,9 +170,7 @@ nav {
   background: rgba(238, 238, 238, 0.9);
   font-size: 28px;
 }
-.dropdown-list .mdi {
-  text-align: center;
-}
+
 .dropdown-list .menu-item {
   text-align: center;
   margin-top: 10px;

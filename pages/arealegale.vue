@@ -1,38 +1,19 @@
 <template>
-  <div class="page-container">
-    <div class ="app-container">
-      <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
-    </div>
-    <section class="section-container">
-      Prossimi Eventi
-    </section>
-    <section class="section-container">
-      Prossimi Eventi
-    </section><section class="section-container">
-    Prossimi Eventi
-  </section><section class="section-container">
-    Prossimi Eventi
-  </section><section class="section-container">
-    Prossimi Eventi
-  </section><section class="section-container">
-    Prossimi Eventi
-  </section><section class="section-container">
-    Prossimi Eventi
-  </section>
-  </div>
+<div>
+  <Breadcrumb class="row justify-content-center mt-1" :crumbs="crumbs" @selected="selected"/>
 
+</div>
 </template>
 
 <script>
-import Breadcrumb from '~/components/Breadcrumb.vue';
-
+import Breadcrumb from "~/components/Breadcrumb";
 export default {
-  layout: 'default',
+  layout: 'default', // you can set a custom layout for the error page
   components: {Breadcrumb},
 
   data() {
     return {
-      crumbs: ['HOME', 'AREA LEGALE','da'],
+      crumbs: ['HOME', 'ABOUT','CHI SIAMO'],
     };
   },
   methods: {
@@ -44,11 +25,4 @@ export default {
 </script>
 <style>
 
-.app-container {
-  float: left;
-  position: fixed;
-  margin-top: 100px;
-  margin-left: 40px;
-  z-index: 2;
-}
 </style>

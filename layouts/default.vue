@@ -1,4 +1,4 @@
-<template>
+z<template>
   <div class="main-page">
     <the-header />
     <Nuxt />

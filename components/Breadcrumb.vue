@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav-container">
     <ol class="breadcrumb ">
       <li
         v-for="(crumb, ci) in crumbs"
@@ -42,11 +42,23 @@ export default {
 
 <style scoped>
   .breadcrumb {
-    margin-top: 50px;
-    background-color: #F2F2F2;
+    background-color: white;
+    margin-bottom: 20px;
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    display: compact;
+
+    width: 100%;
+  }
+  .nav-container{
+    float:left;
+    width: 100%;
+
+    margin-top: 70px;
   }
 
   .breadcrumb-item+.breadcrumb-item::before {
-  content:">";
+    content:"/";
+    color: #C13939;
   }
 </style>
