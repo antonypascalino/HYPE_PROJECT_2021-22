@@ -28,13 +28,13 @@
       <nav class="mobile-nav">
         <span
           v-if="!mobileMenuVisibility"
-          class="mdi mdi-menu-open"
+          class="mdi mdi-menu"
           title="Open menù"
           @click="changeMobileMenuVisibility"
         ></span>
         <span
           v-else
-          class="mdi mdi-close"
+          class="mdi mdi-close-box"
           title="Close menù"
           @click="changeMobileMenuVisibility"
         ></span>
@@ -68,7 +68,7 @@ export default {
       menuOptions: [
         {
           name: 'PUNTI DI INTERESSE',
-          path: '/list/',
+          path: '/puntidiinteresse/',
         },
         {
           name: 'SERVIZI',
@@ -129,7 +129,7 @@ export default {
 }
 .header-content .mdi {
   font-size: 50px;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 .header-content .menu-item {
   padding-right: 40px;
@@ -182,9 +182,13 @@ nav {
 .dropdown-list .mdi {
   text-align: center;
 }
+
 .dropdown-list .menu-item {
   text-align: center;
   margin-top: 10px;
+}
+.mobile-nav{
+  margin-top: 12px;
 }
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
@@ -205,7 +209,7 @@ img {
   }
 }
 /* Desktop navbar if viewport >=826 px */
-@media screen and (min-width: 1070px) {
+@media screen and (min-width: 1071px) {
   .mobile-nav {
     display: none;
   }
