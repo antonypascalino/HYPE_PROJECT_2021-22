@@ -18,7 +18,7 @@
           :key="'menu-item-' + itemIndex"
           class="menu-item"
         >
-          <nuxt-link :to="item.path">
+          <nuxt-link style="text-decoration: none; color: inherit;" :to="item.path">
             {{ item.name }}
           </nuxt-link>
         </div>
@@ -68,7 +68,6 @@ export default {
       menuOptions: [
         {
           name: 'PUNTI DI INTERESSE',
-
           path: '/list/',
         },
         {
@@ -102,7 +101,6 @@ export default {
 }
 </script>
 
-
 <style>
 /* Positioning and colors of the whole component */
 .header {
@@ -111,18 +109,16 @@ export default {
   height:50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: fixed; /* Set the navbar to fixed position */
-  top: 5px; /* Position the navbar at the top of the page */
-  z-index: 2;
+  top: 0; /* Position the navbar at the top of the page */
+  z-index: 90;
 }
-
 /*Color of the text inside the menu and elimination of the underline*/
 .header *{
   text-decoration: none;
-  color:black;
+  color:inherit;
   text-align: center;
   font-size: 15px;
-  padding-bottom:9px;
-
+  padding-bottom:9px
 }
 
 /* Main header containers */
@@ -131,27 +127,40 @@ export default {
   font-family: "Josefin Sans";
   text-align: center;
 }
-
 .header-content .mdi {
   font-size: 50px;
   margin-right: 25px;
 }
 .header-content .menu-item {
   padding-right: 40px;
-
+  padding-left: 40px ;
 }
 
-.menu-item{
+.menu-item {
+  position: relative;
   padding-right:20px;
   padding-top: 19px;
   height: inherit;
 }
+.menu-item::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 0;
+  background: #C13939;
+  transition: height 0.3s, color 0.3s;
+  -webkit-transition: height 0.3s, color 0.3s;
+}
+.menu-item:hover::after {
+  height: 9px;
+  transition: height 0.3s, color 0.3s;
+}
 
-.menu-item :hover {
-  border-bottom: 9px solid #c13939;
-  color: #c13939 ;
-  transition: linear 300ms;
-
+.menu-item:hover {
+  color: #C13939;
+  -webkit-text-decoration-color: #C13939;
 }
 
 nav {
@@ -170,7 +179,9 @@ nav {
   background: rgba(238, 238, 238, 0.9);
   font-size: 28px;
 }
-
+.dropdown-list .mdi {
+  text-align: center;
+}
 .dropdown-list .menu-item {
   text-align: center;
   margin-top: 10px;
@@ -178,7 +189,7 @@ nav {
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
   font-weight: bold;
-  color: #c13939 ;
+  color: #C13939;
 }
 /* Logo layout */
 img {
