@@ -148,8 +148,8 @@ nav {
 .dropdown-list {
   display: block;
   width: 100vw;
-  height: 100vw;
-  background: rgb(255, 255, 255,0.8);
+  height: 25vh;
+  background: rgb(255, 255, 255);
 }
 .dropdown-list .mdi {
   text-align: center;
@@ -168,7 +168,7 @@ nav {
 
 }
 .mobile-nav{
-  margin-top: 0px;
+  margin-top: -2px;
 }
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
@@ -190,12 +190,9 @@ img {
   img{
     margin-left: 36%;
   }
-
   .menu-item:hover {
     color: #C13939;
   }
-
-
 }
 /* Desktop navbar if viewport >=826 px */
 @media screen and (min-width: 1071px) {
@@ -224,7 +221,6 @@ img {
     height: 9px;
     transition: height 0.3s, color 0.3s;
   }
-
   .menu-item:hover {
     color: #C13939;
     -webkit-text-decoration-color: #C13939;

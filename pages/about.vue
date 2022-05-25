@@ -16,11 +16,6 @@
       </p>
   </section>
 
-
-    <section class="section-il-team">
-      <div class="title-container">Il team</div>
-    </section>
-
       <section class="section-la-nostra-missione">
       <div class="title-container">La nostra Missione</div>
       <p>Per noi non è il Cittadino che deve arrivare all’informazione ma è l’informazione a doverlo raggiungere, in un' ottica "Prima l'Utente" . Sempre. InsideBO è la nostra piccola rivoluzione.
@@ -64,7 +59,7 @@ export default {
 .title-container{
   margin-top: 40px;
   width: 100%;
-  margin-top: 120px;
+  margin-top: 40px;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 600;
@@ -84,15 +79,6 @@ export default {
   margin-right: 8px;
 }
 
-.section-il-team{
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 200;
-  font-size: 17px;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
 .section-la-nostra-missione{
   font-family: 'Josefin Sans';
   font-style: normal;
@@ -101,6 +87,8 @@ export default {
   margin-left: 8px;
   margin-right: 8px;
 }
-
+p{
+  margin-top: 20px;
+}
 
 </style>
