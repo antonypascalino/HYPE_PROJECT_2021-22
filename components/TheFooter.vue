@@ -35,12 +35,22 @@
             <p>
               <a href="/bolognainbreve" class="text">> Bologna in Breve</a>
             </p>
-            <p>
-              <a href="https://www.bolognatoday.it/meteo/" class="text">> Meteo</a>
-            </p>
+
           </div>
           <!-- Grid column -->
 
+          <!-- Grid column -->
+          <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4"></h6>
+            <p>
+              <a href="https://www.bolognatoday.it/meteo/" class="text">> Meteo</a>
+            </p>
+            <p>
+              <a href="https://www.skylinewebcams.com/en/webcam/italia/emilia-romagna/bologna/bologna-torre-degli-asinelli.html" class="text">> Webcam</a>
+            </p>
+          </div>
+          <!-- Grid column -->
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
