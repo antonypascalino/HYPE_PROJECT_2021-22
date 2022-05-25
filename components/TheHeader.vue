@@ -52,7 +52,7 @@
         :key="'menu-item-' + itemIndex"
         class="menu-item"
       >
-        <nuxt-link :to="item.path">
+        <nuxt-link style="text-decoration: none; color: inherit;" :to="item.path">
           {{ item.name }}
         </nuxt-link>
       </div>
