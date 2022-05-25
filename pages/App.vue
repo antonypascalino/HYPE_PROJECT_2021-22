@@ -8,8 +8,8 @@
                       :key="slide"
                       :index="index"
                       :visibleSlide = "visibleSlide"
-                      >
-        <img :src= "slide" :alt="slide"/>
+      >
+        <img :src="slide">
       </carousel-slide>
     </carousel>
   </div>
@@ -23,9 +23,9 @@ export default {
   data() {
     return {
         slides: [
-          '@/static/carousel/piazzamaggiore01.jpg',
-          '@/static/carousel/2.jpg',
-          '@/static/carousel/piazzamaggiore02.jpg',
+          require('@/static/carousel/piazzamaggiore01.jpg'),
+          require('@/static/carousel/2.jpg'),
+          require('@/static/carousel/piazzamaggiore02.jpg'),
         ],
         visibleSlide :0,
     }
