@@ -71,18 +71,18 @@ export default {
 
 }
 .section-chi-siamo{
-  font-family: 'Josefin Sans';
+  font-family: 'Inria Sans';
   font-style: normal;
-  font-weight: 200;
+
   font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;
 }
 
 .section-la-nostra-missione{
-  font-family: 'Josefin Sans';
+  font-family: 'Inria Sans';
   font-style: normal;
-  font-weight: 200;
+
   font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;

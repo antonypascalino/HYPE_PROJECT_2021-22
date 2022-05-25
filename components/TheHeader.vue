@@ -68,7 +68,7 @@ export default {
       menuOptions: [
         {
           name: 'PUNTI DI INTERESSE',
-          path: '/puntidiinteresse/',
+          path: '/App/',
         },
         {
           name: 'SERVIZI',
@@ -148,7 +148,7 @@ nav {
 .dropdown-list {
   display: block;
   width: 100vw;
-  height: 30vh;
+  height: 310px;
   background: rgb(255, 255, 255);
 }
 .dropdown-list .mdi {
@@ -157,15 +157,14 @@ nav {
   margin-left: 0px;
 }
 .mdi-menu{
-  padding-top: 16px;
+  padding-top: 25px;
 }
 .mdi-close-box{
-  padding-top: 16px;
+  padding-top: 25px;
 }
 .dropdown-list .menu-item {
   text-align: center;
-  margin-top: 10px;
-
+  margin-top: 25px;
 }
 .mobile-nav{
   margin-top: -2px;

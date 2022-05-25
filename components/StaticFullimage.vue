@@ -1,11 +1,16 @@
 
 <template>
   <div class="slider-container">
-    <img class="image-container" src="/Bologna_Homepage_1.jpg">
+    <img class="image-container" :src="slide">
   </div>
 </template>
-<script>
 
+<script>
+export default {
+  props:{
+    slide:{type:String, required:true}
+  }
+}
 </script>
 
 <style scoped>

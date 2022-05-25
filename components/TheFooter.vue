@@ -113,7 +113,7 @@ footer{
 
 img{
   float:inherit;
-  width:150px;
+  width:130px;
 }
 /* Color of social icons on mouse */
 .mdi-facebook{
