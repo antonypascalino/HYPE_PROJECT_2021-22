@@ -148,7 +148,7 @@ nav {
 .dropdown-list {
   display: block;
   width: 100vw;
-  height: 25vh;
+  height: 30vh;
   background: rgb(255, 255, 255);
 }
 .dropdown-list .mdi {
