@@ -3,7 +3,7 @@
     <TheHeader/>
     <div class="carouselDiv">
       <div class="indicatorList">
-        <ul>
+        <ul style="list-style-type: none">
           <carousel-indicator
             v-for = "slide in slides"
             :key = "slide.id"
@@ -131,7 +131,19 @@ export default {
     overflow: hidden;
     float: right;
     margin-top: 6%;
+    margin-right: 2%;
   }
+
+  .carousel-indicator {
+    position: relative;
+    color: black;
+  }
+
+  .carousel-indicator:hover {
+    color: #C13939;
+  }
+
+
 
 
 </style>

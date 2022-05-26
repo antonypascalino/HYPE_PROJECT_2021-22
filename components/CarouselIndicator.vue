@@ -1,5 +1,8 @@
 <template>
+  <div>
+    {{ title }}
     <button @click="change" class = "carousel-indicator"></button>
+  </div>
 </template>
 
 <script>
@@ -11,6 +14,7 @@ export default {
 
     }
   },
+  props: ['title'],
   methods: {
     change() {
       this.$emit('change')
@@ -24,20 +28,21 @@ export default {
 
 <style>
 
-  .carousel-indicator {
+  button.carousel-indicator {
     position: absolute;
     height: 20px;
     width: 20px;
-    left: 60%;
     background-color: black;
     color: black;
     border-radius: 100%;
     margin-left: 0;
-    padding: 0;
+    rigth:0;
+    text-align: left;
   }
 
-  .carousel-indicator:hover {
+  button.carousel-indicator:hover {
     background-color: #C13939;
+    color: #C13939;
   }
 
 </style>
