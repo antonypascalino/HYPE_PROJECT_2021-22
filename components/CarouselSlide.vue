@@ -9,7 +9,6 @@ export default {
   props: ['visibleSlide','index'],
     data() {
       return {
-
       }
     }
 }

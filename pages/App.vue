@@ -1,7 +1,20 @@
 <template>
   <div class="App">
+    <div class = "Breadcrumb">
+      <Breadcrumb class="row justify-content-left mt-1"
+                  :crumbs="crumbs"
+                  @selected="selected"/>
+    </div>
     <TheHeader/>
     <div class="carouselDiv">
+      <carousel-indicators :total = "slidesLen"
+                           :current-index = "visibleSlide"
+                           @switch = "switchSlide($event)"
+
+
+      >
+
+      </carousel-indicators>
       <carousel
         @next="next"
         @prev="prev"
@@ -24,7 +37,9 @@
 <script>
 import Carousel from "~/components/Carousel";
 import CarouselSlide from "~/components/CarouselSlide";
+import CarouselIndicator from "~/components/CarouselIndicator";
 import TheHeader from "~/components/TheHeader";
+import Breadcrumb from "~/components/Breadcrumb";
 
 export default {
   layout: 'empty',
@@ -37,6 +52,7 @@ export default {
           require('@/static/carousel/piazzamaggiore02.jpg'),
         ],
         visibleSlide :0,
+        crumbs: ['HOME', 'PUNTI DI INTERESSE']
     }
   },
   computed: {
@@ -58,12 +74,23 @@ export default {
       } else {
         this.visibleSlide--;
       }
+    },
+    switchSlide(index){
+      const step = index - this.visibleSlide;
+      if(step > 0){
+        this.next(step);
+      }
+      else{
+        this.prev(step);
+      }
     }
   },
   components : {
     Carousel,
     CarouselSlide,
-    TheHeader
+    CarouselIndicator,
+    TheHeader,
+    Breadcrumb
   }
 }
 </script>
