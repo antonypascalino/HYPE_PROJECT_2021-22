@@ -18,13 +18,13 @@
         @prev="prev"
         class = "carousel"
       >
-        <carousel-slide v-for = "(slide,index) in slides"
+        <carousel-slide v-for = "(slide, index) in slides"
                         :key="slide"
                         :index="index"
                         :visibleSlide = "visibleSlide"
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="slide">
+            <img class= "carouselImg" :src="slide.img">
           </div>
         </carousel-slide>
       </carousel>
@@ -37,6 +37,7 @@ import Carousel from "~/components/Carousel";
 import CarouselSlide from "~/components/CarouselSlide";
 import CarouselIndicator from "~/components/CarouselIndicator";
 import TheHeader from "~/components/TheHeader";
+
 
 export default {
   layout: 'empty',
