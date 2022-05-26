@@ -3,10 +3,15 @@
     <TheHeader/>
     <div class="carouselDiv">
       <div class="indicatorList">
-        <carousel-indicator
-          @change="change"
-          class = "carousel-inidcator"
-        />
+        <ul>
+          <carousel-indicator
+            v-for = "slide in slides"
+            :key = "slide.id"
+            :title = "slide.title"
+            @change = "change(slide.id)"
+            class = "carousel-indicator"
+          />
+        </ul>
       </div>
       <carousel
         @next="next"
@@ -30,6 +35,7 @@
 <script>
 import Carousel from "~/components/Carousel";
 import CarouselSlide from "~/components/CarouselSlide";
+import CarouselIndicator from "~/components/CarouselIndicator";
 import TheHeader from "~/components/TheHeader";
 
 export default {
@@ -38,11 +44,11 @@ export default {
   data() {
     return {
         slides: [
-          require('@/static/carousel/piazzamaggiore01.jpg'),
-          require('@/static/carousel/2.jpg'),
-          require('@/static/carousel/piazzamaggiore02.jpg'),
+          {img: require('@/static/carousel/piazzamaggiore01.jpg'), id: 0, title: "Piazza Maggiore"},
+          {img: require('@/static/carousel/2.jpg'), id: 1, title: "Nettuno"},
+          {img: require('@/static/carousel/piazzamaggiore02.jpg'), id: 2, title: "Altro"}
         ],
-        visibleSlide :0,
+        visibleSlide : 0,
     }
   },
   computed: {
@@ -65,14 +71,15 @@ export default {
         this.visibleSlide--;
       }
     },
-    change() {
-      this.visibleSlide = 2;
+    change(index) {
+      this.visibleSlide = index;
     }
   },
   components : {
     Carousel,
     CarouselSlide,
-    TheHeader
+    TheHeader,
+    CarouselIndicator
   }
 }
 </script>
