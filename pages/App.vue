@@ -2,6 +2,12 @@
   <div class="App">
     <TheHeader/>
     <div class="carouselDiv">
+      <div class="indicatorList">
+        <carousel-indicator
+          @change="change"
+          class = "carousel-inidcator"
+        />
+      </div>
       <carousel
         @next="next"
         @prev="prev"
@@ -58,6 +64,9 @@ export default {
       } else {
         this.visibleSlide--;
       }
+    },
+    change() {
+      this.visibleSlide = 2;
     }
   },
   components : {
@@ -74,6 +83,8 @@ export default {
     padding-top: 5%;
     padding-bottom: 3%;
     padding-left: 4%;
+    border: 2px solid blue;
+
   }
 
   carousel-slide {
@@ -103,5 +114,16 @@ export default {
   .App {
     background-color: #EBEBEB;
   }
+
+  .indicatorList {
+    height: 600px;
+    width: 200px;
+    border: 2px solid blue;
+    position: relative;
+    overflow: hidden;
+    float: right;
+    margin-top: 6%;
+  }
+
 
 </style>
