@@ -84,8 +84,12 @@ export default {
           path: '/itinerari/',
         },
         {
-          name: 'ABOUT',
-          path: '/about/',
+          name: 'CONTATTACI',
+          path: '/contattaci/',
+        },
+        {
+          name: 'BOLOGNA IN BREVE',
+          path: '/bolognainbreve/',
         },
       ],
       /** Expansion status of the mobile navbar menu */
@@ -117,8 +121,9 @@ export default {
   text-decoration: none;
   color:inherit;
   text-align: center;
-  font-size: 15px;
-  padding-bottom:9px
+  font-size: 13px;
+  padding-bottom:9px;
+
 }
 
 /* Main header containers */
@@ -148,7 +153,7 @@ nav {
 .dropdown-list {
   display: block;
   width: 100vw;
-  height: 310px;
+  height: 350px;
   background: rgb(255, 255, 255);
 }
 .dropdown-list .mdi {
@@ -158,9 +163,11 @@ nav {
 }
 .mdi-menu{
   padding-top: 25px;
+  cursor: pointer;
 }
 .mdi-close-box{
   padding-top: 25px;
+  cursor: pointer;
 }
 .dropdown-list .menu-item {
   text-align: center;
@@ -182,7 +189,7 @@ img {
   margin-left:100px;
 }
 /* Mobile navbar if viewport <=825 px */
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1270px) {
   .desktop-nav {
     display: none;
   }
@@ -191,10 +198,11 @@ img {
   }
   .menu-item:hover {
     color: #C13939;
+    cursor: pointer;
   }
 }
 /* Desktop navbar if viewport >=826 px */
-@media screen and (min-width: 1071px) {
+@media screen and (min-width: 1271px) {
   .mobile-nav {
     display: none;
   }
@@ -223,6 +231,7 @@ img {
   .menu-item:hover {
     color: #C13939;
     -webkit-text-decoration-color: #C13939;
+    cursor: pointer;
   }
 }
 </style>

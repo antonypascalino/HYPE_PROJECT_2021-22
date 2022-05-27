@@ -20,9 +20,6 @@
 </script>
 
 <style scoped>
-.page-container{
-  margin-top: 45px; /*allow partially overlap between header and the photo */
-}
 
 .section-container{
   font-family: 'Josefin Sans';
