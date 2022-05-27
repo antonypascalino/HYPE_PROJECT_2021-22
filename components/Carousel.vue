@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel">
+  <div class= "carousel">
     <slot> </slot>
     <button @click="next" class = "next">Next</button>
     <button @click="prev" class = "prev">Prev</button>
@@ -31,7 +31,13 @@ export default {
     overflow: hidden;
     /*border: 2px solid black;*/
   }
-  button {
+
+  button:focus, button:hover {
+    outline: none;
+    cursor: pointer;
+  }
+  .next {
+    bottom: 0;
     position: absolute;
     height: 40px;
     width: 50px;
@@ -40,14 +46,15 @@ export default {
     border: none;
     color: white;
   }
-  button:focus, button:hover {
-    outline: none;
-    cursor: pointer;
-  }
-  .next {
-    bottom: 0;
-  }
   .prev {
     top: 0;
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    left: calc(50% - 25px);
+    background-color: #C13939;
+    border: none;
+    color: white;
   }
+
 </style>

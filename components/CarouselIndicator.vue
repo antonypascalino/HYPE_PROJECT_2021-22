@@ -1,7 +1,10 @@
 <template>
-
     <button @click="change" class = "carousel-indicator">
       {{ title }}
+      <i class = "icon">
+        <i class = "dot mdi mdi-moon-full">
+        </i>
+      </i>
     </button>
 </template>
 
@@ -14,7 +17,7 @@ export default {
 
     }
   },
-  props: ['title'],
+  props: ['title', 'selected', 'index'],
   methods: {
     change() {
       this.$emit('change')
@@ -31,16 +34,34 @@ export default {
   button.carousel-indicator {
     height: 40px;
     width: 150px;
-    border: 2px solid black;
     background-color: transparent;
     color: black;
+    margin: 2px;
     font-size: 10px;
+    font-family: "Josefin Sans";
   }
 
   button.carousel-indicator:hover {
-    border: 2px solid #C13939;
     color: #C13939;
   }
+
+  .icon{
+    float: right;
+    color: black;
+  }
+
+  .icon :hover{
+    color: #c13939;
+  }
+
+  button.carousel-indicator:active {
+    color: #C13939;
+  }
+
+
+
+
+
 
 
 
