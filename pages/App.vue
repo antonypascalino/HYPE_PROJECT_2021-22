@@ -25,6 +25,7 @@
         >
           <div class="imageContainer">
             <img class= "carouselImg" :src="slide.img">
+            <div class="textContainer">{{slide.title}}</div>
           </div>
         </carousel-slide>
       </carousel>
@@ -46,7 +47,7 @@ export default {
     return {
         slides: [
           {img: require('@/static/carousel/piazzamaggiore01.jpg'), id: 0, title: "Piazza Maggiore"},
-          {img: require('@/static/carousel/2.jpg'), id: 1, title: "Nettuno"},
+          {img: require('@/static/carousel/2.jpg'), id: 1, title: "Fontana del Nettuno"},
           {img: require('@/static/carousel/piazzamaggiore02.jpg'), id: 2, title: "Altro"}
         ],
         visibleSlide : 0,
@@ -109,12 +110,32 @@ export default {
     align-items: center;
   }
 
+  .imageContainer:hover {
+    -webkit-filter: blur(4px);
+    cursor: pointer;
+    transition: 200ms;
+  }
+
   .carouselImg {
      aspect-ratio: auto;
      margin-left: 0;
      flex-shrink: 0;
      min-width: 100%;
      min-height: 100%
+  }
+
+  div.textContainer{
+    color: white ;
+    font-size: 80px;
+    line-height: normal;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    float: left;
+    position: absolute;
+    bottom: 28px;
+    width: 800px;
+    left: 0;
+    margin-bottom: 2.5%;
   }
 
   .App {
