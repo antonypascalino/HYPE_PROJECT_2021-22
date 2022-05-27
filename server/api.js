@@ -18,8 +18,7 @@ const database =new Sequelize(process.env.DATABASE_URL,{
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
     await database.authenticate()
-    const pointOfInterest = database.define("pointOfInterest", {
-        POI_ID: DataTypes.INTEGER,
+    const PointOfInterest = database.define("pointofinterest", {
         name: DataTypes.STRING,
         description: DataTypes.STRING,
         img: DataTypes.ARRAY(DataTypes.STRING),
@@ -27,7 +26,7 @@ async function initializeDatabaseConnection() {
     })
     await database.sync({ force: true })
     return {
-        pointOfInterest
+      PointOfInterest,
     }
 }
 
@@ -41,16 +40,13 @@ async function runMainApi() {
     await initialize(models)
 
     // HTTP GET api that returns all the cats in our fake database
-    app.get("/pointsOfInterest", async (req, res) => {
-        const result = await models.pointOfInterest.findAll()
+    app.get("/pointsofinterest", async (req, res) => {
+        const result = await models.PointOfInterest.findAll()
         const filtered = []
         for (const element of result) {
             filtered.push({
-                POI_ID: element.POI_ID,
-                name: element.name,
-                description: element.description,
-                img: element.img,
-                visitInfo: element.visitInfo,
+              title:element.title,
+              img: element.img,
             })
         }
         return res.json(filtered)
