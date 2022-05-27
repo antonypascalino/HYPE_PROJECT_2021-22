@@ -3,14 +3,14 @@
     <TheHeader/>
     <div class="carouselDiv">
       <div class="indicatorList">
-        <ul style="list-style-type: none">
+        <ul class = "list">
           <carousel-indicator
             v-for = "slide in slides"
             :key = "slide.id"
             :title = "slide.title"
             @change = "change(slide.id)"
             class = "carousel-indicator"
-          />
+          ></carousel-indicator>
         </ul>
       </div>
       <carousel
@@ -91,8 +91,6 @@ export default {
     padding-top: 5%;
     padding-bottom: 3%;
     padding-left: 4%;
-    border: 2px solid blue;
-
   }
 
   carousel-slide {
@@ -123,15 +121,16 @@ export default {
     background-color: #EBEBEB;
   }
 
-  .indicatorList {
+  div.indicatorList {
     height: 600px;
     width: 200px;
     border: 2px solid blue;
     position: relative;
-    overflow: hidden;
     float: right;
     margin-top: 6%;
     margin-right: 2%;
+    padding: 0;
+    font-size: 20px;
   }
 
   .carousel-indicator {
@@ -142,6 +141,12 @@ export default {
   .carousel-indicator:hover {
     color: #C13939;
   }
+
+  ul.list {
+    width: 200px;
+    padding-left: 0;
+  }
+
 
 
 
