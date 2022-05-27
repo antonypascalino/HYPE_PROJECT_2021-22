@@ -121,6 +121,7 @@ export default {
   padding-bottom:9px
 }
 
+
 /* Main header containers */
 .header-content {
   height: inherit;

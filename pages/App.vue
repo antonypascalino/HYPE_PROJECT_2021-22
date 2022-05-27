@@ -3,15 +3,15 @@
     <TheHeader/>
     <div class="carouselDiv">
       <div class="indicatorList">
-        <ul class = "list">
-          <carousel-indicator
+        <div class = "list">
+        <carousel-indicator
             v-for = "slide in slides"
             :key = "slide.id"
             :title = "slide.title"
             @change = "change(slide.id)"
             class = "carousel-indicator"
           ></carousel-indicator>
-        </ul>
+        </div>
       </div>
       <carousel
         @next="next"

@@ -1,9 +1,8 @@
 <template>
-  <menu class = "indicatorMenu">
+
     <button @click="change" class = "carousel-indicator">
       {{ title }}
     </button>
-  </menu>
 </template>
 
 <script>
@@ -30,16 +29,12 @@ export default {
 <style>
 
   button.carousel-indicator {
-    position: relative;
     height: 40px;
     width: 150px;
     border: 2px solid black;
     background-color: transparent;
     color: black;
     font-size: 10px;
-    padding: 0;
-    margin-right: 400px;
-    text-align: right;
   }
 
   button.carousel-indicator:hover {
@@ -47,12 +42,6 @@ export default {
     color: #C13939;
   }
 
-  carousel-indicator * {
 
-  }
-
-  menu.indicatorMenu.carousel-indicator {
-    padding-left: 0;
-  }
 
 </style>
