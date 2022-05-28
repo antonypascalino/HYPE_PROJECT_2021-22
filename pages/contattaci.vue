@@ -26,7 +26,7 @@
             <a href="fax:+393347711504">+39 011 7234011</a>
           </div>
           <div class="mail">
-            <span class="mdi mdi-email"></span> Mail:
+            <span class="mdi mdi-email"></span>
             <a href="insideBO@gmail.com">insideBO@gmail.com</a>
           </div>
         </map-view>
