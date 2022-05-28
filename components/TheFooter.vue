@@ -27,7 +27,7 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4"></h6>
             <p>
-               <a href="/contatti" class="text">> Contattaci</a>
+               <a href="/contattaci" class="text">> Contattaci</a>
             </p>
             <p>
               <a href="/bolognainbreve" class="text">> Bologna in Breve</a>
