@@ -56,13 +56,25 @@ export default {
   data() {
     return {
       crumbs: ['HOME', 'CONTATTACI'],
-    };
+      methods: {
+        selected(crumb) {
+          console.log(crumb);
+        },
+      },
+    }
   },
-  methods: {
-    selected(crumb) {
-      console.log(crumb);
-    },
-  },
+  head(){
+    return{
+      title: 'insideBO|contattaci',
+      meta:[
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        }
+      ]
+    }
+  }
 }
 </script>
 <style scoped>
