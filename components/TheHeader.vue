@@ -8,7 +8,7 @@
 
       <!-- Company Logo -->
       <nuxt-link to="/" class="logo">
-        <img src="~/static/logo_rosso.png" alt="insideBO" />
+        <img class="responsive center" src="~/static/logo_rosso.png" alt="insideBO" />
       </nuxt-link>
 
       <!-- Desktop Navbar -->
@@ -115,6 +115,7 @@ export default {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   z-index: 90;
+  text-align: center;
 }
 /*Color of the text inside the menu and elimination of the underline*/
 .header *{
@@ -188,20 +189,37 @@ img {
   margin-top: 6px;
   margin-left:100px;
 }
-/* Mobile navbar if viewport <=825 px */
+/* Mobile navbar if viewport <=1270 px */
 @media screen and (max-width: 1270px) {
   .desktop-nav {
     display: none;
   }
   img{
-    margin-left: 36%;
+    max-width: 100%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+    margin-top: 5px;
   }
+
+  .responsive{
+    max-width:100%;
+    max-height:100%;
+  }
+
+  .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .menu-item:hover {
     color: #C13939;
     cursor: pointer;
   }
 }
-/* Desktop navbar if viewport >=826 px */
+/* Desktop navbar if viewport >=1271 px */
 @media screen and (min-width: 1271px) {
   .mobile-nav {
     display: none;
