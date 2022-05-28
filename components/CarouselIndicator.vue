@@ -1,10 +1,8 @@
 <template>
-    <button @click="change" class = "carousel-indicator">
-      {{ title }}
-      <i class = "icon">
-        <i class = "dot mdi mdi-moon-full">
-        </i>
-      </i>
+    <button @click="change"
+            class = "carousel-indicator">
+      {{ title + ' ' }}
+        <i class = "dot mdi mdi-moon-new"/>
     </button>
 </template>
 
@@ -31,37 +29,27 @@ export default {
 
 <style>
 
+  .carousel-indicator * {
+    float: right;
+  }
+
   button.carousel-indicator {
     height: 40px;
-    width: 150px;
+
     background-color: transparent;
     color: black;
-    margin: 2px;
-    font-size: 10px;
+    font-size: 16px;
     font-family: "Josefin Sans";
-  }
-
-  button.carousel-indicator:hover {
-    color: #C13939;
-  }
-
-  .icon{
     float: right;
-    color: black;
+    margin-right: 0;
+    text-align: right;
+    border: none;
   }
 
-  .icon :hover{
-    color: #c13939;
+  /*Per distanziare i pallini dal nome*/
+  i.mdi.mdi-moon-new {
+    margin-left: 3px;
   }
-
-  button.carousel-indicator:active {
-    color: #C13939;
-  }
-
-
-
-
-
 
 
 

@@ -108,9 +108,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .imageContainer:hover {
+  .carouselImg:hover {
     -webkit-filter: blur(4px);
     cursor: pointer;
     transition: 200ms;
@@ -145,7 +146,6 @@ export default {
   div.indicatorList {
     height: 600px;
     width: 200px;
-    border: 2px solid blue;
     position: relative;
     float: right;
     margin-top: 6%;
