@@ -8,6 +8,7 @@
     </section>
     <div class="body-container">
 
+      <StaticHalfImage slide="/Bologna_Homepage_1.jpg" />
         <p>Capoluogo della Città metropolitana e della regione Emilia Romagna, Bologna è situata tra le montagne dell'Appennino tosco-emiliano ed il cuore della Pianura Padana. Punto d’incontro tra nord e sud, tra est e ovest, da Bologna si raggiungono facilmente la Riviera Adriatica nonché Venezia, Firenze, Milano e Roma.
         </p>
 
