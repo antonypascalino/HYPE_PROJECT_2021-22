@@ -27,9 +27,6 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4"></h6>
             <p>
-              <a href="/about" class="text">> Chi siamo </a>
-            </p>
-            <p>
                <a href="/contatti" class="text">> Contattaci</a>
             </p>
             <p>
