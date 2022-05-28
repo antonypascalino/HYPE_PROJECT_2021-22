@@ -61,6 +61,19 @@ export default {
       console.log(crumb);
     },
   },
+
+  head(){
+    return{
+      title: 'insideBO | Privacy',
+      meta:[
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        }
+      ]
+    }
+  }
 }
 </script>
 <style scoped>

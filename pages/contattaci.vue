@@ -65,7 +65,7 @@ export default {
   },
   head(){
     return{
-      title: 'insideBO|contattaci',
+      title: 'insideBO | Contattaci',
       meta:[
         {
           hid: 'description',

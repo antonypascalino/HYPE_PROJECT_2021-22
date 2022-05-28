@@ -2,15 +2,15 @@
 
 <template>
   <main class="page-container">
-
+    <div class="body-container">
     <section class="breadcrumb-section">
       <Breadcrumb :crumbs="crumbs" @selected="selected"/>
     </section>
-    <div class="body-container">
-
-      <StaticHalfImage slide="/Bologna_Homepage_1.jpg" />
+    <section> <StaticHalfImage slide="/Bologna_finestra.jpg" title="BOLOGNA" /></section>
+      <section class="section-la-nostra-missione">
         <p>Capoluogo della Città metropolitana e della regione Emilia Romagna, Bologna è situata tra le montagne dell'Appennino tosco-emiliano ed il cuore della Pianura Padana. Punto d’incontro tra nord e sud, tra est e ovest, da Bologna si raggiungono facilmente la Riviera Adriatica nonché Venezia, Firenze, Milano e Roma.
         </p>
+      </section>
 
       <section class="section-la-nostra-missione">
         <div class="title-container">Perchè visitarla</div>
@@ -39,12 +39,13 @@
 
 <script>
 import Breadcrumb from '~/components/Breadcrumb.vue';
+import StaticHalfImage from "~/components/StaticHalfImage";
 
 export default {
   layout: 'default',
   components: {
     Breadcrumb,
-
+    StaticHalfImage
   },
 
   data() {
@@ -57,6 +58,18 @@ export default {
       console.log(crumb);
     },
   },
+  head(){
+    return{
+      title: 'insideBO | Bologna in Breve',
+      meta:[
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        }
+      ]
+    }
+  }
 }
 </script>
 <style scoped>
@@ -92,7 +105,6 @@ export default {
 .section-la-nostra-missione{
   font-family: 'Inria Sans';
   font-style: normal;
-
   font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;

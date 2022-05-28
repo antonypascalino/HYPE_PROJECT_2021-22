@@ -46,6 +46,18 @@ export default {
       console.log(crumb);
     },
   },
+  head(){
+    return{
+      title: 'insideBO | Area Legale',
+      meta:[
+        {
+          hid: 'description',
+          name: 'description',
+          content: '',
+        }
+      ]
+    }
+  }
 }
 </script>
 <style scoped>
