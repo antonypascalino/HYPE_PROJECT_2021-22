@@ -1,7 +1,7 @@
 
 <template>
   <div class="slider-container">
-    <img class="image-container" :src="slide">
+    <img class="image-container" :src="slide" alt="image-Hoemapge">
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 
 <template>
   <div class="slider-container">
-    <img class="image-container" :src="slide">
+    <img class="image-container" :src="slide" alt="image-header">
     <div class="text-block">
       <h2>{{title}}</h2>
     </div>
