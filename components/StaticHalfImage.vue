@@ -3,7 +3,7 @@
   <div class="slider-container">
     <img class="image-container" :src="slide">
     <div class="text-block">
-      <h4>{{title}}</h4>
+      <h2>{{title}}</h2>
     </div>
   </div>
 </template>
@@ -28,16 +28,11 @@ export default {
   margin-left: 0;
   padding-left: 0;
   margin-top:-20px;
-  position:relative;
 }
 
 .text-block {
-  bottom: 20px;
-  right: 20px;
-  background-color: #c13939;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: #ffffff;
+  color: #c13939;
   z-index: 90;
   text-align: center;
 }
