@@ -35,7 +35,6 @@ export default {
 
   button.carousel-indicator {
     height: 40px;
-
     background-color: transparent;
     color: black;
     font-size: 16px;
