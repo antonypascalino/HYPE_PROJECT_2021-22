@@ -1,6 +1,9 @@
 <template>
   <div class="App">
     <TheHeader/>
+    <section class="breadcrumb-section">
+      <Breadcrumb   :crumbs="crumbs" @selected="selected"/>
+    </section>
     <div class="carouselDiv">
       <div class="indicatorList">
         <div class = "list">
@@ -38,6 +41,7 @@ import Carousel from "~/components/Carousel";
 import CarouselSlide from "~/components/CarouselSlide";
 import CarouselIndicator from "~/components/CarouselIndicator";
 import TheHeader from "~/components/TheHeader";
+import Breadcrumb from "~/components/Breadcrumb";
 
 
 export default {
@@ -51,6 +55,8 @@ export default {
           {img: require('@/static/carousel/piazzamaggiore02.jpg'), id: 2, title: "Altro"}
         ],
         visibleSlide : 0,
+
+        crumbs: ['HOME','PUNTI DI INTERESSE'],
     }
   },
   computed: {
@@ -75,15 +81,21 @@ export default {
     },
     change(index) {
       this.visibleSlide = index;
-    }
+    },
+
+    selected(crumb) {
+      console.log(crumb);
+    },
   },
   components : {
     Carousel,
     CarouselSlide,
     TheHeader,
-    CarouselIndicator
+    CarouselIndicator,
+    Breadcrumb,
   }
 }
+
 </script>
 
 <style>

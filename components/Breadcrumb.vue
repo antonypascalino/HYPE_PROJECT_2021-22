@@ -6,6 +6,7 @@
         :key="ci"
         class="breadcrumb-item align-items-center"
       >
+        <span class = "mdi mdi-menu-right"></span>
         <button class="btn" :class="{ disabled: isLast(ci) }" @click="selected(crumb)">
           {{ crumb }}
         </button>
@@ -42,21 +43,38 @@ export default {
 
 <style scoped>
   .breadcrumb {
-    background-color: white;
-    margin-bottom: 20px;
+    background-color: transparent;
     font-family: "Josefin Sans";
+    font-weight: bolder;
     font-size: 25px;
-    display: compact;
     width: 100%;
+    vertical-align: center;
+    margin-bottom: 0;
   }
   .nav-container{
-    float:left;
+    float: left;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 60px;
+    height: 38px;
+    margin-bottom: 0;
   }
 
   .breadcrumb-item+.breadcrumb-item::before {
-    content:"/";
+    font-weight: bolder;
+    content:"";
     color: #C13939;
   }
+
+  .mdi.mdi-menu-right {
+    color: #C13939;
+    font-size: 32px;
+    line-height: 38px;
+    vertical-align: bottom;
+  }
+
+  .btn {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 </style>
