@@ -43,16 +43,19 @@ export default {
 <style scoped>
   .breadcrumb {
     background-color: transparent;
-    margin-bottom: 20px;
     font-family: "Josefin Sans";
+    font-weight: bolder;
     font-size: 25px;
-    display: compact;
     width: 100%;
+    vertical-align: center;
+    margin-bottom: 0;
   }
   .nav-container{
-    float:left;
+    float: left;
     width: 100%;
     margin-top: 60px;
+    height: 38px;
+    margin-bottom: 0;
   }
 
   .breadcrumb-item+.breadcrumb-item::before {

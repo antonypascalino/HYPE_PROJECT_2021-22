@@ -127,6 +127,7 @@ export default {
 
 }
 
+
 /* Main header containers */
 .header-content {
   height: inherit;
