@@ -65,6 +65,7 @@ export default {
   }
 
   .btn-container{
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     position: absolute;
     height: 50px;
     width: 80px;
