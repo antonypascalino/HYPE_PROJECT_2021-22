@@ -27,13 +27,12 @@ export default {
   width: 100%;
   margin-left: 0;
   padding-left: 0;
-  margin-top:-20px;
+  margin-top: 0px;
 }
 
 .text-block {
   background-color: #ffffff;
   color: #c13939;
-  z-index: 90;
   text-align: center;
 }
 

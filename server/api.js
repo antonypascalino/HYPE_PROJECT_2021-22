@@ -51,10 +51,8 @@ async function runMainApi() {
         }
         return res.json(filtered)
     })
-
 }
 
 runMainApi()
-
 
 export default app

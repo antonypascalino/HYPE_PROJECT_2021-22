@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
   .breadcrumb {
-    background-color: transparent;
+    background-color:#F2F2F2  ;
     font-family: "Josefin Sans";
     font-weight: bolder;
     font-size: 25px;
@@ -53,7 +53,7 @@ export default {
   .nav-container{
     float: left;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 55px;
     height: 38px;
     margin-bottom: 0;
   }

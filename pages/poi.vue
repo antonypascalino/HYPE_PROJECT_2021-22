@@ -2,7 +2,7 @@
   <div class="App">
     <TheHeader/>
     <section class="breadcrumb-section">
-      <Breadcrumb   :crumbs="crumbs" @selected="selected"/>
+      <Breadcrumb :crumbs="crumbs" @selected="selected"/>
     </section>
     <div class="carouselDiv">
       <div class="indicatorList">
@@ -49,16 +49,21 @@ export default {
 
   data() {
     return {
-        slides: [
-          {img: require('@/static/carousel/piazzamaggiore01.jpg'), id: 0, title: "Piazza Maggiore"},
-          {img: require('@/static/carousel/2.jpg'), id: 1, title: "Fontana del Nettuno"},
-          {img: require('@/static/carousel/piazzamaggiore02.jpg'), id: 2, title: "Altro"}
-        ],
+        slides: [],
         visibleSlide : 0,
 
         crumbs: ['HOME','PUNTI DI INTERESSE'],
     }
   },
+
+  async asyncData({ $axios }) {
+    // const { data } = await $axios.get('http://localhost:3000/api/cats')
+    const { data } = await $axios.get('/api/pointsofinterest')
+    return {
+      slides: data,
+    }
+  },
+
   computed: {
     slidesLen() {
       return this.slides.length;
