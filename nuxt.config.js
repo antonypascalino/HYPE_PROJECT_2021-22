@@ -15,11 +15,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'insideBO è il sito informativo riguardo la splendida città di Bologna' +
-          '' },
+      { hid: 'description', name: 'description', content: 'insideBO è il sito informativo riguardo la splendida città di Bologna'},
       { name: 'format-detection', content: 'telephone=no' },
       { name:"msapplication-TileColor" , content:"#da532c"},
-      {name:"theme-color", content:"#ffffff"},
+      { name:"theme-color", content:"#ffffff"},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'Favicon/favicon.ico' },

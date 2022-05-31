@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
   .breadcrumb {
-    background-color: white;
+    background-color: transparent;
     margin-bottom: 20px;
     font-family: "Josefin Sans";
     font-size: 25px;
@@ -52,7 +52,7 @@ export default {
   .nav-container{
     float:left;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 60px;
   }
 
   .breadcrumb-item+.breadcrumb-item::before {

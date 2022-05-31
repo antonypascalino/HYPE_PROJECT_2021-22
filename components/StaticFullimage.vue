@@ -1,7 +1,10 @@
-
+<!--
+  Component: StaticFullimage
+  Description: It's the component for the display of a full page image
+-->
 <template>
   <div class="slider-container">
-    <img class="image-container" :src="slide" alt="image-Hoemapge">
+    <img class="image-container" :src="slide" alt="image-Homepage">
   </div>
 </template>
 
@@ -28,27 +31,4 @@ export default {
   padding-left: 0;
   margin-top:50px;
 }
-
-.top-left1{
-  position: absolute;
-  top: 130px;
-  left: 100px;
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  color: #000000;
-}
-.top-left2{
-  position: absolute;
-  left: 122px;
-  top: 165px;
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 50px;
-  color: #C13939;
-}
-
-
 </style>
