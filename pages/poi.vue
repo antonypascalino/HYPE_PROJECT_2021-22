@@ -58,7 +58,7 @@ export default {
 
   async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/cats')
-    const { data } = await $axios.get('/api/pointsofinterest')
+    const { data } = await $axios.get('http://localhost:3000/api/pointsofinterest')
     return {
       slides: data,
     }
