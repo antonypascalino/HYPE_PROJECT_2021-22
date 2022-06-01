@@ -15,14 +15,14 @@ export default async (models) => {
   const location1 = await models.Location.create(locationList[1])
   const catList = [
     {
-      name: "Cat 1",
+      name: "Piazza Maggiore",
       breed: "Siberian",
       description: "Details about cat 1",
-      img: "https://fs.i3lab.group/hypermedia/cats/siberian.jpg",
+      img: "https://fs.i3lab.group/hypermedia/cats/birman.jpg",
       locationId: location0.id
     },
     {
-      name: "Cat 2",
+      name: "Fontana del nettuno",
       breed: "Birman",
       description: "Details about cat 2",
       img: "https://fs.i3lab.group/hypermedia/cats/birman.jpg",

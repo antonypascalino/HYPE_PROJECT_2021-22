@@ -8,10 +8,10 @@
       <div class="indicatorList">
         <div class = "list">
         <carousel-indicator
-            v-for = "slide in slides"
-            :key = "slide.id"
-            :title = "slide.title"
-            @change = "change(slide.id)"
+            v-for = "cat in catList"
+            :key = "cat.id"
+            :title = "cat.name"
+            @change = "change(cat.id)"
             class = "carousel-indicator"
           ></carousel-indicator>
         </div>
@@ -21,14 +21,14 @@
         @prev="prev"
         class = "carousel"
       >
-        <carousel-slide v-for = "(slide, index) in slides"
-                        :key="slide"
+        <carousel-slide v-for = "(cat, index) in catList"
+                        :key="cat"
                         :index="index"
                         :visibleSlide = "visibleSlide"
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="slide.img">
-            <div class="textContainer">{{slide.title}}</div>
+            <img class= "carouselImg" :src=cat.img>
+            <div class="textContainer">{{cat.name}}</div>
           </div>
         </carousel-slide>
       </carousel>
@@ -49,7 +49,7 @@ export default {
 
   data() {
     return {
-        slides: [],
+        catList:[],
         visibleSlide : 0,
 
         crumbs: ['HOME','PUNTI DI INTERESSE'],
@@ -58,9 +58,9 @@ export default {
 
   async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/cats')
-    const { data } = await $axios.get('http://localhost:3000/api/pointsofinterest')
+    const { data } = await $axios.get('http://localhost:3000/api/cats')
     return {
-      slides: data,
+      catList: data,
     }
   },
 
