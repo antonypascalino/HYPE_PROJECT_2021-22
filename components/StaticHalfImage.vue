@@ -35,5 +35,7 @@ export default {
   color: #c13939;
   text-align: center;
 }
-
+h2{
+  font-family: "Josefin Sans";
+}
 </style>

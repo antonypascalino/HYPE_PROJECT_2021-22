@@ -10,7 +10,7 @@
     <div class="body-container">
       <section class="section-chi-siamo">
         <div class="title-container">La nostra Sede e contatti</div>
-        <map-view>
+        <Map>
           <p>
             <span class="mdi mdi-map-marker"></span> Via Mecenate 12, Bologna
 
@@ -29,7 +29,7 @@
             <span class="mdi mdi-email"></span>
             <a href="insideBO@gmail.com">insideBO@gmail.com</a>
           </div>
-        </map-view>
+        </Map>
       </section>
 
       <section class="section-la-nostra-missione">
@@ -45,12 +45,12 @@
 
 <script>
 import Breadcrumb from '~/components/Breadcrumb.vue'
-import MapView from '~/components/MapView.vue'
+import Map from '~/components/Map.vue'
 export default {
   layout: 'default',
   components: {
     Breadcrumb,
-    MapView
+    Map
   },
 
   data() {

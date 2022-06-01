@@ -72,7 +72,7 @@ export default {
         },
         {
           name: 'SERVIZI',
-          path: '/servizi',
+          path: '/list',
         },
         {
           name: 'EVENTI',
