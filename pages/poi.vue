@@ -8,10 +8,10 @@
       <div class="indicatorList">
         <div class = "list">
         <carousel-indicator
-            v-for = "cat in catList"
-            :key = "cat.id"
-            :title = "cat.name"
-            @change = "change(cat.id)"
+            v-for = "poi in poiList"
+            :key = "poi.id"
+            :title = "poi.name"
+            @change = "change(poi.id)"
             class = "carousel-indicator"
           ></carousel-indicator>
         </div>
@@ -21,14 +21,14 @@
         @prev="prev"
         class = "carousel"
       >
-        <carousel-slide v-for = "(cat, index) in catList"
-                        :key="cat"
+        <carousel-slide v-for = "(poi, index) in poiList"
+                        :key="poi"
                         :index="index"
                         :visibleSlide = "visibleSlide"
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src=cat.img>
-            <div class="textContainer">{{cat.name}}</div>
+            <img class= "carouselImg" :src="poi.img1">
+            <div class="textContainer">{{poi.name}}</div>
           </div>
         </carousel-slide>
       </carousel>
@@ -49,24 +49,23 @@ export default {
 
   data() {
     return {
-        catList:[],
+        poiList:[],
         visibleSlide : 0,
-
         crumbs: ['HOME','PUNTI DI INTERESSE'],
     }
   },
 
   async asyncData({ $axios }) {
-    // const { data } = await $axios.get('http://localhost:3000/api/cats')
-    const { data } = await $axios.get('http://localhost:3000/api/cats')
+    // const { data } = await $axios.get('api/cats')
+    const { data } = await $axios.get('http://localhost:3000/api/pois')
     return {
-      catList: data,
+      poiList: data,
     }
   },
 
   computed: {
     slidesLen() {
-      return this.slides.length;
+      return this.poiList.length;
     }
   },
   methods : {
@@ -85,7 +84,7 @@ export default {
       }
     },
     change(index) {
-      this.visibleSlide = index;
+      this.visibleSlide = index-1;
     },
 
     selected(crumb) {
@@ -184,9 +183,5 @@ export default {
     width: 200px;
     padding-left: 0;
   }
-
-
-
-
 
 </style>

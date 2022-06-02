@@ -3,6 +3,7 @@
             class = "carousel-indicator">
       {{ title + ' ' }}
         <i class = "dot mdi mdi-moon-new"/>
+
     </button>
 </template>
 

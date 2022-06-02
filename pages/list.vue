@@ -35,11 +35,5 @@ export default {
       catList: data,
     }
   },
-
-  // Note: This would happen on frontend (client) side
-  // async mounted() {
-  //   const { data } = await this.$axios.get('/api/cats')
-  //   this.catList = data
-  // },
 }
 </script>
