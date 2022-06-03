@@ -33,7 +33,6 @@ export default {
   layout: 'default',
   components: {
     Breadcrumb,
-
   },
 
   data() {

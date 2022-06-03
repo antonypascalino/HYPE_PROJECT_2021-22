@@ -25,9 +25,10 @@
                         :key="poi"
                         :index="index"
                         :visibleSlide = "visibleSlide"
+                        :id="poi.id"
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="poi.img1">
+            <img class= "carouselImg" :src="'../static/carousel/piazzamaggiore.01'"  :alt="poi.name">
             <div class="textContainer">{{poi.name}}</div>
           </div>
         </carousel-slide>
@@ -66,8 +67,11 @@ export default {
   computed: {
     slidesLen() {
       return this.poiList.length;
-    }
+    },
+
+
   },
+
   methods : {
     next() {
       if(this.visibleSlide >= this.slidesLen - 1 ) {
@@ -138,7 +142,8 @@ export default {
      margin-left: 0;
      flex-shrink: 0;
      min-width: 100%;
-     min-height: 100%
+     min-height: 100%;
+
   }
 
   div.textContainer{
@@ -184,4 +189,9 @@ export default {
     padding-left: 0;
   }
 
+  @media screen and (max-width: 1220px) {
+    .indicatorList{
+      display: none;
+    }
+  }
 </style>

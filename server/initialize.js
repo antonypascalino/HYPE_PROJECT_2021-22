@@ -7,7 +7,7 @@ export default async (models) => {
       name: "Piazza Maggiore",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.",
-      img1:"@/static/carousel/2.jpg"
+      img1: "/piazzamaggiore01.jpg"
     },
     {
       name: "Fontana di Nettuno",
