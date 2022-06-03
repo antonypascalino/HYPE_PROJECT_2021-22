@@ -34,7 +34,7 @@
         ></span>
         <span
           v-else
-          class="mdi mdi-close-box"
+          class="mdi mdi-close"
           title="Chiudi menu"
           @click="changeMobileMenuVisibility"
         ></span>
@@ -156,7 +156,8 @@ nav {
   display: block;
   width: 100vw;
   height: 350px;
-  background: rgb(255, 255, 255);
+  background: rgb(193, 57, 57);
+  color: white;
 }
 .dropdown-list .mdi {
   text-align: center;
@@ -167,7 +168,7 @@ nav {
   padding-top: 25px;
   cursor: pointer;
 }
-.mdi-close-box{
+.mdi-close{
   padding-top: 25px;
   cursor: pointer;
 }
@@ -216,8 +217,9 @@ img {
   }
 
   .menu-item:hover {
-    color: #C13939;
+    color: #000000;
     cursor: pointer;
+    font-weight: bold;
   }
 }
 /* Desktop navbar if viewport >=1271 px */

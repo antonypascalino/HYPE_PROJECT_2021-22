@@ -1,22 +1,29 @@
 <template>
   <main class="page-container">
-  <div class="container my-5">
-    <div
-      class="row p-4 pb-0 pe-lg-0 pt-lg-5 pb-lg-5 pe-lg-5 align-items-center rounded-3 border shadow-lg"
-    >
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-       <h1>{{name}}</h1>
+    <div class="body-container">
+
+      <section class="section-description">
+        <div class="title-container">DESCRIZIONE</div>
         <p>{{description}}</p>
-      </div>
+      </section>
+
+      <section class="section-description">
+        <div class="title-container">GALLERY</div>
+      </section>
+
+      <section class="section-description">
+        <div class="title-container">INFORMAZIONI</div>
+        <p>{{visit_info}}</p>
+      </section>
       <button
         type="button"
         class="btn btn-outline-secondary btn-lg px-4"
         @click="backToList"
       >
+        Back to list
       </button>
 
-    </div>
-  </div>
+      </div>
   </main>
 </template>
 
@@ -58,3 +65,35 @@ export default {
 
 }
 </script>
+<style>
+section-description{
+  font-family: 'Inria Sans';
+  font-style: normal;
+  font-size: 17px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+p{
+  margin-top: 20px;
+}
+.page-container{
+  margin-top: -60px;
+}
+.body-container{
+  margin-top: 110px;
+}
+.title-container{
+  margin-top: 40px;
+  width: 100%;
+  margin-top: 40px;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 50px;
+  display: flex;
+  color: #C13939;
+  background-color: #EBEBEB;
+
+}
+</style>
