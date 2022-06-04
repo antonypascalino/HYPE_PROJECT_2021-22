@@ -1,7 +1,14 @@
 <template>
   <main class="page-container">
+
     <div class="body-container">
       <StaticHalfImage :slide="`../Poi/${img1}`" :title=name />
+
+      <div class="breadcrumb-section">
+        <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+      </div>
+      <br>
+
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
         <p>{{description}}</p>
@@ -9,21 +16,37 @@
 
       <section class="section-description">
         <div class="title-container">GALLERY</div>
+
+        <div class="row mt-3">
+          <card
+            class="col-sm-2 m-2"
+            :img="`../Poi/${img1}`"
+          />
+          <card
+            class="col-sm-2 m-2"
+            :img="`../Poi/${img1}`"
+          />
+          <card
+            class="col-sm-2 m-2"
+            :img="`../Poi/${img1}`"
+          />
+        </div>
       </section>
 
       <section class="section-description">
         <div class="title-container">INFORMAZIONI</div>
         <p>{{visit_info}}</p>
       </section>
+
       <button
         type="button"
-        class="btn btn-outline-secondary btn-lg px-4"
+        class="btn btn-outline-secondary px-4"
         @click="backToList"
       >
-        Back to list
+        Torna indietro
       </button>
-
       </div>
+
   </main>
 </template>
 
@@ -31,12 +54,13 @@
 
 import CommonMixin from '~/mixins/common'
 import staticHalfImage from "~/components/StaticHalfImage";
-
+import Breadcrumb from '~/components/Breadcrumb.vue';
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
     staticHalfImage,
+    Breadcrumb
   },
 
   async asyncData({ route, $axios }) {
@@ -50,10 +74,18 @@ export default {
       description: data.description
     }
   },
+  data() {
+    return {
+      crumbs: ['HOME', 'POIS', ],
+    };
+  },
 
   methods: {
     backToList() {
       this.$router.push('/pois/')
+    },
+    selected(crumb) {
+      console.log(crumb);
     },
   },
   head(){
@@ -99,6 +131,8 @@ p{
   display: flex;
   color: #C13939;
   background-color: #EBEBEB;
-
 }
+
+
+
 </style>

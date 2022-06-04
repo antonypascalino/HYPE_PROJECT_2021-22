@@ -53,7 +53,7 @@ export default {
   .nav-container{
     float: left;
     width: 100%;
-    margin-top: 55px;
+    margin-top: 0;
     height: 38px;
     margin-bottom: 0;
   }
