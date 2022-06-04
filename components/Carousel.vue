@@ -40,7 +40,7 @@ export default {
 
   .mdi.mdi-menu-down {
     color: #C13939;
-    font-size: 120px;
+    font-size: 8vw;
     text-align: center;
     vertical-align: center;
     line-height: 20px;
@@ -49,10 +49,10 @@ export default {
 
   .mdi.mdi-menu-up {
     color: #C13939;
-    font-size: 120px;
+    font-size: 8vw;
     text-align: center;
     vertical-align: center;
-    line-height: 20px;
+    line-height: 2vw;
     margin: auto;
   }
 

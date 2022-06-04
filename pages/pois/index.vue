@@ -110,6 +110,7 @@ export default {
     padding-top: 5%;
     padding-bottom: 3%;
     padding-left: 4%;
+    width:100%
   }
 
   carousel-slide {
@@ -118,8 +119,8 @@ export default {
 
   .imageContainer {
     /*border: solid blue 2px;*/
-    width: 950px;
-    height: 600px;
+    width: 100%;
+    height: 40%;
     overflow: hidden;
     margin-left: 0;
     margin-top: 6%;
@@ -127,6 +128,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 100px;
   }
 
   .carouselImg:hover {
@@ -138,15 +140,13 @@ export default {
   .carouselImg {
      aspect-ratio: auto;
      margin-left: 0;
-     flex-shrink: 0;
-     min-width: 100%;
-     min-height: 100%;
+     width: 100%;
 
   }
 
   div.textContainer{
     color: white ;
-    font-size: 80px;
+    font-size: 5vw;
     line-height: normal;
     font-family: "Josefin Sans";
     text-transform: uppercase;
