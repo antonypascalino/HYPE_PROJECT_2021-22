@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/details/${id}`">
+  <nuxt-link :to="`/pois/${id}`">
   <div v-show="visibleSlide === index" class="carousel-slide">
     <slot></slot>
   </div>

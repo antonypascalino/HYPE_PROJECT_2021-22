@@ -22,14 +22,14 @@
         class = "carousel"
       >
         <carousel-slide v-for = "(poi, index) in poiList"
-                        :key="poi"
+                        :key="index"
                         :index="index"
                         :visibleSlide = "visibleSlide"
                         :id="poi.id"
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="require(`@/static/carousel/${poi.img1}`)" :alt="poi.name">
-            <div class="textContainer">{{poi.name}}</div>
+            <img class= "carouselImg" :src="require(`@/static/Poi/${poi.img1}`)" :alt="poi.name">
+            <div class="textContainer">{{ poi.name }}</div>
           </div>
         </carousel-slide>
       </carousel>

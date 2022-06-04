@@ -1,7 +1,7 @@
 <template>
   <main class="page-container">
     <div class="body-container">
-
+      <StaticHalfImage :slide="`../Poi/${img1}`" :title=name />
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
         <p>{{description}}</p>
@@ -30,9 +30,14 @@
 <script>
 
 import CommonMixin from '~/mixins/common'
+import staticHalfImage from "~/components/StaticHalfImage";
+
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
+  components:{
+    staticHalfImage,
+  },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -48,7 +53,7 @@ export default {
 
   methods: {
     backToList() {
-      this.$router.push('/poi')
+      this.$router.push('/pois/')
     },
   },
   head(){

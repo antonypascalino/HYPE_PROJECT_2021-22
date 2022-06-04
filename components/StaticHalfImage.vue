@@ -1,9 +1,11 @@
 
 <template>
-  <div class="slider-container">
-    <img class="image-container" :src="slide" alt="image-header">
+  <div>
+    <div class="slider-container">
+      <img class="image-container1" :src="slide" alt="image-header">
+    </div>
     <div class="text-block">
-      <h2>{{title}}</h2>
+      <h1>{{title}}</h1>
     </div>
   </div>
 </template>
@@ -20,22 +22,40 @@ export default {
 <style scoped>
 /* Component containers  */
 
-.image-container {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+.slider-container{
+  width:100%;
+  height: 300px;
   margin-left: 0;
-  padding-left: 0;
-  margin-top: 0px;
+  margin-top: 0;
+  align-content: center;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+}
+
+.image-container1 {
+  object-fit: cover;
+  width: auto;
+  height: auto;
+  aspect-ratio: auto;
+  margin-left: 0;
+  vertical-align: center;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
 }
 
 .text-block {
-  background-color: #ffffff;
-  color: #c13939;
+  background-color: #c13939;
+  color: #f8f8f8;
   text-align: center;
+  height: 50px;
+  vertical-align: middle;
+  align-content: center;
+  justify-content: center;
 }
-h2{
+h1{
   font-family: "Josefin Sans";
+
 }
 </style>

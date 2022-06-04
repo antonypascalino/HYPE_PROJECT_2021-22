@@ -27,9 +27,18 @@ async function initializeDatabaseConnection() {
     img1: DataTypes.STRING,
   })
 
+  const Events = database.define("event", {
+    name: DataTypes.STRING,
+    description: DataTypes.STRING,
+    date: DataTypes.STRING,
+    address: DataTypes.STRING,
+    img1: DataTypes.STRING,
+  })
+
   await database.sync({ force: true })
   return {
-    Poi
+    Poi,
+    Events
   }
 }
 
@@ -39,7 +48,7 @@ async function runMainApi() {
   await initialize(models)
 
 
-  // HTTP GET api that returns all the cats in our actual database
+  // HTTP GET api that returns all the point of interest
   app.get("/pois", async (req, res) => {
     const result = await models.Poi.findAll()
     const filtered = []
@@ -53,12 +62,29 @@ async function runMainApi() {
     }
     return res.json(filtered)
   })
+
+  // HTTP GET api that returns a specific point of interest
   app.get('/pois/:id', async (req, res) => {
     const id = +req.params.id
     const result = await models.Poi.findOne({ where: { id }})
     return res.json(result)
   })
 
+  // HTTP GET api that returns all the cats in our actual database
+  app.get("/events", async (req, res) => {
+    const result = await models.Poi.findAll()
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        img1: element.img1,
+        address: element.visit_info,
+        date:element.visit_info,
+        id: element.id,
+      })
+    }
+    return res.json(filtered)
+  })
 
 }
 

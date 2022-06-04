@@ -13,28 +13,31 @@ export default async (models) => {
       name: "Fontana di Nettuno",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       description: "ciao",
-      img1:"2.jpg"
+      img1:"fontanaNettuno01.jpg"
     },
     {
       name: "San Petronio",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.",
-      img1:"2.jpg"
+      img1:"sanPetronio01.jpg"
     },
-
   ]
   await models.Poi.bulkCreate(poiList)
 
   //Event Table
-/*  const eventList = [
+  const eventList = [
     {
-      name: "Piazza Maggiore",
-      visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
-      description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.\n" +
-        "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere).\n" +
-        "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
-      images:"require('@/static/carousel/2.jpg')"
+      name: "Il Cinema Ritrovato",
+      description: "",
+      img1:"require('@/static/carousel/fontanaNettuno01.jpg')",
+      address:"",
+      date:""
     },
   ]
-  await models.Event.bulkCreate(eventList)*/
+  await models.Events.bulkCreate(eventList)
+
+  //Service Table
+
+
+  //Itinerary Table
 }
