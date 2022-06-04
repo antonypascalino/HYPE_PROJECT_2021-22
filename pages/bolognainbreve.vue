@@ -16,9 +16,7 @@
       <section class="section-la-nostra-missione">
         <div class="title-container">Perchè visitarla</div>
         <p>Città d’arte, cultura e commercio con un'efficiente struttura fieristica e una rinomata tradizione manifatturiera e motoristica, Bologna è nota per i quasi 40 km di portici, i più lunghi del mondo.
-
           Chiamata anche la “Dotta”, per via della sua antica Università, e la “Grassa” per la sua gastronomia, la città si fregia del titolo "Città creativa della Musica UNESCO" e vanta un centro storico medievale tra i più estesi e meglio conservati d’Europa, brulicante di locali, osterie, teatri e botteghe.
-
           Patria di grandi artisti tra cui Giorgio Morandi, Guido Reni, i Carracci, Guercino, Aspertini, il suo fascino ha catturato anche personaggi illustri come Mozart, Carducci, Dante, Rossini e il Nobel per la Fisica, Guglielmo Marconi.</p>
          </section>
       <section class="section-la-nostra-missione">

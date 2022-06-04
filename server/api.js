@@ -46,7 +46,7 @@ async function runMainApi() {
     for (const element of result) {
       filtered.push({
         name: element.name,
-        img1: element.images,
+        img1: element.img1,
         visit_info: element.visit_info,
         id: element.id,
       })

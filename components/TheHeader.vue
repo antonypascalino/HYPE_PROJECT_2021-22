@@ -182,7 +182,6 @@ nav {
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
   font-weight: bold;
-  color: #C13939;
 }
 /* Logo layout */
 img {

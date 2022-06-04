@@ -28,7 +28,7 @@
                         :id="poi.id"
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="'../static/carousel/piazzamaggiore.01'"  :alt="poi.name">
+            <img class= "carouselImg" :src="require(`@/static/carousel/${poi.img1}`)" :alt="poi.name">
             <div class="textContainer">{{poi.name}}</div>
           </div>
         </carousel-slide>
@@ -68,8 +68,6 @@ export default {
     slidesLen() {
       return this.poiList.length;
     },
-
-
   },
 
   methods : {
