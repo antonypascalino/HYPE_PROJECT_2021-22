@@ -7,13 +7,13 @@
     <div class="carouselDiv">
       <div class="indicatorList">
         <div class = "list">
-        <carousel-indicator
-            v-for = "poi in poiList"
-            :key = "poi.id"
-            :title = "poi.name"
-            @change = "change(poi.id)"
-            class = "carousel-indicator"
-          ></carousel-indicator>
+          <carousel-indicator
+              v-for = "poi in poiList"
+              :key = "poi.id"
+              :title = "poi.name"
+              @change = "change(poi.id)"
+              class = "carousel-indicator"
+            />
         </div>
       </div>
       <carousel
@@ -29,7 +29,7 @@
         >
           <div class="imageContainer">
             <img class= "carouselImg" :src="require(`@/static/Poi/${poi.img1}`)" :alt="poi.name">
-            <div class="textContainer">{{ poi.name }}</div>
+            <p class="textContainer">{{ poi.name }}</p>
           </div>
         </carousel-slide>
       </carousel>
@@ -108,9 +108,9 @@ export default {
 
   .carouselDiv {
     padding-top: 5%;
-    padding-bottom: 3%;
     padding-left: 4%;
-    width:100%
+    width:100%;
+    height: 100%;
   }
 
   carousel-slide {
@@ -119,15 +119,19 @@ export default {
 
   .imageContainer {
     /*border: solid blue 2px;*/
-    width: 100%;
-    height: 40%;
-    overflow: hidden;
+    width: 70vw;
+    height: 76vh;
+    margin-top: 6vh;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  }
+
+  .carouselImg {
     margin-left: 0;
-    margin-top: 6%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
     margin-bottom: 100px;
   }
 
@@ -137,14 +141,9 @@ export default {
     transition: 200ms;
   }
 
-  .carouselImg {
-     aspect-ratio: auto;
-     margin-left: 0;
-     width: 100%;
 
-  }
 
-  div.textContainer{
+  .textContainer{
     color: white ;
     font-size: 5vw;
     line-height: normal;
@@ -152,10 +151,12 @@ export default {
     text-transform: uppercase;
     float: left;
     position: absolute;
-    bottom: 28px;
-    width: 800px;
+    bottom: 0;
+    width: inherit;
     left: 0;
-    margin-bottom: 2.5%;
+    margin-bottom: 5vh;
+
+    /*border: solid yellow 6px;*/
   }
 
   .App {
@@ -187,7 +188,7 @@ export default {
     padding-left: 0;
   }
 
-  @media screen and (max-width: 1220px) {
+  @media screen and (max-width: 880px) {
     .indicatorList{
       display: none;
     }
