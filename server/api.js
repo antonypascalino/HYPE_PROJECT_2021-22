@@ -24,11 +24,8 @@ async function initializeDatabaseConnection() {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     visit_info: DataTypes.STRING,
-    img1: DataTypes.STRING,
-    img2: DataTypes.STRING,
-    img3: DataTypes.STRING,
-    img4: DataTypes.STRING,
-
+    imgBackground: DataTypes.STRING,
+    imgArray: DataTypes.ARRAY(DataTypes.STRING),
   })
 
   const Events = database.define("event", {
@@ -59,9 +56,10 @@ async function runMainApi() {
     for (const element of result) {
       filtered.push({
         name: element.name,
-        img1: element.img1,
+        imgBackground: element.imgBackground,
         visit_info: element.visit_info,
         id: element.id,
+        imgArray:element.imgArray
       })
     }
     return res.json(filtered)

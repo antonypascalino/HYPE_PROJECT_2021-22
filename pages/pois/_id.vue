@@ -2,12 +2,15 @@
   <main class="page-container">
 
     <div class="body-container">
-      <StaticHalfImage :slide="`../Poi/${img1}`" :title=name />
+      <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title=name />
 
-      <div class="breadcrumb-section">
-        <Breadcrumb :crumbs="crumbs" @selected="selected"/>
-      </div>
-      <br>
+      <breadcrumb1
+        :default-route="[{ title: 'Punti di Interesse', path: '/pois/' }]"
+        :alt-routes="[
+          [{ title: name, path: '/areas/' + name + '/' }],
+        ]"
+        :current-page="name"
+      />
 
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
@@ -16,19 +19,12 @@
 
       <section class="section-description">
         <div class="title-container">GALLERY</div>
-
         <div class="row mt-3">
           <card
+            v-for="(img, index) of imgArray"
             class="col-sm-2 m-2"
-            :img="`../Poi/${img1}`"
-          />
-          <card
-            class="col-sm-2 m-2"
-            :img="`../Poi/${img1}`"
-          />
-          <card
-            class="col-sm-2 m-2"
-            :img="`../Poi/${img1}`"
+            :key="index"
+            :img="`../Poi/${img}`"
           />
         </div>
       </section>
@@ -54,13 +50,13 @@
 
 import CommonMixin from '~/mixins/common'
 import staticHalfImage from "~/components/StaticHalfImage";
-import Breadcrumb from '~/components/Breadcrumb.vue';
+import breadcrumb1 from "~/components/breadcrumb1";
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
     staticHalfImage,
-    Breadcrumb
+    breadcrumb1
   },
 
   async asyncData({ route, $axios }) {
@@ -70,14 +66,10 @@ export default {
     return {
       name: data.name,
       visit_info: data.visit_info,
-      img1: data.img1,
-      description: data.description
+      imgBackground: data.imgBackground,
+      imgArray:data.imgArray,
+      description: data.description,
     }
-  },
-  data() {
-    return {
-      crumbs: ['HOME', 'POIS', ],
-    };
   },
 
   methods: {
@@ -132,7 +124,6 @@ p{
   color: #C13939;
   background-color: #EBEBEB;
 }
-
 
 
 </style>

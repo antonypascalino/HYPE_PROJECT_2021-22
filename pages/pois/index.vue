@@ -28,7 +28,7 @@
                         :id="poi.id"
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="require(`@/static/Poi/${poi.img1}`)" :alt="poi.name">
+            <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
             <div class="textContainer">{{ poi.name }}</div>
           </div>
         </carousel-slide>
