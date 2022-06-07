@@ -4,9 +4,8 @@
     <div class="body-container">
       <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title=name />
       <section class="breadcrumb-section">
-        <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+        <Breadcrumb :crumbs="crumbs" :optional=name @selected="selected"/>
       </section>
-
 
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
@@ -72,16 +71,13 @@ export default {
   },
   data() {
     return {
-      crumbs: ['HOME', 'PUNTI DI INTERESSE',],
+      crumbs: ['HOME', 'PUNTI DI INTERESSE', ],
     };
   },
   methods: {
     backToList() {
       this.$router.push('/pois/')
-    },
-    selected(crumb) {
-      console.log(crumb);
-    },
+    }
   },
   head(){
     return {

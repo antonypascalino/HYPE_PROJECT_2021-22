@@ -21,6 +21,10 @@ export default {
       type: Array,
       required: true,
     },
+    optional:{
+      type:String,
+      required: false
+    }
   },
   methods: {
     isLast(index) {

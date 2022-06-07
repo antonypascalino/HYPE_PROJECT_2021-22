@@ -51,8 +51,8 @@ export default {
   },
 
   async asyncData({ route, $axios }) {
-     const { data } = await $axios.get('api/4events')
-    //const { data } = await $axios.get('http://localhost:3000/api/4events')
+    // const { data } = await $axios.get('api/4events')
+    const { data } = await $axios.get('http://localhost:3000/api/4events')
     return {
       eventList: data,
     }
