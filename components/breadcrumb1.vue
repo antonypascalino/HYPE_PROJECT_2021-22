@@ -1,25 +1,13 @@
-<!--
-  Component: Breadcrumb
-  Description:  A dynamic breadcrumb. The route to be shown is defined by the parameter
-                'route' in the URL. Specifically:
-                - if its value is not specified (or is equal to -1) the default-route is displayed;
-                - otherwise (>=0) its value represent the index of the alt-route array to be displayed.
-                A single route (made up of the traversed pages) is specified as an array of objects (specifying path and title of the traversed pages)
 
-  Props:
-  ├── default-route: the default breadcrumb defined as an array of pairs (path,title). It's shown when no other alternative route is activated
-  ├── alt-routes: array of alternative breadcrumbs . The alternative to be shown at position 'route'.
-  └── current-page: name of the current page to be shown in the breadcrumb
--->
 
 <template>
   <header>
-    <ul v-if="showRoute" class="breadcrumb">
+    <ul v-if="showRoute" class="breadcrumb" style="text-decoration: none">
       <li
         v-for="(element, elementIndex) of selectedRoute"
         :key="'li-' + elementIndex"
       >
-        <nuxt-link :to="element.path">{{ element.title }}</nuxt-link>
+        <nuxt-link style="text-decoration: none; color:black" :to="element.path">{{ element.title }}</nuxt-link>
       </li>
       <li>{{ currentPage }}</li>
     </ul>
@@ -71,7 +59,6 @@ ul.breadcrumb li {
   display: inline;
 }
 ul.breadcrumb li + li:before {
-  padding: 6px;
   content:"/";
   color: #C13939;
 }

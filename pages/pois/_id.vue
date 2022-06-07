@@ -3,26 +3,22 @@
 
     <div class="body-container">
       <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title=name />
+      <section class="breadcrumb-section">
+        <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+      </section>
 
-      <breadcrumb1
-        :default-route="[{ title: 'Punti di Interesse', path: '/pois/' }]"
-        :alt-routes="[
-          [{ title: name, path: '/areas/' + name + '/' }],
-        ]"
-        :current-page="name"
-      />
 
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
-        <p>{{description}}</p>
+        <p class="text-container">{{description}}</p>
       </section>
 
       <section class="section-description">
         <div class="title-container">GALLERY</div>
-        <div class="row mt-3">
+        <div class="row mt-1">
           <card
             v-for="(img, index) of imgArray"
-            class="col-sm-2 m-2"
+            class="col-sm-2 m-1"
             :key="index"
             :img="`../Poi/${img}`"
           />
@@ -31,9 +27,10 @@
 
       <section class="section-description">
         <div class="title-container">INFORMAZIONI</div>
-        <p>{{visit_info}}</p>
+        <p class="text-container">{{visit_info}}</p>
       </section>
 
+      <div class="button-container">
       <button
         type="button"
         class="btn btn-outline-secondary px-4"
@@ -42,6 +39,7 @@
         Torna indietro
       </button>
       </div>
+    </div>
 
   </main>
 </template>
@@ -50,13 +48,14 @@
 
 import CommonMixin from '~/mixins/common'
 import staticHalfImage from "~/components/StaticHalfImage";
-import breadcrumb1 from "~/components/breadcrumb1";
+import Breadcrumb from '~/components/Breadcrumb.vue';
+
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
     staticHalfImage,
-    breadcrumb1
+    Breadcrumb
   },
 
   async asyncData({ route, $axios }) {
@@ -71,7 +70,11 @@ export default {
       description: data.description,
     }
   },
-
+  data() {
+    return {
+      crumbs: ['HOME', 'PUNTI DI INTERESSE',],
+    };
+  },
   methods: {
     backToList() {
       this.$router.push('/pois/')
@@ -82,7 +85,7 @@ export default {
   },
   head(){
     return {
-      title: this.name
+      title: "insideBO | "+this.name
     }
   },
   mounted(){
@@ -95,18 +98,19 @@ export default {
 }
 </script>
 <style>
+
+
 section-description{
+
   font-family: 'Inria Sans';
   font-style: normal;
   font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;
 }
-p{
-  margin-top: 20px;
-}
+
 .page-container{
-  margin-top: -60px;
+  margin-top: -65px;
 }
 .body-container{
   margin-top: 110px;
@@ -123,7 +127,28 @@ p{
   display: flex;
   color: #C13939;
   background-color: #EBEBEB;
+  padding-left: 5px;
 }
+.row{
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+
+}
+.button-container{
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+}
+.btn{
+  float:right;
+  color:black
+}
+.text-container{
+  padding: 10px ;
+}
+
 
 
 </style>

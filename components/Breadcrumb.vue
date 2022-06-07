@@ -62,4 +62,8 @@ export default {
     content:"/";
     color: #C13939;
   }
+  .btn{
+    background-color: transparent;
+    color:black
+  }
 </style>

@@ -50,12 +50,9 @@ export default {
   color: #f8f8f8;
   text-align: center;
   height: 50px;
-  vertical-align: middle;
-  align-content: center;
-  justify-content: center;
+  padding: 5px;
 }
 h1{
   font-family: "Josefin Sans";
-
 }
 </style>

@@ -5,16 +5,15 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
-const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
+//const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
 
 // Production (use this code when deploying to production in Heroku)
-// const pg = require('pg')
-// pg.defaults.ssl = true
-// const database = new Sequelize(process.env.DATABASE_URL, {
-//   ssl: true,
-//   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
-// })
-
+ const pg = require('pg')
+ pg.defaults.ssl = true
+ const database = new Sequelize(process.env.DATABASE_URL, {
+   ssl: true,
+   dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
+})
 
 
 // Function that will initialize the connection to the database
@@ -33,13 +32,29 @@ async function initializeDatabaseConnection() {
     description: DataTypes.STRING,
     date: DataTypes.STRING,
     address: DataTypes.STRING,
-    img1: DataTypes.STRING,
+    imgBackground: DataTypes.STRING,
+    imgArray: DataTypes.ARRAY(DataTypes.STRING),
+  })
+
+  const Itinerary = database.define("itinerary", {
+    name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    opening_hours: DataTypes.STRING,
+
+  })
+  const Service = database.define("service", {
+    name: DataTypes.STRING,
+    description: DataTypes.STRING,
+    map: DataTypes.STRING,
+    duration: DataTypes.STRING,
   })
 
   await database.sync({ force: true })
   return {
     Poi,
-    Events
+    Events,
+    Itinerary,
+    Service
   }
 }
 
@@ -65,6 +80,22 @@ async function runMainApi() {
     return res.json(filtered)
   })
 
+  // HTTP GET api that returns all the point of interest
+  app.get("/highlights", async (req, res) => {
+    const result = await models.Poi.findAll({limit:4})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgBackground: element.imgBackground,
+        visit_info: element.visit_info,
+        id: element.id,
+        imgArray:element.imgArray
+      })
+    }
+    return res.json(filtered)
+  })
+
   // HTTP GET api that returns a specific point of interest
   app.get('/pois/:id', async (req, res) => {
     const id = +req.params.id
@@ -72,17 +103,35 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  // HTTP GET api that returns all the cats in our actual database
+  // HTTP GET api that returns all the events in our actual database
   app.get("/events", async (req, res) => {
-    const result = await models.Poi.findAll()
+    const result = await models.Events.findAll()
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
-        img1: element.img1,
+        imgArray: element.imgArray,
         address: element.visit_info,
         date:element.visit_info,
         id: element.id,
+        imgBackground:element.imgBackground
+      })
+    }
+    return res.json(filtered)
+  })
+
+  // HTTP GET api that returns 4 events in our actual database
+  app.get("/4events", async (req, res) => {
+    const result = await models.Events.findAll({limit: 4})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgArray: element.imgArray,
+        address: element.visit_info,
+        date:element.visit_info,
+        id: element.id,
+        imgBackground:element.imgBackground
       })
     }
     return res.json(filtered)
