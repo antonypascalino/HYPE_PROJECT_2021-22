@@ -34,20 +34,32 @@ async function initializeDatabaseConnection() {
     address: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
+    website:DataTypes.STRING,
+    price:DataTypes.STRING
   })
 
   const Itinerary = database.define("itinerary", {
     name: DataTypes.STRING,
-    address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING,
+    description: DataTypes.STRING,
+    imgBackground: DataTypes.STRING,
+    map: DataTypes.STRING,
+    duration: DataTypes.STRING,
 
   })
   const Service = database.define("service", {
     name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    opening_hours: DataTypes.STRING,
     description: DataTypes.STRING,
-    map: DataTypes.STRING,
-    duration: DataTypes.STRING,
+    website: DataTypes.STRING,
+    imgBackground: DataTypes.STRING,
   })
+  // Creating the N -> N association between Itinerary and Poi
+  Itinerary.belongsToMany(Poi, { through: 'poiInItinerary'}) // to show poi in itinerary page
+
+// Creating the 1 -> N association between POI and Event
+  Poi.hasMany(Events)
+  Events.belongsTo(Poi)
 
   await database.sync({ force: true })
   return {
@@ -80,21 +92,6 @@ async function runMainApi() {
     return res.json(filtered)
   })
 
-  // HTTP GET api that returns all the point of interest
-  app.get("/highlights", async (req, res) => {
-    const result = await models.Poi.findAll({limit:4})
-    const filtered = []
-    for (const element of result) {
-      filtered.push({
-        name: element.name,
-        imgBackground: element.imgBackground,
-        visit_info: element.visit_info,
-        id: element.id,
-        imgArray:element.imgArray
-      })
-    }
-    return res.json(filtered)
-  })
 
   // HTTP GET api that returns a specific point of interest
   app.get('/pois/:id', async (req, res) => {
@@ -111,10 +108,12 @@ async function runMainApi() {
       filtered.push({
         name: element.name,
         imgArray: element.imgArray,
-        address: element.visit_info,
-        date:element.visit_info,
+        address: element.address,
+        date:element.date,
         id: element.id,
-        imgBackground:element.imgBackground
+        imgBackground:element.imgBackground,
+        price:element.price,
+        website:element.website
       })
     }
     return res.json(filtered)
@@ -128,8 +127,8 @@ async function runMainApi() {
       filtered.push({
         name: element.name,
         imgArray: element.imgArray,
-        address: element.visit_info,
-        date:element.visit_info,
+        address: element.address,
+        date:element.date,
         id: element.id,
         imgBackground:element.imgBackground
       })
@@ -137,6 +136,62 @@ async function runMainApi() {
     return res.json(filtered)
   })
 
+  // HTTP GET api that returns a specific point of interest
+  app.get('/events/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Events.findOne({ where: { id }})
+    return res.json(result)
+  })
+
+  // HTTP GET api that returns all the services in our actual database
+  app.get("/services", async (req, res) => {
+    const result = await models.Service.findAll()
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        address: element.visit_info,
+        opening_hours:element.opening_hours,
+        id: element.id,
+        imgBackground:element.imgBackground,
+        website:element.website,
+        description:element.description
+
+      })
+    }
+    return res.json(filtered)
+  })
+
+  // HTTP GET api that returns a specific point of interest
+  app.get('/services/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Service.findOne({ where: { id }})
+    return res.json(result)
+  })
+
+  // HTTP GET api that returns all the services in our actual database
+  app.get("/itineraries", async (req, res) => {
+    const result = await models.Itinerary.findAll()
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        address: element.visit_info,
+        map:element.map,
+        id: element.id,
+        imgBackground:element.imgBackground,
+        description:element.description
+      })
+    }
+    return res.json(filtered)
+  })
+
+  // HTTP GET api that returns a specific point of interest
+  app.get('/itineraries/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Itinerary.findOne({ where: { id }})
+    return res.json(result)
+  })
 }
 
 runMainApi()

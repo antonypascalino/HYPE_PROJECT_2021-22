@@ -24,11 +24,13 @@ export default async (models) => {
   const eventList = [
     {
       name: "Il Cinema Ritrovato",
-      description: "",
+      description: "Il Cinema Ritrovato è un evento sia per cinefili che per semplici amanti del cinema e impegna per alcuni giorni diverse sale cinematografiche e arene all’aperto ospitando da mattina a notte centinaia di film di tutte le epoche: un vero paradiso!",
       imgBackground: "ilCinemaRitrovato01.jpg",
-      imgArray:["",""],
-      address:"",
-      date:""
+      imgArray:[],
+      address:"Bologna, Piazza Maggiore",
+      date:"25 Giu 2022 - 03 Lug 2022",
+      price:"Ingresso gratuito",
+      website:"https://festival.ilcinemaritrovato.it/"
     },
     {
       name: "Festival della mortadella",
@@ -36,7 +38,9 @@ export default async (models) => {
       imgBackground: "festivalMortadella01.jpg",
       imgArray:["",""],
       address:"",
-      date:""
+      date:"",
+      price:"",
+      website:""
     },
     {
       name: "Arte Fiera",
@@ -44,7 +48,9 @@ export default async (models) => {
       imgBackground: "arteFiera01.jpg",
       imgArray:["",""],
       address:"",
-      date:""
+      date:"",
+      price:"",
+      website:""
     },
     {
       name: "Jazz Festival",
@@ -52,7 +58,9 @@ export default async (models) => {
       imgBackground: "jazzFestival01.png",
       imgArray:["",""],
       address:"",
-      date:""
+      date:"",
+      price:"",
+      website:""
     },
 
   ]
@@ -61,9 +69,12 @@ export default async (models) => {
   //Service Table
   const serviceList = [
     {
-      name: "",
-      address:"",
-      opening_hours:""
+      name: "Trasporti",
+      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.",
+      address:"Via Guglielmo Marconi, 440122 Bologna BO",
+      imgBackground: "trasporti01.jpeg",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      website:"https://www.tper.it/orari"
     },
   ]
   await models.Service.bulkCreate(serviceList)
@@ -71,10 +82,11 @@ export default async (models) => {
   //Itinerary Table
   const itineraryList = [
     {
-      name: "",
-      description: "",
+      name: "Una passeggiata in Centro",
+      description: "Piazza Maggiore, il salotto di Bologna, è il principale luogo di ritrovo dei bolognesi: sulla destra si può ammirare la Fontana del Nettuno, uno dei simboli della città, opera dello scultore Giambologna.",
       map:"",
-      duration:""
+      duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
+      imgBackground:"unaPasseggiataInCentro01.jpg"
     },
   ]
   await models.Itinerary.bulkCreate(itineraryList)

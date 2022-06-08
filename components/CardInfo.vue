@@ -7,7 +7,7 @@
     <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
 
-      <nuxt-link :to="`/details/${id}`">
+      <nuxt-link :to="`/eventi/${id}`">
         <div class="btn btn-primary btn-orange">Vedi Dettagli</div>
       </nuxt-link>
     </div>
