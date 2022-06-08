@@ -6,17 +6,20 @@ export default async (models) => {
     {
       name: "Piazza Maggiore",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
-      description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.",
-      imgBackground: "piazzaMaggiore02.jpg",
+      description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.\n" +
+        "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere).\n" +
+        "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
+      imgBackground: "piazzaMaggiore01.jpg",
       imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore03.jpg","piazzaMaggiore04.jpg"],
     },
     {
-      name: "Fontana Nettuno",
-      visit_info:"",
-      description: "",
+      name: "Fontana del Nettuno",
+      visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      description: "La fontana del Nettuno è una struttura in onore dell'omonima divinità, sita in piazza del Nettuno a Bologna: in ragione delle dimensioni, è soprannominata al Żigànt (il Gigante) in dialetto felsineo.Frutto della collaborazione tra Giambologna e Tommaso Laureti, l'opera fu voluta da Pier Donato Cesi (1522-1586) per glorificare il governo pontificio del papa Pio IV e fu terminata nel 1566.",
       imgBackground: "fontanaNettuno01.jpg",
-      imgArray:[""],
+      imgArray:["fontanaNettuno02.jpg","fontanaNettuno03.jpg"],
     },
+
   ]
   await models.Poi.bulkCreate(poiList)
 

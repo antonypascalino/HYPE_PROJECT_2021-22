@@ -24,6 +24,7 @@
           />
         </div>
 
+
         <!--Button for display all the events -->
         <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToEvent">
           Tutti gli eventi
@@ -61,7 +62,9 @@ export default {
 </script>
 
 <style scoped>
-
+.page-container{
+  margin-top:0px ;
+}
 .section-container{
   font-family: 'Josefin Sans';
   font-style: normal;

@@ -21,7 +21,7 @@ async function initializeDatabaseConnection() {
   await database.authenticate()
   const Poi = database.define("poi", {
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     visit_info: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
@@ -29,7 +29,7 @@ async function initializeDatabaseConnection() {
 
   const Events = database.define("event", {
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     date: DataTypes.STRING,
     address: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
@@ -40,7 +40,7 @@ async function initializeDatabaseConnection() {
 
   const Itinerary = database.define("itinerary", {
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     imgBackground: DataTypes.STRING,
     map: DataTypes.STRING,
     duration: DataTypes.STRING,
@@ -50,7 +50,7 @@ async function initializeDatabaseConnection() {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     opening_hours: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     website: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
   })

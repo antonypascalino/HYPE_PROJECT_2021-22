@@ -22,11 +22,16 @@
             <!-- Grid column -->
             <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">ORARI e INDIRIZZO</h6>
+              <h6 class="text-uppercase fw-bold mb-4">ORARIO</h6>
               <p class="mdi mdi-clock-outline">{{ opening_hours }}</p>
-              <p class="mdi mdi-map-marker-check-outline">{{address}}</p>
             </div>
             <!-- Grid column -->
+            <!-- Grid column -->
+            <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">INDIRIZZZO</h6>
+              <p class="mdi mdi-map-marker-check-outline">{{address}}</p>
+            </div>
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
@@ -138,22 +143,8 @@ section-description{
   background-color: #EBEBEB;
   padding-left: 5px;
 }
-.row{
-  margin: auto;
-  width: 100%;
-  justify-content: center;
-  padding: 10px;
 
-}
-.button-container{
-  width: 100%;
-  height: 60px;
-  padding: 20px;
-}
-.btn{
-  float:right;
-  color:black
-}
+
 .text-container{
   padding: 10px ;
 }

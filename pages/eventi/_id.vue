@@ -28,7 +28,7 @@
         <div class="title-container">INFORMAZIONI</div>
         <div class="container-info container text-center text-md-start mt-5">
           <!-- Grid row -->
-          <div class="row mt-3">
+          <div class="row-container row mt-3">
 
             <!-- Grid column -->
             <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -76,7 +76,7 @@
       <div class="button-container">
         <button
           type="button"
-          class="btn btn-outline-secondary px-4"
+          class="btn1 btn btn-outline-secondary px-4"
           @click="backToList"
         >
           Torna indietro
@@ -172,7 +172,7 @@ section-description{
   background-color: #EBEBEB;
   padding-left: 5px;
 }
-.row{
+.row-container{
   margin: auto;
   width: 100%;
   justify-content: center;
@@ -184,7 +184,7 @@ section-description{
   height: 60px;
   padding: 20px;
 }
-.btn{
+.btn1{
   float:right;
   color:black
 }
