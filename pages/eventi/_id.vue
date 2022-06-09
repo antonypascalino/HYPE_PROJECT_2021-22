@@ -64,7 +64,7 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">SITO WEB</h6>
 
-              <p class="mdi mdi-calendar-blank">{{ website }}</p>
+              <p class="mdi mdi-web">{{ website }}</p>
 
             </div>
             <!-- Grid column -->
@@ -76,7 +76,7 @@
       <div class="button-container">
         <button
           type="button"
-          class="btn1 btn btn-outline-secondary px-4"
+          class="btn1 btn btn-outline-secondary px-4" style="float:right"
           @click="backToList"
         >
           Torna indietro
@@ -142,7 +142,6 @@ export default {
 </script>
 <style>
 
-
 section-description{
 
   font-family: 'Inria Sans';
@@ -184,19 +183,9 @@ section-description{
   height: 60px;
   padding: 20px;
 }
-.btn1{
-  float:right;
-  color:black
-}
+
 .text-container{
   padding: 10px ;
-}
-
-.container-info{
-  width:90%;
- justify-content: center;
-  align-content: center;
-  vertical-align: center;
 }
 
 

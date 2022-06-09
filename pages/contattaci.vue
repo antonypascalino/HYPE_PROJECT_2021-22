@@ -11,17 +11,18 @@
       <section class="section-chi-siamo">
         <div class="title-container">La nostra Sede e contatti</div>
         <Map>
-          <p>
+          <p class="address-container">
             <span class="mdi mdi-map-marker"></span> Via Mecenate 12, Bologna
 
             <br />
-            Orari: 8:00/12:00 da Lunedì a Venerdì
+            <br />
+            <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
           </p>
           <div class="phone-number">
             <span class="mdi mdi-phone"></span> Tel:
             <a href="tel:+393347711504"> +39 3319212318</a>
           </div>
-          <div class="phone-number">
+          <div class="fax-number">
             <span class="mdi mdi-fax"></span> Fax:
             <a href="fax:+393347711504">+39 011 7234011</a>
           </div>
@@ -117,10 +118,25 @@ export default {
 }
 p{
   margin-top: 20px;
+
 }
 a{
   text-decoration: none;
   color:black
 }
+.address-container{
+  text-align: center;
+}
+.phone-number{
+  text-align: center;
+}
+
+.mail{
+  text-align: center;
+}
+.fax-number{
+  text-align: center;
+}
+
 
 </style>
