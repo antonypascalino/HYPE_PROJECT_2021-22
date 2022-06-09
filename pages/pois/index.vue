@@ -33,6 +33,15 @@
           </div>
         </carousel-slide>
       </carousel>
+      <div class="carouselScroll"
+                      v-for = "(poi, index) in poiList"
+                      :key="index"
+                      :id="poi.id">
+        <div class="imageContainer container-scroll">
+          <img class= "carouselImg image-scroll" :src="require(`@/static/Poi/${poi.img1}`)" :alt="poi.name">
+          <h5 class="textContainer-scroll">{{poi.name}}</h5>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -109,7 +118,7 @@ export default {
   .carouselDiv {
     padding-top: 5%;
     padding-left: 4%;
-    width:100%;
+    width: 100%;
     height: 100%;
   }
 
@@ -123,7 +132,17 @@ export default {
     height: 76vh;
     margin-top: 6vh;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
 
+  .imageContainer.container-scroll {
+    height: 38vh;
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 10vw;
+  }
+
+  .carouselImg.image-scroll {
+    margin-bottom: 50px;
   }
 
   .carouselImg {
@@ -142,6 +161,15 @@ export default {
   }
 
 
+  .textContainer-scroll {
+    margin-top: -90px;
+    color: white ;
+    font-size: 5vw;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    box-sizing: content-box;
+    float: left;
+  }
 
   .textContainer{
     color: white ;
@@ -161,6 +189,17 @@ export default {
 
   .App {
     background-color: #EBEBEB;
+    height: auto;
+  }
+
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  body {
+    overflow: auto;
+    height: 100%;
   }
 
   div.indicatorList {
@@ -190,6 +229,15 @@ export default {
 
   @media screen and (max-width: 880px) {
     .indicatorList{
+      display: none;
+    }
+    .carousel {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 881px) {
+    .carouselScroll {
       display: none;
     }
   }
