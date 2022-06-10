@@ -143,14 +143,24 @@ section-description{
   background-color: #EBEBEB;
   padding-left: 5px;
 }
+.row{
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
 
-
+}
+.button-container{
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+}
+.btn{
+  float:right;
+  color:black
+}
 .text-container{
   padding: 10px ;
-}
-
-.container-info{
-  border:2px solid black;
 }
 
 </style>

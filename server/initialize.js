@@ -128,8 +128,8 @@ export default async (models) => {
       description: "San Pietro è la cattedrale della città. Collocata in Via Indipendenza, la chiesa fu consacrata ufficialmente nel 1184.\n" +
         "La cattedrale fu soggetta a diversi cambiamenti fino ad assestarsi con uno stile barocco, che tuttavia, fece perdere ogni traccia del precedente impianto romano. La facciata è composta da mattoni rossi e decorazioni in marmo bianco che lasciano spazio ai mastodontici portali che suggeriscono l’impianto interno a tre navate.\n" +
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
-      imgBackground: "cattedraleSanPeietro01.jpg",
-      imgArray:["cattedraleSanPeietro02.jpg",""],
+      imgBackground: "cattedraleSanPietro01.jpg",
+      imgArray:["cattedraleSanPietro02.jpg"],
     },
     {
       name: "La finestrella sul Canale",
@@ -184,6 +184,14 @@ export default async (models) => {
         "Luogo prediletto dai bolognesi durante le afose giornate estive, durante la costruzione fu rinvenuta una tomba etrusca tutt’ora presente.\n" ,
       imgBackground: "giardiniMargherita01.jpg",
       imgArray:["giardiniMargherita02.jpg","giardiniMargherita03.jpg"],
+    },
+    {
+      name: "Stadio Renato Dall’Ara ",
+      visit_info:"Aperto in occasione di eventi e partite",
+      description: "Lo stadio più importante e grande della città. La storica arena è stata teatro delle più grandi imprese calcistiche della nazionale italiana e dalla squadra del Bologna, oggi allenata da Sinisa Mihajlovic. \n" +
+        "Lo stadio fu inaugurato durante l’epoca fascista, più precisamente nel 1927. La caratteristica più particolare è sicuramente la Torre di Maratona, che si erge con i suoi 42 metri di altezza a sostegno della tribuna est.\n" ,
+      imgBackground: "stadio01.jpg",
+      imgArray:["stadio02.jpg","stadio03.jpg"],
     }
 
   ]
@@ -195,7 +203,7 @@ export default async (models) => {
       name: "Il Cinema Ritrovato",
       description: "Il Cinema Ritrovato è un evento sia per cinefili che per semplici amanti del cinema e impegna per alcuni giorni diverse sale cinematografiche e arene all’aperto ospitando da mattina a notte centinaia di film di tutte le epoche: un vero paradiso!",
       imgBackground: "ilCinemaRitrovato01.jpg",
-      imgArray:[],
+      imgArray:["ilCinemaRitrovato02.jpg","ilCinemaRitrovato03.jpg"],
       address:"Bologna, Piazza Maggiore",
       date:"25 Giu 2022 - 03 Lug 2022",
       price:"Ingresso gratuito",
@@ -213,23 +221,15 @@ export default async (models) => {
     },
     {
       name: "Arte Fiera",
-      description: "",
+      description: "Arte Fiera ha riaperto le porte dal 13 al 15 maggio 2022, animata da uno spirito di ripresa e dal desiderio di poter ritrovare in presenza gli operatori e il pubblico dell’arte, dopo la decisione di rimandare la tradizionale edizione di fine gennaio a causa della pandemia.\n" +
+        "\n" +
+        "Terza edizione fisica sotto la direzione artistica di Simone Menegoi - quella del 2021 è stata sostituita dal progetto culturale online Playlist - Arte Fiera 2022 ha riproposto i punti di forza della formula messa a punto nelle due edizioni precedenti, puntando con decisione alla qualità espositiva. “Arte Fiera si ripresenta a testa alta: con una selezione di gallerie senza cedimenti qualitativi, e che si arricchisce anzi di alcune interessanti new entry; con allestimenti rinnovati; con un percorso di visita più razionale ed efficiente”, dichiarava Menegoi.",
       imgBackground: "arteFiera01.jpg",
-      imgArray:[],
-      address:"",
-      date:"",
-      price:"",
-      website:""
-    },
-    {
-      name: "Jazz Festival",
-      description: "",
-      imgBackground: "jazzFestival01.png",
-      imgArray:[],
-      address:"",
-      date:"",
-      price:"",
-      website:""
+      imgArray:["arteFiera02.jpg"],
+      address:"Viale della Fiera, 20, 40127 Bologna BO",
+      date:" dal 13 al 15 maggio 2022",
+      price:"26 euro",
+      website:"http://www.artefiera.it/home/776.html"
     },
     {
       name: "Fiera del Libro",
@@ -242,6 +242,70 @@ export default async (models) => {
       date:"18 marzo – 1 maggio 2022",
       price:"Ingresso gratuito",
       website:"https://www.fieradellibrobologna.it/"
+    },
+    {
+      name: "StraBologna",
+      description: "StraBologna è la camminata ludico motoria non competitiva organizzata da UISP Bologna che si svolge nel cuore della città in una domenica di primavera anticipata da due giorni di eventi in Piazza Maggiore, per promuovere gli ideali di benessere, lo sport per tutti, l’inclusione sociale e il divertimento.\n" +
+        "L’evento è adatto a: runner, podisti, famiglie anche con passeggini, bambini, disabili, anziani, cani al guinzaglio... insomma è proprio per tutt*! Un’occasione per vivere insieme le bellezze del centro storico di Bologna e per scoprire la città da un nuovo punto di vista.",
+      imgBackground: "straBologna01.jpg",
+      imgArray:["straBologna02.jpg"],
+      address:"",
+      date:"22 MAGGIO 2022\n" +
+        "ORE 10:30",
+      price:"15 euro",
+      website:"https://strabologna.it/"
+    },
+    {
+      name: "roBOt",
+      description: "roBOt Festival è una manifestazione internazionale nata nel 2008 a Bologna e dedicata alla musica elettronica e alle arti visuali. La direzione artistica del festival è affidata fin dalla sua prima edizione a Marco Ligurgo e Antonio Puglisi. Il festival, che si svolge in autunno, propone ogni anno oltre 100 eventi tra concerti, dj set, performance, proiezioni, installazioni digitali e workshop[2].\n" +
+        "\n" +
+        "Vi hanno partecipato artisti internazionali come Ryūichi Sakamoto, Alva Noto, Francesco Tristano Schlimé, Nathan Fake, Plaid, Yann Tiersen, Gianluca Petrella, Carl Craig e Pan Sonic.",
+      imgBackground: "robot01.jpg",
+      imgArray:["robot02.png","robot03.jpg"],
+      address:"Via Camillo Casarini, 19, 40131 Bologna BO",
+      date:"23-24 Settembre",
+      price:"30 euro",
+      website:"https://robotfestival.it/"
+    },
+    {
+      name: "Cosmoprof",
+      description: "Cosmoprof è la fiera leader mondiale per l'intera industria della cosmetica e della bellezza professionale.",
+      imgBackground: "cosmoprof01.jpg",
+      imgArray:["cosmoprof02.jpg"],
+      address:"Quartiere Fieristico, Bologna",
+      date:"16 al 20 marzo 2023",
+      price:"Ingresso gratuito",
+      website:"https://www.cosmoprof.com/"
+    },
+    {
+      name: "Cioccoshow",
+      description: "Il Cioccoshow , ossia il Cioccolato tradizionale di alta qualità in fiera, giunto alla sua 15° edizione, si svolge nel centro storico di Bologna. Tra assaggi, degustazioni, laboratori curati da grandi Maestri Cioccolatieri ed esperti di settore.",
+      imgBackground: "cioccoshow01.jpg",
+      imgArray:["cioccoshow02.jpg"],
+      address:"Piazza XX settembre BOLOGNA",
+      date:"17-20 Novermbre 2022",
+      price:"Ingresso gratuito",
+      website:"https://cioccoshow.it/"
+    },
+    {
+      name: "Imola in Musica",
+      description: "La 26ª edizione Imola in Musica trasformerà ancora una volta la città in un unico grande palcoscenico tra piazze e strade, chiese e musei, cortili e palazzi, giardini e teatri. La manifestazione offre, come sempre, un cartellone estremamente eterogeneo di appuntamenti estesi dalle tipologie musicali più classiche alle più insolite: classico, folk, pop, rock, blues, gospel, etno, lirica, sacra, jazz senza tralasciare contaminazioni curiose e affascinanti.",
+      imgBackground: "imolaInMusica01.jpg",
+      imgArray:[],
+      address:"Centro Storico Imola (BO)",
+      date:"01 Settembre 2022 - 04 Settembre 2022",
+      price:"ingresso gratuito",
+      website:"https://www.imolainmusica.it/"
+    },
+    {
+      name: "Bologna Jazz Festival",
+      description: "Bologna Jazz Festival (abbreviato BJF) è considerato il più antico festival musicale italiano dedicato al jazz; fu fondato nel 1958. Si svolge annualmente a Bologna, con eventi anche a Ferrara e Modena, nel mese di novembre",
+      imgBackground: "jazzFestival01.jpg",
+      imgArray:[],
+      address:"Palasport di Bologna",
+      date:"20-30 Novembre",
+      price:"10 euro",
+      website:"https://www.bolognajazzfestival.com/"
     },
 
   ]
@@ -258,6 +322,42 @@ export default async (models) => {
       opening_hours:"Lun - Ven 7.00 - 19.00",
       website:"https://www.tper.it/orari"
     },
+    {
+      name: "Trasporti",
+      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
+        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
+      address:"Via Guglielmo Marconi, 440122 Bologna BO",
+      imgBackground: "trasporti01.jpeg",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      website:"https://www.tper.it/orari"
+    },
+    {
+      name: "Trasporti",
+      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
+        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
+      address:"Via Guglielmo Marconi, 440122 Bologna BO",
+      imgBackground: "trasporti01.jpeg",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      website:"https://www.tper.it/orari"
+    },
+    {
+      name: "Trasporti",
+      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
+        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
+      address:"Via Guglielmo Marconi, 440122 Bologna BO",
+      imgBackground: "trasporti01.jpeg",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      website:"https://www.tper.it/orari"
+    },
+    {
+      name: "Trasporti",
+      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
+        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
+      address:"Via Guglielmo Marconi, 440122 Bologna BO",
+      imgBackground: "trasporti01.jpeg",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      website:"https://www.tper.it/orari"
+    },
   ]
   await models.Service.bulkCreate(serviceList)
 
@@ -265,7 +365,21 @@ export default async (models) => {
   const itineraryList = [
     {
       name: "Una passeggiata in Centro",
-      description: "Piazza Maggiore, il salotto di Bologna, è il principale luogo di ritrovo dei bolognesi: sulla destra si può ammirare la Fontana del Nettuno, uno dei simboli della città, opera dello scultore Giambologna.",
+      description: "Partendo da Piazza Maggiore, cuore della città, passeremo in rassegna i principali monumenti del centro storico. La visita alla Basilica di San Petronio sarà seguita dai meravigliosi Palazzo D’Accursio e Re Enzo. Ci soffermeremo in Piazza Nettuno, dove si trova l’omonima e celebre fontana. Infine, passeggiando lungo via Rizzoli raggiungeremo il simbolo di Bologna: la Torre degli Asinelli insieme alla Garisenda.",
+      map:"mapPasseggiataInCentro01.jpg",
+      duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
+      imgBackground:"unaPasseggiataInCentro01.jpg"
+    },
+    {
+      name: "I Portici e San Luca",
+      description: "La partenza è appena fuori le mura, più precisamente a Porta Saragozza, dove percorreremo il famoso portico ed i suoi archi che ci conducono fino al Colle della Guardia, parte dell’appennino bolognese, dove ci attenderà il Santuario della Madonna di San Luca. Lungo il cammino ci fermeremo ad osservare lo stadio Renato Dall’Ara.",
+      map:"",
+      duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
+      imgBackground:"unaPasseggiataInCentro01.jpg"
+    },
+    {
+      name: "Bologna La Dotta ",
+      description: "Partendo dalle sale mozzafiato dell’Archiginnasio, ci dirigeremo verso la biblioteca più importante della città, ovvero Sala Borsa. Continuando per Via Dell’Indipendenza, osserveremo la maestosa Cattedrale di San Pietro, per poi dirigerci verso Via Delle Moline, dove ci attenderà la suggestiva finestrella sull’omonimo canale. Da qui, proseguiremo verso il cuore dell’odierna zona universitaria, per ammirare gli splendidi edifici medievali di Via Zamboni e Piazza Verdi.",
       map:"",
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
       imgBackground:"unaPasseggiataInCentro01.jpg"

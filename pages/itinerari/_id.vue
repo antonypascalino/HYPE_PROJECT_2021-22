@@ -23,9 +23,11 @@
 
       <section class="section-description">
         <div class="title-container">MAPPA ITINERARIO</div>
-        <p class="text-container"></p>
-      </section>
 
+        <div class="map-container">
+          <img class="img-map" :src="require(`@/static/Itineraries/${map}`)"/>
+        </div>
+      </section>
       <div class="button-container">
         <button
           type="button"
@@ -131,7 +133,7 @@ section-description{
 }
 .button-container{
   width: 100%;
-  height: 60px;
+  height: 200px;
   padding: 20px;
 }
 .btn{
@@ -141,7 +143,21 @@ section-description{
 .text-container{
   padding: 10px ;
 }
+.map-container{
+  width:90vw;
+  height: 30vw;
+  justify-content: center;
+  vertical-align: center;
+  align-content: center;
+  text-align: center;
+  margin: auto;
 
+}
+.img-map{
+  width:inherit;
+  height: inherit;
+  margin-bottom: 20px;
+}
 
 
 </style>
