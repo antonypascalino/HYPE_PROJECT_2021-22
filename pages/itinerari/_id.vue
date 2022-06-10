@@ -133,7 +133,7 @@ section-description{
 }
 .button-container{
   width: 100%;
-  height: 200px;
+  height: 100px;
   padding: 20px;
 }
 .btn{
@@ -144,20 +144,12 @@ section-description{
   padding: 10px ;
 }
 .map-container{
-  width:90vw;
-  height: 30vw;
-  justify-content: center;
-  vertical-align: center;
-  align-content: center;
-  text-align: center;
-  margin: auto;
-
+  width:95vw;
+  height:40vw;
+  display: flex;
 }
 .img-map{
-  width:inherit;
-  height: inherit;
-  margin-bottom: 20px;
+  width: 90%;
+
 }
-
-
 </style>

@@ -35,7 +35,8 @@ async function initializeDatabaseConnection() {
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
     website:DataTypes.STRING,
-    price:DataTypes.STRING
+    price:DataTypes.STRING,
+    type:DataTypes.INTEGER
   })
 
   const Itinerary = database.define("itinerary", {
@@ -135,6 +136,25 @@ async function runMainApi() {
     }
     return res.json(filtered)
   })
+
+  app.get("/summerEvents", async (req, res) => {
+    const title = req.query.type;
+    var condition = title ? { title: { [Op.like]: `%${3}%` } } : null;
+    const result = await models.Events.findAll({where:condition})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgArray: element.imgArray,
+        address: element.address,
+        date:element.date,
+        id: element.id,
+        imgBackground:element.imgBackground
+      })
+    }
+    return res.json(filtered)
+  })
+
 
   // HTTP GET api that returns a specific point of interest
   app.get('/events/:id', async (req, res) => {

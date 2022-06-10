@@ -5,7 +5,6 @@
         a realistic itinerary has at least 5 POIs
 • Itineraries – At least 3 instances
 • Service types – At least 5 instances
-
  */
 export default async (models) => {
 
@@ -207,7 +206,8 @@ export default async (models) => {
       address:"Bologna, Piazza Maggiore",
       date:"25 Giu 2022 - 03 Lug 2022",
       price:"Ingresso gratuito",
-      website:"https://festival.ilcinemaritrovato.it/"
+      website:"https://festival.ilcinemaritrovato.it/",
+      type:0
     },
     {
       name: "Festival della mortadella",
@@ -217,7 +217,8 @@ export default async (models) => {
       address:"piazza Grande - 40069 Zola Predosa (BO)",
       date:"20-21-22 Sett 2022",
       price:"ingresso libero, ristorazione a pagamento",
-      website:"www.mortadellaplease.eu/"
+      website:"www.mortadellaplease.eu/",
+      type:0
     },
     {
       name: "Arte Fiera",
@@ -229,7 +230,8 @@ export default async (models) => {
       address:"Viale della Fiera, 20, 40127 Bologna BO",
       date:" dal 13 al 15 maggio 2022",
       price:"26 euro",
-      website:"http://www.artefiera.it/home/776.html"
+      website:"http://www.artefiera.it/home/776.html",
+      type:0
     },
     {
       name: "Fiera del Libro",
@@ -241,7 +243,8 @@ export default async (models) => {
       address:"Piazza XX Settembre (Porta Galliera",
       date:"18 marzo – 1 maggio 2022",
       price:"Ingresso gratuito",
-      website:"https://www.fieradellibrobologna.it/"
+      website:"https://www.fieradellibrobologna.it/",
+      type:0
     },
     {
       name: "StraBologna",
@@ -253,7 +256,8 @@ export default async (models) => {
       date:"22 MAGGIO 2022\n" +
         "ORE 10:30",
       price:"15 euro",
-      website:"https://strabologna.it/"
+      website:"https://strabologna.it/",
+      type:0
     },
     {
       name: "roBOt",
@@ -265,7 +269,8 @@ export default async (models) => {
       address:"Via Camillo Casarini, 19, 40131 Bologna BO",
       date:"23-24 Settembre",
       price:"30 euro",
-      website:"https://robotfestival.it/"
+      website:"https://robotfestival.it/",
+      type:0
     },
     {
       name: "Cosmoprof",
@@ -275,7 +280,8 @@ export default async (models) => {
       address:"Quartiere Fieristico, Bologna",
       date:"16 al 20 marzo 2023",
       price:"Ingresso gratuito",
-      website:"https://www.cosmoprof.com/"
+      website:"https://www.cosmoprof.com/",
+      type:0
     },
     {
       name: "Cioccoshow",
@@ -285,7 +291,8 @@ export default async (models) => {
       address:"Piazza XX settembre BOLOGNA",
       date:"17-20 Novermbre 2022",
       price:"Ingresso gratuito",
-      website:"https://cioccoshow.it/"
+      website:"https://cioccoshow.it/",
+      type:0
     },
     {
       name: "Imola in Musica",
@@ -295,7 +302,8 @@ export default async (models) => {
       address:"Centro Storico Imola (BO)",
       date:"01 Settembre 2022 - 04 Settembre 2022",
       price:"ingresso gratuito",
-      website:"https://www.imolainmusica.it/"
+      website:"https://www.imolainmusica.it/",
+      type:0
     },
     {
       name: "Bologna Jazz Festival",
@@ -305,7 +313,8 @@ export default async (models) => {
       address:"Palasport di Bologna",
       date:"20-30 Novembre",
       price:"10 euro",
-      website:"https://www.bolognajazzfestival.com/"
+      website:"https://www.bolognajazzfestival.com/",
+      type:1
     },
 
   ]
@@ -373,17 +382,19 @@ export default async (models) => {
     {
       name: "I Portici e San Luca",
       description: "La partenza è appena fuori le mura, più precisamente a Porta Saragozza, dove percorreremo il famoso portico ed i suoi archi che ci conducono fino al Colle della Guardia, parte dell’appennino bolognese, dove ci attenderà il Santuario della Madonna di San Luca. Lungo il cammino ci fermeremo ad osservare lo stadio Renato Dall’Ara.",
-      map:"",
+      map:"mapPasseggiataInCentro01.jpg",
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
       imgBackground:"unaPasseggiataInCentro01.jpg"
     },
     {
       name: "Bologna La Dotta ",
       description: "Partendo dalle sale mozzafiato dell’Archiginnasio, ci dirigeremo verso la biblioteca più importante della città, ovvero Sala Borsa. Continuando per Via Dell’Indipendenza, osserveremo la maestosa Cattedrale di San Pietro, per poi dirigerci verso Via Delle Moline, dove ci attenderà la suggestiva finestrella sull’omonimo canale. Da qui, proseguiremo verso il cuore dell’odierna zona universitaria, per ammirare gli splendidi edifici medievali di Via Zamboni e Piazza Verdi.",
-      map:"",
+      map:"mapPasseggiataInCentro01.jpg",
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
       imgBackground:"unaPasseggiataInCentro01.jpg"
     },
+
+
   ]
   await models.Itinerary.bulkCreate(itineraryList)
 
