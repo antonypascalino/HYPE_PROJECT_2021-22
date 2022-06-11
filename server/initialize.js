@@ -332,7 +332,25 @@ export default async (models) => {
       website:"https://www.tper.it/orari"
     },
     {
-      name: "Trasporti",
+      name: "Ospedale",
+      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
+        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
+      address:"Via Guglielmo Marconi, 440122 Bologna BO",
+      imgBackground: "ospedale01.jpg",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      website:"https://www.tper.it/orari"
+    },
+    {
+      name: "Università",
+      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
+        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
+      address:"Via Guglielmo Marconi, 440122 Bologna BO",
+      imgBackground: "universita01.jpg",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      website:"https://www.tper.it/orari"
+    },
+    {
+      name: "Ufficio comunale",
       description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
         "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
       address:"Via Guglielmo Marconi, 440122 Bologna BO",
@@ -341,29 +359,11 @@ export default async (models) => {
       website:"https://www.tper.it/orari"
     },
     {
-      name: "Trasporti",
+      name: "Divertimento",
       description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
         "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
       address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "trasporti01.jpeg",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      website:"https://www.tper.it/orari"
-    },
-    {
-      name: "Trasporti",
-      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-      address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "trasporti01.jpeg",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      website:"https://www.tper.it/orari"
-    },
-    {
-      name: "Trasporti",
-      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-      address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "trasporti01.jpeg",
+      imgBackground: "divertimento01.jpeg",
       opening_hours:"Lun - Ven 7.00 - 19.00",
       website:"https://www.tper.it/orari"
     },
@@ -384,14 +384,14 @@ export default async (models) => {
       description: "La partenza è appena fuori le mura, più precisamente a Porta Saragozza, dove percorreremo il famoso portico ed i suoi archi che ci conducono fino al Colle della Guardia, parte dell’appennino bolognese, dove ci attenderà il Santuario della Madonna di San Luca. Lungo il cammino ci fermeremo ad osservare lo stadio Renato Dall’Ara.",
       map:"mapPasseggiataInCentro01.jpg",
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
-      imgBackground:"unaPasseggiataInCentro01.jpg"
+      imgBackground:"portici01.jpg"
     },
     {
       name: "Bologna La Dotta ",
       description: "Partendo dalle sale mozzafiato dell’Archiginnasio, ci dirigeremo verso la biblioteca più importante della città, ovvero Sala Borsa. Continuando per Via Dell’Indipendenza, osserveremo la maestosa Cattedrale di San Pietro, per poi dirigerci verso Via Delle Moline, dove ci attenderà la suggestiva finestrella sull’omonimo canale. Da qui, proseguiremo verso il cuore dell’odierna zona universitaria, per ammirare gli splendidi edifici medievali di Via Zamboni e Piazza Verdi.",
       map:"mapPasseggiataInCentro01.jpg",
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
-      imgBackground:"unaPasseggiataInCentro01.jpg"
+      imgBackground:"viaDelleMoline01.jpg"
     },
 
 
