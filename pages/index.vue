@@ -93,10 +93,11 @@ export default {
 .row{
   margin: auto;
   width: 70%;
-  border: 2px solid lightgray;
   justify-content: center;
   padding: 10px;
 
 }
+
+
 
 </style>

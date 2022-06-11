@@ -1,7 +1,7 @@
 <!--
   Component: StaticFullimage
   Description: It's the component for the display of a full page image: In the insideBO website is used
-  in the homepage. Beyond the j
+  in the homepage.
 -->
 
 <template>
@@ -55,5 +55,12 @@ export default {
   color: #C13939;
   font-size: 4vw;
 }
-
+@media screen and (max-width: 600px) {
+  .scopri-container{
+    margin-top: 25px;
+  }
+  .bologna-container{
+    margin-top: 25px;
+  }
+}
 </style>

@@ -19,12 +19,16 @@
   border: 2px solid lightgray;
   background-color: #EBEBEB;
 }
-.card:hover {
+
+.btn-orange{
+  background-color: #C13939;
+  color: #ffffff;
   border: 2px solid #C13939;
 }
-.btn-orange {
-  background-color:#C13939 ;
-  border: 2px solid #C13939;
+
+.btn-orange:hover{
+  background-color: #ffffff;
+  color: black;
 }
 .card-image {
   margin-top: 10px;

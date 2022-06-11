@@ -150,6 +150,5 @@ section-description{
 }
 .img-map{
   width: 90%;
-
 }
 </style>
