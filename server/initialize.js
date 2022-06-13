@@ -323,52 +323,38 @@ export default async (models) => {
   //Service Table
   const serviceList = [
     {
-      name: "Trasporti",
-      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-                   "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-      address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "trasporti01.jpeg",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      website:"https://www.tper.it/orari"
+      name: "Banche",
+      imgBackground: "banche01.jpg"
     },
     {
-      name: "Ospedale",
-      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-      address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "ospedale01.jpg",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      website:"https://www.tper.it/orari"
-    },
-    {
-      name: "Università",
-      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-      address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "universita01.jpg",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      website:"https://www.tper.it/orari"
-    },
-    {
-      name: "Ufficio comunale",
-      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-      address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "trasporti01.jpeg",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      website:"https://www.tper.it/orari"
+      name: "Cinema",
+      imgBackground: "cinema01.jpg"
     },
     {
       name: "Divertimento",
-      description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-        "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-      address:"Via Guglielmo Marconi, 440122 Bologna BO",
-      imgBackground: "divertimento01.jpeg",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      website:"https://www.tper.it/orari"
+      imgBackground: "discoteca01.jpg",
+    },
+    {
+      name: "Farmacie",
+      imgBackground: "farmacie01.jpg",
+    },
+    {
+      name: "Ristorazione",
+      imgBackground: "ristorazione01.jpg",
     },
   ]
   await models.Service.bulkCreate(serviceList)
+
+/*
+  name: "Bacnhe",
+    description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
+  "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
+    address:"Via Guglielmo Marconi, 440122 Bologna BO",
+    imgBackground: "trasporti01.jpeg",
+    opening_hours:"Lun - Ven 7.00 - 19.00",
+    website:"https://www.tper.it/orari"
+*/
+
 
   //Itinerary Table
   const itineraryList = [
