@@ -182,7 +182,7 @@ export default {
     float: left;
     position: absolute;
     width: 100%;
-    border: solid 2px blue;
+    /*border: solid 2px blue;*/
     margin-bottom: 0;
     bottom: 0;
   }
@@ -194,12 +194,12 @@ export default {
   }
 
   div.indicatorList {
-    border: solid 2px blue;
-    height: 600px;
-    width: 300px;
+    /*border: solid 2px blue;*/
+    width: 20vw;
+    height: 76vh;
     position: relative;
     float: right;
-    margin-top: 6%;
+    margin-top: 3%;
     margin-right: 2%;
     padding: 0;
     font-size: 20px;

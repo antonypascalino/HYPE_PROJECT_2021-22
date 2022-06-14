@@ -35,10 +35,11 @@ export default {
   }
 
   button.carousel-indicator {
-    height: 40px;
+    width: 100%;
+    height: 3.8vh;
     background-color: transparent;
     color: black;
-    font-size: 16px;
+    font-size: 1.1vw;
     font-family: "Josefin Sans";
     float: right;
     margin-right: 0;
