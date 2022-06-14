@@ -42,7 +42,7 @@
                       :id="poi.id">
         <div class="imageContainer container-scroll">
           <img class= "carouselImg image-scroll" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
-          <p class="textContainer-scroll">{{poi.name}}</p>
+          <div class="textContainer-scroll">{{poi.name}}</div>
         </div>
       </div>
     </div>
@@ -122,7 +122,7 @@ export default {
     padding-top: 5%;
     padding-left: 4%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 
   carousel-slide {
@@ -131,10 +131,9 @@ export default {
 
   .imageContainer {
     position: relative;
-    /*border: solid blue 2px;*/
     width: 70vw;
-    height: 76vh;
-    margin-top: 5vh;
+    height: 74vh;
+    margin-top: 7vh;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   }
 
@@ -145,7 +144,11 @@ export default {
     height: 74vh;
     aspect-ratio: auto;
     object-fit: cover;
-    /*margin-bottom: 100px;*/
+  }
+
+  .carouselScroll {
+    width: 70vh;
+    left: 0;
   }
 
   .carouselImg:hover {
@@ -155,30 +158,44 @@ export default {
   }
 
   .imageContainer.container-scroll {
+    position: relative;
     height: 38vh;
-    margin-right: 0;
+    width: 70vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
     margin-top: 0;
-    margin-left: 10vw;
+    margin-bottom: 35px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   }
 
   .carouselImg.image-scroll {
+    display: block;
     margin-bottom: 50px;
+    margin-left: 0;
+    width: 100%;
+    height: 38vh;
+    aspect-ratio: auto;
+    object-fit: cover;
   }
 
-  .textContainer-scroll {
-    margin-top: -90px;
+  div.textContainer-scroll {
     color: white ;
     font-size: 5vw;
+    line-height: normal;
     font-family: "Josefin Sans";
     text-transform: uppercase;
-    box-sizing: content-box;
     float: left;
+    position: absolute;
+    width: 100%;
+    /*border: solid 2px blue;*/
+    margin-bottom: 0;
+    bottom: 0;
   }
 
   div.textContainer-carousel {
     color: white ;
     font-size: 5vw;
-    /*line-height: normal;*/
+    line-height: normal;
     font-family: "Josefin Sans";
     text-transform: uppercase;
     float: left;
@@ -207,26 +224,16 @@ export default {
     font-size: 20px;
   }
 
-  /*.carousel-indicator {*/
-  /*  position: relative;*/
-  /*  color: black;*/
-  /*}*/
-
-  .carousel-indicator:hover {
-    color: #C13939;
-  }
-
-  ul.list {
-    width: 200px;
-    padding-left: 0;
-  }
-
   @media screen and (max-width: 880px) {
     .indicatorList{
       display: none;
     }
     .carousel {
       display: none;
+    }
+
+    .carouselDiv {
+      padding-left: 0 ;
     }
   }
 

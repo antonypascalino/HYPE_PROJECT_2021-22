@@ -66,7 +66,7 @@ export default {
     bottom: 0;
   }
 
-  .btn-container{
+  .btn-container {
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     position: absolute;
     height: 5vh;
@@ -78,7 +78,6 @@ export default {
     align-content: center;
     justify-content: center;
     overflow: hidden;
-    /*border: solid black 6px;*/
 
   }
 
