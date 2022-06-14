@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/pois/${id}`">
+  <nuxt-link :to="`/${name}/${id}`">
   <div v-show="visibleSlide === index" class="carousel-slide">
     <slot></slot>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  props: ['visibleSlide', 'index','id'],
+  props: ['visibleSlide', 'index','id','name'],
   data() {
     return {}
   },

@@ -2,12 +2,12 @@
 
 <template>
   <main class="page-container">
-
-    <div class="breadcrumb-section">
-      <Breadcrumb :crumbs="crumbs" @selected="selected"/>
-    </div>
     <div class="body-container">
       <StaticHalfImage slide="/Bologna_finestra.jpg" title="BOLOGNA" />
+      <div class="breadcrumb-section">
+        <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+      </div>
+      <br>
       <section class="section-la-nostra-missione">
         <p>Capoluogo della Città metropolitana e della regione Emilia Romagna, Bologna è situata tra le montagne dell'Appennino tosco-emiliano ed il cuore della Pianura Padana. Punto d’incontro tra nord e sud, tra est e ovest, da Bologna si raggiungono facilmente la Riviera Adriatica nonché Venezia, Firenze, Milano e Roma.
         </p>
@@ -22,7 +22,7 @@
       <section class="section-la-nostra-missione">
         <div class="title-container">Sulla Tavola</div>
         <p>Bologna è sinonimo di enogastronomia. Mortadella, "ragù alla Bolognese", tortellini, lasagne, tagliatelle, bollito, certosino, sono solo alcuni dei prodotti che l’hanno resa famosa nel mondo insieme alle mitiche sfogline, i cui corsi di cucina sono frequentati da visitatori di ogni continente. Altrettanto noti sono i Vini DOC dei Colli Bolognesi, fra i quali il tipico Pignoletto.</p>
-         </section>
+      </section>
       <section class="section-la-nostra-missione">
         <div class="title-container">Per Divertirsi</div>
        <p>La città pulsa di vita di giorno e di notte nelle numerose osterie, teatri, gallerie, librerie, piazze e negozi. Nelle suggestive stradine adiacenti Piazza Maggiore, dove si snoda tra botteghe di prodotti tipici il vivace e pittoresco mercato del Quadrilatero, i più golosi non possono rinunciare ad una sosta nel più antico e rinomato laboratorio di cioccolato della città e all’aperitivo in un'antica enoteca.</p>
@@ -69,11 +69,12 @@ export default {
       ]
     }
   }
+
 }
 </script>
 <style scoped>
 .page-container{
-  margin-top: -60px;
+  margin-top: -40px;
 }
 .body-container{
   margin-top: 60px;

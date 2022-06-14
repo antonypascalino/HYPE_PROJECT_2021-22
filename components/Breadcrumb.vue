@@ -21,6 +21,10 @@ export default {
       type: Array,
       required: true,
     },
+    optional:{
+      type:String,
+      required: false
+    }
   },
   methods: {
     isLast(index) {
@@ -53,7 +57,7 @@ export default {
   .nav-container{
     float: left;
     width: 100%;
-    margin-top: 55px;
+    margin-top: 0;
     height: 38px;
     margin-bottom: 0;
   }
@@ -61,5 +65,9 @@ export default {
   .breadcrumb-item+.breadcrumb-item::before {
     content:"/";
     color: #C13939;
+  }
+  .btn{
+    background-color: transparent;
+    color:black
   }
 </style>

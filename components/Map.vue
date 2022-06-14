@@ -87,7 +87,7 @@ h3 {
 }
 
 /* Grid management for mobile devices */
-@media (min-width: 726px) {
+@media (min-width: 1000px) {
   .map-container,
   .address-container {
     float: left;
@@ -100,7 +100,7 @@ h3 {
   }
 }
 /* Grid management for desktop devices */
-@media (max-width: 725px) {
+@media (max-width: 999px) {
   .map {
     max-height: 70vh;
   }

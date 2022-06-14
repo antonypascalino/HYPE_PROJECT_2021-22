@@ -26,6 +26,7 @@
                         :index="index"
                         :visibleSlide = "visibleSlide"
                         :id="poi.id"
+                        :name='"pois"'
         >
           <div class="imageContainer">
             <img class= "carouselImg" :src="require(`@/static/Poi/${poi.img1}`)" :alt="poi.name">
