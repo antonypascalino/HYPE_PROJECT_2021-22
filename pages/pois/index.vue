@@ -8,11 +8,13 @@
       <div class="indicatorList">
         <div class = "list">
           <carousel-indicator
-              v-for = "poi in poiList"
+              v-for = "(poi,index) in poiList"
               :key = "poi.id"
+              :index = "index"
+              :visibleSlide = "visibleSlide"
               :title = "poi.name"
               @change = "change(poi.id)"
-              class = "carousel-indicator"
+
             />
         </div>
       </div>
@@ -205,10 +207,10 @@ export default {
     font-size: 20px;
   }
 
-  .carousel-indicator {
-    position: relative;
-    color: black;
-  }
+  /*.carousel-indicator {*/
+  /*  position: relative;*/
+  /*  color: black;*/
+  /*}*/
 
   .carousel-indicator:hover {
     color: #C13939;

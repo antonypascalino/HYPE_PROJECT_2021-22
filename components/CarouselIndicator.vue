@@ -1,9 +1,13 @@
 <template>
     <button @click="change"
-            class = "carousel-indicator">
-      {{ title + ' ' }}
-        <i class = "dot mdi mdi-moon-new"/>
-
+            class = "carousel-indicator"
+            :style = "getTextColor(index,visibleSlide)"
+    >
+            {{ title }}
+      <i
+        :class = "getSymbol(index,visibleSlide)"
+        :style = "getColor(index,visibleSlide)"
+      />
     </button>
 </template>
 
@@ -16,11 +20,28 @@ export default {
 
     }
   },
-  props: ['title', 'selected', 'index'],
+  props: ['title', 'selected', 'index','visibleSlide'],
   methods: {
     change() {
       this.$emit('change')
     },
+    getTextColor(index,visibleSlide) {
+      if (visibleSlide === index) {
+        return "color: #C13939;"
+      }
+    },
+    getSymbol(index, visibleSlide) {
+      if (visibleSlide === index) {
+        return "dot mdi mdi-moon-full"
+      }
+      else return "dot mdi mdi-moon-new"
+    },
+    getColor(index, visibleSlide) {
+      if (visibleSlide === index) {
+        return  "color: #C13939";
+      }
+      else return "color: black;"
+    }
   }
 }
 
@@ -34,7 +55,7 @@ export default {
     float: right;
   }
 
-  button.carousel-indicator {
+  .carousel-indicator {
     width: 100%;
     height: 3.8vh;
     background-color: transparent;
@@ -47,10 +68,15 @@ export default {
     border: none;
   }
 
-  /*Per distanziare i pallini dal nome*/
-  i.mdi.mdi-moon-new {
-    margin-left: 3px;
+  .carousel-indicator:hover {
+    color: #C13939;
   }
+
+  /*Per distanziare i pallini dal nome*/
+  i {
+    margin-left: 5px;
+  }
+
 
 
 
