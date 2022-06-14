@@ -29,8 +29,8 @@
                         :name='"pois"'
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="require(`@/static/Poi/${poi.img1}`)" :alt="poi.name">
-            <p class="textContainer">{{ poi.name }}</p>
+            <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
+            <div class="textContainer-carousel">{{ poi.name }}</div>
           </div>
         </carousel-slide>
       </carousel>
@@ -39,8 +39,8 @@
                       :key="index"
                       :id="poi.id">
         <div class="imageContainer container-scroll">
-          <img class= "carouselImg image-scroll" :src="require(`@/static/Poi/${poi.img1}`)" :alt="poi.name">
-          <h5 class="textContainer-scroll">{{poi.name}}</h5>
+          <img class= "carouselImg image-scroll" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
+          <p class="textContainer-scroll">{{poi.name}}</p>
         </div>
       </div>
     </div>
@@ -128,11 +128,28 @@ export default {
   }
 
   .imageContainer {
+    position: relative;
     /*border: solid blue 2px;*/
     width: 70vw;
     height: 76vh;
-    margin-top: 6vh;
+    margin-top: 5vh;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .carouselImg {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    height: 74vh;
+    aspect-ratio: auto;
+    object-fit: cover;
+    /*margin-bottom: 100px;*/
+  }
+
+  .carouselImg:hover {
+    -webkit-filter: blur(4px);
+    cursor: pointer;
+    transition: 200ms;
   }
 
   .imageContainer.container-scroll {
@@ -146,22 +163,6 @@ export default {
     margin-bottom: 50px;
   }
 
-  .carouselImg {
-    margin-left: 0;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: auto;
-    object-fit: cover;
-    margin-bottom: 100px;
-  }
-
-  .carouselImg:hover {
-    -webkit-filter: blur(4px);
-    cursor: pointer;
-    transition: 200ms;
-  }
-
-
   .textContainer-scroll {
     margin-top: -90px;
     color: white ;
@@ -172,40 +173,30 @@ export default {
     float: left;
   }
 
-  .textContainer{
+  div.textContainer-carousel {
     color: white ;
     font-size: 5vw;
-    line-height: normal;
+    /*line-height: normal;*/
     font-family: "Josefin Sans";
     text-transform: uppercase;
     float: left;
     position: absolute;
+    width: 100%;
+    border: solid 2px blue;
+    margin-bottom: 0;
     bottom: 0;
-    width: inherit;
-    left: 0;
-    margin-bottom: 5vh;
-
-    /*border: solid yellow 6px;*/
   }
+
 
   .App {
     background-color: #EBEBEB;
     height: auto;
   }
 
-  html {
-    overflow: hidden;
-    height: 100%;
-  }
-
-  body {
-    overflow: auto;
-    height: 100%;
-  }
-
   div.indicatorList {
+    border: solid 2px blue;
     height: 600px;
-    width: 200px;
+    width: 300px;
     position: relative;
     float: right;
     margin-top: 6%;
@@ -242,4 +233,5 @@ export default {
       display: none;
     }
   }
+
 </style>
