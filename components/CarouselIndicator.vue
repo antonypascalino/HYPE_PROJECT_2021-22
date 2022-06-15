@@ -27,7 +27,8 @@ export default {
     },
     getTextColor(index,visibleSlide) {
       if (visibleSlide === index) {
-        return "color: #C13939;"
+        return "color: #C13939;\n " +
+                "font-size: 1.4vw;"
       }
     },
     getSymbol(index, visibleSlide) {
@@ -70,12 +71,17 @@ export default {
 
   .carousel-indicator:hover {
     color: #C13939;
+    font-size: 1.4vw;
   }
 
   /*Per distanziare i pallini dal nome*/
   i {
     margin-left: 5px;
   }
+
+  /*i:hover {*/
+  /*  color: #C13939;*/
+  /*}*/
 
 
 

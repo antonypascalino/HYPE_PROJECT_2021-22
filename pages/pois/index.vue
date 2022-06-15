@@ -31,8 +31,11 @@
                         :name='"pois"'
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
+            <nuxt-link :to="`/pois/${poi.id}`">
+              <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
+            </nuxt-link>
             <div class="textContainer-carousel">{{ poi.name }}</div>
+            <div class="hoverText">Scopri di più</div>
           </div>
         </carousel-slide>
       </carousel>
@@ -40,10 +43,14 @@
                       v-for = "(poi, index) in poiList"
                       :key="index"
                       :id="poi.id">
-        <div class="imageContainer container-scroll">
-          <img class= "carouselImg image-scroll" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
-          <div class="textContainer-scroll">{{poi.name}}</div>
-        </div>
+
+          <div class="imageContainer container-scroll">
+            <nuxt-link :to="`/pois/${poi.id}`">
+              <img class= "carouselImg image-scroll" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
+            </nuxt-link>
+            <div class="textContainer-scroll">{{poi.name}}</div>
+            <div class="hoverText">Scopri di più</div>
+          </div>
       </div>
     </div>
   </div>
@@ -104,6 +111,9 @@ export default {
     selected(crumb) {
       console.log(crumb);
     },
+    goToDetails() {
+      this.$router.push(`/details/${this.id}`)
+    },
   },
   components : {
     Carousel,
@@ -137,6 +147,35 @@ export default {
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   }
 
+  .imageContainer:hover .hoverText, .imageContainer.hover .hoverText {
+    visibility: visible;
+    opacity: 1;
+    bottom: 20%;
+    transition: 350ms ease-in-out;
+  }
+
+  .imageContainer:hover .carouselImg, .imageContainer.hover .carouselImg {
+    -webkit-filter: blur(4px);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+  }
+
+  .imageContainer:hover .carouselImg.image-scroll, .imageContainer.hover .carouselImg.image-scroll {
+    -webkit-filter: blur(4px);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+  }
+
+  .imageContainer:hover .textContainer-carousel, .imageContainer.hover .textContainer-carousel {
+    bottom: 40%;
+    transition: 400ms ease-in-out;
+  }
+
+  .imageContainer:hover .textContainer-scroll, .imageContainer.hover .textContainer-scroll {
+    bottom: 40%;
+    transition: 400ms ease-in-out;
+  }
+
   .carouselImg {
     display: block;
     margin-left: 0;
@@ -144,35 +183,28 @@ export default {
     height: 74vh;
     aspect-ratio: auto;
     object-fit: cover;
+    transition: 200ms ease-in-out;
   }
 
   .carouselScroll {
     width: 70vh;
     left: 0;
-  }
-
-  .carouselImg:hover {
-    -webkit-filter: blur(4px);
-    cursor: pointer;
-    transition: 200ms;
+    margin-right: 0;
   }
 
   .imageContainer.container-scroll {
     position: relative;
     height: 38vh;
     width: 70vh;
-    margin-left: 15vh;
-    margin-right: 15vh;
-    margin-top: 0;
-    margin-bottom: 35px;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    margin-left: 15vw;
   }
 
   .carouselImg.image-scroll {
     display: block;
     margin-bottom: 50px;
     margin-left: 0;
-    width: 100%;
+    width: 70vw;
     height: 38vh;
     aspect-ratio: auto;
     object-fit: cover;
@@ -200,12 +232,47 @@ export default {
     text-transform: uppercase;
     float: left;
     position: absolute;
-    width: 100%;
+    width: 56%;
     /*border: solid 2px blue;*/
     margin-bottom: 0;
     bottom: 0;
+    transition: 400ms ease-in-out;
   }
 
+  div.hoverText {
+    color: white ;
+    font-size: 3vw;
+    line-height: normal;
+    font-family: "Josefin Sans";
+    font-style: italic;
+    float: left;
+    position: absolute;
+    width: 30%;
+    /*border: solid 2px blue;*/
+    margin-bottom: 0;
+    bottom:0;
+    height: auto;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 350ms ease-in-out;
+  }
+
+  span {
+    top: 50%;
+    border: solid 2px yellow;
+  }
+
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #EBEBEB;
+  }
 
   .App {
     background-color: #EBEBEB;
@@ -214,7 +281,7 @@ export default {
 
   div.indicatorList {
     /*border: solid 2px blue;*/
-    width: 20vw;
+    width: 23vw;
     height: 76vh;
     position: relative;
     float: right;

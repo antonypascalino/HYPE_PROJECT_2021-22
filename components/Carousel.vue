@@ -82,11 +82,11 @@ export default {
   }
 
   .mdi.mdi-menu-down:hover {
-    font-size: 140px;
+    font-size: 160px;
   }
 
   .mdi.mdi-menu-up:hover {
-    font-size: 140px;
+    font-size: 160px;
   }
 
 
