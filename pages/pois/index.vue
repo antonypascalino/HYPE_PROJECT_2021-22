@@ -7,13 +7,15 @@
     <div class="carouselDiv">
       <div class="indicatorList">
         <div class = "list">
-        <carousel-indicator
-            v-for = "poi in poiList"
-            :key = "poi.id"
-            :title = "poi.name"
-            @change = "change(poi.id)"
-            class = "carousel-indicator"
-          ></carousel-indicator>
+          <carousel-indicator
+              v-for = "(poi,index) in poiList"
+              :key = "poi.id"
+              :index = "index"
+              :visibleSlide = "visibleSlide"
+              :title = "poi.name"
+              @change = "change(poi.id)"
+
+            />
         </div>
       </div>
       <carousel
@@ -29,11 +31,27 @@
                         :name='"pois"'
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
-            <div class="textContainer">{{ poi.name }}</div>
+            <nuxt-link :to="`/pois/${poi.id}`">
+              <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
+            </nuxt-link>
+            <div class="textContainer-carousel">{{ poi.name }}</div>
+            <div class="hoverText">Scopri di più</div>
           </div>
         </carousel-slide>
       </carousel>
+      <div class="carouselScroll"
+                      v-for = "(poi, index) in poiList"
+                      :key="index"
+                      :id="poi.id">
+
+          <div class="imageContainer container-scroll">
+            <nuxt-link :to="`/pois/${poi.id}`">
+              <img class= "carouselImg image-scroll" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
+            </nuxt-link>
+            <div class="textContainer-scroll">{{poi.name}}</div>
+            <div class="hoverText">Scopri di più</div>
+          </div>
+      </div>
     </div>
   </div>
 </template>
@@ -93,6 +111,9 @@ export default {
     selected(crumb) {
       console.log(crumb);
     },
+    goToDetails() {
+      this.$router.push(`/details/${this.id}`)
+    },
   },
   components : {
     Carousel,
@@ -107,11 +128,16 @@ export default {
 
 <style>
 
+  .breadcrumb-section {
+    margin-top: 70px;
+    background: transparent;
+  }
+
   .carouselDiv {
-    padding-top: 5%;
-    padding-bottom: 3%;
+    padding-top: 2%;
     padding-left: 4%;
-    width:100%
+    width: 100%;
+    height: 100vh;
   }
 
   carousel-slide {
@@ -119,33 +145,78 @@ export default {
   }
 
   .imageContainer {
-    /*border: solid blue 2px;*/
-    width: 100%;
-    height: 40%;
-    overflow: hidden;
-    margin-left: 0;
-    margin-top: 6%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 100px;
+    position: relative;
+    width: 70vw;
+    height: 74vh;
+    margin-top: 7vh;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   }
 
-  .carouselImg:hover {
+  .imageContainer:hover .hoverText, .imageContainer.hover .hoverText {
+    visibility: visible;
+    opacity: 1;
+    bottom: 20%;
+    transition: 350ms ease-in-out;
+  }
+
+  .imageContainer:hover .carouselImg, .imageContainer.hover .carouselImg {
     -webkit-filter: blur(4px);
     cursor: pointer;
-    transition: 200ms;
+    transition: 200ms ease-in-out;
+  }
+
+  .imageContainer:hover .carouselImg.image-scroll, .imageContainer.hover .carouselImg.image-scroll {
+    -webkit-filter: blur(4px);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+  }
+
+  .imageContainer:hover .textContainer-carousel, .imageContainer.hover .textContainer-carousel {
+    bottom: 40%;
+    transition: 400ms ease-in-out;
+  }
+
+  .imageContainer:hover .textContainer-scroll, .imageContainer.hover .textContainer-scroll {
+    bottom: 40%;
+    transition: 400ms ease-in-out;
   }
 
   .carouselImg {
-     aspect-ratio: auto;
-     margin-left: 0;
-     width: 100%;
-
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    height: 74vh;
+    aspect-ratio: auto;
+    object-fit: cover;
+    transition: 200ms ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
   }
 
-  div.textContainer{
+  .carouselScroll {
+    width: 70vh;
+    left: 0;
+    margin-right: 0;
+  }
+
+  .imageContainer.container-scroll {
+    position: relative;
+    height: 38vh;
+    width: 70vh;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    margin-left: 15vw;
+  }
+
+  .carouselImg.image-scroll {
+    display: block;
+    margin-bottom: 50px;
+    margin-left: 0;
+    width: 70vw;
+    height: 38vh;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  div.textContainer-scroll {
     color: white ;
     font-size: 5vw;
     line-height: normal;
@@ -153,44 +224,96 @@ export default {
     text-transform: uppercase;
     float: left;
     position: absolute;
-    bottom: 28px;
-    width: 800px;
+    width: 100%;
+    /*border: solid 2px blue;*/
+    margin-bottom: 0;
+    bottom: 0;
+  }
+
+  div.textContainer-carousel {
+    color: white ;
+    font-size: 5vw;
+    line-height: normal;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    float: left;
+    position: absolute;
+    width: 56%;
+    /*border: solid 2px blue;*/
+    margin-bottom: 0;
+    bottom: 0;
+    transition: 400ms ease-in-out;
+  }
+
+  div.hoverText {
+    color: white ;
+    font-size: 3vw;
+    line-height: normal;
+    font-family: "Josefin Sans";
+    font-style: italic;
+    float: left;
+    position: absolute;
+    width: 30%;
+    /*border: solid 2px blue;*/
+    margin-bottom: 0;
+    bottom:0;
+    height: auto;
     left: 0;
-    margin-bottom: 2.5%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 350ms ease-in-out;
+  }
+
+  span {
+    top: 50%;
+    /*border: solid 2px yellow;*/
+  }
+
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    height: 100%;
+    overflow: auto;
+    background-color: #F2F2F2;
   }
 
   .App {
-    background-color: #EBEBEB;
+    background-color: #F2F2F2;
+    height: auto;
   }
 
   div.indicatorList {
-    height: 600px;
-    width: 200px;
+    /*border: solid 2px blue;*/
+    width: 23vw;
+    height: 76vh;
     position: relative;
     float: right;
-    margin-top: 6%;
+    margin-top: 4%;
     margin-right: 2%;
     padding: 0;
     font-size: 20px;
   }
 
-  .carousel-indicator {
-    position: relative;
-    color: black;
-  }
-
-  .carousel-indicator:hover {
-    color: #C13939;
-  }
-
-  ul.list {
-    width: 200px;
-    padding-left: 0;
-  }
-
-  @media screen and (max-width: 1220px) {
+  @media screen and (max-width: 880px) {
     .indicatorList{
       display: none;
     }
+    .carousel {
+      display: none;
+    }
+
+    .carouselDiv {
+      padding-left: 0 ;
+    }
   }
+
+  @media screen and (min-width: 881px) {
+    .carouselScroll {
+      display: none;
+    }
+  }
+
 </style>

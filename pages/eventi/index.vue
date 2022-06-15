@@ -30,7 +30,7 @@
         >
           <div class="imageContainer">
             <img class= "carouselImg" :src="require(`@/static/Events/${ev.imgBackground}`)" :alt="ev.name">
-            <div class="textContainer">{{ ev.name }}</div>
+            <div class="textContainer-carousel">{{ ev.name }}</div>
           </div>
         </carousel-slide>
       </carousel>
@@ -101,92 +101,90 @@ export default {
 
 </script>
 
-<style>
+<!--<style>-->
 
-.carouselDiv {
-  padding-top: 5%;
-  padding-bottom: 3%;
-  padding-left: 4%;
-  width:100%
-}
+<!--.carouselDiv {-->
+<!--  padding-top: 5%;-->
+<!--  padding-bottom: 3%;-->
+<!--  padding-left: 4%;-->
+<!--  width:100%-->
+<!--}-->
 
-carousel-slide {
-  left: 0;
-}
+<!--carousel-slide {-->
+<!--  left: 0;-->
+<!--}-->
 
-.imageContainer {
-  /*border: solid blue 2px;*/
-  width: 100%;
-  height: 40%;
-  overflow: hidden;
-  margin-left: 0;
-  margin-top: 6%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 100px;
-}
+<!--.imageContainer {-->
+<!--  /*border: solid blue 2px;*/-->
+<!--  width: 100%;-->
+<!--  height: 40%;-->
+<!--  overflow: hidden;-->
+<!--  margin-left: 0;-->
+<!--  margin-top: 6%;-->
+<!--  display: flex;-->
+<!--  justify-content: center;-->
+<!--  align-items: center;-->
+<!--  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);-->
+<!--  margin-bottom: 100px;-->
+<!--}-->
 
-.carouselImg:hover {
-  -webkit-filter: blur(4px);
-  cursor: pointer;
-  transition: 200ms;
-}
+<!--.carouselImg:hover {-->
+<!--  -webkit-filter: blur(4px);-->
+<!--  cursor: pointer;-->
+<!--  transition: 200ms;-->
+<!--}-->
 
-.carouselImg {
-  aspect-ratio: auto;
-  margin-left: 0;
-  width: 100%;
+<!--.carouselImg {-->
+<!--  aspect-ratio: auto;-->
+<!--  margin-left: 0;-->
+<!--  width: 100%;-->
 
-}
+<!--}-->
 
-div.textContainer{
-  color: white ;
-  font-size: 5vw;
-  line-height: normal;
-  font-family: "Josefin Sans";
-  text-transform: uppercase;
-  float: left;
-  position: absolute;
-  bottom: 28px;
-  width: 800px;
-  left: 0;
-  margin-bottom: 2.5%;
-}
+<!--div.textContainer-carousel{-->
+<!--  color: white ;-->
+<!--  font-size: 5vw;-->
+<!--  line-height: normal;-->
+<!--  font-family: "Josefin Sans";-->
+<!--  text-transform: uppercase;-->
+<!--  float: left;-->
+<!--  position: absolute;-->
+<!--  width: 800px;-->
+<!--  left: 0;-->
+<!--}-->
 
-.App {
-  background-color: #EBEBEB;
-}
+<!--.App {-->
+<!--  background-color: #EBEBEB;-->
+<!--}-->
 
-div.indicatorList {
-  height: 600px;
-  width: 200px;
-  position: relative;
-  float: right;
-  margin-top: 6%;
-  margin-right: 2%;
-  padding: 0;
-  font-size: 20px;
-}
+<!--div.indicatorList {-->
+<!--  height: 600px;-->
+<!--  width: 200px;-->
+<!--  position: relative;-->
+<!--  float: right;-->
+<!--  margin-top: 6%;-->
+<!--  margin-right: 2%;-->
+<!--  padding: 0;-->
+<!--  font-size: 20px;-->
+<!--}-->
 
-.carousel-indicator {
-  position: relative;
-  color: black;
-}
+<!--.carousel-indicator {-->
+<!--  position: relative;-->
+<!--  color: black;-->
+<!--}-->
 
-.carousel-indicator:hover {
-  color: #C13939;
-}
+<!--.carousel-indicator:hover {-->
+<!--  color: #C13939;-->
+<!--}-->
 
-ul.list {
-  width: 200px;
-  padding-left: 0;
-}
+<!--ul.list {-->
+<!--  width: 200px;-->
+<!--  padding-left: 0;-->
+<!--}-->
 
-@media screen and (max-width: 1220px) {
-  .indicatorList{
-    display: none;
-  }
-}
-</style>
+<!--@media screen and (max-width: 1220px) {-->
+<!--  .indicatorList{-->
+<!--    display: none;-->
+<!--  }-->
+<!--}-->
+<!--</style>-->

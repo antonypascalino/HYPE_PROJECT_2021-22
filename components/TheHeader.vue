@@ -17,8 +17,9 @@
           v-for="(item, itemIndex) of menuOptions"
           :key="'menu-item-' + itemIndex"
           class="menu-item"
+          @mouseover="mouse"
         >
-          <nuxt-link style="text-decoration: none; color: inherit;" :to="item.path">
+          <nuxt-link style="text-decoration: none;" :to="item.path">
             {{ item.name }}
           </nuxt-link>
         </div>
@@ -52,7 +53,7 @@
         :key="'menu-item-' + itemIndex"
         class="menu-item"
       >
-        <nuxt-link style="text-decoration: none; color: inherit;" :to="item.path">
+        <nuxt-link style="text-decoration: none; " :to="item.path">
           {{ item.name }}
         </nuxt-link>
       </div>
@@ -101,11 +102,14 @@ export default {
     changeMobileMenuVisibility() {
       this.mobileMenuVisibility = !this.mobileMenuVisibility
     },
+    mouse(){
+         this.active=""
+    }
   },
 }
 </script>
 
-<style>
+<style scoper>
 /* Positioning and colors of the whole component */
 .header {
   width: 100%;
@@ -126,7 +130,6 @@ export default {
   padding-bottom:9px;
 
 }
-
 
 /* Main header containers */
 .header-content {
@@ -181,10 +184,12 @@ nav {
 }
 /* Appearance of the landmark to current page */
 .nuxt-link-active {
-  font-weight: bold;
+  font-weight: bolder;
+  color:#C13939;
 }
+
 /* Logo layout */
-img {
+.responsive.center {
   width: 150px;
   float: left;
   margin-top: 6px;
@@ -195,12 +200,11 @@ img {
   .desktop-nav {
     display: none;
   }
-  img{
+  .responsive.center {
     max-width: 100%;
     height: auto;
     display: table;
-    margin: 0 auto;
-    margin-top: 5px;
+    margin: 5px auto 0;
   }
 
   .responsive{
@@ -214,12 +218,16 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
   .menu-item:hover {
     color: #000000;
     cursor: pointer;
     font-weight: bold;
   }
+  .nuxt-link-active {
+    font-weight: bolder;
+    color: #000000;
+  }
+
 }
 /* Desktop navbar if viewport >=1271 px */
 @media screen and (min-width: 1271px) {
@@ -249,7 +257,7 @@ img {
     transition: height 0.3s, color 0.3s;
   }
   .menu-item:hover {
-    color: #C13939;
+    color: #3969c1;
     -webkit-text-decoration-color: #C13939;
     cursor: pointer;
   }

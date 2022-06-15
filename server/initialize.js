@@ -156,7 +156,7 @@ export default async (models) => {
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
       imgBackground: "porticiSanLuca01.jpg",
-      imgArray:["porticiSanLuca01.jpg"],
+      imgArray:["porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
     },
     {
       name: "Mura e Porte",
@@ -165,7 +165,7 @@ export default async (models) => {
         "I resti più antichi sono stati edificati in corrispondenza del crollo dell’Impero Romano di Occidente al fine di difendersi dalle invasioni barbariche. Il materiale di cui erano composte era la selenite. Una seconda cinta fu costruita in epoca medievale intorno all’anno 1100, di proporzioni maggiori rispetto alle precedenti mura. La terza cerchia è nominata “Circla” è la più recente e corrisponde come forma a quella degli attuali viali.\n" +
         "Le porte sono uno degli ultimi baluardi delle antiche mura che dal III secolo d.C. hanno accerchiato e difeso la città. Si hanno in totale 12 porte, di cui due non sono più esistenti. Ogni porta, di stampo romano, ha uno stile diverso. Porta Castiglione, ad esempio è alta ed imponente, mentre Porta Saragozza, con le sue torri ha uno sviluppo più orizzontale che ne conferisce stabilità.\n" ,
       imgBackground: "porta01.jpg",
-      imgArray:["porta02.png"],
+      imgArray:["porta02.jpg", "porta03.jpg", "porta04.jpg"],
     },
     {
       name: "Zona Universitaria",
@@ -174,7 +174,7 @@ export default async (models) => {
         "La strada che inizia a partire da Piazza di Porta Ravegnana, sotto le due torri, vede un susseguirsi di locali e bar, superando il conservatorio, si termina nella celebre Piazza Verdi, denominata così in onore del compositore italiano. È il principale luogo di ritrovo dei giovani. Qui possiamo osservare gli splendidi edifici di stampo medievale e l’importante Teatro Comunale.\n" +
         "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato. \n" ,
       imgBackground: "universita01.jpg",
-      imgArray:["universita02.jpg"],
+      imgArray:["universita02.jpg", "universita03.jpg"],
     },
     {
       name: "Giardini Margherita",
@@ -201,7 +201,7 @@ export default async (models) => {
     {
       name: "Il Cinema Ritrovato",
       description: "Il Cinema Ritrovato è un evento sia per cinefili che per semplici amanti del cinema e impegna per alcuni giorni diverse sale cinematografiche e arene all’aperto ospitando da mattina a notte centinaia di film di tutte le epoche: un vero paradiso!",
-      imgBackground: "ilCinemaRitrovato01.jpg",
+      imgBackground: "ilCinemaRitrovato03.jpg",
       imgArray:["ilCinemaRitrovato02.jpg","ilCinemaRitrovato03.jpg"],
       address:"Bologna, Piazza Maggiore",
       date:"25 Giu 2022 - 03 Lug 2022",
@@ -286,8 +286,8 @@ export default async (models) => {
     {
       name: "Cioccoshow",
       description: "Il Cioccoshow , ossia il Cioccolato tradizionale di alta qualità in fiera, giunto alla sua 15° edizione, si svolge nel centro storico di Bologna. Tra assaggi, degustazioni, laboratori curati da grandi Maestri Cioccolatieri ed esperti di settore.",
-      imgBackground: "cioccoshow01.jpg",
-      imgArray:["cioccoshow02.jpg"],
+      imgBackground: "cioccoShow01.jpg",
+      imgArray:["cioccoShow02.jpg"],
       address:"Piazza XX settembre BOLOGNA",
       date:"17-20 Novermbre 2022",
       price:"Ingresso gratuito",
@@ -308,7 +308,7 @@ export default async (models) => {
     {
       name: "Bologna Jazz Festival",
       description: "Bologna Jazz Festival (abbreviato BJF) è considerato il più antico festival musicale italiano dedicato al jazz; fu fondato nel 1958. Si svolge annualmente a Bologna, con eventi anche a Ferrara e Modena, nel mese di novembre",
-      imgBackground: "jazzFestival01.jpg",
+      imgBackground: "jazzFestival03.jpg",
       imgArray:[],
       address:"Palasport di Bologna",
       date:"20-30 Novembre",
@@ -335,7 +335,7 @@ export default async (models) => {
       imgBackground: "discoteca01.jpg",
     },
     {
-      name: "Farmacie",
+      name: "Salute",
       imgBackground: "farmacie01.jpg",
     },
     {
@@ -343,17 +343,39 @@ export default async (models) => {
       imgBackground: "ristorazione01.jpg",
     },
   ]
-  await models.Service.bulkCreate(serviceList)
-
-/*
-  name: "Bacnhe",
-    description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-  "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-    address:"Via Guglielmo Marconi, 440122 Bologna BO",
-    imgBackground: "trasporti01.jpeg",
-    opening_hours:"Lun - Ven 7.00 - 19.00",
-    website:"https://www.tper.it/orari"
-*/
+  const service0 = await models.Service.create(serviceList[0])
+  const service1 = await models.Service.create(serviceList[1])
+  const service2 = await models.Service.create(serviceList[2])
+  const service3 = await models.Service.create(serviceList[3])
+  const service4 = await models.Service.create(serviceList[4])
+  //Bank Table
+  const pharmacyList = [
+    {
+      name: "Lloyds Farmacia Centrale",
+      address:"Piazza Maggiore",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+    {
+      name: "Farmacia Speranza",
+      address:"Via Ugo Bassi",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+    {
+      name: "Antica Farmacia dei Servi",
+      address:"Strada Maggiore",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+    {
+      name: "Farmacia Alberani",
+      address:"Via Farini",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+  ]
+  await models.Pharmacy.bulkCreate(pharmacyList)
 
 
   //Itinerary Table
@@ -379,8 +401,6 @@ export default async (models) => {
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
       imgBackground:"viaDelleMoline01.jpg"
     },
-
-
   ]
   await models.Itinerary.bulkCreate(itineraryList)
 
