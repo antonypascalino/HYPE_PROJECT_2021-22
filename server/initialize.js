@@ -201,7 +201,7 @@ export default async (models) => {
     {
       name: "Il Cinema Ritrovato",
       description: "Il Cinema Ritrovato è un evento sia per cinefili che per semplici amanti del cinema e impegna per alcuni giorni diverse sale cinematografiche e arene all’aperto ospitando da mattina a notte centinaia di film di tutte le epoche: un vero paradiso!",
-      imgBackground: "ilCinemaRitrovato01.jpg",
+      imgBackground: "ilCinemaRitrovato03.jpg",
       imgArray:["ilCinemaRitrovato02.jpg","ilCinemaRitrovato03.jpg"],
       address:"Bologna, Piazza Maggiore",
       date:"25 Giu 2022 - 03 Lug 2022",
@@ -286,8 +286,8 @@ export default async (models) => {
     {
       name: "Cioccoshow",
       description: "Il Cioccoshow , ossia il Cioccolato tradizionale di alta qualità in fiera, giunto alla sua 15° edizione, si svolge nel centro storico di Bologna. Tra assaggi, degustazioni, laboratori curati da grandi Maestri Cioccolatieri ed esperti di settore.",
-      imgBackground: "cioccoshow01.jpg",
-      imgArray:["cioccoshow02.jpg"],
+      imgBackground: "cioccoShow01.jpg",
+      imgArray:["cioccoShow02.jpg"],
       address:"Piazza XX settembre BOLOGNA",
       date:"17-20 Novermbre 2022",
       price:"Ingresso gratuito",
@@ -308,7 +308,7 @@ export default async (models) => {
     {
       name: "Bologna Jazz Festival",
       description: "Bologna Jazz Festival (abbreviato BJF) è considerato il più antico festival musicale italiano dedicato al jazz; fu fondato nel 1958. Si svolge annualmente a Bologna, con eventi anche a Ferrara e Modena, nel mese di novembre",
-      imgBackground: "jazzFestival01.jpg",
+      imgBackground: "jazzFestival03.jpg",
       imgArray:[],
       address:"Palasport di Bologna",
       date:"20-30 Novembre",
