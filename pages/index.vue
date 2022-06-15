@@ -25,7 +25,7 @@
           />
         </div>
         <!--Button for display all the events -->
-        <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToEvent">
+        <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToPoi">
           Scopri di più
         </button>
     </div>
@@ -106,7 +106,6 @@ export default {
 .events-container{
   width: 100%;
   align-content: center;
-  margin-top: -30px;
 }
 .btn{
   background-color: #C13939;
