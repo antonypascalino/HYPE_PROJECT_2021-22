@@ -6,10 +6,12 @@
   <div class="page-container" >
 
     <!--Homepage full page slide  -->
-    <StaticFullImage slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA" anchor="anchor" />
-    <br><br>
+    <StaticFullImage @scrollto="goto" slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA"  />
+    <section class="fake-section" ref="anchor"></section>
+    <br><br><br>
+
     <!--Points of interest section -->
-    <section class="section-container" ref="anchor" >
+    <section class="section-container" >
      <h1 class="section-title">IN PRIMO PIANO</h1>
       <!--Cards of Points of interest  -->
       <div class="">
@@ -35,7 +37,7 @@
 
 
     <!--Events section -->
-    <section class="section-container">
+    <section class="section-container" >
       <h1 class="section-title">EVENTI A BOLOGNA</h1>
       <!--Cards of events -->
       <div class="events-container">
@@ -77,7 +79,13 @@ export default {
     },
     goToPoi(){
       this.$router.push('/pois/')
+    },
+    goto(refName) {
+      const element = this.$refs[refName];
+      const top = element.offsetTop;
+      window.scrollTo(0, top);
     }
+
   },
 
   async asyncData({ route, $axios }) {
@@ -139,7 +147,7 @@ export default {
   padding: 5px;
 }
 
-h1 .section-title{
+h1.section-title{
   color:#C13939;
 }
 

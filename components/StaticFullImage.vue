@@ -8,7 +8,8 @@
     <img class="image-container1" :src="slide" alt="image-Homepage"/>
     <div class="scopri-container">{{ title1 }}</div>
     <div class="bologna-container">{{ title2 }}</div>
-    <div class="arrow-down mdi mdi-chevron-double-down"  @click="gotoAnchor({Anchor})"></div>
+    <div class="arrow-down mdi mdi-chevron-double-down"  @click="$emit('scrollto', 'anchor')"></div>
+
   </div>
 </template>
 
@@ -18,12 +19,7 @@ export default {
   props:{
     slide:{type:String, required:true},
     title1:{type:String},
-    title2:{type:String},
-  },
-  methods: {
-    gotoAnchor(refName){
-      window.scrollTo(0, 940);
-    },
+    title2:{type:String}
   },
 }
 </script>
@@ -41,6 +37,7 @@ export default {
   width: 100%;
   margin-top:50px;
   margin-left: 0;
+  height: auto;
 }
 .scopri-container{
   position: absolute;
@@ -64,8 +61,8 @@ export default {
 .arrow-down{
   position: absolute;
   top:45vw ;
-  left: calc(50% - 40px);
-  font-size: 80px;
+  left: calc(50% - 2vw);
+  font-size: 4vw;
   color:white;
   display: none;
   cursor: pointer;
