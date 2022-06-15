@@ -3,25 +3,26 @@
   Description: It's the component for the display of a full page image: In the insideBO website is used
   in the homepage.
 -->
-
 <template>
   <div class="slider-container">
     <img class="image-container1" :src="slide" alt="image-Homepage"/>
     <div class="scopri-container">{{ title1 }}</div>
     <div class="bologna-container">{{ title2 }}</div>
-    <div class="arrow-down mdi mdi-chevron-double-down"  @click="goto()"></div>
+    <div class="arrow-down mdi mdi-chevron-double-down"  @click="gotoAnchor"></div>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'StaticFullImage',
   props:{
     slide:{type:String, required:true},
     title1:{type:String},
-    title2:{type:String}
+    title2:{type:String},
+    anchor:{type:String}
   },
   methods: {
-    goto() {
+    gotoAnchor(){
       window.scrollTo(0, 940);
     },
   },
@@ -81,8 +82,7 @@ export default {
     margin-top: 25px;
   }
 }
-
-@media screen and (min-width: 1850px) {
+@media screen and (min-width: 1000px) {
   .arrow-down{
     display: block;
   }

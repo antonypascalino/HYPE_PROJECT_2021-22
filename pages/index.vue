@@ -6,10 +6,10 @@
   <div class="page-container" >
 
     <!--Homepage full page slide  -->
-    <StaticFullimage slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA" gotoTitle="section-event" />
+    <StaticFullImage slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA" anchor="anchor" />
 
     <!--Events section -->
-    <section class="section-container">
+    <section class="section-container" >
       In Primo Piano
       <!--Cards of events -->
       <div class="">
@@ -33,7 +33,7 @@
 
 
     <!--Events section -->
-    <section class="section-container">
+    <section class="section-container" ref="anchor">
       Eventi a Bologna
       <!--Cards of events -->
       <div class="events-container">
@@ -61,12 +61,12 @@
 
 <script>
 import cardInfo from "~/components/CardInfo";
-import staticFullimage from "~/components/StaticFullimage";
+import staticFullImage from "~/components/StaticFullImage";
 
 export default {
   components:{
     cardInfo,
-    staticFullimage
+    staticFullImage
   },
 
   methods: {

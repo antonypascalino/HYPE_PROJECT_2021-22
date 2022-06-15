@@ -26,6 +26,6 @@ export default {
 <style>
 /*Color of the page */
 .main-page{
-  background: #F2F2F2;
+  background: #E5E5E5;
 }
 </style>

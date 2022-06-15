@@ -3,7 +3,7 @@
 <template>
   <main class="page-container">
     <div class="body-container">
-      <StaticHalfImage slide="/Bologna_finestra.jpg" title="BOLOGNA" />
+      <StaticHalfImage slide="/bolognaInBreve.jpg" title="BOLOGNA" />
       <div class="breadcrumb-section">
         <Breadcrumb :crumbs="crumbs" @selected="selected"/>
       </div>
