@@ -149,7 +149,7 @@ export default {
     width: 70vw;
     height: 74vh;
     margin-top: 7vh;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
   }
 
   .imageContainer:hover .hoverText, .imageContainer.hover .hoverText {
@@ -287,7 +287,7 @@ export default {
 
   div.indicatorList {
     /*border: solid 2px blue;*/
-    width: 23vw;
+    width: 22vw;
     height: 76vh;
     position: relative;
     float: right;
