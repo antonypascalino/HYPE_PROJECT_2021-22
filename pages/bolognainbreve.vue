@@ -79,6 +79,9 @@ export default {
 .body-container{
   margin-top: 60px;
 }
+.breadcrumb-section{
+  margin-top: 10px;
+}
 .title-container{
   margin-top: 40px;
   width: 100%;

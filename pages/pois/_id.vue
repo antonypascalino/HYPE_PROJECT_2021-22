@@ -3,7 +3,7 @@
 
     <div class="body-container">
       <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title=name />
-      <section class="breadcrumb-section">
+      <section class="breadcrumb-section1">
         <Breadcrumb :crumbs="crumbs" :optional=name @selected="selected"/>
       </section>
 
@@ -32,7 +32,7 @@
       <div class="button-container">
       <button
         type="button"
-        class="btn btn-outline-secondary px-4"
+        class="btnBack btn btn-outline-secondary px-4"
         @click="backToList"
       >
         Torna indietro
@@ -95,8 +95,10 @@ export default {
 </script>
 <style>
 
-
-section-description{
+.breadcrumb-section1{
+  margin-top: 10px;
+}
+.section-description{
 
   font-family: 'Inria Sans';
   font-style: normal;
@@ -142,6 +144,20 @@ section-description{
   justify-content: center;
   padding: 10px;
 
+}
+.btnBack{
+  float:right;
+  color:black
+}
+.btnBack{
+  background-color: #C13939;
+  color: #ffffff;
+  border: 2px solid #C13939;
+}
+
+.btnBack:hover{
+  background-color: #ffffff;
+  color: black;
 }
 
 </style>

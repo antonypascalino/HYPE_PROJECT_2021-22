@@ -109,7 +109,7 @@ export default {
 }
 </script>
 
-<style scoper>
+<style>
 /* Positioning and colors of the whole component */
 .header {
   width: 100%;

@@ -103,7 +103,7 @@
 
 <style scoped>
 footer{
-  bottom: 0px;
+  bottom: 0;
 }
 .container1{
   background-color: #c13939;

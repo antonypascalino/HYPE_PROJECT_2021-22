@@ -82,7 +82,7 @@ export default {
     margin-top: 25px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1850px) {
   .arrow-down{
     display: block;
   }
