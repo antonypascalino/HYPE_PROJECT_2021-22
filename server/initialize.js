@@ -156,7 +156,7 @@ export default async (models) => {
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
       imgBackground: "porticiSanLuca01.jpg",
-      imgArray:["porticiSanLuca01.jpg"],
+      imgArray:["porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
     },
     {
       name: "Mura e Porte",
@@ -165,7 +165,7 @@ export default async (models) => {
         "I resti più antichi sono stati edificati in corrispondenza del crollo dell’Impero Romano di Occidente al fine di difendersi dalle invasioni barbariche. Il materiale di cui erano composte era la selenite. Una seconda cinta fu costruita in epoca medievale intorno all’anno 1100, di proporzioni maggiori rispetto alle precedenti mura. La terza cerchia è nominata “Circla” è la più recente e corrisponde come forma a quella degli attuali viali.\n" +
         "Le porte sono uno degli ultimi baluardi delle antiche mura che dal III secolo d.C. hanno accerchiato e difeso la città. Si hanno in totale 12 porte, di cui due non sono più esistenti. Ogni porta, di stampo romano, ha uno stile diverso. Porta Castiglione, ad esempio è alta ed imponente, mentre Porta Saragozza, con le sue torri ha uno sviluppo più orizzontale che ne conferisce stabilità.\n" ,
       imgBackground: "porta01.jpg",
-      imgArray:["porta02.png"],
+      imgArray:["porta02.jpg", "porta03.jpg", "porta04.jpg"],
     },
     {
       name: "Zona Universitaria",
@@ -174,7 +174,7 @@ export default async (models) => {
         "La strada che inizia a partire da Piazza di Porta Ravegnana, sotto le due torri, vede un susseguirsi di locali e bar, superando il conservatorio, si termina nella celebre Piazza Verdi, denominata così in onore del compositore italiano. È il principale luogo di ritrovo dei giovani. Qui possiamo osservare gli splendidi edifici di stampo medievale e l’importante Teatro Comunale.\n" +
         "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato. \n" ,
       imgBackground: "universita01.jpg",
-      imgArray:["universita02.jpg"],
+      imgArray:["universita02.jpg", "universita03.jpg"],
     },
     {
       name: "Giardini Margherita",
