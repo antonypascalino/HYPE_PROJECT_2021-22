@@ -3,7 +3,9 @@
   Description: This page represents the layout of a page without header and footer.
 -->
 <template>
-  <nuxt />
+  <div class="main-page">
+    <Nuxt />
+  </div>
 </template>
 
 <script>
@@ -12,3 +14,9 @@ export default {
 }
 </script>
 
+<style>
+/*Color of the page */
+.main-page{
+  background: #EBEBEB;
+}
+</style>

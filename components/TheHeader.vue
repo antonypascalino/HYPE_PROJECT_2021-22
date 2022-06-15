@@ -189,7 +189,7 @@ nav {
 }
 
 /* Logo layout */
-img {
+.responsive.center {
   width: 150px;
   float: left;
   margin-top: 6px;
@@ -200,12 +200,11 @@ img {
   .desktop-nav {
     display: none;
   }
-  img{
+  .responsive.center {
     max-width: 100%;
     height: auto;
     display: table;
-    margin: 0 auto;
-    margin-top: 5px;
+    margin: 5px auto 0;
   }
 
   .responsive{

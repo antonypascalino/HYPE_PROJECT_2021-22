@@ -34,8 +34,10 @@ export default {
   .carousel {
     position: relative;
     width: 70vw;
-    height:50vw;
+    height: 88vh;
     overflow: hidden;
+    /*border: solid limegreen 2px;*/
+    display: flex;
   }
 
   .mdi.mdi-menu-down {
@@ -64,11 +66,11 @@ export default {
     bottom: 0;
   }
 
-  .btn-container{
+  .btn-container {
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     position: absolute;
-    height: 50px;
-    width: 80px;
+    height: 5vh;
+    width: 10%;
     left: calc(50% - 40px);
     display: flex;
     border: none;
@@ -78,12 +80,22 @@ export default {
     overflow: hidden;
   }
 
+  .mdi.mdi-menu-down {
+    transition: 200ms;
+  }
+
+  .mdi.mdi-menu-up {
+    transition: 200ms;
+  }
+
   .mdi.mdi-menu-down:hover {
-    font-size: 140px;
+    font-size: 160px;
+    transition: 200ms;
   }
 
   .mdi.mdi-menu-up:hover {
-    font-size: 140px;
+    font-size: 160px;
+    transition: 200ms;
   }
 
 
