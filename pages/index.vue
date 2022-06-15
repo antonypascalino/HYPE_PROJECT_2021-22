@@ -7,11 +7,11 @@
 
     <!--Homepage full page slide  -->
     <StaticFullImage slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA" anchor="anchor" />
-
-    <!--Events section -->
-    <section class="section-container" >
-      In Primo Piano
-      <!--Cards of events -->
+    <br><br>
+    <!--Points of interest section -->
+    <section class="section-container" ref="anchor" >
+     <h1 class="section-title">IN PRIMO PIANO</h1>
+      <!--Cards of Points of interest  -->
       <div class="">
         <div class="poi-card-container row mt-4">
           <cardInfo
@@ -24,17 +24,19 @@
             link="pois"
           />
         </div>
-        <!--Button for display all the events -->
+        <!--Button for display 4 points of interest -->
         <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToPoi">
           Scopri di più
         </button>
     </div>
     </section>
+    <br>
+    <br>
 
 
     <!--Events section -->
-    <section class="section-container" ref="anchor">
-      Eventi a Bologna
+    <section class="section-container">
+      <h1 class="section-title">EVENTI A BOLOGNA</h1>
       <!--Cards of events -->
       <div class="events-container">
         <div class="event-card-container row mt-4">
@@ -49,7 +51,7 @@
           />
         </div>
 
-        <!--Button for display all the events -->
+        <!--Button for display 4 events -->
         <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToEvent">
           Tutti gli eventi
         </button>
@@ -103,11 +105,15 @@ export default {
   line-height: 80px;
   color: #C13939;
   text-align: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .events-container{
   width: 100%;
   align-content: center;
+  align-content: center;
+  justify-content: center;
 }
 .btn{
   background-color: #C13939;
@@ -132,4 +138,9 @@ export default {
   justify-content: center;
   padding: 5px;
 }
+
+h1 .section-title{
+  color:#C13939;
+}
+
 </style>

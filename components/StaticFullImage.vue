@@ -8,7 +8,7 @@
     <img class="image-container1" :src="slide" alt="image-Homepage"/>
     <div class="scopri-container">{{ title1 }}</div>
     <div class="bologna-container">{{ title2 }}</div>
-    <div class="arrow-down mdi mdi-chevron-double-down"  @click="gotoAnchor"></div>
+    <div class="arrow-down mdi mdi-chevron-double-down"  @click="gotoAnchor({Anchor})"></div>
   </div>
 </template>
 
@@ -19,10 +19,9 @@ export default {
     slide:{type:String, required:true},
     title1:{type:String},
     title2:{type:String},
-    anchor:{type:String}
   },
   methods: {
-    gotoAnchor(){
+    gotoAnchor(refName){
       window.scrollTo(0, 940);
     },
   },
@@ -64,7 +63,7 @@ export default {
 }
 .arrow-down{
   position: absolute;
-  top:90vh ;
+  top:45vw ;
   left: calc(50% - 40px);
   font-size: 80px;
   color:white;
@@ -82,7 +81,7 @@ export default {
     margin-top: 25px;
   }
 }
-@media screen and (min-width: 1850px) {
+@media screen and (min-width: 900px) {
   .arrow-down{
     display: block;
   }

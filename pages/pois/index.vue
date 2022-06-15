@@ -269,14 +269,9 @@ export default {
     /*border: solid 2px yellow;*/
   }
 
-  html {
-    height: 100%;
-    overflow: hidden;
-  }
 
   body {
-    height: 100%;
-    overflow: auto;
+
     background-color: #F2F2F2;
   }
 
