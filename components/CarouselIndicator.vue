@@ -39,7 +39,7 @@ export default {
     },
     getColor(index, visibleSlide) {
       if (visibleSlide === index) {
-        return  "color: #C13939";
+        return  "color: #C13939"
       }
       else return "color: black;"
     }
@@ -67,11 +67,13 @@ export default {
     margin-right: 0;
     text-align: right;
     border: none;
+    transition: 200ms;
   }
 
   .carousel-indicator:hover {
     color: #C13939;
     font-size: 1.4vw;
+    transition: 200ms;
   }
 
   /*Per distanziare i pallini dal nome*/
@@ -79,9 +81,6 @@ export default {
     margin-left: 5px;
   }
 
-  /*i:hover {*/
-  /*  color: #C13939;*/
-  /*}*/
 
 
 

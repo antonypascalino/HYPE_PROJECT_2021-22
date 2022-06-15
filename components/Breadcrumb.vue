@@ -46,10 +46,10 @@ export default {
 
 <style scoped>
   .breadcrumb {
-    background-color:#F2F2F2  ;
+    background-color: transparent ;
     font-family: "Josefin Sans";
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 1.8vw;
     width: 100%;
     vertical-align: center;
     margin-bottom: 0;

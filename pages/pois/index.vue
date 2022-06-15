@@ -128,8 +128,13 @@ export default {
 
 <style>
 
+  .breadcrumb-section {
+    margin-top: 70px;
+    background: transparent;
+  }
+
   .carouselDiv {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-left: 4%;
     width: 100%;
     height: 100vh;
@@ -184,6 +189,7 @@ export default {
     aspect-ratio: auto;
     object-fit: cover;
     transition: 200ms ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
   }
 
   .carouselScroll {
@@ -260,7 +266,7 @@ export default {
 
   span {
     top: 50%;
-    border: solid 2px yellow;
+    /*border: solid 2px yellow;*/
   }
 
   html {
@@ -270,12 +276,12 @@ export default {
 
   body {
     height: 100%;
-    overflow: hidden;
-    background-color: #EBEBEB;
+    overflow: auto;
+    background-color: #F2F2F2;
   }
 
   .App {
-    background-color: #EBEBEB;
+    background-color: #F2F2F2;
     height: auto;
   }
 
@@ -285,7 +291,7 @@ export default {
     height: 76vh;
     position: relative;
     float: right;
-    margin-top: 3%;
+    margin-top: 4%;
     margin-right: 2%;
     padding: 0;
     font-size: 20px;

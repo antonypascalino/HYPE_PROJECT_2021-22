@@ -78,15 +78,24 @@ export default {
     align-content: center;
     justify-content: center;
     overflow: hidden;
+  }
 
+  .mdi.mdi-menu-down {
+    transition: 200ms;
+  }
+
+  .mdi.mdi-menu-up {
+    transition: 200ms;
   }
 
   .mdi.mdi-menu-down:hover {
     font-size: 160px;
+    transition: 200ms;
   }
 
   .mdi.mdi-menu-up:hover {
     font-size: 160px;
+    transition: 200ms;
   }
 
 
