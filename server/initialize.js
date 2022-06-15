@@ -335,7 +335,7 @@ export default async (models) => {
       imgBackground: "discoteca01.jpg",
     },
     {
-      name: "Farmacie",
+      name: "Salute",
       imgBackground: "farmacie01.jpg",
     },
     {
@@ -343,17 +343,39 @@ export default async (models) => {
       imgBackground: "ristorazione01.jpg",
     },
   ]
-  await models.Service.bulkCreate(serviceList)
-
-/*
-  name: "Bacnhe",
-    description:"Il servizio di trasporti pubblici di Bologna è fornito dalla compagnia emiliana T-Per che con una rete capillare di autobus collega le varie zone del capoluogo estendendosi anche nei comuni limitrofi.\n" +
-  "Potrete trovare i link al portale T-Per, la mappa con gli orari e molto di più nell’info-box qui sotto.",
-    address:"Via Guglielmo Marconi, 440122 Bologna BO",
-    imgBackground: "trasporti01.jpeg",
-    opening_hours:"Lun - Ven 7.00 - 19.00",
-    website:"https://www.tper.it/orari"
-*/
+  const service0 = await models.Service.create(serviceList[0])
+  const service1 = await models.Service.create(serviceList[1])
+  const service2 = await models.Service.create(serviceList[2])
+  const service3 = await models.Service.create(serviceList[3])
+  const service4 = await models.Service.create(serviceList[4])
+  //Bank Table
+  const pharmacyList = [
+    {
+      name: "Lloyds Farmacia Centrale",
+      address:"Piazza Maggiore",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+    {
+      name: "Farmacia Speranza",
+      address:"Via Ugo Bassi",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+    {
+      name: "Antica Farmacia dei Servi",
+      address:"Strada Maggiore",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+    {
+      name: "Farmacia Alberani",
+      address:"Via Farini",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      serviceId:service3.id
+    },
+  ]
+  await models.Pharmacy.bulkCreate(pharmacyList)
 
 
   //Itinerary Table
@@ -379,8 +401,6 @@ export default async (models) => {
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
       imgBackground:"viaDelleMoline01.jpg"
     },
-
-
   ]
   await models.Itinerary.bulkCreate(itineraryList)
 

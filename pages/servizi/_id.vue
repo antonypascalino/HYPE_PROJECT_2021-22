@@ -7,15 +7,19 @@
         <Breadcrumb :crumbs="crumbs" :optional=name @selected="selected"/>
       </section>
 
-      <section class="section-description">
-        <div class="title-container">DESCRIZIONE</div>
-        <p class="text-container">{{description}}</p>
-      </section>
-
-
       <section class="container1">
         <div class="title-container">INFORMAZIONI</div>
-        <div class="container-info container text-center text-md-start mt-5">
+        <!--Cards of events -->
+
+          <div class="event-card-container row mt-4">
+            <cardService
+              v-for="(s, index) of serviceList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="s.name"
+            />
+          </div>
+          <div class="container-info container text-center text-md-start mt-5">
           <!-- Grid row -->
           <div class="row mt-3">
 
@@ -65,26 +69,23 @@
 import CommonMixin from '~/mixins/common'
 import staticHalfImage from "~/components/StaticHalfImage";
 import Breadcrumb from '~/components/Breadcrumb.vue';
+import cardService from "~/components/CardService";
 
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
     staticHalfImage,
-    Breadcrumb
+    Breadcrumb,
+    cardService
   },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
     // const { data } = await $axios.get('api/pois/'+ id)
-    const { data } = await $axios.get('http://localhost:3000/api/services/'+ id)
+    const { data } = await $axios.get('http://localhost:3000/api/services1/'+ id)
     return {
-      name: data.name,
-      opening_hours: data.opening_hours,
-      imgBackground: data.imgBackground,
-      address:data.address,
-      description: data.description,
-      website:data.website
+      serviceList: data,
     }
   },
   data() {

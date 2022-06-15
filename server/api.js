@@ -55,19 +55,56 @@ async function initializeDatabaseConnection() {
     website: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
   })
+
+  const Bank = database.define("bank", {
+    name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    opening_hours: DataTypes.STRING
+  })
+
+  const Cinema = database.define("cinema", {
+    name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    opening_hours: DataTypes.STRING
+  })
+  const Disco = database.define("disco", {
+    name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    opening_hours: DataTypes.STRING
+  })
+  const Pharmacy = database.define("pharmacy", {
+    name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    opening_hours: DataTypes.STRING
+  })
+  const Restaurant = database.define("restaurant", {
+    name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    opening_hours: DataTypes.STRING
+  })
+
   // Creating the N -> N association between Itinerary and Poi
   Itinerary.belongsToMany(Poi, { through: 'poiInItinerary'}) // to show poi in itinerary page
 
-// Creating the 1 -> N association between POI and Event
+  // Creating the 1 -> N association between POI and Event
   Poi.hasMany(Events)
   Events.belongsTo(Poi)
+
+  // Creating the 1 -> N association between POI and Event
+  Service.hasMany(Pharmacy)
+  Pharmacy.belongsTo(Service)
 
   await database.sync({ force: true })
   return {
     Poi,
     Events,
     Itinerary,
-    Service
+    Service,
+    Bank,
+    Restaurant,
+    Disco,
+    Cinema,
+    Pharmacy
   }
 }
 
@@ -80,6 +117,22 @@ async function runMainApi() {
   // HTTP GET api that returns all the point of interest
   app.get("/pois", async (req, res) => {
     const result = await models.Poi.findAll()
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgBackground: element.imgBackground,
+        visit_info: element.visit_info,
+        id: element.id,
+        imgArray:element.imgArray
+      })
+    }
+    return res.json(filtered)
+  })
+
+  // HTTP GET api that returns all the point of interest
+  app.get("/4pois", async (req, res) => {
+    const result = await models.Poi.findAll({limit: 4})
     const filtered = []
     for (const element of result) {
       filtered.push({
@@ -188,6 +241,24 @@ async function runMainApi() {
     const result = await models.Service.findOne({ where: { id }})
     return res.json(result)
   })
+
+  // HTTP GET api that returns a specific point of interest
+  app.get('/services1/:serviceId', async (req, res) => {
+    const id = +req.params.serviceId
+    const result = await models.Pharmacy.findAll({ where: { id },include: [{model: models.Service}]})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        address: element.visit_info,
+        opening_hours:element.opening_hours,
+        id: element.id,
+
+      })
+    }
+    return res.json(filtered)
+  })
+
 
   // HTTP GET api that returns all the services in our actual database
   app.get("/itineraries", async (req, res) => {
