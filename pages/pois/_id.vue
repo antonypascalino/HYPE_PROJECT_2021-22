@@ -131,10 +131,7 @@ section-description{
   height: 60px;
   padding: 20px;
 }
-.btn{
-  float:right;
-  color:black
-}
+
 .text-container{
   padding: 10px ;
 }
