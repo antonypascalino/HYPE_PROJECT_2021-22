@@ -6,14 +6,38 @@
   <div class="page-container" >
 
     <!--Homepage full page slide  -->
-    <StaticFullimage slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA" />
+    <StaticFullimage slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA" gotoTitle="section-event" />
+
+    <!--Events section -->
+    <section class="section-container">
+      In Primo Piano
+      <!--Cards of events -->
+      <div class="">
+        <div class="poi-card-container row mt-4">
+          <cardInfo
+            v-for="(poi, index) of poiList"
+            class="col-sm-1 m-2"
+            :key="`index-${index}`"
+            :name="poi.name"
+            :img="`../Poi/${poi.imgBackground}`"
+            :id="poi.id"
+            link="pois"
+          />
+        </div>
+        <!--Button for display all the events -->
+        <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToEvent">
+          Scopri di più
+        </button>
+    </div>
+    </section>
+
 
     <!--Events section -->
     <section class="section-container">
       Eventi a Bologna
       <!--Cards of events -->
       <div class="events-container">
-        <div class="row mt-4">
+        <div class="event-card-container row mt-4">
           <cardInfo
             v-for="(event, index) of eventList"
             class="col-sm-1 m-2"
@@ -21,9 +45,9 @@
             :name="event.name"
             :img="`../Events/${event.imgBackground}`"
             :id="event.id"
+            link="eventi"
           />
         </div>
-
 
         <!--Button for display all the events -->
         <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToEvent">
@@ -49,13 +73,17 @@ export default {
     goToEvent() {
       this.$router.push('/eventi/')
     },
+    goToPoi(){
+      this.$router.push('/pois/')
+    }
   },
 
   async asyncData({ route, $axios }) {
-    // const { data } = await $axios.get('api/4events')
-    const { data } = await $axios.get('http://localhost:3000/api/4events')
-    return {
-      eventList: data,
+    const events = await $axios.get(`http://localhost:3000/api/4events`)
+    const pois = await $axios.get(`http://localhost:3000/api/4pois`)
+      return {
+      eventList: events.data,
+      poiList:pois.data
     }
   },
 }
@@ -83,6 +111,7 @@ export default {
 .btn{
   background-color: #C13939;
   color: #ffffff;
+  border: 2px solid #C13939;
 }
 
 .btn:hover{
@@ -90,14 +119,16 @@ export default {
   color: black;
 }
 
-.row{
+.event-card-container{
   margin: auto;
-  width: 70%;
+  width: 90%;
   justify-content: center;
-  padding: 10px;
-
+  padding: 5px;
 }
-
-
-
+.poi-card-container{
+  margin: auto;
+  width: 90%;
+  justify-content: center;
+  padding: 5px;
+}
 </style>

@@ -1,15 +1,13 @@
 <template>
   <div class="card" style="width: 18rem">
-    <div
-      class="card-img-top card-image"
-      :style="{ 'background-image': 'url(' + img + ')' }"
-    ></div>
     <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
-
-      <nuxt-link :to="`/${link}/${id}`">
-        <div class="btn btn-primary btn-orange">Vedi Dettagli</div>
-      </nuxt-link>
+      <p class="card-text">
+        {{ address }}
+      </p>
+      <p class="card-text">
+        {{ opening_hours }}
+      </p>
     </div>
   </div>
 </template>
@@ -17,32 +15,25 @@
 <style scoped>
 .card {
   border: 2px solid lightgray;
-  background-color: #EBEBEB;
 }
-
-.btn-orange{
-  background-color: #C13939;
-  color: #ffffff;
-  border: 2px solid #C13939;
+.card:hover {
+  border: 2px solid orange;
 }
-
-.btn-orange:hover{
-  background-color: #ffffff;
-  color: black;
+.btn-orange {
+  background-color: orange;
+  border: 2px solid orange;
 }
 .card-image {
-  margin-top: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 160px;
-
 }
 </style>
 
 <script>
 export default {
-  name: 'CardiInfo',
+  name: 'CardComponent',
   props: {
     name: {
       type: String,
@@ -56,9 +47,14 @@ export default {
       type: Number,
       required: true,
     },
-    link: {
+    breed: {
       type: String,
       required: true,
+    },
+  },
+  methods: {
+    goToDetails() {
+      this.$router.push(`/details/${this.id}`)
     },
   },
 }

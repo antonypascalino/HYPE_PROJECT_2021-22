@@ -6,9 +6,10 @@
 
 <template>
   <div class="slider-container">
-    <img class="image-container1" :src="slide" alt="image-Homepage">
+    <img class="image-container1" :src="slide" alt="image-Homepage"/>
     <div class="scopri-container">{{ title1 }}</div>
     <div class="bologna-container">{{ title2 }}</div>
+    <div class="arrow-down mdi mdi-chevron-double-down"  @click="goto()"></div>
   </div>
 </template>
 
@@ -18,7 +19,12 @@ export default {
     slide:{type:String, required:true},
     title1:{type:String},
     title2:{type:String}
-  }
+  },
+  methods: {
+    goto() {
+      window.scrollTo(0, 940);
+    },
+  },
 }
 </script>
 
@@ -55,12 +61,30 @@ export default {
   color: #C13939;
   font-size: 4vw;
 }
+.arrow-down{
+  position: absolute;
+  top:90vh ;
+  left: calc(50% - 40px);
+  font-size: 80px;
+  color:white;
+  display: none;
+  cursor: pointer;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s;
+  animation: bounce 2s infinite;
+}
 @media screen and (max-width: 600px) {
   .scopri-container{
     margin-top: 25px;
   }
   .bologna-container{
     margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 1850px) {
+  .arrow-down{
+    display: block;
   }
 }
 </style>
