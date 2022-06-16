@@ -1,6 +1,10 @@
 <template>
   <transition :name="direction" mode="in-out">
-    <div v-show="visibleSlide === index" class="carousel-slide">
+    <div
+      v-show="visibleSlide === index"
+      class="carousel-slide"
+      @wheel = "wheel"
+    >
       <slot></slot>
     </div>
   </transition>
@@ -11,6 +15,11 @@ export default {
   props: ['visibleSlide', 'index','id','name','direction'],
   data() {
     return {}
+  },
+  methods: {
+    wheel() {
+      this.$emit('wheel')
+    },
   }
 }
 </script>

@@ -30,6 +30,7 @@
                         :id="poi.id"
                         :name='"pois"'
                         :direction="direction"
+                        @wheel = "wheel"
         >
           <div class="imageContainer">
             <nuxt-link :to="`/pois/${poi.id}`">
@@ -63,6 +64,7 @@ import CarouselSlide from "~/components/CarouselSlide";
 import CarouselIndicator from "~/components/CarouselIndicator";
 import TheHeader from "~/components/TheHeader";
 import Breadcrumb from "~/components/Breadcrumb";
+import carouselSlide from "~/components/CarouselSlide";
 
 
 export default {
@@ -110,6 +112,17 @@ export default {
     },
     change(index) {
       this.visibleSlide = index-1;
+    },
+
+    wheel(event) {
+      // this.visibleSlide += (event.deltaY * -0.01) * (this.slidesLen - 1)
+      if(this.visibleSlide <= 0 ) {
+        this.visibleSlide =  (this.slidesLen - 1) * (this.deltaY * -0.01);
+      } else {
+        this.visibleSlide--;
+      }
+
+      this.direction = 'right'
     },
 
     selected(crumb) {
@@ -278,7 +291,7 @@ export default {
 
   body {
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: #F2F2F2;
   }
 
