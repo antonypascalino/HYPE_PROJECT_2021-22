@@ -238,7 +238,7 @@ export default async (models) => {
       description: "Dalla prima edizione del 1927, la Fiera del Libro è diventata un appuntamento fisso nell’agenda cittadina, atteso non solo dai bibliofili, ma anche dai semplici appassionati.\n" +
         "\n" +
         "Passeggiando per porta Galliera —a pochi passi dalla Stazione Centrale— potrete trovare una vasta e specializzata offerta di libri, sviluppata in oltre 400 metri quadri d’esposizione: non solo rare edizioni antiche e ricercate, ma anche migliaia di libri di seconda mano o nuovi a metà prezzo, oltre ad una vasta collezione di fumetti, poster vintage e dischi in vinile.",
-      imgBackground: "fieraLibro01.png",
+      imgBackground: "fieraLibro01.jpg",
       imgArray:["fieraLibro02.png"],
       address:"Piazza XX Settembre (Porta Galliera",
       date:"18 marzo – 1 maggio 2022",
@@ -295,20 +295,20 @@ export default async (models) => {
       type:0
     },
     {
-      name: "Imola in Musica",
-      description: "La 26ª edizione Imola in Musica trasformerà ancora una volta la città in un unico grande palcoscenico tra piazze e strade, chiese e musei, cortili e palazzi, giardini e teatri. La manifestazione offre, come sempre, un cartellone estremamente eterogeneo di appuntamenti estesi dalle tipologie musicali più classiche alle più insolite: classico, folk, pop, rock, blues, gospel, etno, lirica, sacra, jazz senza tralasciare contaminazioni curiose e affascinanti.",
-      imgBackground: "imolaInMusica01.jpg",
-      imgArray:[],
-      address:"Centro Storico Imola (BO)",
-      date:"01 Settembre 2022 - 04 Settembre 2022",
+      name: "Bil Bol Bul",
+      description: "Per tre giorni all'anno, BilBOlbul è un festival internazionale di fumetto che si tiene a Bologna. Il festival porta in Italia artiste e artisti da tutto il mondo, e attraverso il fumetto prova a leggere il presente.",
+      imgBackground: "bilbolbul02.jpg",
+      imgArray:["bilbolbul01.jpg","bilbolbul03.jpg"],
+      address:"Via del Porto 11/2",
+      date:"03 Dicembre 2022 - 05 Dicembre 2022",
       price:"ingresso gratuito",
-      website:"https://www.imolainmusica.it/",
+      website:"https://bilbolbul.net/BBB21",
       type:0
     },
     {
       name: "Bologna Jazz Festival",
       description: "Bologna Jazz Festival (abbreviato BJF) è considerato il più antico festival musicale italiano dedicato al jazz; fu fondato nel 1958. Si svolge annualmente a Bologna, con eventi anche a Ferrara e Modena, nel mese di novembre",
-      imgBackground: "jazzFestival03.jpg",
+      imgBackground: "jazzfestival01.jpg",
       imgArray:[],
       address:"Palasport di Bologna",
       date:"20-30 Novembre",

@@ -139,10 +139,13 @@ a{
   justify-content: center;
   width:100%;
   margin-top: 10px;
+
 }
 .img-map{
   width: 100%;
   max-width: 900px;
   height: auto;
+  border-radius:10%;
+  border:2px solid black;
 }
 </style>
