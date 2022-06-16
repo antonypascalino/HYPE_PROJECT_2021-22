@@ -38,15 +38,15 @@ export default {
   }
 
   @keyframes leftOutAnimation {
-    from { transform: translateX(0);}
+    from { transform: translateY(0);}
     to { transform: translateY(-100%);}
   }
 
   .right-enter-active {
-    animation: rightInAnimation 0.4s ease-in-out;
+    animation: rightInAnimation 200ms ease-in-out;
   }
   .right-leave-active {
-    animation: rightOutAnimation 0.4s ease-in-out;
+    animation: rightOutAnimation 200ms ease-in-out;
 
   }
   @keyframes rightInAnimation {
@@ -55,7 +55,7 @@ export default {
   }
 
   @keyframes rightOutAnimation {
-    from { transform: translateX(0);}
+    from { transform: translateY(0);}
     to { transform: translateY(100%);}
   }
 </style>
