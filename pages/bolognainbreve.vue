@@ -1,4 +1,7 @@
-*/This page is the "Chi siamo" page that describes the company insideBo, in particular the team. It's a static page.*/
+<!--
+  Page: bolognainbreve
+  Description: It's the page that describe the city of Bologna.
+-->
 
 <template>
   <main class="page-container">
@@ -82,7 +85,7 @@ export default {
 .breadcrumb-section{
   margin-top: 10px;
 }
-.title-container{
+.title-container {
   margin-top: 40px;
   width: 100%;
   margin-top: 40px;
@@ -96,7 +99,6 @@ export default {
   background-color: #EBEBEB;
 
 }
-
 .section-la-nostra-missione{
   font-family: 'Inria Sans';
   font-style: normal;

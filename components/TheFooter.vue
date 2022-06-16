@@ -117,7 +117,6 @@ footer{
 .logo{
   margin: auto;
 }
-
 img{
   float:inherit;
   width:130px;

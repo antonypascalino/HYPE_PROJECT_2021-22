@@ -10,14 +10,15 @@
     <div class="body-container">
       <section class="section-chi-siamo">
         <div class="title-container">La nostra Sede e contatti</div>
-        <Map>
+        <div class="img-map-container"><img src="~/static/mapInsideBOUfficio01.jpg" class="img-map"></div>
           <p class="address-container">
             <span class="mdi mdi-map-marker"></span> Via Mecenate 12, Bologna
 
             <br />
-            <br />
             <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
           </p>
+
+        <br />
           <div class="phone-number">
             <span class="mdi mdi-phone"></span> Tel:
             <a href="tel:+393347711504"> +39 3319212318</a>
@@ -30,7 +31,6 @@
             <span class="mdi mdi-email"></span>
             <a href="insideBO@gmail.com">insideBO@gmail.com</a>
           </div>
-        </Map>
       </section>
 
       <section class="section-la-nostra-missione">
@@ -46,22 +46,15 @@
 
 <script>
 import Breadcrumb from '~/components/Breadcrumb.vue'
-import Map from '~/components/Map.vue'
 export default {
   layout: 'default',
   components: {
     Breadcrumb,
-    Map
   },
 
   data() {
     return {
       crumbs: ['HOME', 'CONTATTACI'],
-      methods: {
-        selected(crumb) {
-          console.log(crumb);
-        },
-      },
     }
   },
   head(){
@@ -138,5 +131,18 @@ a{
   text-align: center;
 }
 
-
+.breadcrumb-section{
+  margin-top: 95px;
+}
+.img-map-container{
+  text-align: center;
+  justify-content: center;
+  width:100%;
+  margin-top: 10px;
+}
+.img-map{
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
 </style>

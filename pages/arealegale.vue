@@ -40,11 +40,6 @@ export default {
       crumbs: ['HOME', 'AREA LEGALE'],
     };
   },
-  methods: {
-    selected(crumb) {
-      console.log(crumb);
-    },
-  },
   head(){
     return{
       title: 'insideBO | Area Legale',
@@ -60,6 +55,9 @@ export default {
 }
 </script>
 <style scoped>
+.breadcrumb-section{
+  margin-top: 95px;
+}
 .page-container{
   margin-top: -40px;
 }

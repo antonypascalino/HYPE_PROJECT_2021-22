@@ -79,7 +79,6 @@ export default {
           name: 'EVENTI',
           path: '/eventi/',
         },
-
         {
           name: 'ITINERARI',
           path: '/itinerari/',
@@ -102,9 +101,6 @@ export default {
     changeMobileMenuVisibility() {
       this.mobileMenuVisibility = !this.mobileMenuVisibility
     },
-    mouse(){
-         this.active=""
-    }
   },
 }
 </script>
@@ -130,7 +126,6 @@ export default {
   padding-bottom:9px;
 
 }
-
 /* Main header containers */
 .header-content {
   height: inherit;
@@ -145,7 +140,6 @@ export default {
   padding-right: 40px;
   padding-left: 40px ;
 }
-
 nav {
   align-items: center;
   height: inherit;
@@ -187,7 +181,6 @@ nav {
   font-weight: bolder;
   color:#C13939;
 }
-
 /* Logo layout */
 .responsive.center {
   width: 150px;
@@ -206,12 +199,10 @@ nav {
     display: table;
     margin: 5px auto 0;
   }
-
   .responsive{
     max-width:100%;
     max-height:100%;
   }
-
   .center{
     position: absolute;
     top: 50%;
@@ -227,7 +218,6 @@ nav {
     font-weight: bolder;
     color: #000000;
   }
-
 }
 /* Desktop navbar if viewport >=1271 px */
 @media screen and (min-width: 1271px) {
@@ -240,7 +230,6 @@ nav {
     padding-top: 19px;
     height: inherit;
   }
-
   .menu-item::after {
     content: ' ';
     position: absolute;

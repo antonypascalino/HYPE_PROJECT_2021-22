@@ -1,4 +1,7 @@
-
+<!--
+  Component: StaticHalfImage
+  Description: It's the component for the display of small band at the top of some pages
+-->
 <template>
   <div>
     <div class="slider-container">

@@ -56,12 +56,6 @@ export default {
       crumbs: ['HOME', 'PRIVACY'],
     };
   },
-  methods: {
-    selected(crumb) {
-      console.log(crumb);
-    },
-  },
-
   head(){
     return{
       title: 'insideBO | Privacy',
@@ -111,5 +105,9 @@ p{
 }
 h4{
   font-weight: bold;
+}
+
+.breadcrumb-section{
+  margin-top: 95px;
 }
 </style>
