@@ -30,9 +30,10 @@
                         :id="poi.id"
                         :name='"pois"'
                         :direction="direction"
-                        @wheel = "wheel"
         >
-          <div class="imageContainer">
+          <div class="imageContainer"
+               @wheel.once = "wheel($event.deltaY)"
+          >
             <nuxt-link :to="`/pois/${poi.id}`">
               <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
             </nuxt-link>
@@ -64,8 +65,6 @@ import CarouselSlide from "~/components/CarouselSlide";
 import CarouselIndicator from "~/components/CarouselIndicator";
 import TheHeader from "~/components/TheHeader";
 import Breadcrumb from "~/components/Breadcrumb";
-import carouselSlide from "~/components/CarouselSlide";
-
 
 export default {
   layout: 'empty',
@@ -76,6 +75,7 @@ export default {
       visibleSlide : 0,
       crumbs: ['HOME','PUNTI DI INTERESSE'],
       direction: 'left',
+      loading: false,
     }
   },
 
@@ -114,15 +114,13 @@ export default {
       this.visibleSlide = index-1;
     },
 
-    wheel(event) {
-      // this.visibleSlide += (event.deltaY * -0.01) * (this.slidesLen - 1)
-      if(this.visibleSlide <= 0 ) {
-        this.visibleSlide =  (this.slidesLen - 1) * (this.deltaY * -0.01);
-      } else {
-        this.visibleSlide--;
+    wheel(deltaY) {
+      if(deltaY === 1) {
+        this.next();
       }
-
-      this.direction = 'right'
+      else {
+        this.prev();
+      }
     },
 
     selected(crumb) {
