@@ -6,14 +6,15 @@
   <div class="page-container" >
 
     <!--Homepage full page slide  -->
-    <StaticFullImage @scrollto="goto" slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA"  />
+    <StaticFullImage @scrollto="goto" slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA"/>
+    <!--Fake section used as anchor of the arrow down scroll  -->
     <section class="fake-section" ref="anchor"></section>
     <br><br><br>
 
     <!--Points of interest section -->
-    <section class="section-container" >
+    <section class="section-container">
      <h1 class="section-title">IN PRIMO PIANO</h1>
-      <!--Cards of Points of interest  -->
+      <!--Cards of Points of interest (Bootstrap)  -->
       <div class="">
         <div class="poi-card-container row mt-4">
           <cardInfo
@@ -26,15 +27,12 @@
             link="pois"
           />
         </div>
-        <!--Button for display 4 points of interest -->
-        <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToPoi">
-          Scopri di più
-        </button>
+        <!--Button for display all the points of interest -->
+        <baseButton title="Scopri di più" goto="pois"></baseButton>
     </div>
     </section>
-    <br>
-    <br>
 
+    <br><br><br><br>
 
     <!--Events section -->
     <section class="section-container" >
@@ -53,10 +51,8 @@
           />
         </div>
 
-        <!--Button for display 4 events -->
-        <button type="button" class="btn btn-outline-secondary btn-lg" @click="goToEvent">
-          Tutti gli eventi
-        </button>
+        <!--Button for display all the events -->
+        <baseButton title="Tutti gli eventi" goto="pois"></baseButton>
 
       </div>
     </section>
@@ -66,26 +62,20 @@
 <script>
 import cardInfo from "~/components/CardInfo";
 import staticFullImage from "~/components/StaticFullImage";
-
+import baseButton from "~/components/BaseButton";
 export default {
   components:{
     cardInfo,
-    staticFullImage
+    staticFullImage,
+    baseButton
   },
-
+  // function to implement the scroll
   methods: {
-    goToEvent() {
-      this.$router.push('/eventi/')
-    },
-    goToPoi(){
-      this.$router.push('/pois/')
-    },
     goto(refName) {
       const element = this.$refs[refName];
       const top = element.offsetTop;
       window.scrollTo(0, top);
     }
-
   },
 
   async asyncData({ route, $axios }) {
@@ -102,6 +92,7 @@ export default {
 </script>
 
 <style scoped>
+
 .page-container{
   margin-top:0px ;
 }
@@ -116,24 +107,13 @@ export default {
   align-content: center;
   justify-content: center;
 }
-
 .events-container{
   width: 100%;
   align-content: center;
   align-content: center;
   justify-content: center;
+  text-align: center;
 }
-.btn{
-  background-color: #C13939;
-  color: #ffffff;
-  border: 2px solid #C13939;
-}
-
-.btn:hover{
-  background-color: #ffffff;
-  color: black;
-}
-
 .event-card-container{
   margin: auto;
   width: 90%;
@@ -146,7 +126,6 @@ export default {
   justify-content: center;
   padding: 5px;
 }
-
 h1.section-title{
   color:#C13939;
 }

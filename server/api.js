@@ -253,7 +253,6 @@ async function runMainApi() {
         address: element.visit_info,
         opening_hours:element.opening_hours,
         id: element.id,
-
       })
     }
     return res.json(filtered)

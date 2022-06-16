@@ -390,14 +390,14 @@ export default async (models) => {
     {
       name: "I Portici e San Luca",
       description: "La partenza è appena fuori le mura, più precisamente a Porta Saragozza, dove percorreremo il famoso portico ed i suoi archi che ci conducono fino al Colle della Guardia, parte dell’appennino bolognese, dove ci attenderà il Santuario della Madonna di San Luca. Lungo il cammino ci fermeremo ad osservare lo stadio Renato Dall’Ara.",
-      map:"mapPasseggiataInCentro01.jpg",
+      map:"mapPortici01.jpg",
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
       imgBackground:"portici01.jpg"
     },
     {
       name: "Bologna La Dotta ",
       description: "Partendo dalle sale mozzafiato dell’Archiginnasio, ci dirigeremo verso la biblioteca più importante della città, ovvero Sala Borsa. Continuando per Via Dell’Indipendenza, osserveremo la maestosa Cattedrale di San Pietro, per poi dirigerci verso Via Delle Moline, dove ci attenderà la suggestiva finestrella sull’omonimo canale. Da qui, proseguiremo verso il cuore dell’odierna zona universitaria, per ammirare gli splendidi edifici medievali di Via Zamboni e Piazza Verdi.",
-      map:"mapPasseggiataInCentro01.jpg",
+      map:"mapLaDotta01.jpg",
       duration:"La durata è molto breve. Si tratta di circa 500 metri da percorrere a piedi.",
       imgBackground:"viaDelleMoline01.jpg"
     },

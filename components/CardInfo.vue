@@ -1,18 +1,21 @@
+<!--
+  Component: BaseButton
+  Description: This is the component for the design and the implementation of a button.
+-->
 <template>
   <div class="card" style="width: 18rem">
     <div
-      class="card-img-top card-image"
-      :style="{ 'background-image': 'url(' + img + ')' }"
+      class="card-img-top card-image" :style="{'background-image': 'url(' + img + ')'}"
     ></div>
     <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
-
       <nuxt-link :to="`/${link}/${id}`">
-        <div class="btn btn-primary btn-orange">Vedi Dettagli</div>
+       <base-button title="Vedi dettagli"></base-button>
       </nuxt-link>
     </div>
   </div>
 </template>
+
 
 <style scoped>
 .card {
@@ -20,29 +23,22 @@
   background-color: #EBEBEB;
 }
 
-.btn-orange{
-  background-color: #C13939;
-  color: #ffffff;
-  border: 2px solid #C13939;
-}
-
-.btn-orange:hover{
-  background-color: #ffffff;
-  color: black;
-}
 .card-image {
   margin-top: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 160px;
-
 }
 </style>
 
 <script>
+import baseButton from "~/components/BaseButton";
 export default {
   name: 'CardInfo',
+  components:{
+      baseButton
+  },
   props: {
     name: {
       type: String,

@@ -1,11 +1,6 @@
 <template>
   <main class="page-container">
-
     <div class="body-container">
-      <StaticHalfImage :slide="`../Services/${imgBackground}`" :title=name />
-      <section class="breadcrumb-section">
-        <Breadcrumb :crumbs="crumbs" :optional=name @selected="selected"/>
-      </section>
 
       <section class="container1">
         <div class="title-container">INFORMAZIONI</div>
@@ -33,18 +28,9 @@
             <!-- Grid column -->
             <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">INDIRIZZZO</h6>
+              <h6 class="text-uppercase fw-bold mb-4">INDIRIZZO</h6>
               <p class="mdi mdi-map-marker-check-outline">{{address}}</p>
             </div>
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">SITO WEB</h6>
-
-              <p class="mdi mdi-web">{{website}}  </p>
-
-            </div>
-            <!-- Grid column -->
           </div>
           <!-- Grid row -->
         </div>
@@ -67,16 +53,13 @@
 <script>
 
 import CommonMixin from '~/mixins/common'
-import staticHalfImage from "~/components/StaticHalfImage";
-import Breadcrumb from '~/components/Breadcrumb.vue';
 import cardService from "~/components/CardService";
 
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
-    staticHalfImage,
-    Breadcrumb,
+
     cardService
   },
 
