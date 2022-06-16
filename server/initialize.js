@@ -201,7 +201,7 @@ export default async (models) => {
     {
       name: "Il Cinema Ritrovato",
       description: "Il Cinema Ritrovato è un evento sia per cinefili che per semplici amanti del cinema e impegna per alcuni giorni diverse sale cinematografiche e arene all’aperto ospitando da mattina a notte centinaia di film di tutte le epoche: un vero paradiso!",
-      imgBackground: "ilCinemaRitrovato03.jpg",
+      imgBackground: "ilCinemaRitrovato01.jpg",
       imgArray:["ilCinemaRitrovato02.jpg","ilCinemaRitrovato03.jpg"],
       address:"Bologna, Piazza Maggiore",
       date:"25 Giu 2022 - 03 Lug 2022",

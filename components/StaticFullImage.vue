@@ -1,5 +1,5 @@
 <!--
-  Component: StaticFullImage
+  Component: StaticFullimage
   Description: It's the component for the display of a full page image: In the insideBO website is used
   in the homepage.
 -->
@@ -9,6 +9,7 @@
     <div class="scopri-container">{{ title1 }}</div>
     <div class="bologna-container">{{ title2 }}</div>
     <div class="arrow-down mdi mdi-chevron-double-down"  @click="$emit('scrollto', 'anchor')"></div>
+
   </div>
 </template>
 
@@ -28,6 +29,7 @@ export default {
 .slider-container {
   position: relative;
 }
+
 .image-container1 {
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,6 +47,7 @@ export default {
   font-style: normal;
   font-size: 3vw;
 }
+
 .bologna-container{
   position: absolute;
   top: 15vw;
