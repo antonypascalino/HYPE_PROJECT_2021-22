@@ -115,10 +115,10 @@ export default {
     },
 
     wheel(deltaY) {
-      if(deltaY === 1) {
+      if(deltaY > 0) {
         this.next();
       }
-      else {
+      if(deltaY < 0){
         this.prev();
       }
     },
