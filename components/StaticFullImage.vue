@@ -3,24 +3,44 @@
   Description: It's the component for the display of a full page image: In the insideBO website is used
   in the homepage.
 -->
+
 <template>
   <div class="slider-container">
     <img class="image-container1" :src="slide" alt="image-Homepage"/>
-    <div class="scopri-container">{{ title1 }}</div>
-    <div class="bologna-container">{{ title2 }}</div>
-    <div class="arrow-down mdi mdi-chevron-double-down"  @click="$emit('scrollto', 'anchor')"></div>
+    <div class="scopri-container" :class="{change_color1: scrollPosition > 130,change_color2: scrollPosition > 150,change_color3: scrollPosition > 170}">{{ title1 }}</div>
+    <div class="bologna-container" :class="{change_color1: scrollPosition > 200,change_color2: scrollPosition > 200,change_color3: scrollPosition > 230}">{{ title2 }}</div>
+    <div class="arrow-down mdi mdi-chevron-double-down" :class="{change_color1: scrollPosition > 700,change_color2: scrollPosition > 750,change_color3: scrollPosition > 800}"  @click="$emit('scrollto', 'anchor')"></div>
 
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      showMenu: false,
+      distanceScrolled:0,
+      changeColor:true,
+      scrollPosition:null,
+    };
+
+  },
   name: 'StaticFullImage',
   props:{
     slide:{type:String, required:true},
     title1:{type:String},
     title2:{type:String}
   },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
+
 }
 </script>
 
@@ -37,7 +57,6 @@ export default {
   width: 100%;
   margin-top:50px;
   margin-left: 0;
-  height: auto;
 }
 .scopri-container{
   position: absolute;
@@ -82,5 +101,17 @@ export default {
   .arrow-down{
     display: block;
   }
+}
+.change_color1{
+  transition: opacity 0.5s linear;
+  opacity: 50%;
+}
+.change_color2{
+  transition: opacity 0.5s linear;
+  opacity: 30%;
+}
+.change_color3{
+  transition: opacity 0.5s linear;
+  opacity: 0%;
 }
 </style>
