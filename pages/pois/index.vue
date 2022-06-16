@@ -33,6 +33,8 @@
         >
           <div class="imageContainer"
                @wheel.once = "wheel($event.deltaY)"
+               @keyup.up = "prev"
+               @keyup.down = "next"
           >
             <nuxt-link :to="`/pois/${poi.id}`">
               <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
