@@ -29,6 +29,7 @@
                         :visibleSlide = "visibleSlide"
                         :id="poi.id"
                         :name='"pois"'
+                        :direction="direction"
         >
           <div class="imageContainer">
             <nuxt-link :to="`/pois/${poi.id}`">
@@ -69,9 +70,10 @@ export default {
 
   data() {
     return {
-        poiList:[],
-        visibleSlide : 0,
-        crumbs: ['HOME','PUNTI DI INTERESSE'],
+      poiList:[],
+      visibleSlide : 0,
+      crumbs: ['HOME','PUNTI DI INTERESSE'],
+      direction: 'left',
     }
   },
 
@@ -96,6 +98,7 @@ export default {
       } else {
         this.visibleSlide++;
       }
+      this.direction = 'left'
     },
     prev() {
       if(this.visibleSlide <= 0 ) {
@@ -103,6 +106,7 @@ export default {
       } else {
         this.visibleSlide--;
       }
+      this.direction = 'right'
     },
     change(index) {
       this.visibleSlide = index-1;
@@ -140,9 +144,7 @@ export default {
     height: 100vh;
   }
 
-  carousel-slide {
-    left: 0;
-  }
+  /*Tolto carosuelSlide e spostato in CarouselSlide component*/
 
   .imageContainer {
     position: relative;
@@ -287,7 +289,7 @@ export default {
 
   div.indicatorList {
     /*border: solid 2px blue;*/
-    width: 22vw;
+    width: 23vw;
     height: 76vh;
     position: relative;
     float: right;
