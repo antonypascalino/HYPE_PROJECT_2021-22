@@ -155,7 +155,7 @@ export default async (models) => {
       description: "Partendo da Porta Saragozza si può procedere con una lunga camminata di quasi 4km interamente all’ombra di un complesso di un numero simbolico 666 portici. Giunti a destinazione in cima al Colle della Guardia si potrà accedere al Santuario della Madonna di San Luca. \n" +
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
-      imgBackground: "porticiSanLuca01.jpg",
+      imgBackground: "porticiSanLuca01.png",
       imgArray:["porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
     },
     {
