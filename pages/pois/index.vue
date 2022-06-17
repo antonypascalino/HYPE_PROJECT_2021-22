@@ -2,7 +2,10 @@
   <div class="App">
     <TheHeader/>
     <section class="breadcrumb-section">
-      <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+      <breadcrumb
+      :default-route="[{ title: 'Home', path: '/' }]"
+      current-page="Punti di Interesse"
+      />
     </section>
     <div class="carouselDiv">
       <div class="indicatorList">
@@ -128,10 +131,6 @@ export default {
 
 <style>
 
-  .breadcrumb-section {
-    margin-top: 70px;
-    background: transparent;
-  }
 
   .carouselDiv {
     padding-top: 2%;

@@ -4,7 +4,10 @@
     <div class="body-container">
       <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title=name />
       <section class="breadcrumb-section1">
-        <Breadcrumb :crumbs="crumbs" :optional=name @selected="selected"/>
+        <breadcrumb
+          :default-route="[{ title: 'Punti di Interesse', path: '/pois/' }]"
+          :current-page="name"
+        />
       </section>
 
       <section class="section-description">
@@ -71,7 +74,8 @@ export default {
   },
   data() {
     return {
-      crumbs: ['HOME', 'PUNTI DI INTERESSE', ],
+      name1:this.name,
+      crumbs: ['HOME', 'PUNTI DI INTERESSE'],
     };
   },
   methods: {
@@ -95,9 +99,6 @@ export default {
 </script>
 <style>
 
-.breadcrumb-section1{
-  margin-top: 10px;
-}
 .section-description{
 
   font-family: 'Inria Sans';
