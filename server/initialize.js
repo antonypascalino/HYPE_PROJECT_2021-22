@@ -289,10 +289,10 @@ export default async (models) => {
       imgBackground: "cioccoShow01.jpg",
       imgArray:["cioccoShow02.jpg"],
       address:"Piazza XX settembre BOLOGNA",
-      date:"17-20 Novermbre 2022",
+      date:"17-20 Novembre 2022",
       price:"Ingresso gratuito",
       website:"https://cioccoshow.it/",
-      type:0
+      type:1
     },
     {
       name: "Bil Bol Bul",
@@ -303,7 +303,7 @@ export default async (models) => {
       date:"03 Dicembre 2022 - 05 Dicembre 2022",
       price:"ingresso gratuito",
       website:"https://bilbolbul.net/BBB21",
-      type:0
+      type:1
     },
     {
       name: "Bologna Jazz Festival",
@@ -321,7 +321,7 @@ export default async (models) => {
   await models.Events.bulkCreate(eventList)
 
   //Service Table
-  const serviceList = [
+  const serviceTypeList = [
     {
       name: "Banche",
       imgBackground: "banche01.jpg"
@@ -343,39 +343,140 @@ export default async (models) => {
       imgBackground: "ristorazione01.jpg",
     },
   ]
-  const service0 = await models.Service.create(serviceList[0])
-  const service1 = await models.Service.create(serviceList[1])
-  const service2 = await models.Service.create(serviceList[2])
-  const service3 = await models.Service.create(serviceList[3])
-  const service4 = await models.Service.create(serviceList[4])
+  const servicetype0 = await models.ServiceType.create(serviceTypeList[0])
+  const servicetype1 = await models.ServiceType.create(serviceTypeList[1])
+  const servicetype2 = await models.ServiceType.create(serviceTypeList[2])
+  const servicetype3 = await models.ServiceType.create(serviceTypeList[3])
+  const servicetype4 = await models.ServiceType.create(serviceTypeList[4])
   //Bank Table
-  const pharmacyList = [
+  const serviceList = [
+    {
+      name: "bancaBNL",
+      address:"Via Rizzoli",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype0.id
+    },
+    {
+      name: " Intesa San Paolo",
+      address:"Via Rizzoli",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype0.id
+    },
+    {
+      name: "BPER",
+      address:"Via Venezian",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype0.id
+    },
+    {
+      name: "Deutsche Bank",
+      address:"Via Carbonesi",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype0.id
+    },
+
+    {
+      name: "Medica",
+      address:"Via Montegrappa",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype1.id
+    },
+    {
+      name: "Rialto",
+      address:"Via Rialto",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype1.id
+    },
+    {
+      name: "Odeon",
+      address:"Via Mascarella",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype1.id
+    },
+    {
+      name: "Europa",
+      address:"Via Pietralata",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype1.id
+    },
+
+    {
+      name: "Matis",
+      address:"Via Rotta",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype2.id
+    },
+    {
+      name: "Numa",
+      address:"Via Maserati",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype2.id
+    },
+    {
+      name: "Qubò",
+      address:"Via Sampieri, 3",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype2.id
+    },
+    {
+      name: "O2 Oxygen",
+      address:"Via Sabbiuno",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype2.id
+    },
+
     {
       name: "Lloyds Farmacia Centrale",
       address:"Piazza Maggiore",
       opening_hours:"Lun - Ven 7.00 - 19.00",
-      serviceId:service3.id
+      servicetypeId:servicetype3.id
     },
     {
       name: "Farmacia Speranza",
       address:"Via Ugo Bassi",
       opening_hours:"Lun - Ven 7.00 - 19.00",
-      serviceId:service3.id
+      servicetypeId:servicetype3.id
     },
     {
       name: "Antica Farmacia dei Servi",
       address:"Strada Maggiore",
       opening_hours:"Lun - Ven 7.00 - 19.00",
-      serviceId:service3.id
+      servicetypeId:servicetype3.id
     },
     {
       name: "Farmacia Alberani",
       address:"Via Farini",
       opening_hours:"Lun - Ven 7.00 - 19.00",
-      serviceId:service3.id
+      servicetypeId:servicetype3.id
     },
+
+    {
+      name: "051",
+      address:"Piazza Maggiore",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype4.id
+    },
+    {
+      name: "Pizzeria Vasinikò",
+      address:"Via Santo Stefano",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype4.id
+    },
+    {
+      name: "Osteria del Cappello",
+      address:"Via De Fusari",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype4.id
+    },
+    {
+      name: "Ca' Shin",
+      address:"Via Cavaioni",
+      opening_hours:"Lun - Ven 7.00 - 19.00",
+      servicetypeId:servicetype4.id
+    },
+
   ]
-  await models.Pharmacy.bulkCreate(pharmacyList)
+  await models.Service.bulkCreate(serviceList)
 
 
   //Itinerary Table

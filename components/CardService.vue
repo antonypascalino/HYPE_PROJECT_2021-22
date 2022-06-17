@@ -39,7 +39,7 @@ export default {
       type: String,
       required: true,
     },
-    img: {
+    address: {
       type: String,
       required: true,
     },
@@ -47,7 +47,7 @@ export default {
       type: Number,
       required: true,
     },
-    breed: {
+    opening_hours: {
       type: String,
       required: true,
     },

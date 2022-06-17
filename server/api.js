@@ -1,3 +1,5 @@
+
+
 const express = require('express')
 const app = express()
 const { Sequelize, DataTypes } = require("sequelize")
@@ -36,7 +38,8 @@ async function initializeDatabaseConnection() {
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
     website:DataTypes.STRING,
     price:DataTypes.STRING,
-    type:DataTypes.INTEGER
+    type:DataTypes.INTEGER,
+    firstDay:DataTypes.DATEONLY
   })
 
   const Itinerary = database.define("itinerary", {
@@ -47,7 +50,7 @@ async function initializeDatabaseConnection() {
     duration: DataTypes.STRING,
 
   })
-  const Service = database.define("service", {
+  const ServiceType = database.define("servicetype", {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     opening_hours: DataTypes.STRING,
@@ -56,55 +59,31 @@ async function initializeDatabaseConnection() {
     imgBackground: DataTypes.STRING,
   })
 
-  const Bank = database.define("bank", {
-    name: DataTypes.STRING,
-    address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING
-  })
-
-  const Cinema = database.define("cinema", {
-    name: DataTypes.STRING,
-    address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING
-  })
-  const Disco = database.define("disco", {
-    name: DataTypes.STRING,
-    address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING
-  })
-  const Pharmacy = database.define("pharmacy", {
-    name: DataTypes.STRING,
-    address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING
-  })
-  const Restaurant = database.define("restaurant", {
+  const Service = database.define("service", {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     opening_hours: DataTypes.STRING
   })
 
   // Creating the N -> N association between Itinerary and Poi
-  Itinerary.belongsToMany(Poi, { through: 'poiInItinerary'}) // to show poi in itinerary page
+  Itinerary.belongsToMany(Poi, { through: 'poiInItinerary',foreignKey: 'ItineraryId'}) // to show poi in itinerary page
+  Poi.belongsToMany(Itinerary, { through: 'poiInItinerary',foreignKey: 'PoiId'}) // to show poi in itinerary page
 
   // Creating the 1 -> N association between POI and Event
   Poi.hasMany(Events)
   Events.belongsTo(Poi)
 
   // Creating the 1 -> N association between POI and Event
-  Service.hasMany(Pharmacy)
-  Pharmacy.belongsTo(Service)
+  ServiceType.hasMany(Service)
+  Service.belongsTo(ServiceType)
 
   await database.sync({ force: true })
   return {
     Poi,
     Events,
     Itinerary,
-    Service,
-    Bank,
-    Restaurant,
-    Disco,
-    Cinema,
-    Pharmacy
+    ServiceType,
+    Service
   }
 }
 
@@ -167,7 +146,8 @@ async function runMainApi() {
         id: element.id,
         imgBackground:element.imgBackground,
         price:element.price,
-        website:element.website
+        website:element.website,
+        firstDay:element.firstDay
       })
     }
     return res.json(filtered)
@@ -175,7 +155,7 @@ async function runMainApi() {
 
   // HTTP GET api that returns 4 events in our actual database
   app.get("/4events", async (req, res) => {
-    const result = await models.Events.findAll({limit: 4})
+    const result = await models.Events.findAll({ order: Sequelize.literal('random()'), limit: 4 })
     const filtered = []
     for (const element of result) {
       filtered.push({
@@ -184,7 +164,8 @@ async function runMainApi() {
         address: element.address,
         date:element.date,
         id: element.id,
-        imgBackground:element.imgBackground
+        imgBackground:element.imgBackground,
+        firstDay:element.firstDay
       })
     }
     return res.json(filtered)
@@ -233,7 +214,7 @@ async function runMainApi() {
 
   // HTTP GET api that returns all the services in our actual database
   app.get("/services", async (req, res) => {
-    const result = await models.Service.findAll()
+    const result = await models.ServiceType.findAll()
     const filtered = []
     for (const element of result) {
       filtered.push({
@@ -244,28 +225,22 @@ async function runMainApi() {
         imgBackground:element.imgBackground,
         website:element.website,
         description:element.description
-
       })
     }
     return res.json(filtered)
   })
 
+
+
   // HTTP GET api that returns a specific point of interest
   app.get('/services/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Service.findOne({ where: { id }})
-    return res.json(result)
-  })
-
-  // HTTP GET api that returns a specific point of interest
-  app.get('/services1/:serviceId', async (req, res) => {
-    const id = +req.params.serviceId
-    const result = await models.Pharmacy.findAll({ where: { id },include: [{model: models.Service}]})
+    const result = await models.Service.findAll({ where: { servicetypeId: id },include: [{model: models.ServiceType}]})
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
-        address: element.visit_info,
+        address: element.address,
         opening_hours:element.opening_hours,
         id: element.id,
       })
@@ -297,6 +272,7 @@ async function runMainApi() {
     const result = await models.Itinerary.findOne({ where: { id }})
     return res.json(result)
   })
+
 }
 
 runMainApi()

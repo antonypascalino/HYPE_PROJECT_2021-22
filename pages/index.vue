@@ -64,6 +64,7 @@ import cardInfo from "~/components/CardInfo";
 import staticFullImage from "~/components/StaticFullImage";
 import baseButton from "~/components/BaseButton";
 export default {
+
   components:{
     cardInfo,
     staticFullImage,

@@ -228,6 +228,7 @@ export default {
     /*border: solid 2px blue;*/
     margin-bottom: 0;
     bottom: 0;
+
   }
 
   div.textContainer-carousel {

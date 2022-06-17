@@ -12,28 +12,12 @@
               class="col-sm-1 m-2"
               :key="`index-${index}`"
               :name="s.name"
+              :address="s.address"
+              :opening_hours="s.opening_hours"
+
             />
           </div>
-          <div class="container-info container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
 
-            <!-- Grid column -->
-            <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">ORARIO</h6>
-              <p class="mdi mdi-clock-outline">{{ opening_hours }}</p>
-            </div>
-            <!-- Grid column -->
-            <!-- Grid column -->
-            <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">INDIRIZZO</h6>
-              <p class="mdi mdi-map-marker-check-outline">{{address}}</p>
-            </div>
-          </div>
-          <!-- Grid row -->
-        </div>
       </section>
 
       <div class="button-container">
@@ -59,14 +43,13 @@ export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
-
     cardService
   },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    // const { data } = await $axios.get('api/services1/'+ id)
-    const { data } = await $axios.get('http://localhost:3000/api/services1/'+ id)
+    // const { data } = await $axios.get('api/services/'+ id)
+    const { data } = await $axios.get('http://localhost:3000/api/services/'+ id)
     return {
       serviceList: data,
     }

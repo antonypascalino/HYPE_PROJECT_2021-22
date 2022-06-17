@@ -13,7 +13,7 @@
 
       <!-- Desktop Navbar -->
       <nav class="desktop-nav">
-        <div
+        <divz
           v-for="(item, itemIndex) of menuOptions"
           :key="'menu-item-' + itemIndex"
           class="menu-item"
@@ -22,7 +22,7 @@
           <nuxt-link style="text-decoration: none;" :to="item.path">
             {{ item.name }}
           </nuxt-link>
-        </div>
+        </divz>
       </nav>
 
       <!-- Mobile Navbar Commands -->
