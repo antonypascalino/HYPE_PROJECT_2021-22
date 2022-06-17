@@ -49,6 +49,7 @@
             :id="event.id"
             link="eventi"
             :first-day="event.firstDay"
+            :address="event.address"
           />
         </div>
 
