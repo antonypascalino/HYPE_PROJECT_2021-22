@@ -589,7 +589,7 @@ export default async (models) => {
     {
       name: "La Bottega di Franco",
       address:"Via Agucchi 112, 40131 Bologna (BO)",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      opening_hours:"Lun - Ven: 12:30–14:30, 20:00–23:00, Sab: 20:00-23:00",
       phone_number: "051 311243",
       website: "https://labottegadifranco.com",
       servicetypeId:servicetype4.id
