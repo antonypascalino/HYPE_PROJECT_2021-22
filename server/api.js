@@ -1,4 +1,6 @@
 
+const { Op, QueryTypes } = require('sequelize')
+const moment = require('moment')
 
 const express = require('express')
 const app = express()
@@ -38,7 +40,8 @@ async function initializeDatabaseConnection() {
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
     website:DataTypes.STRING,
     price:DataTypes.STRING,
-    type:DataTypes.INTEGER
+    type:DataTypes.INTEGER,
+    firstDay:DataTypes.DATEONLY
   })
 
   const Itinerary = database.define("itinerary", {
@@ -82,7 +85,7 @@ async function initializeDatabaseConnection() {
     Events,
     Itinerary,
     ServiceType,
-    Service
+    Service,
   }
 }
 
@@ -110,7 +113,7 @@ async function runMainApi() {
 
   // HTTP GET api that returns all the point of interest
   app.get("/4pois", async (req, res) => {
-    const result = await models.Poi.findAll({limit: 4})
+    const result = await models.Poi.findAll({ order: Sequelize.literal('random()'), limit: 4 })
     const filtered = []
     for (const element of result) {
       filtered.push({
@@ -131,6 +134,8 @@ async function runMainApi() {
     const result = await models.Poi.findOne({ where: { id }})
     return res.json(result)
   })
+
+
 
   // HTTP GET api that returns all the events in our actual database
   app.get("/events", async (req, res) => {
@@ -164,45 +169,31 @@ async function runMainApi() {
         date:element.date,
         id: element.id,
         imgBackground:element.imgBackground,
+      })
+    }
+    return res.json(filtered)
+  })
+
+  // HTTP GET api that returns 4 events in our actual database
+  app.get("/4events1", async (req, res) => {
+    const result = await models.Events.findAll(  {where: { firstDay: { [Op.gte]: moment().toDate() } },
+    order: [['firstDay', 'ASC']],
+      limit: 4,
+  })
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgArray: element.imgArray,
+        address: element.address,
+        date:element.date,
+        id: element.id,
+        imgBackground:element.imgBackground,
         firstDay:element.firstDay
       })
     }
     return res.json(filtered)
   })
-
-  app.get("/summerEvents", async (req, res) => {
-    const result = await models.Events.findAll({where: { type: 1 }})
-    const filtered = []
-    for (const element of result) {
-      filtered.push({
-        name: element.name,
-        imgArray: element.imgArray,
-        address: element.address,
-        date:element.date,
-        id: element.id,
-        imgBackground:element.imgBackground
-      })
-    }
-    return res.json(filtered)
-  })
-
-  app.get("/winterEvents", async (req, res) => {
-    const result = await models.Events.findAll({where: { type: 0 }})
-    const filtered = []
-    for (const element of result) {
-      filtered.push({
-        name: element.name,
-        imgArray: element.imgArray,
-        address: element.address,
-        date:element.date,
-        id: element.id,
-        imgBackground:element.imgBackground
-      })
-    }
-    return res.json(filtered)
-  })
-
-
 
   // HTTP GET api that returns a specific point of interest
   app.get('/events/:id', async (req, res) => {

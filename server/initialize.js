@@ -207,7 +207,8 @@ export default async (models) => {
       date:"25 Giu 2022 - 03 Lug 2022",
       price:"Ingresso gratuito",
       website:"https://festival.ilcinemaritrovato.it/",
-      type:0
+      type:0,
+      firstDay:'2022-06-25'
     },
     {
       name: "Festival della mortadella",
@@ -218,7 +219,8 @@ export default async (models) => {
       date:"20-21-22 Sett 2022",
       price:"ingresso libero, ristorazione a pagamento",
       website:"www.mortadellaplease.eu/",
-      type:0
+      type:0,
+      firstDay:'2022-09-20'
     },
     {
       name: "Arte Fiera",
@@ -231,7 +233,8 @@ export default async (models) => {
       date:" dal 13 al 15 maggio 2022",
       price:"26 euro",
       website:"http://www.artefiera.it/home/776.html",
-      type:0
+      type:0,
+      firstDay:'2022-05-13'
     },
     {
       name: "Fiera del Libro",
@@ -244,7 +247,8 @@ export default async (models) => {
       date:"18 marzo – 1 maggio 2022",
       price:"Ingresso gratuito",
       website:"https://www.fieradellibrobologna.it/",
-      type:0
+      type:0,
+      firstDay:'2022-03-18'
     },
     {
       name: "StraBologna",
@@ -257,7 +261,8 @@ export default async (models) => {
         "ORE 10:30",
       price:"15 euro",
       website:"https://strabologna.it/",
-      type:0
+      type:0,
+      firstDay:'2022-05-22'
     },
     {
       name: "roBOt",
@@ -270,7 +275,8 @@ export default async (models) => {
       date:"23-24 Settembre",
       price:"30 euro",
       website:"https://robotfestival.it/",
-      type:0
+      type:0,
+      firstDay:'2022-09-23'
     },
     {
       name: "Cosmoprof",
@@ -281,7 +287,8 @@ export default async (models) => {
       date:"16 al 20 marzo 2023",
       price:"Ingresso gratuito",
       website:"https://www.cosmoprof.com/",
-      type:0
+      type:0,
+      firstDay:'2022-03-16'
     },
     {
       name: "Cioccoshow",
@@ -292,7 +299,8 @@ export default async (models) => {
       date:"17-20 Novembre 2022",
       price:"Ingresso gratuito",
       website:"https://cioccoshow.it/",
-      type:1
+      type:1,
+      firstDay:'2022-10-17'
     },
     {
       name: "Bil Bol Bul",
@@ -303,7 +311,8 @@ export default async (models) => {
       date:"03 Dicembre 2022 - 05 Dicembre 2022",
       price:"ingresso gratuito",
       website:"https://bilbolbul.net/BBB21",
-      type:1
+      type:1,
+      firstDay:'2022-12-03'
     },
     {
       name: "Bologna Jazz Festival",
@@ -314,7 +323,8 @@ export default async (models) => {
       date:"20-30 Novembre",
       price:"10 euro",
       website:"https://www.bolognajazzfestival.com/",
-      type:1
+      type:1,
+      firstDay:'2022-10-20'
     },
 
   ]
