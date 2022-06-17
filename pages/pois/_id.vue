@@ -5,7 +5,7 @@
       <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title=name />
       <section class="breadcrumb-section1">
         <breadcrumb
-          :default-route="[{ title: 'Punti di Interesse', path: '/pois/' }]"
+          :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' }]"
           :current-page="name"
         />
       </section>
@@ -160,5 +160,9 @@ export default {
   background-color: #ffffff;
   color: black;
 }
-
+.breadcrumb-section1{
+  float:right;
+  margin-right: 20px;
+  margin-top: -10px;
+}
 </style>

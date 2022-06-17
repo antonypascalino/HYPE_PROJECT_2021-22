@@ -2,18 +2,23 @@
   <div class="App">
     <TheHeader/>
     <section class="breadcrumb-section">
-      <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+      <breadcrumb
+        :default-route="[{ title: 'Home', path: '/' }]"
+        current-page="Punti di Interesse"
+      />
     </section>
     <div class="carouselDiv">
       <div class="indicatorList">
         <div class = "list">
           <carousel-indicator
-            v-for = "it in itList"
-            :key = "it.id"
-            :title = "it.name"
-            @change = "change(it.id)"
-            class = "carousel-indicator"
-          ></carousel-indicator>
+            v-for = "(poi,index) in poiList"
+            :key = "poi.id"
+            :index = "index"
+            :visibleSlide = "visibleSlide"
+            :title = "poi.name"
+            @change = "change(poi.id)"
+
+          />
         </div>
       </div>
       <carousel
@@ -21,19 +26,35 @@
         @prev="prev"
         class = "carousel"
       >
-        <carousel-slide v-for = "(it, index) in itList"
+        <carousel-slide v-for = "(poi, index) in poiList"
                         :key="index"
                         :index="index"
                         :visibleSlide = "visibleSlide"
-                        :id="it.id"
+                        :id="poi.id"
                         :name='"itinerari"'
         >
           <div class="imageContainer">
-            <img class= "carouselImg" :src="require(`@/static/Itineraries/${it.imgBackground}`)" :alt="it.name">
-            <div class="textContainer-carousel">{{ it.name }}</div>
+            <nuxt-link :to="`/itinerari/${poi.id}`">
+              <img class= "carouselImg" :src="require(`@/static/Itineraries/${poi.imgBackground}`)" :alt="poi.name">
+            </nuxt-link>
+            <div class="textContainer-carousel">{{ poi.name }}</div>
+            <div class="hoverText">Scopri di più</div>
           </div>
         </carousel-slide>
       </carousel>
+      <div class="carouselScroll"
+           v-for = "(poi, index) in poiList"
+           :key="index"
+           :id="poi.id">
+
+        <div class="imageContainer container-scroll">
+          <nuxt-link :to="`/itinerari/${poi.id}`">
+            <img class= "carouselImg image-scroll" :src="require(`@/static/Itineraries/${poi.imgBackground}`)" :alt="poi.name">
+          </nuxt-link>
+          <div class="textContainer-scroll">{{poi.name}}</div>
+          <div class="hoverText">Scopri di più</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -51,22 +72,23 @@ export default {
 
   data() {
     return {
+      poiList:[],
       visibleSlide : 0,
-      crumbs: ['HOME','ITINERARI'],
+      crumbs: ['HOME','PUNTI DI INTERESSE'],
     }
   },
 
   async asyncData({ $axios }) {
-    // const { data } = await $axios.get('api/itineraries')
+    // const { data } = await $axios.get('api/pois')
     const { data } = await $axios.get('http://localhost:3000/api/itineraries')
     return {
-      itList: data,
+      poiList: data,
     }
   },
 
   computed: {
     slidesLen() {
-      return this.itList.length;
+      return this.poiList.length;
     },
   },
 
@@ -92,6 +114,9 @@ export default {
     selected(crumb) {
       console.log(crumb);
     },
+    goToDetails() {
+      this.$router.push(`/details/${this.id}`)
+    },
   },
   components : {
     Carousel,
@@ -104,92 +129,186 @@ export default {
 
 </script>
 
-<!--<style>-->
+<style>
 
-<!--.carouselDiv {-->
-<!--  padding-top: 5%;-->
-<!--  padding-bottom: 3%;-->
-<!--  padding-left: 4%;-->
-<!--  width:100%-->
-<!--}-->
 
-<!--carousel-slide {-->
-<!--  left: 0;-->
-<!--}-->
+.carouselDiv {
+  padding-top: 2%;
+  padding-left: 4%;
+  width: 100%;
+  height: 100vh;
+}
 
-<!--.imageContainer {-->
-<!--  /*border: solid blue 2px;*/-->
-<!--  width: 100%;-->
-<!--  height: 40%;-->
-<!--  overflow: hidden;-->
-<!--  margin-left: 0;-->
-<!--  margin-top: 6%;-->
-<!--  display: flex;-->
-<!--  justify-content: center;-->
-<!--  align-items: center;-->
-<!--  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);-->
-<!--  margin-bottom: 100px;-->
-<!--}-->
+carousel-slide {
+  left: 0;
+}
 
-<!--.carouselImg:hover {-->
-<!--  -webkit-filter: blur(4px);-->
-<!--  cursor: pointer;-->
-<!--  transition: 200ms;-->
-<!--}-->
+.imageContainer {
+  position: relative;
+  width: 70vw;
+  height: 74vh;
+  margin-top: 7vh;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
 
-<!--.carouselImg {-->
-<!--  aspect-ratio: auto;-->
-<!--  margin-left: 0;-->
-<!--  width: 100%;-->
+.imageContainer:hover .hoverText, .imageContainer.hover .hoverText {
+  visibility: visible;
+  opacity: 1;
+  bottom: 20%;
+  transition: 350ms ease-in-out;
+}
 
-<!--}-->
+.imageContainer:hover .carouselImg, .imageContainer.hover .carouselImg {
+  -webkit-filter: blur(4px);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
 
-<!--div.textContainer-carousel {-->
-<!--  color: white ;-->
-<!--  font-size: 5vw;-->
-<!--  /*line-height: normal;*/-->
-<!--  font-family: "Josefin Sans";-->
-<!--  text-transform: uppercase;-->
-<!--  float: left;-->
-<!--  position: absolute;-->
-<!--  width: 100%;-->
-<!--  border: solid 2px blue;-->
-<!--  margin-bottom: 0;-->
-<!--  bottom: 0;-->
-<!--}-->
+.imageContainer:hover .carouselImg.image-scroll, .imageContainer.hover .carouselImg.image-scroll {
+  -webkit-filter: blur(4px);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
 
-<!--.App {-->
-<!--  background-color: #EBEBEB;-->
-<!--}-->
+.imageContainer:hover .textContainer-carousel, .imageContainer.hover .textContainer-carousel {
+  bottom: 40%;
+  transition: 400ms ease-in-out;
+}
 
-<!--div.indicatorList {-->
-<!--  height: 600px;-->
-<!--  width: 200px;-->
-<!--  position: relative;-->
-<!--  float: right;-->
-<!--  margin-top: 6%;-->
-<!--  margin-right: 2%;-->
-<!--  padding: 0;-->
-<!--  font-size: 20px;-->
-<!--}-->
+.imageContainer:hover .textContainer-scroll, .imageContainer.hover .textContainer-scroll {
+  bottom: 40%;
+  transition: 400ms ease-in-out;
+}
 
-<!--.carousel-indicator {-->
-<!--  position: relative;-->
-<!--  color: black;-->
-<!--}-->
+.carouselImg {
+  display: block;
+  margin-left: 0;
+  width: 100%;
+  height: 74vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+  transition: 200ms ease-in-out;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+}
 
-<!--.carousel-indicator:hover {-->
-<!--  color: #C13939;-->
-<!--}-->
+.carouselScroll {
+  width: 70vh;
+  left: 0;
+  margin-right: 0;
+}
 
-<!--ul.list {-->
-<!--  width: 200px;-->
-<!--  padding-left: 0;-->
-<!--}-->
+.imageContainer.container-scroll {
+  position: relative;
+  height: 38vh;
+  width: 70vh;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  margin-left: 15vw;
+}
 
-<!--@media screen and (max-width: 1220px) {-->
-<!--  .indicatorList{-->
-<!--    display: none;-->
-<!--  }-->
-<!--}-->
-<!--</style>-->
+.carouselImg.image-scroll {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: 0;
+  width: 70vw;
+  height: 38vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+div.textContainer-scroll {
+  color: white ;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 100%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+
+}
+
+div.textContainer-carousel {
+  color: white ;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 56%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+  transition: 400ms ease-in-out;
+}
+
+div.hoverText {
+  color: white ;
+  font-size: 3vw;
+  line-height: normal;
+  font-family: "Josefin Sans";
+  font-style: italic;
+  float: left;
+  position: absolute;
+  width: 30%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom:0;
+  height: auto;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 350ms ease-in-out;
+}
+
+span {
+  top: 50%;
+  /*border: solid 2px yellow;*/
+}
+
+
+body {
+
+  background-color: #F2F2F2;
+}
+
+.App {
+  background-color: #F2F2F2;
+  height: auto;
+}
+
+div.indicatorList {
+  /*border: solid 2px blue;*/
+  width: 22vw;
+  height: 76vh;
+  position: relative;
+  float: right;
+  margin-top: 4%;
+  margin-right: 2%;
+  padding: 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  .indicatorList{
+    display: none;
+  }
+  .carousel {
+    display: none;
+  }
+
+  .carouselDiv {
+    padding-left: 0 ;
+  }
+}
+
+@media screen and (min-width: 881px) {
+  .carouselScroll {
+    display: none;
+  }
+}
+
+</style>

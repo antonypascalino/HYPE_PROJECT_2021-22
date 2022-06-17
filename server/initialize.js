@@ -153,7 +153,7 @@ export default async (models) => {
     },
     {
       name: "San Luca e i Portici",
-      visit_info:"porticiSanLuca01.jpg",
+      visit_info:"",
       description: "Partendo da Porta Saragozza si può procedere con una lunga camminata di quasi 4km interamente all’ombra di un complesso di un numero simbolico 666 portici. Giunti a destinazione in cima al Colle della Guardia si potrà accedere al Santuario della Madonna di San Luca. \n" +
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
@@ -174,7 +174,7 @@ export default async (models) => {
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       description: "“La Dotta”, uno degli appellativi con cui si fa riferimento a Bologna, deve la propria origine alla lunga storia universitaria della città. Attualmente la maggior parte delle sedi sono concentrate nella zona lungo Via Zamboni, che è diventata inoltre negli anni uno dei centri della vita notturna degli studenti. \n" +
         "La strada che inizia a partire da Piazza di Porta Ravegnana, sotto le due torri, vede un susseguirsi di locali e bar, superando il conservatorio, si termina nella celebre Piazza Verdi, denominata così in onore del compositore italiano. È il principale luogo di ritrovo dei giovani. Qui possiamo osservare gli splendidi edifici di stampo medievale e l’importante Teatro Comunale.\n" +
-        "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato. \n" ,
+        "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato.\n" ,
       imgBackground: "universita01.jpg",
       imgArray:["universita02.jpg", "universita03.jpg"],
     },
@@ -205,11 +205,12 @@ export default async (models) => {
       description: "Il Cinema Ritrovato è un evento sia per cinefili che per semplici amanti del cinema e impegna per alcuni giorni diverse sale cinematografiche e arene all’aperto ospitando da mattina a notte centinaia di film di tutte le epoche: un vero paradiso!",
       imgBackground: "ilCinemaRitrovato01.jpg",
       imgArray:["ilCinemaRitrovato02.jpg","ilCinemaRitrovato03.jpg"],
-      address:"Piazza Maggiore, 40124 Bologna (BO)",
-      date:"25 Giugno 2022 - 03 Luglio 2022",
+      address:"Bologna, Piazza Maggiore",
+      date:"25 Giu 2022 - 03 Lug 2022",
       price:"Ingresso gratuito",
       website:"https://festival.ilcinemaritrovato.it/",
-      type:0
+      type:0,
+      firstDay:'2022-06-25'
     },
     {
       name: "Cersaie",
@@ -220,7 +221,8 @@ export default async (models) => {
       date: "26 Settembre 2022 - 30 Settembre 2022",
       price: "Ingresso gratuito",
       website: "https://www.cersaie.it/it/index.php",
-      type: 0
+      type: 0,
+      firstDay:'2022-09-26'
     },
     {
       name: "Festival della Mortadella",
@@ -231,7 +233,8 @@ export default async (models) => {
       date:"20 Settembre 2022 - 22 Settembre 2022",
       price:"ingresso libero, ristorazione a pagamento",
       website:"www.mortadellaplease.eu/",
-      type:0
+      type:0,
+      firstDay:'2022-09-20'
     },
     {
       name: "Arte Fiera",
@@ -244,7 +247,8 @@ export default async (models) => {
       date:" dal 13 al 15 maggio 2022",
       price:"26 euro",
       website:"http://www.artefiera.it/home/776.html",
-      type:0
+      type:0,
+      firstDay:'2022-05-13'
     },
     {
       name: "Fiera del Libro",
@@ -257,7 +261,8 @@ export default async (models) => {
       date:"18 Marzo 2022 – 1 Maggio 2022",
       price:"Ingresso gratuito",
       website:"https://www.fieradellibrobologna.it/",
-      type:0
+      type:0,
+      firstDay:'2022-03-18'
     },
     {
       name: "StraBologna",
@@ -270,7 +275,8 @@ export default async (models) => {
         "ORE 10:30",
       price:"15 euro",
       website:"https://strabologna.it/",
-      type:0
+      type:0,
+      firstDay:'2022-05-22'
     },
     {
       name: "roBOt",
@@ -283,7 +289,8 @@ export default async (models) => {
       date:"23 Settembre 2022 -24 Settembre 2022",
       price:"30 euro",
       website:"https://robotfestival.it/",
-      type:0
+      type:0,
+      firstDay:'2022-09-23'
     },
     {
       name: "Cosmoprof",
@@ -294,7 +301,8 @@ export default async (models) => {
       date:"16 Marzo 2023 - 23 Marzo 2023",
       price:"Ingresso gratuito",
       website:"https://www.cosmoprof.com/",
-      type:0
+      type:0,
+      firstDay:'2022-03-16'
     },
     {
       name: "Cioccoshow",
@@ -305,7 +313,8 @@ export default async (models) => {
       date: "17 Novembre 2022 - 20 Novembre 2022",
       price: "Ingresso gratuito, consumazioni a pagamento",
       website: "https://cioccoshow.it/",
-      type:1
+      type:1,
+      firstDay:'2022-10-17'
     },
     {
       name: "BilBOlBul",
@@ -316,7 +325,8 @@ export default async (models) => {
       date:"03 Dicembre 2022 - 05 Dicembre 2022",
       price:"Ingresso gratuito",
       website:"https://bilbolbul.net/BBB21",
-      type:1
+      type:1,
+      firstDay:'2022-12-03'
     },
     {
       name: "Bologna Jazz Festival",
@@ -327,7 +337,8 @@ export default async (models) => {
       date:"20 Novembre 2022 - 30 Novembre 2022",
       price:"10 euro",
       website:"https://www.bolognajazzfestival.com/",
-      type:1
+      type:1,
+      firstDay:'2022-10-20'
     },
 
   ]

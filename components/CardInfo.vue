@@ -9,6 +9,7 @@
     ></div>
     <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
+     <h6 v-if="!!firstDay"  class="mdi mdi-calendar-blank-outline">{{firstDay}}</h6>
       <nuxt-link :to="`/${link}/${id}`">
        <base-button title="Vedi dettagli"></base-button>
       </nuxt-link>
@@ -29,6 +30,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 160px;
+}
+.mdi-calendar-blank-outline{
+  color:#C13939;
 }
 </style>
 
@@ -55,6 +59,10 @@ export default {
     link: {
       type: String,
       required: true,
+    },
+    firstDay: {
+      type: String,
+      required: false,
     },
   },
 }

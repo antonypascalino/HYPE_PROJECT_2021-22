@@ -36,7 +36,7 @@
 
     <!--Events section -->
     <section class="section-container" >
-      <h1 class="section-title">EVENTI A BOLOGNA</h1>
+      <h1 class="section-title">PROSSIMI EVENTI</h1>
       <!--Cards of events -->
       <div class="events-container">
         <div class="event-card-container row mt-4">
@@ -48,6 +48,7 @@
             :img="`../Events/${event.imgBackground}`"
             :id="event.id"
             link="eventi"
+            :first-day="event.firstDay"
           />
         </div>
 
@@ -80,7 +81,7 @@ export default {
   },
 
   async asyncData({ route, $axios }) {
-    const events = await $axios.get(`http://localhost:3000/api/4events`)
+    const events = await $axios.get(`http://localhost:3000/api/4events1`)
     // const events = await $axios.get(`api/4events`)
     const pois = await $axios.get(`http://localhost:3000/api/4pois`)
     // const pois = await $axios.get(`api/4pois`)

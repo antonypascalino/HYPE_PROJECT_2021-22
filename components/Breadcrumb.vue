@@ -49,7 +49,7 @@ ul.breadcrumb {
   font-family: "Josefin Sans";
   margin-left: 10px;
   margin-bottom:-30px;
-  font-size: 20px;
+  font-size: 18px;
 
 }
 /* Apperence of the list elements  */

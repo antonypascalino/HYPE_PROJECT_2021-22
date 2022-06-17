@@ -9,6 +9,17 @@
 
       <section class="section-description">
         <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
+        <div class="poi-card-container row mt-4">
+          <cardInfo
+            v-for="(poi, index) of poiList"
+            class="col-sm-1 m-2"
+            :key="`index-${index}`"
+            :name="poi.name"
+            :img="`../Poi/${poi.imgBackground}`"
+            :id="poi.id"
+            link="pois"
+          />
+        </div>
         <p class="text-container"></p>
       </section>
 
@@ -47,25 +58,28 @@
 import CommonMixin from '~/mixins/common'
 import staticHalfImage from "~/components/StaticHalfImage";
 import Breadcrumb from '~/components/Breadcrumb.vue';
+import cardInfo from "~/components/CardInfo";
 
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
     staticHalfImage,
-    Breadcrumb
+    Breadcrumb,
+    cardInfo
   },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
     // const { data } = await $axios.get('api/itineraries/'+ id)
     const { data } = await $axios.get('http://localhost:3000/api/itineraries/'+ id)
-    return {
+     return {
       name: data.name,
       duration: data.duration,
       imgBackground: data.imgBackground,
       description: data.description,
       map: data.map,
+
     }
   },
   data() {
