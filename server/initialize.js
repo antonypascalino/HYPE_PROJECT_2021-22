@@ -153,7 +153,7 @@ export default async (models) => {
     },
     {
       name: "San Luca e i Portici",
-      visit_info:"porticiSanLuca01.jpg",
+      visit_info:"",
       description: "Partendo da Porta Saragozza si può procedere con una lunga camminata di quasi 4km interamente all’ombra di un complesso di un numero simbolico 666 portici. Giunti a destinazione in cima al Colle della Guardia si potrà accedere al Santuario della Madonna di San Luca. \n" +
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
@@ -174,7 +174,7 @@ export default async (models) => {
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       description: "“La Dotta”, uno degli appellativi con cui si fa riferimento a Bologna, deve la propria origine alla lunga storia universitaria della città. Attualmente la maggior parte delle sedi sono concentrate nella zona lungo Via Zamboni, che è diventata inoltre negli anni uno dei centri della vita notturna degli studenti. \n" +
         "La strada che inizia a partire da Piazza di Porta Ravegnana, sotto le due torri, vede un susseguirsi di locali e bar, superando il conservatorio, si termina nella celebre Piazza Verdi, denominata così in onore del compositore italiano. È il principale luogo di ritrovo dei giovani. Qui possiamo osservare gli splendidi edifici di stampo medievale e l’importante Teatro Comunale.\n" +
-        "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato. \n" ,
+        "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato.\n" ,
       imgBackground: "universita01.jpg",
       imgArray:["universita02.jpg", "universita03.jpg"],
     },
@@ -221,7 +221,8 @@ export default async (models) => {
       date: "26 Settembre 2022 - 30 Settembre 2022",
       price: "Ingresso gratuito",
       website: "https://www.cersaie.it/it/index.php",
-      type: 0
+      type: 0,
+      firstDay:'2022-09-26'
     },
     {
       name: "Festival della Mortadella",
