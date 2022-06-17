@@ -38,8 +38,7 @@ async function initializeDatabaseConnection() {
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
     website:DataTypes.STRING,
     price:DataTypes.STRING,
-    type:DataTypes.INTEGER,
-    firstDay:DataTypes.DATEONLY
+    type:DataTypes.INTEGER
   })
 
   const Itinerary = database.define("itinerary", {
@@ -147,7 +146,7 @@ async function runMainApi() {
         imgBackground:element.imgBackground,
         price:element.price,
         website:element.website,
-        firstDay:element.firstDay
+        type:element.type
       })
     }
     return res.json(filtered)
