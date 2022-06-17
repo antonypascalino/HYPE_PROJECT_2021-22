@@ -375,127 +375,223 @@ export default async (models) => {
   //Bank Table
   const serviceList = [
     {
-      name: "bancaBNL",
-      address:"Via Rizzoli",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      name: "BNL BNP Paribas",
+      address:"Via Rizzoli 26, 40125 Bologna (BO)",
+      opening_hours:"Lun - Ven: 08:20–16:45",
+      phone_number: "06 0060",
+      website: "https://bnl.it",
       servicetypeId:servicetype0.id
     },
     {
       name: " Intesa San Paolo",
-      address:"Via Rizzoli",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Rizzoli 5, 40125 Bologna (BO)",
+      opening_hours:"Lun - Ven: 08:30–13:30, 14:45–16:55",
+      phone_number: "051 640 5011",
+      website: "https://www.intesasanpaolo.com/it",
       servicetypeId:servicetype0.id
     },
     {
       name: "BPER",
-      address:"Via Venezian",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Giacomo Venezian 5A, 40121 Bologna (BO)",
+      opening_hours:"Lun - Ven: 8:40-13:00, 15:00-16:00",
+      phone_number: "051 275 7811",
+      website: "https://www.bper.it",
       servicetypeId:servicetype0.id
     },
     {
       name: "Deutsche Bank",
-      address:"Via Carbonesi",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Farini 17, 40124 Bologna (BO)",
+      opening_hours:"Lun - Ven: 08:20–13:20, 14:35–15:35",
+      phone_number: "051 295727",
+      website: "https://www.deutsche-bank.it",
+      servicetypeId:servicetype0.id
+    },
+    {
+      name: "Banco BPM",
+      address:"Via de' Carbonesi 11, 40123 Bologna (BO)",
+      opening_hours:"Lun - Ven: 08:20–13:20, 14:30–15:30",
+      phone_number: "051 559411",
+      website: "https://www.bancobpm.it",
       servicetypeId:servicetype0.id
     },
 
     {
-      name: "Medica",
-      address:"Via Montegrappa",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      name: "Medica Palace",
+      address:"Via Monte Grappa 9b, 40122 Bologna (BO)",
+      opening_hours:"Orario variabile a seconda delle programmazioni",
+      phone_number: "051 263826",
+      website: "https://medica.popupcinema.18tickets.it/",
       servicetypeId:servicetype1.id
     },
     {
-      name: "Rialto",
-      address:"Via Rialto",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      name: "Rialto Studio",
+      address:"Via Rialto 19, 40126 Bologna (BO)",
+      opening_hours:"Orario variabile a seconda delle programmazioni",
+      phone_number: "051 227926",
+      website: "https://rialto.circuitocinemabologna.it/",
       servicetypeId:servicetype1.id
     },
     {
       name: "Odeon",
-      address:"Via Mascarella",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Mascarella 3, 40126 Bologna (BO)",
+      opening_hours:"Orario variabile a seconda delle programmazioni",
+      phone_number: "051 227916",
+      website: "https://odeon.circuitocinemabologna.it/",
       servicetypeId:servicetype1.id
     },
     {
       name: "Europa",
-      address:"Via Pietralata",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Pietralata 55, 40100 Bologna (BO)",
+      opening_hours:"Orario variabile a seconda delle programmazioni",
+      phone_number: "051 523812",
+      website: "https://europa.circuitocinemabologna.it/",
+      servicetypeId:servicetype1.id
+    },
+    {
+      name: "Lumière",
+      address:"Piazzetta P.P.Pasolini 2/b, 40122 Bologna (BO)",
+      opening_hours:"Orario variabile a seconda delle programmazioni",
+      phone_number: "051 2195311",
+      website: "https://programmazione.cinetecadibologna.it/",
       servicetypeId:servicetype1.id
     },
 
     {
-      name: "Matis",
-      address:"Via Rotta",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      name: "Matis Club",
+      address:"Via Rotta 10, 40132 Bologna (BO)",
+      opening_hours:"Ven - Sab: 22:00-04.00",
+      phone_number: "389 5654503",
+      website: "https://www.facebook.com/matisclubofficial/",
       servicetypeId:servicetype2.id
     },
     {
-      name: "Numa",
-      address:"Via Maserati",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      name: "Numa Club",
+      address:"Via Alfieri Maserati 9, 40127 Bologna (BO)",
+      opening_hours:"Mer, Ven, Sab: 21:00-04:00",
+      phone_number: "051 363591",
+      website: "https://www.facebook.com/numa.club.bologna/",
       servicetypeId:servicetype2.id
     },
     {
       name: "Qubò",
-      address:"Via Sampieri, 3",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Sampieri 3, 40125 Bologna (BO)",
+      opening_hours:"Mar - Sab: 23:30-04:00",
+      phone_number: "338 2726397",
+      website: "http://qubodiscotecabologna.com/",
       servicetypeId:servicetype2.id
     },
     {
       name: "O2 Oxygen",
-      address:"Via Sabbiuno",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via dell'Incisore, 2, 40138 Bologna BO",
+      opening_hours:"24 ore su 24",
+      phone_number: "348 842 3513",
+      website: "https://www.facebook.com/Latifoliagroup/",
+      servicetypeId:servicetype2.id
+    },
+    {
+      name: "Kindergarden",
+      address:"Via Alfredo Calzoni 6h, 40128 Bologna (BO)",
+      opening_hours:"Ven - Sab: 23:00-04:00",
+      phone_number: "051 365836",
+      website: "https://www.derkindergarten.it/",
       servicetypeId:servicetype2.id
     },
 
     {
       name: "Lloyds Farmacia Centrale",
-      address:"Piazza Maggiore",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Piazza Maggiore 6, 40121 Bologna (BO)",
+      opening_hours:"24 ore su 24",
+      phone_number: "051 239690",
+      website: "https://lloydsfarmacia.it",
       servicetypeId:servicetype3.id
     },
     {
       name: "Farmacia Speranza",
-      address:"Via Ugo Bassi",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Ugo Bassi 6, 40121 Bologna (BO)",
+      opening_hours:"Lun - Sab: 08:30-19:30, Dom: 8:30-19:00",
+      phone_number: "051 232436",
+      website: "https://www.farmaciediturno.org/farmacia.asp?idf=6987",
       servicetypeId:servicetype3.id
     },
     {
       name: "Antica Farmacia dei Servi",
-      address:"Strada Maggiore",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Strada Maggiore 39, 40125 Bologna (BO)",
+      opening_hours:"Lun - Ven: 08.30-20:00, Sab - Dom: 09:00-19:00",
+      phone_number: "051 231638",
+      website: "https://www.anticafarmaciadeiservi.it/",
       servicetypeId:servicetype3.id
     },
     {
       name: "Farmacia Alberani",
-      address:"Via Farini",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Farini 19, 40124 Bologna (BO)",
+      opening_hours:"Lun - Sab: 08:30–13:30, 15:30–19:30",
+      phone_number: "051 224573",
+      website: "https://www.facebook.com/farmaciaalberani/",
+      servicetypeId:servicetype3.id
+    },
+    {
+      name: "Farmacia D'Azeglio",
+      address:"Via d'Azeglio 88, 40123 Bologna (BO)",
+      opening_hours:"Lun - Ven: 08:00–13:00, 15:30–19:30, Sab: 09:00–13:00",
+      phone_number: "051 459 6403",
+      website: "http://www.farmauniti.it/le-farmacie-dettaglio.aspx?id=407",
       servicetypeId:servicetype3.id
     },
 
     {
       name: "051",
-      address:"Piazza Maggiore",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
-      servicetypeId:servicetype4.id
-    },
-    {
-      name: "Pizzeria Vasinikò",
-      address:"Via Santo Stefano",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via de' Pignattari 1/F, 40124 Bologna (BO)",
+      opening_hours:"Tutti i giorni: 12:00–15:00, 19:00–23:00",
+      phone_number: "051 510515",
+      website: "https://051.it/",
       servicetypeId:servicetype4.id
     },
     {
       name: "Osteria del Cappello",
-      address:"Via De Fusari",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via de' Fusari 9B, 40123 Bologna (BO)",
+      opening_hours:"Lun - Sab: 07:00–15:00, 19:30–23:00, Dom: 7.00-11.00",
+      phone_number: "051 1998 6887",
+      website: "https://www.osteriadelcappello.com/",
+      servicetypeId:servicetype4.id
+    },
+    {
+      name: "Al Pappagallo",
+      address:"Piazza della Mercanzia 3, 40125 Bologna (BO)",
+      opening_hours:"Mer - Gio: 19:30-22.00, Ven - Dom: 12:00–14:30, 19:30–22:00",
+      phone_number: "353 4044221",
+      website: "https://www.alpappagallo.it",
+      servicetypeId:servicetype4.id
+    },
+    {
+      name: "Osteria Bartolini",
+      address:"Piazza Malpighi 16, 40123 Bologna (BO)",
+      opening_hours:"Tutti i giorni: 12:00–14:30, 19:00–22:30",
+      phone_number: "051 262192",
+      website: "https://www.osteriabartolinibologna.com/",
+      servicetypeId:servicetype4.id
+    },
+    {
+      name: "Pizzeria Vasinikò",
+      address:"Via Santo Stefano 40e, 40125 Bologna (BO)",
+      opening_hours:"Tutti i giorni: 12:00–15:00, 19:00–00:00 ",
+      phone_number: "051 239088",
+      website: "http://www.vasiniko.com/",
       servicetypeId:servicetype4.id
     },
     {
       name: "Ca' Shin",
-      address:"Via Cavaioni",
-      opening_hours:"Lun - Ven 7.00 - 19.00",
+      address:"Via Cavaioni 1, 40136 Bologna (BO)",
+      opening_hours:"Mar - Ven: 19.30-23.00, Sab: 12:30–16:30, 19:30–23:00, Dom: 12:30–17:00",
+      phone_number: "051 589419",
+      website: "https://www.cashin.coop",
+      servicetypeId:servicetype4.id
+    },
+    {
+      name: "La Bottega di Franco",
+      address:"Via Agucchi 112, 40131 Bologna (BO)",
+      opening_hours:"Lun - Ven: 12:30–14:30, 20:00–23:00, Sab: 20:00-23:00",
+      phone_number: "051 311243",
+      website: "https://labottegadifranco.com",
       servicetypeId:servicetype4.id
     },
 
