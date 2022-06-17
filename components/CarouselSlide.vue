@@ -28,13 +28,12 @@ export default {
     bottom: 0;
   }
   .left-enter-active {
-    animation: leftInAnimation 200ms ease-in-out;
-    -webkit-filter: blur(8px);
+    animation: leftInAnimation 1.1s ease-in-out;
   }
   .left-leave-active {
-    animation: leftOutAnimation 200ms ease-in-out;
-    -webkit-filter: blur(8px);
+    animation: leftOutAnimation 1.1s ease-in-out;
   }
+
   @keyframes leftInAnimation {
     from { transform: translateY(100%);}
     to { transform: translateY(0%);}
@@ -42,23 +41,32 @@ export default {
 
   @keyframes leftOutAnimation {
     from { transform: translateY(0);}
-    to { transform: translateY(-100%);}
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
   }
 
   .right-enter-active {
-    animation: rightInAnimation 200ms ease-in-out;
+    animation: rightInAnimation 1.1s ease-in-out;
   }
   .right-leave-active {
-    animation: rightOutAnimation 200ms ease-in-out;
-
+    animation: rightOutAnimation 1.1s ease-in-out;
   }
   @keyframes rightInAnimation {
-    from { transform: translateY(-100%);}
-    to { transform: translateY(0%);}
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
   }
 
   @keyframes rightOutAnimation {
     from { transform: translateY(0);}
-    to { transform: translateY(100%);}
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
   }
 </style>

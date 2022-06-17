@@ -32,9 +32,7 @@
                         :direction="direction"
         >
           <div class="imageContainer"
-               @wheel.once = "wheel($event.deltaY)"
-               @keyup.up = "prev"
-               @keyup.down = "next"
+               @wheel= "wheel($event.deltaY)"
           >
             <nuxt-link :to="`/pois/${poi.id}`">
               <img class= "carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name">
@@ -78,6 +76,10 @@ export default {
       crumbs: ['HOME','PUNTI DI INTERESSE'],
       direction: 'left',
       loading: false,
+
+      scrollingDirection : 0,
+      lastScroll : 9999,
+      scrollIdleTime : 90, // time interval that we consider a new scroll event: 80 is quite good
     }
   },
 
@@ -113,16 +115,36 @@ export default {
       this.direction = 'right'
     },
     change(index) {
+      if (this.visibleSlide < index -1) {
+        this.direction = 'left';
+      } else {
+        this.direction = 'right';
+      }
       this.visibleSlide = index-1;
     },
 
     wheel(deltaY) {
-      if(deltaY > 0) {
+
+      // adding .once in the template after @wheel
+      // if(deltaY > 0) {
+      //   this.next();
+      // } else {
+      //   this.prev();
+      // }
+      const scrollingDirection = this.scrollingDirection;
+      const lastScroll = this.lastScroll;
+      const scrollIdleTime = this.scrollIdleTime;
+
+      const delta = deltaY
+      const timeNow = performance.now();
+      if (delta > 0 && ( scrollingDirection !== 1 || timeNow > lastScroll + scrollIdleTime) ) {
         this.next();
-      }
-      if(deltaY < 0){
+        this.scrollingDirection = 1;
+      } else if (delta < 0 && ( scrollingDirection !==2 ||  timeNow > lastScroll + scrollIdleTime)) {
         this.prev();
+        this.scrollingDirection = 2;
       }
+      this.lastScroll = performance.now();
     },
 
     selected(crumb) {
