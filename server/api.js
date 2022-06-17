@@ -191,9 +191,7 @@ async function runMainApi() {
   })
 
   app.get("/summerEvents", async (req, res) => {
-    const title = req.query.type;
-    var condition = title ? { title: { [Op.like]: `%${3}%` } } : null;
-    const result = await models.Events.findAll({where:condition})
+    const result = await models.Events.findAll({where: { type: 1 }})
     const filtered = []
     for (const element of result) {
       filtered.push({
@@ -207,6 +205,23 @@ async function runMainApi() {
     }
     return res.json(filtered)
   })
+
+  app.get("/winterEvents", async (req, res) => {
+    const result = await models.Events.findAll({where: { type: 0 }})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgArray: element.imgArray,
+        address: element.address,
+        date:element.date,
+        id: element.id,
+        imgBackground:element.imgBackground
+      })
+    }
+    return res.json(filtered)
+  })
+
 
 
   // HTTP GET api that returns a specific point of interest
