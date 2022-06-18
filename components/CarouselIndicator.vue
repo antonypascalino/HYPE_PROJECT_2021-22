@@ -28,7 +28,8 @@ export default {
     getTextColor(index,visibleSlide) {
       if (visibleSlide === index) {
         return "color: #C13939;\n " +
-                "font-size: 1.4vw;"
+                "font-size: 1.4vw;\n " +
+                "transition: 1.1s"
       }
     },
     getSymbol(index, visibleSlide) {
