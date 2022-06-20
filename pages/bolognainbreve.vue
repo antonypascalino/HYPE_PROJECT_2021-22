@@ -8,7 +8,10 @@
     <div class="body-container">
       <StaticHalfImage slide="/bolognaInBreve.jpg" title="BOLOGNA" />
       <div class="breadcrumb-section">
-        <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+        <breadcrumb
+          :default-route="[{ title: 'HOME', path: '/' }]"
+          current-page="Bologna in Breve"
+        />
       </div>
       <br>
       <section class="section-la-nostra-missione">
@@ -113,11 +116,6 @@ export default {
     return {
       crumbs: ['HOME', 'BOLOGNA IN BREVE'],
     };
-  },
-  methods: {
-    selected(crumb) {
-      console.log(crumb);
-    },
   },
   head(){
     return{

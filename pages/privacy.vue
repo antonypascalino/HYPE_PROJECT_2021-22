@@ -4,7 +4,10 @@
   <main class="page-container">
 
     <section class="breadcrumb-section">
-      <Breadcrumb   :crumbs="crumbs" @selected="selected"/>
+      <breadcrumb
+        :default-route="[{ title: 'HOME', path: '/' }]"
+        current-page="Privacy"
+      />
     </section>
 
     <div class="body-container">
@@ -49,12 +52,6 @@ export default {
   components: {
     Breadcrumb,
 
-  },
-
-  data() {
-    return {
-      crumbs: ['HOME', 'PRIVACY'],
-    };
   },
   head(){
     return{

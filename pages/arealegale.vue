@@ -4,7 +4,10 @@
   <main class="page-container">
 
     <section class="breadcrumb-section">
-      <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+      <breadcrumb
+        :default-route="[{ title: 'HOME', path: '/' }]"
+        current-page="Area Legale"
+      />
     </section>
 
     <div class="body-container">
@@ -35,11 +38,6 @@ export default {
     Breadcrumb,
   },
 
-  data() {
-    return {
-      crumbs: ['HOME', 'AREA LEGALE'],
-    };
-  },
   head(){
     return{
       title: 'insideBO | Area Legale',
