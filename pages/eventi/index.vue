@@ -9,6 +9,7 @@
     </section>
     <div class="carouselDiv">
       <div class="indicatorList events">
+        <select-filter @filter-change="filterBySeason"/>
         <div class="list">
           <carousel-indicator
             v-for="(ev, index) in eventList"
@@ -22,7 +23,7 @@
       </div>
       <carousel @next="next" @prev="prev" class="carousel">
         <carousel-slide
-          v-for="(ev, index) in eventList"
+          v-for="(ev, index) in filteredList"
           :key="index"
           :index="index"
           :visibleSlide="visibleSlide"
@@ -71,12 +72,14 @@ import CarouselSlide from '~/components/CarouselSlide'
 import CarouselIndicator from '~/components/CarouselIndicator'
 import TheHeader from '~/components/TheHeader'
 import Breadcrumb from '~/components/Breadcrumb'
+import SelectFilter from "~/components/SelectFilter";
 
 export default {
   layout: 'empty',
 
   data() {
     return {
+      filteredList: [],
       eventList: [],
       visibleSlide: 0,
       crumbs: ['HOME', 'EVENTI'],
@@ -123,6 +126,23 @@ export default {
     change(index) {
       this.visibleSlide = index - 1
     },
+    // Change the season filter option
+    filterBySeason (chosenValue) {
+      this.filteredList = [];
+      if(chosenValue === 'Estate'){
+        for (const x of this.eventList){
+          if(x.type === 0)
+            this.filteredList.push(x)
+        }
+      }else if (chosenValue === 'Inverno'){
+        for (const x of this.eventList){
+          if(x.type === 1)
+            this.filteredList.push(x)
+        }
+      }else{
+        this.filteredList = this.eventList
+      }
+    },
     wheel(deltaY) {
       // adding .once in the template after @wheel
       // if(deltaY > 0) {
@@ -165,6 +185,7 @@ export default {
     TheHeader,
     CarouselIndicator,
     Breadcrumb,
+    SelectFilter
   },
 }
 </script>
