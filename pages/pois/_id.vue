@@ -29,8 +29,7 @@
 
       <section class="section-description">
         <div class="title-container">DOVE SI TROVA</div>
-        <Map></Map>
-
+          <Map :x=x :y=y> </Map>
       </section>
 
       <section class="section-description">
@@ -39,13 +38,8 @@
       </section>
 
       <div class="button-container">
-      <button
-        type="button"
-        class="btnBack btn btn-outline-secondary px-4"
-        @click="backToList"
-      >
-        Torna indietro
-      </button>
+    <baseButton title="Tutti i Punti di interesse" goto="/pois/">
+      </baseButton>
       </div>
     </div>
 
@@ -58,6 +52,7 @@ import CommonMixin from '~/mixins/common'
 import staticHalfImage from "~/components/StaticHalfImage";
 import Breadcrumb from '~/components/Breadcrumb.vue';
 import Map from "~/components/Map";
+import baseButton from "~/components/BaseButton";
 
 export default {
   name: 'DetailsPage',
@@ -65,7 +60,8 @@ export default {
   components:{
     staticHalfImage,
     Breadcrumb,
-    Map
+    Map,
+    baseButton
   },
 
   async asyncData({ route, $axios }) {
@@ -78,6 +74,8 @@ export default {
       imgBackground: data.imgBackground,
       imgArray:data.imgArray,
       description: data.description,
+      x:data.x,
+      y:data.y
     }
   },
   data() {
@@ -86,11 +84,7 @@ export default {
       crumbs: ['HOME', 'PUNTI DI INTERESSE'],
     };
   },
-  methods: {
-    backToList() {
-      this.$router.push('/pois/')
-    }
-  },
+
   head(){
     return {
       title: "insideBO | "+this.name
@@ -108,7 +102,6 @@ export default {
 <style>
 
 .section-description{
-
   font-family: 'Inria Sans';
   font-style: normal;
   font-size: 17px;
@@ -154,23 +147,14 @@ export default {
   padding: 10px;
 
 }
-.btnBack{
-  float:right;
-  color:black
-}
-.btnBack{
-  background-color: #C13939;
-  color: #ffffff;
-  border: 2px solid #C13939;
-}
-
-.btnBack:hover{
-  background-color: #ffffff;
-  color: black;
-}
 .breadcrumb-section1{
   float:right;
   margin-right: 20px;
   margin-top: -10px;
 }
+
+.button-container{
+  text-align: right;
+}
+
 </style>

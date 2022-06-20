@@ -13,9 +13,9 @@
     <div class="body-container">
       <section class="section-chi-siamo">
         <div class="title-container">La nostra Sede e contatti</div>
-        <div class="img-map-container"><img src="~/static/mapInsideBOUfficio01.jpg" class="img-map"></div>
-          <p class="address-container">
-            <span class="mdi mdi-map-marker"></span> Via Mecenate 12, Bologna
+        <Map :x=43.78198 :y=11.28143 ></Map>
+         <p class="address-container">
+            <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
 
             <br />
             <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
@@ -49,10 +49,12 @@
 
 <script>
 import Breadcrumb from '~/components/Breadcrumb.vue'
+import map from "~/components/Map";
 export default {
   layout: 'default',
   components: {
     Breadcrumb,
+    map
   },
 
   head(){

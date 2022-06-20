@@ -18,6 +18,8 @@ export default async (models) => {
         "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
       imgBackground: "piazzaMaggiore01.jpg",
       imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore03.jpg","piazzaMaggiore04.jpg"],
+      x:44.49371,
+      y:11.34304
     },
     {
       name: "Fontana del Nettuno",
@@ -27,18 +29,20 @@ export default async (models) => {
         "Il tridente impugnato dal Nettuno è stata fonte di ispirazione per il logo della casa di auto sportive Maserati che lo introdusse a partire dal 1926.\n",
       imgBackground: "fontanaNettuno01.jpg",
       imgArray:["fontanaNettuno02.jpg","fontanaNettuno03.jpg"],
+      x:44.49426,
+      y:11.34266
     },
     {
       name: "Basilica di San Petronio",
-      visit_info:"Tutti i giorni ingresso libero\n" +
-        "\n" +
-        "dalle 8.30 alle 13.30 e dalle 15.00 alle 18.30",
+      visit_info:"Tutti i giorni ingresso libero dalle 8.30 alle 13.30 e dalle 15.00 alle 18.30.",
       description: "La basilica di San Petronio è la chiesa più grande della città, nonché una delle più grandi basiliche italiane ed europee. La sua estensione raggiunge i 132 metri di lunghezza e 51 di altezza. La peculiarità, tuttavia è che risulta incompiuta: lo si può chiaramente notare dalla facciata, ricoperta solo per metà in marmo.\n" +
         "Iniziata nel 1390, è l’ultima grande opera tardo gotica italiana. Il progetto inizialmente era a carico di Antonio di Vincenzo ma nel 1514, durante i lavori di costruzione, Arduino degli Arriguzzi propose un nuovo piano: un’imponente pianta a croce latina che superava le dimensioni della basilica di San Pietro a Roma. Per questo motivo, secondo la leggenda, il papa Pio IV interruppe la realizzazione, focalizzando le risorse sull’Archiginnasio.\n" +
         "L’interno è suddiviso in tre navate e fu attuato in epoche diverse. Si contano ben ventidue cappelle, dove si possono scorgere dipinti e decorazioni di illustri artisti del tempo, tra cui Donato Creti e Girolamo Mazzola detto “Parmigianino”. Tra queste raffigurazioni, tuttavia, vi è un affresco che suscita tutt’ora controversie: ispirandosi all’inferno di Dante, l’autore Giovanni da Modena ha rappresentato una serie di peccatori e dannati tra cui Maometto che viene scuoiato da un diavolo.\n" +
         "Un’ulteriore caratteristica di San Petronio è la meridiana che si trova al suo interno e che si estende nella pavimentazione per una lunghezza di circa 67 metri, rendendola la più lunga al mondo.\n" ,
       imgBackground: "sanPetronio01.jpg",
       imgArray:["sanPetronio02.jpg","sanPetronio03.jpg","sanPetronio04.jpg"],
+      x:44.49273,
+      y:11.34303
     },
     {
       name: "Palazzo Re Enzo",
@@ -47,47 +51,56 @@ export default async (models) => {
         "Il palazzo ha uno stile gotico-medievale frutto anche degli importanti restauri avvenuti nel 1905.\n" ,
       imgBackground: "palazzoReEnzo01.jpg",
       imgArray:["palazzoReEnzo02.jpg","palazzoReEnzo03.jpg"],
+      x:44.49491,
+      y:11.34317
     },
     {
       name: "Palazzo D’Accursio",
-      visit_info:"martedì, mercoledì, giovedì, sabato e domenica dalle ore 10.00 alle ore 18.30 e venerdì dalle 15 alle 18.30 (lunedì chiuso). INGRESSO LIBERO",
+      visit_info:"martedì, mercoledì, giovedì, sabato e domenica dalle ore 10.00 alle ore 18.30 e venerdì dalle 15 alle 18.30 (lunedì chiuso). INGRESSO LIBERO.",
       description: "Sede del comune dal 1336, Palazzo d’Accursio è uno degli edifici che completano Piazza Maggiore. Deve il nome all’importante giurista e maestro di diritto Accursio (1184-1236). L’imponente edificio di circa 15.000 mq è caratterizzato da una torre con un orologio, costruito nella seconda metà del XV secolo. La facciata su Piazza Grande presenta anche una statua del Papa Gregorio XIII ed ulteriori decorazioni caratteristiche, come una rappresentazione della Madonna con bambino. \n" +
         "Si hanno due ingressi principali, quello su Piazza del Nettuno però non conduce alle camere del comune, bensì alla biblioteca Sala Borsa, la più grande ed importante della città. \n" +
         "Superato il cortile interno dall’ingresso di Piazza Maggiore, si arriva ad una particolare scalinata attribuita al Bramante, l’ampiezza della costruzione facilitava l’ingresso a cavallo dei rappresentanti comunali.\n" +
         "All’interno si trovano numerose sale decorate ed in particolare La Collezione di Arte Comunale, tra cui si possono osservare le opere del pittore bolognese Giorgio Morandi.\n" ,
       imgBackground: "palazzoAccursio01.jpg",
-      imgArray:["palazzoAccursio02.jpg"],
+      imgArray:["palazzoAccursio02.jpg","palazzoAccursio03.jpg"],
+      x:44.49399,
+      y:11.34217
     },
     {
       name: "Torre degli Asinelli e Garisenda",
       visit_info:"La Torre degli Asinelli è aperta CON PRENOTAZIONE OBBLIGATORIA con i seguenti orari:\n" +
-        "\n" +
         "Tutti i giorni\n" +
-        "Quattro ingressi all'ora (ai 00, ai 15, ai 30 e ai 45), primo ingresso ore 10:00, ultimo ore 17:00",
+        "Quattro ingressi all'ora (ai 00, ai 15, ai 30 e ai 45), primo ingresso ore 10:00, ultimo ore 17:00.",
       description: "Il simbolo della città, poste in Piazza di Porta Ravegnana, punto di incontro delle principali vie del centro, sono l’elemento più riconoscibile di Bologna. \n" +
         "La prima, la torre degli Asinelli deve presumibilmente la sua realizzazione al cavaliere ghibellino Gerardo Asinelli. I lavori iniziarono nel 1109 e terminarono dieci anni più tardi. L’altezza è di circa 97 metri e presenta una scalinata di 498 gradini.\n" +
         "La torre Garisenda invece fu sempre costruita per mano ghibellina, per il volere della famiglia omonima. Inizialmente alta 60 metri, venne ridotta a 48 per via di cedimenti strutturali insorti durante la realizzazione che ne conferirono la peculiare pendenza. La torre fu anche soggetto di paragone nella Divina Commedia, dove Dante la utilizzò come similitudine per indicare il Gigante Anteo nel canto XXXI dell’Inferno.\n" ,
       imgBackground: "torri01.jpg",
       imgArray:["torri02.jpg","torri03.jpg"],
+      x:44.49420,
+      y:11.34677
     },
     {
       name: "Archiginnasio",
-      visit_info:"Lunedì-venerdì 9-19. Sabato ore 9-14",
+      visit_info:"Lunedì-venerdì 9-19. Sabato ore 9-14.",
       description: "A pochi passi dalla basilica di San Petronio e da Piazza Maggiore si colloca uno degli edifici più significativi della città. La biblioteca comunale dell’Archiginnasio, divenuta tale nel 1838, presenta una ricca collezione di volumi antichi. \n" +
         "L’interno è costituito da diverse sale studio riccamente decorate dagli stemmi delle ricche famiglie felsinee dell’epoca. \n" +
         "La sala più caratteristica è certamente il teatro anatomico, un anfiteatro in legno d’abete corredato da statue.\n" +
         "L’Archiginnasio fu gravemente colpito dai bombardamenti della Seconda Guerra Mondiale. Oggi, tuttavia, lo si può ammirare in tutto il suo splendore grazie ai restauri e ricostruzioni effettuati nei decenni successivi.\n" ,
       imgBackground: "archiginnasio02.jpg",
       imgArray:["archiginnasio01.jpg","archiginnasio03.jpg"],
+      x:44.49205,
+      y:11.34341
     },
     {
       name: "Sala Borsa",
-      visit_info:"Salaborsa è aperta dal lunedì al venerdì dalle 13 alle 19",
+      visit_info:"Salaborsa è aperta dal lunedì al venerdì dalle 13 alle 19.",
       description: "Situata all’ingresso di Piazza del Nettuno di Palazzo d’Accursio, Sala Borsa è la biblioteca pubblica multimediale più celebre di Bologna. Al suo interno possono essere consultati sia volumi cartacei che digitali, oltre che a CD, DVD e fumetti.\n" +
         "Numerosi sono gli eventi e gli ospiti illustri che vi partecipano ogni anno. Solo nel 2019 a Sala Borsa sono stati effettuati 530.000 prestiti. \n" +
         "Nell’androne principale, il pavimento in vetro rivela delle rovine romane visitabili.\n" ,
       imgBackground: "salaBorsa01.jpg",
-      imgArray:["salaBorsa02.jpg"],
+      imgArray:["salaBorsa02.jpg","salaBorsa03.jpg"],
+      x:44.49469,
+      y:11.34214
     },
     {
       name: "Piazza Santo Stefano",
@@ -97,40 +110,50 @@ export default async (models) => {
         "La piazza è celebre anche per le manifestazioni ed il mercato di antiquariato che si svolge ogni primo week end del mese.\n" ,
       imgBackground: "piazzaSantoStefano01.jpg",
       imgArray:["piazzaSantoStefano02.jpg","piazzaSantoStefano03.jpg"],
+      x:44.49213,
+      y:11.34828
     },
     {
       name: "Basilica di Santo Stefano",
-      visit_info:"Aperta tutti i giorni 8.00 – 19.00 (durante le funzioni religiose la visita turistica potrebbe essere limitata o sospesa",
+      visit_info:"Aperta tutti i giorni 8.00 – 19.00 (durante le funzioni religiose la visita turistica potrebbe essere limitata o sospesa.",
       description: "Conosciuto anche come il complesso delle “Sette Chiese”, si affaccia sul lato sud-est della piazza omonima.\n" +
         "Fondata in epoca romana intorno al 100 d.C., la basilica, inizialmente tempio pagano dedicato ad Iside, fu soggetto di numerose ricostruzioni ed ampliamenti che passano dall’epoca romana alle prime invasioni longobarde. Gli ultimi edifici risalgono al periodo tra il X e il XIII secolo e furono edificati dall’organo dei Benedettini.\n" +
         "La chiesa del Crocefisso di origine longobarda si affaccia su Piazza Santo Stefano mentre all’interno si hanno cortili di stampo romano, come il cortile di Pilato ed il museo che conserva opere di diverse epoche.\n" ,
       imgBackground: "basilicaSantoStefano01.jpg",
       imgArray:["basilicaSantoStefano02.jpg","basilicaSantoStefano03.jpg"],
+      x:44.49207,
+      y:11.34877
     },
     {
       name: "Il Mercato del Quadrilatero",
-      visit_info:"Segue gli abituali orari di apertura dei negozi",
+      visit_info:"Segue gli abituali orari di apertura dei negozi.",
       description: "A partire dalle prime ore del giorno un insieme di schiamazzi, odori, bancarelle e botteghe contenenti cibi di ogni genere fanno da sfondo al vivo brulicare di venditori e clienti che si accalcano nelle sinuose vie adiacenti a Piazza Maggiore denominate “il Quadrilatero”. Qui è possibile trovare le fresche pietanze bolognesi ricche di gusto e sapore. Dai salumi più pregiati al pesce fresco, pasta sfoglia e tortellini fatti a mano con cura. In questo mercato si può scorgere un lato più vero della città e meno turistico" ,
       imgBackground: "quadrilatero01.jpg",
       imgArray:["quadrilatero02.jpg","quadrilatero03.jpg"],
+      x:44.49353,
+      y:11.34518
     },
     {
       name: "Via D’Azeglio",
-      visit_info:"",
+      visit_info:"via D’Azeglio è liberamente accessibile senza limitazioni di orario. La casa di Lucio Dalla viene aperta solo in alcuni periodi dell’anno.",
       description: "Celebre via del centro storico di Bologna che collega Piazza Maggiore a Via San Mamolo, deve il nome al politico, storico, scrittore e patriota italiano Massimo D’Azeglio.\n" +
         "Via di importanza sociale per i cittadini bolognesi, è suddivisa in una parte pedonale dove sono presenti un insieme di negozi moderni e botteghe storiche e una parte dove è consentita anche la circolazione dei mezzi. \n" +
         "Nella via vi è la dimora del defunto cantautore bolognese di fama internazionale Lucio Dalla. \n" ,
       imgBackground: "viaAzeglio01.jpg",
       imgArray:["viaAzeglio02.jpg","viaAzeglio03.jpg"],
+      x:44.48856,
+      y:11.33986
     },
     {
       name: "La Cattedrale di San Pietro",
-      visit_info:"Orari di apertura ; Giovedi, 08:00 - 18:45 ; Venerdi, 08:00 - 18:45 ; Sabato, 08:00 - 18:45 ; Domenica, 08:00 - 18:45",
+      visit_info:"Orari di apertura ; Giovedi, 08:00 - 18:45 ; Venerdi, 08:00 - 18:45 ; Sabato, 08:00 - 18:45 ; Domenica, 08:00 - 18:45.",
       description: "San Pietro è la cattedrale della città. Collocata in Via Indipendenza, la chiesa fu consacrata ufficialmente nel 1184.\n" +
         "La cattedrale fu soggetta a diversi cambiamenti fino ad assestarsi con uno stile barocco, che tuttavia, fece perdere ogni traccia del precedente impianto romano. La facciata è composta da mattoni rossi e decorazioni in marmo bianco che lasciano spazio ai mastodontici portali che suggeriscono l’impianto interno a tre navate.\n" +
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
       imgBackground: "cattedraleSanPietro01.jpg",
-      imgArray:["cattedraleSanPietro02.jpg"],
+      imgArray:["cattedraleSanPietro02.jpg","cattedraleSanPietro03.jpg"],
+      x:44.49570,
+      y:11.34350
     },
     {
       name: "La finestrella sul Canale",
@@ -139,7 +162,9 @@ export default async (models) => {
         "Fino al primo dopoguerra, Bologna era pervasa da canali che estendevano il corso del fiume Reno e semplificavano il trasporto di materie prime che giungevano per essere lavorate nei vari opifici, in particolare nei laboratori di produzione della seta.\n" +
         "Dai primi anni del Novecento, i canali furono tutti cementati, fatta eccezione per quello di via delle Moline, osservabile dalla suggestiva finestra.\n" ,
       imgBackground: "finestra01.jpg",
-      imgArray:["finestra02.jpg"],
+      imgArray:["finestra02.jpg","finestra03.jpg"],
+      x:44.49856,
+      y:11.34520
     },
     {
       name: "I Portici",
@@ -150,15 +175,19 @@ export default async (models) => {
         "Il complesso più celebre tuttavia è quello che, partendo da Porta Saragozza, conduce fino alla chiesa di San Luca, arroccata sul Colle della Guardia.\n" ,
       imgBackground: "portici01.jpg",
       imgArray:["portici02.jpg","portici03.jpg"],
+      x:44.49181,
+      y:11.34398
     },
     {
       name: "San Luca e i Portici",
-      visit_info:"",
+      visit_info:"L'ingresso è gratuito durante la settimana e a pagamento nei giorni festivi",
       description: "Partendo da Porta Saragozza si può procedere con una lunga camminata di quasi 4km interamente all’ombra di un complesso di un numero simbolico 666 portici. Giunti a destinazione in cima al Colle della Guardia si potrà accedere al Santuario della Madonna di San Luca. \n" +
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
       imgBackground: "porticiSanLuca01.png",
       imgArray:["porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
+      x:44.47909,
+      y:11.29812
     },
     {
       name: "Mura e Porte",
@@ -168,6 +197,8 @@ export default async (models) => {
         "Le porte sono uno degli ultimi baluardi delle antiche mura che dal III secolo d.C. hanno accerchiato e difeso la città. Si hanno in totale 12 porte, di cui due non sono più esistenti. Ogni porta, di stampo romano, ha uno stile diverso. Porta Castiglione, ad esempio è alta ed imponente, mentre Porta Saragozza, con le sue torri ha uno sviluppo più orizzontale che ne conferisce stabilità.\n" ,
       imgBackground: "porta01.jpg",
       imgArray:["porta02.jpg", "porta03.jpg", "porta04.jpg"],
+      x:44.4470,
+      y:11.4138
     },
     {
       name: "Zona Universitaria",
@@ -177,22 +208,28 @@ export default async (models) => {
         "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato.\n" ,
       imgBackground: "universita01.jpg",
       imgArray:["universita02.jpg", "universita03.jpg"],
+      x:44.49748,
+      y:11.35341
     },
     {
       name: "Giardini Margherita",
-      visit_info:"",
+      visit_info:"Il parco è aperto tutti i giorni della settimana 24h al giorno.",
       description: "Con i suoi 26 ettari, si tratta del parco più grande di Bologna. I Giardini Margherita furono inaugurati nel 1879. Ispirati ai giardini inglesi del periodo romantico, tutt’ora mantengono le caratteristiche originali del tempo. Gli ampi prati e la vegetazione rigogliosa lasciano spazio al laghetto centrale, abitato da numerosi pesci e tartarughe.\n" +
         "Luogo prediletto dai bolognesi durante le afose giornate estive, durante la costruzione fu rinvenuta una tomba etrusca tutt’ora presente.\n" ,
       imgBackground: "giardiniMargherita01.jpg",
       imgArray:["giardiniMargherita02.jpg","giardiniMargherita03.jpg"],
+      x:44.4822,
+      y:11.3526
     },
     {
       name: "Stadio Renato Dall’Ara ",
-      visit_info:"Aperto in occasione di eventi e partite",
+      visit_info:"Aperto in occasione di eventi e partite.",
       description: "Lo stadio più importante e grande della città. La storica arena è stata teatro delle più grandi imprese calcistiche della nazionale italiana e dalla squadra del Bologna, oggi allenata da Sinisa Mihajlovic. \n" +
         "Lo stadio fu inaugurato durante l’epoca fascista, più precisamente nel 1927. La caratteristica più particolare è sicuramente la Torre di Maratona, che si erge con i suoi 42 metri di altezza a sostegno della tribuna est.\n" ,
       imgBackground: "stadio01.jpg",
       imgArray:["stadio02.jpg","stadio03.jpg"],
+      x:44.49229,
+      y:11.30997
     }
 
   ]
@@ -242,7 +279,7 @@ export default async (models) => {
         "\n" +
         "Terza edizione fisica sotto la direzione artistica di Simone Menegoi - quella del 2021 è stata sostituita dal progetto culturale online Playlist - Arte Fiera 2022 ha riproposto i punti di forza della formula messa a punto nelle due edizioni precedenti, puntando con decisione alla qualità espositiva. “Arte Fiera si ripresenta a testa alta: con una selezione di gallerie senza cedimenti qualitativi, e che si arricchisce anzi di alcune interessanti new entry; con allestimenti rinnovati; con un percorso di visita più razionale ed efficiente”, dichiarava Menegoi.",
       imgBackground: "arteFiera01.jpg",
-      imgArray:["arteFiera02.jpg"],
+      imgArray:["arteFiera03.jpg","arteFiera04.jpg"],
       address:"Viale della Fiera 20, 40128 Bologna (BO)",
       date:" dal 13 al 15 maggio 2022",
       price:"26 euro",
@@ -269,7 +306,7 @@ export default async (models) => {
       description: "StraBologna è la camminata ludico motoria non competitiva organizzata da UISP Bologna che si svolge nel cuore della città in una domenica di primavera anticipata da due giorni di eventi in Piazza Maggiore, per promuovere gli ideali di benessere, lo sport per tutti, l’inclusione sociale e il divertimento.\n" +
         "L’evento è adatto a: runner, podisti, famiglie anche con passeggini, bambini, disabili, anziani, cani al guinzaglio... insomma è proprio per tutt*! Un’occasione per vivere insieme le bellezze del centro storico di Bologna e per scoprire la città da un nuovo punto di vista.",
       imgBackground: "straBologna01.jpg",
-      imgArray:["straBologna02.jpg"],
+      imgArray:["straBologna02.jpg","straBologna03.jpg","straBologna04.jpg"],
       address:"Piazza Maggiore, 40124 Bologna (BO)",
       date:"22 MAGGIO 2022\n" +
         "ORE 10:30",

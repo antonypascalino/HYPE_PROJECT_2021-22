@@ -3,9 +3,11 @@
 
     <div class="body-container">
       <StaticHalfImage :slide="`../Events/${imgBackground}`" :title=name />
-      <section class="breadcrumb-section">
-        <Breadcrumb :crumbs="crumbs" :optional=name @selected="selected"/>
-      </section>
+      <section class="breadcrumb-section2">
+        <breadcrumb
+          :default-route="[{ title: 'Home', path: '/' },{ title: 'Eventi', path: '/eventi/' }]"
+          :current-page=name
+        />  </section>
 
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
@@ -26,63 +28,31 @@
 
       <section class="container1">
         <div class="title-container">INFORMAZIONI</div>
-        <div class="container-info container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row-container row mt-3">
+        <br>
+        <div class="row row1">
+          <div class="col-sm-3">
+            <h6 class="text-uppercase fw-bold mb-4 mdi mdi-tag">PREZZO</h6>
+            <p>{{price}}</p>  </div>
+          <div class="col-sm-3">  <h6 class=" mdi mdi-map-marker-check-outline text-uppercase fw-bold mb-4">INDIRIZZO</h6>
 
-            <!-- Grid column -->
-            <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">INDIRIZZO</h6>
+            <p >{{address}}</p></div>
+          <div class="col-sm-3"> <h6 class="mdi mdi-calendar-blank text-uppercase fw-bold mb-4">DATA</h6>
 
-              <p class="mdi mdi-map-marker-check-outline">{{address}}</p>
-            </div>
-            <!-- Grid column -->
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">PREZZO</h6>
+            <p >{{ date }}</p></div>
+          <div class="col-sm-4"> <br><h6 class="mdi mdi-web text-uppercase fw-bold mb-4">SITO WEB</h6>
 
-              <p class="mdi mdi-tag">{{price}}  </p>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">DATA</h6>
-
-              <p class="mdi mdi-calendar-blank">{{ date }}</p>
-
-            </div>
-            <!-- Grid column -->
-
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">SITO WEB</h6>
-
-              <p class="mdi mdi-web">{{ website }}</p>
-
-            </div>
-            <!-- Grid column -->
+            <a :href=website><p>{{ website }}</p> </a>
           </div>
-          <!-- Grid row -->
         </div>
       </section>
 
+
       <div class="button-container">
-        <button
-          type="button"
-          class="btn1 btn btn-outline-secondary px-4" style="float:right"
-          @click="backToList"
-        >
-          Torna indietro
-        </button>
+        <baseButton title="Tutti gli eventi" goto="/eventi/">
+        </baseButton>
       </div>
     </div>
+
 
   </main>
 </template>
@@ -116,11 +86,7 @@ export default {
       website: data.website,
     }
   },
-  data() {
-    return {
-      crumbs: ['HOME', 'EVENTI', ],
-    };
-  },
+
   methods: {
     backToList() {
       this.$router.push('/eventi/')
@@ -142,8 +108,7 @@ export default {
 </script>
 <style>
 
-section-description{
-
+.section-description{
   font-family: 'Inria Sans';
   font-style: normal;
   font-size: 17px;
@@ -171,13 +136,7 @@ section-description{
   background-color: #EBEBEB;
   padding-left: 5px;
 }
-.row-container{
-  margin: auto;
-  width: 100%;
-  justify-content: center;
-  padding: 10px;
 
-}
 .button-container{
   width: 100%;
   height: 60px;
@@ -188,5 +147,28 @@ section-description{
   padding: 10px ;
 }
 
+.row{
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
 
+}
+.breadcrumb-section2{
+  float:right;
+  margin-right: 20px;
+  margin-top: -10px;
+}
+
+.button-container{
+  text-align: right;
+}
+
+.row1{
+  text-align: center;
+  border: 1px solid grey;
+}
+.mdi{
+  color: #C13939;
+}
 </style>

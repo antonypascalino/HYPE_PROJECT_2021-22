@@ -29,6 +29,8 @@ async function initializeDatabaseConnection() {
     visit_info: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
+    x:DataTypes.FLOAT,
+    y:DataTypes.FLOAT
   })
 
   const Events = database.define("event", {
@@ -105,7 +107,9 @@ async function runMainApi() {
         imgBackground: element.imgBackground,
         visit_info: element.visit_info,
         id: element.id,
-        imgArray:element.imgArray
+        imgArray:element.imgArray,
+        x:element.x,
+        y:element.y
       })
     }
     return res.json(filtered)

@@ -1,5 +1,5 @@
 <template>
-  <div class="card " style="width: 25rem">
+  <div class="card" style="width: 25rem">
     <a >
     <div
       class="card-image"
@@ -20,12 +20,7 @@
 .card{
   border: 0px solid transparent;;
 }
-.card:hover {
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.5);
-  z-index: 90;
-}
+
 .card {
   border-color: transparent;
   background-color: transparent;
@@ -66,6 +61,15 @@
 
 .card:hover .overlay {
   opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .card:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+    z-index: 90;
+  }
 }
 </style>
 
