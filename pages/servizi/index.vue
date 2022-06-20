@@ -2,7 +2,10 @@
   <div class="App">
     <TheHeader />
     <section class="breadcrumb-section">
-      <Breadcrumb :crumbs="crumbs" @selected="selected" />
+      <breadcrumb
+        :default-route="[{ title: 'Home', path: '/' }]"
+        current-page="Servizi"
+      />
     </section>
     <div class="carouselDiv">
       <div class="indicatorList services">
@@ -96,7 +99,7 @@ export default {
 
   computed: {
     slidesLen() {
-      return this.serviceList.length;
+      return this.serviceList.length
     },
   },
 

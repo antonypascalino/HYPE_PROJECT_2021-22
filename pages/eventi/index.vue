@@ -2,7 +2,10 @@
   <div class="App">
     <TheHeader />
     <section class="breadcrumb-section">
-      <Breadcrumb :crumbs="crumbs" @selected="selected" />
+      <breadcrumb
+        :default-route="[{ title: 'Home', path: '/' }]"
+        current-page="Eventi"
+      />
     </section>
     <div class="carouselDiv">
       <div class="indicatorList events">
