@@ -12,7 +12,7 @@
         <select-filter @filter-change="filterBySeason"/>
         <div class="list">
           <carousel-indicator
-            v-for="(ev, index) in eventList"
+            v-for="(ev, index) in filteredList"
             :key="ev.id"
             :index="index"
             :visibleSlide="visibleSlide"
@@ -23,7 +23,7 @@
       </div>
       <carousel @next="next" @prev="prev" class="carousel">
         <carousel-slide
-          v-for="(ev, index) in filteredList"
+          v-for="(ev, index) in eventList"
           :key="index"
           :index="index"
           :visibleSlide="visibleSlide"
@@ -82,7 +82,6 @@ export default {
       filteredList: [],
       eventList: [],
       visibleSlide: 0,
-      crumbs: ['HOME', 'EVENTI'],
       direction: 'left',
       loading: false,
 
@@ -96,13 +95,14 @@ export default {
     // const { data } = await $axios.get('api/events')
     const { data } = await $axios.get('http://localhost:3000/api/events')
     return {
+      filteredList: data,
       eventList: data,
     }
   },
 
   computed: {
     slidesLen() {
-      return this.eventList.length
+      return this.filteredList.length
     },
   },
 
@@ -172,9 +172,6 @@ export default {
       this.lastScroll = performance.now()
     },
 
-    selected(crumb) {
-      console.log(crumb)
-    },
     goToDetails() {
       this.$router.push(`/details/${this.id}`)
     },
