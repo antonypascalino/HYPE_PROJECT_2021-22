@@ -112,11 +112,7 @@ export default {
     StaticHalfImage
   },
 
-  data() {
-    return {
-      crumbs: ['HOME', 'BOLOGNA IN BREVE'],
-    };
-  },
+
   head(){
     return{
       title: 'insideBO | Bologna in Breve',

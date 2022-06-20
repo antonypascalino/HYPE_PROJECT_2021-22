@@ -2,7 +2,7 @@
 
 <template>
   <main class="page-container">
-
+    <div class="body-container">
     <section class="breadcrumb-section">
       <breadcrumb
         :default-route="[{ title: 'HOME', path: '/' }]"
@@ -43,7 +43,7 @@
       </section>
 
     </div>
-
+    </div>
   </main>
 </template>
 
@@ -73,10 +73,10 @@ export default {
 </script>
 <style scoped>
 .page-container{
-  margin-top: -40px;
+  margin-top: -5px;
 }
 .body-container{
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .title-container{
   margin-top: 40px;
@@ -132,20 +132,7 @@ a{
 }
 
 .breadcrumb-section{
-  margin-top: 95px;
+  margin-top: 60px;
 }
-.img-map-container{
-  text-align: center;
-  justify-content: center;
-  width:100%;
-  margin-top: 10px;
 
-}
-.img-map{
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  border-radius:10%;
-  border:2px solid black;
-}
 </style>

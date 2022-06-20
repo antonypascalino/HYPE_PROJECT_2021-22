@@ -54,13 +54,13 @@ export default {
 </script>
 <style scoped>
 .breadcrumb-section{
-  margin-top: 95px;
+  margin-top: 60px;
 }
 .page-container{
-  margin-top: -40px;
+  margin-top: -5px;
 }
 .body-container{
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .title-container{
   margin-top: 40px;
