@@ -24,6 +24,9 @@
   border: 2px solid lightgray;
   background-color: #EBEBEB;
 }
+.card-title{
+  height:30px
+}
 
 .card-image {
   margin-top: 10px;
