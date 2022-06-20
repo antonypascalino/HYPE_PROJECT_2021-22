@@ -31,38 +31,36 @@
 
       <!-- Mobile Navbar Commands -->
       <nav class="mobile-nav">
-        <button
-          class="mdi mdi-menu menu-button-container"
+        <span
           v-if="!mobileMenuVisibility"
+          class="mdi mdi-menu"
           title="Apri menu"
           @click="changeMobileMenuVisibility"
-        ></button>
-        <button
-          class="mdi mdi-close menu-button-container"
+        ></span>
+        <span
           v-else
+          class="mdi mdi-close"
           title="Chiudi menu"
           @click="changeMobileMenuVisibility"
-        ></button>
-      </nav>
-      <!-- Mobile Navbar -->
-      <nav
-        class="dropdown-list"
-        v-if="mobileMenuVisibility"
-        @click="changeMobileMenuVisibility"
-      >
-        <template v-for="(item, itemIndex) of menuOptions">
-          <nuxt-link
-            :to="item.path"
-            :key="'menu-item-' + itemIndex"
-            style="text-decoration: none"
-          >
-            <div class="menu-item-mobile">
-              <span class="label-container mobile-label">{{ item.name }}</span>
-            </div>
-          </nuxt-link>
-        </template>
+        ></span>
       </nav>
     </div>
+    <!-- Mobile Navbar -->
+    <nav
+      v-if="mobileMenuVisibility"
+      class="mobile-nav dropdown-list"
+      @click="changeMobileMenuVisibility"
+    >
+      <div
+        v-for="(item, itemIndex) of menuOptions"
+        :key="'menu-item-' + itemIndex"
+        class="mobile-menu-item"
+      >
+        <nuxt-link :to="item.path">
+          {{ item.name }}
+        </nuxt-link>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -84,6 +82,7 @@ export default {
           name: 'EVENTI',
           path: '/eventi/',
         },
+
         {
           name: 'ITINERARI',
           path: '/itinerari/',
@@ -122,9 +121,11 @@ export default {
   z-index: 90;
   text-align: center;
 }
+
 .desktop-nav {
   margin-right: 1vw;
 }
+
 .menu-item {
   width: auto;
   padding: 0;
@@ -134,24 +135,17 @@ export default {
   align-items: center;
   border-color: transparent;
 }
-.menu-item-mobile {
-  height: 6.5vh;
-  display: flex;
-  align-items: center;
-}
+
 .nuxt-link-active > .menu-item {
   border-bottom: 9px solid #c13939;
   border-top: 9px solid transparent;
 }
+
 .menu-item:hover .label-container,
 .menu-item.hover .label-container {
   color: #c13939;
 }
-.menu-item-mobile:hover .label-container.mobile-label,
-.menu-item-mobile.hover .label-container.mobile-label {
-  color: white;
-  transition: color 200ms;
-}
+
 .label-container {
   font-family: 'Josefin Sans';
   font-size: 1vw;
@@ -162,15 +156,17 @@ export default {
   /*border: blue 2px solid;*/
   margin-bottom: 10px;
   margin-top: 13px;
-  transition: color 200ms;
 }
-.label-container.mobile-label {
-  font-size: 1.8vh;
-  transition: color 200ms;
-}
+
 .nuxt-link-active .label-container {
   color: #c13939;
 }
+
+.header-content .mdi {
+  font-size: 50px;
+  margin-right: 20px;
+}
+
 nav {
   align-items: center;
   height: inherit;
@@ -181,45 +177,33 @@ nav {
 }
 /* Appearance of the mobile navbar elements */
 .dropdown-list {
-  display: flex;
+  display: block;
   width: 100vw;
-  height: 40vh;
+  height: 350px;
   background: rgb(193, 57, 57);
   color: white;
-  justify-content: center;
-  flex-direction: column;
 }
-.menu-button-container {
-  display: flex;
-  border: none;
-  background: transparent;
-  align-content: center;
-  justify-content: center;
-  overflow: hidden;
+.dropdown-list .mdi {
   text-align: center;
-  vertical-align: center;
-  margin: auto;
-  cursor: pointer;
-  line-height: 50px;
+  vertical-align: bottom;
+  margin-left: 0px;
 }
 .mdi-menu {
-  font-size: 50px;
-}
-.mdi-menu:hover {
-  color: #c13939;
-  transition: color 300ms;
+  padding-top: 25px;
+  cursor: pointer;
 }
 .mdi-close {
-  font-size: 50px;
+  padding-top: 25px;
+  cursor: pointer;
 }
-.mdi-close:hover {
-  color: #c13939;
-  transition: color 300ms;
-}
-
-.dropdown-list {
+.dropdown-list .menu-item {
   text-align: center;
+  margin-top: 25px;
 }
+.mobile-nav {
+  margin-top: -2px;
+}
+/* Appearance of the landmark to current page */
 
 /* Logo layout */
 .responsive.center {
@@ -228,7 +212,6 @@ nav {
   margin-top: 6px;
   margin-left: 100px;
 }
-
 /* Mobile navbar if viewport <=1270 px */
 @media screen and (max-width: 1270px) {
   .desktop-nav {
@@ -237,7 +220,8 @@ nav {
   .responsive.center {
     max-width: 100%;
     height: auto;
-    margin-left: calc(50vw - 74px);
+    display: table;
+    margin: 5px auto 0;
   }
 
   .responsive {
@@ -247,16 +231,11 @@ nav {
 }
 /* Desktop navbar if viewport >=1271 px */
 @media screen and (min-width: 1271px) {
-  .mobile-nav,
-  .dropdown-list {
+  .mobile-nav {
     display: none;
   }
-
   .menu-item {
     position: relative;
-    transition: border 0.3s, color 0.3s;
-    border-bottom: 0 solid #c13939;
-    border-top: 0 solid transparent;
   }
 
   .menu-item:hover {
