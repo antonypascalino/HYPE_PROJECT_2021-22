@@ -140,8 +140,8 @@ export default {
   align-items: center;
 }
 .nuxt-link-active > .menu-item {
-  border-bottom: 9px solid #c13939;
-  border-top: 9px solid transparent;
+  border-bottom: 7px solid #c13939;
+  border-top: 7px solid transparent;
 }
 .menu-item:hover .label-container,
 .menu-item.hover .label-container {
@@ -260,8 +260,8 @@ nav {
   }
 
   .menu-item:hover {
-    border-bottom: 9px solid #c13939;
-    border-top: 9px solid transparent;
+    border-bottom: 7px solid #c13939;
+    border-top: 7px solid transparent;
     transition: border 0.3s, color 0.3s;
     -webkit-transition: border 0.3s, color 0.3s;
   }
