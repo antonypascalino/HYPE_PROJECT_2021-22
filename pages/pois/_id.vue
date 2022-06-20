@@ -28,6 +28,12 @@
       </section>
 
       <section class="section-description">
+        <div class="title-container">DOVE SI TROVA</div>
+        <Map></Map>
+
+      </section>
+
+      <section class="section-description">
         <div class="title-container">INFORMAZIONI</div>
         <p class="text-container">{{visit_info}}</p>
       </section>
@@ -51,13 +57,15 @@
 import CommonMixin from '~/mixins/common'
 import staticHalfImage from "~/components/StaticHalfImage";
 import Breadcrumb from '~/components/Breadcrumb.vue';
+import Map from "~/components/Map";
 
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
   components:{
     staticHalfImage,
-    Breadcrumb
+    Breadcrumb,
+    Map
   },
 
   async asyncData({ route, $axios }) {

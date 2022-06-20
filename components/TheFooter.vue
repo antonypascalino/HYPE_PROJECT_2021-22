@@ -121,6 +121,9 @@ img{
   float:inherit;
   width:130px;
 }
+.mdi{
+  color:white
+}
 /* Color of social icons on mouse */
 .mdi-facebook{
   font-size: 25px;

@@ -5,7 +5,7 @@
         v-for="(element, elementIndex) of selectedRoute"
         :key="'li-' + elementIndex"
       >
-        <nuxt-link style="text-decoration: none;" :to="element.path" >{{ element.title }}</nuxt-link>
+        <nuxt-link style="text-decoration: none; color:#C13939" :to="element.path" >{{ element.title }}</nuxt-link>
       </li>
       <li>{{ currentPage }}</li>
     </ul>
@@ -47,9 +47,9 @@ ul.breadcrumb {
   margin-top: 20px;
   margin-bottom: 0px;
   font-family: "Josefin Sans";
-  margin-left: 10px;
+  margin-left: 12px;
   margin-bottom:-30px;
-  font-size: 18px;
+  font-size: 20px;
 
 }
 /* Apperence of the list elements  */

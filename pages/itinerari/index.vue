@@ -4,7 +4,7 @@
     <section class="breadcrumb-section">
       <breadcrumb
         :default-route="[{ title: 'Home', path: '/' }]"
-        current-page="Punti di Interesse"
+        current-page="Itinerari"
       />
     </section>
     <div class="carouselDiv">
