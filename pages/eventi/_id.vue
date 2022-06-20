@@ -168,7 +168,16 @@ export default {
   text-align: center;
   border: 1px solid grey;
 }
-.mdi{
+.mdi-map-marker-check-outline{
+  color: #C13939;
+}
+.mdi-calendar-blank{
+  color: #C13939;
+}
+.mdi-web{
+  color: #C13939;
+}
+.mdi-tag{
   color: #C13939;
 }
 </style>
