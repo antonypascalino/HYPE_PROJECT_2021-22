@@ -1,58 +1,88 @@
 <template>
   <div class="App">
-    <TheHeader/>
+    <TheHeader />
     <section class="breadcrumb-section">
-      <Breadcrumb :crumbs="crumbs" @selected="selected"/>
+      <Breadcrumb :crumbs="crumbs" @selected="selected" />
     </section>
     <div class="carouselDiv">
-      <div class="indicatorList">
-        <div class = "list">
+      <div class="indicatorList itineraries">
+        <div class="list">
           <carousel-indicator
-            v-for = "it in itList"
-            :key = "it.id"
-            :title = "it.name"
-            @change = "change(it.id)"
-            class = "carousel-indicator"
+            v-for="(it, index) in itList"
+            :key="it.id"
+            :index="index"
+            :visibleSlide="visibleSlide"
+            :title="it.name"
+            @change="change(it.id)"
           ></carousel-indicator>
         </div>
       </div>
-      <carousel
-        @next="next"
-        @prev="prev"
-        class = "carousel"
-      >
-        <carousel-slide v-for = "(it, index) in itList"
-                        :key="index"
-                        :index="index"
-                        :visibleSlide = "visibleSlide"
-                        :id="it.id"
-                        :name='"itinerari"'
+      <carousel @next="next" @prev="prev" class="carousel">
+        <carousel-slide
+          v-for="(it, index) in itList"
+          :key="index"
+          :index="index"
+          :visibleSlide="visibleSlide"
+          :id="it.id"
+          :name="'itinerari'"
+          :direction="direction"
         >
-          <div class="imageContainer">
-            <img class= "carouselImg" :src="require(`@/static/Itineraries/${it.imgBackground}`)" :alt="it.name">
+          <div class="imageContainer" @wheel="wheel($event.deltaY)">
+            <nuxt-link :to="`/itinerari/${it.id}`">
+              <img
+                class="carouselImg"
+                :src="require(`@/static/Itineraries/${it.imgBackground}`)"
+                :alt="it.name"
+              />
+            </nuxt-link>
             <div class="textContainer-carousel">{{ it.name }}</div>
+            <div class="hoverText">Scopri di più</div>
           </div>
         </carousel-slide>
       </carousel>
+      <div
+        class="carouselScroll"
+        v-for="(it, index) in itList"
+        :key="index"
+        :id="it.id"
+      >
+        <div class="imageContainer container-scroll">
+          <nuxt-link :to="`/itinerari/${it.id}`">
+            <img
+              class="carouselImg image-scroll"
+              :src="require(`@/static/Itineraries/${it.imgBackground}`)"
+              :alt="it.name"
+            />
+          </nuxt-link>
+          <div class="textContainer-scroll">{{ it.name }}</div>
+          <div class="hoverText">Scopri di più</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Carousel from "~/components/Carousel";
-import CarouselSlide from "~/components/CarouselSlide";
-import CarouselIndicator from "~/components/CarouselIndicator";
-import TheHeader from "~/components/TheHeader";
-import Breadcrumb from "~/components/Breadcrumb";
-
+import Carousel from '~/components/Carousel'
+import CarouselSlide from '~/components/CarouselSlide'
+import CarouselIndicator from '~/components/CarouselIndicator'
+import TheHeader from '~/components/TheHeader'
+import Breadcrumb from '~/components/Breadcrumb'
 
 export default {
   layout: 'empty',
 
   data() {
     return {
-      visibleSlide : 0,
-      crumbs: ['HOME','ITINERARI'],
+      itList: [],
+      visibleSlide: 0,
+      crumbs: ['HOME', 'ITINERARI'],
+      direction: 'left',
+      loading: false,
+
+      scrollingDirection: 0,
+      lastScroll: 9999,
+      scrollIdleTime: 90, // time interval that we consider a new scroll event: 80 is quite good
     }
   },
 
@@ -66,130 +96,83 @@ export default {
 
   computed: {
     slidesLen() {
-      return this.itList.length;
+      return this.itList.length
     },
   },
 
-  methods : {
+  methods: {
     next() {
-      if(this.visibleSlide >= this.slidesLen - 1 ) {
-        this.visibleSlide = 0;
+      if (this.visibleSlide >= this.slidesLen - 1) {
+        this.visibleSlide = 0
       } else {
-        this.visibleSlide++;
+        this.visibleSlide++
       }
+      this.direction = 'left'
     },
     prev() {
-      if(this.visibleSlide <= 0 ) {
-        this.visibleSlide =  this.slidesLen - 1;
+      if (this.visibleSlide <= 0) {
+        this.visibleSlide = this.slidesLen - 1
       } else {
-        this.visibleSlide--;
+        this.visibleSlide--
       }
+      this.direction = 'right'
     },
     change(index) {
-      this.visibleSlide = index-1;
+      this.visibleSlide = index - 1
+    },
+    wheel(deltaY) {
+      // adding .once in the template after @wheel
+      // if(deltaY > 0) {
+      //   this.next();
+      // } else {
+      //   this.prev();
+      // }
+      const scrollingDirection = this.scrollingDirection
+      const lastScroll = this.lastScroll
+      const scrollIdleTime = this.scrollIdleTime
+
+      const delta = deltaY
+      const timeNow = performance.now()
+      if (
+        delta > 0 &&
+        (scrollingDirection !== 1 || timeNow > lastScroll + scrollIdleTime)
+      ) {
+        this.next()
+        this.scrollingDirection = 1
+      } else if (
+        delta < 0 &&
+        (scrollingDirection !== 2 || timeNow > lastScroll + scrollIdleTime)
+      ) {
+        this.prev()
+        this.scrollingDirection = 2
+      }
+      this.lastScroll = performance.now()
     },
 
     selected(crumb) {
-      console.log(crumb);
+      console.log(crumb)
+    },
+    goToDetails() {
+      this.$router.push(`/details/${this.id}`)
     },
   },
-  components : {
+  components: {
     Carousel,
     CarouselSlide,
     TheHeader,
     CarouselIndicator,
     Breadcrumb,
-  }
+  },
 }
-
 </script>
 
-<!--<style>-->
+<style>
+div.indicatorList.itineraries {
+  margin-top: 35vh;
+  height: 12vh;
+}
 
-<!--.carouselDiv {-->
-<!--  padding-top: 5%;-->
-<!--  padding-bottom: 3%;-->
-<!--  padding-left: 4%;-->
-<!--  width:100%-->
-<!--}-->
-
-<!--carousel-slide {-->
-<!--  left: 0;-->
-<!--}-->
-
-<!--.imageContainer {-->
-<!--  /*border: solid blue 2px;*/-->
-<!--  width: 100%;-->
-<!--  height: 40%;-->
-<!--  overflow: hidden;-->
-<!--  margin-left: 0;-->
-<!--  margin-top: 6%;-->
-<!--  display: flex;-->
-<!--  justify-content: center;-->
-<!--  align-items: center;-->
-<!--  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);-->
-<!--  margin-bottom: 100px;-->
-<!--}-->
-
-<!--.carouselImg:hover {-->
-<!--  -webkit-filter: blur(4px);-->
-<!--  cursor: pointer;-->
-<!--  transition: 200ms;-->
-<!--}-->
-
-<!--.carouselImg {-->
-<!--  aspect-ratio: auto;-->
-<!--  margin-left: 0;-->
-<!--  width: 100%;-->
-
-<!--}-->
-
-<!--div.textContainer-carousel {-->
-<!--  color: white ;-->
-<!--  font-size: 5vw;-->
-<!--  /*line-height: normal;*/-->
-<!--  font-family: "Josefin Sans";-->
-<!--  text-transform: uppercase;-->
-<!--  float: left;-->
-<!--  position: absolute;-->
-<!--  width: 100%;-->
-<!--  border: solid 2px blue;-->
-<!--  margin-bottom: 0;-->
-<!--  bottom: 0;-->
-<!--}-->
-
-<!--.App {-->
-<!--  background-color: #EBEBEB;-->
-<!--}-->
-
-<!--div.indicatorList {-->
-<!--  height: 600px;-->
-<!--  width: 200px;-->
-<!--  position: relative;-->
-<!--  float: right;-->
-<!--  margin-top: 6%;-->
-<!--  margin-right: 2%;-->
-<!--  padding: 0;-->
-<!--  font-size: 20px;-->
-<!--}-->
-
-<!--.carousel-indicator {-->
-<!--  position: relative;-->
-<!--  color: black;-->
-<!--}-->
-
-<!--.carousel-indicator:hover {-->
-<!--  color: #C13939;-->
-<!--}-->
-
-<!--ul.list {-->
-<!--  width: 200px;-->
-<!--  padding-left: 0;-->
-<!--}-->
-
-<!--@media screen and (max-width: 1220px) {-->
-<!--  .indicatorList{-->
-<!--    display: none;-->
-<!--  }-->
-<!--}-->
-<!--</style>-->
+.indicatorList.itineraries .carousel-indicator {
+  height: 5vh;
+}
+</style>

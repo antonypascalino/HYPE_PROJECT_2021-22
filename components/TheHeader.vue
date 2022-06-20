@@ -171,6 +171,9 @@ export default {
 .nuxt-link-active .label-container {
   color: #c13939;
 }
+.nuxt-link-active .label-container.mobile-label {
+  color: white;
+}
 nav {
   align-items: center;
   height: inherit;

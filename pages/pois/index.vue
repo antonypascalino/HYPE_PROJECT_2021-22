@@ -241,7 +241,7 @@ export default {
 }
 
 .carouselScroll {
-  width: 70vh;
+  width: auto;
   left: 0;
   margin-right: 0;
 }
