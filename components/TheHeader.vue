@@ -5,59 +5,64 @@
 <template>
   <header class="header">
     <div class="header-content">
-
       <!-- Company Logo -->
       <nuxt-link to="/" class="logo">
-        <img class="responsive center" src="~/static/logo_rosso.png" alt="insideBO" />
+        <img
+          class="responsive center"
+          src="~/static/logo_rosso.png"
+          alt="insideBO"
+        />
       </nuxt-link>
 
       <!-- Desktop Navbar -->
       <nav class="desktop-nav">
-        <divz
-          v-for="(item, itemIndex) of menuOptions"
-          :key="'menu-item-' + itemIndex"
-          class="menu-item"
-          @mouseover="mouse"
-        >
-          <nuxt-link style="text-decoration: none;" :to="item.path">
-            {{ item.name }}
+        <template v-for="(item, itemIndex) of menuOptions">
+          <nuxt-link
+            :to="item.path"
+            :key="'menu-item-' + itemIndex"
+            style="text-decoration: none"
+          >
+            <div class="menu-item">
+              <span class="label-container">{{ item.name }}</span>
+            </div>
           </nuxt-link>
-        </divz>
+        </template>
       </nav>
 
       <!-- Mobile Navbar Commands -->
       <nav class="mobile-nav">
-        <span
+        <button
+          class="mdi mdi-menu menu-button-container"
           v-if="!mobileMenuVisibility"
-          class="mdi mdi-menu"
           title="Apri menu"
           @click="changeMobileMenuVisibility"
-        ></span>
-        <span
+        ></button>
+        <button
+          class="mdi mdi-close menu-button-container"
           v-else
-          class="mdi mdi-close"
           title="Chiudi menu"
           @click="changeMobileMenuVisibility"
-        ></span>
+        ></button>
+      </nav>
+      <!-- Mobile Navbar -->
+      <nav
+        class="dropdown-list"
+        v-if="mobileMenuVisibility"
+        @click="changeMobileMenuVisibility"
+      >
+        <template v-for="(item, itemIndex) of menuOptions">
+          <nuxt-link
+            :to="item.path"
+            :key="'menu-item-' + itemIndex"
+            style="text-decoration: none"
+          >
+            <div class="menu-item-mobile">
+              <span class="label-container mobile-label">{{ item.name }}</span>
+            </div>
+          </nuxt-link>
+        </template>
       </nav>
     </div>
-
-    <!-- Mobile Navbar -->
-    <nav
-      v-if="mobileMenuVisibility"
-      class="mobile-nav dropdown-list"
-      @click="changeMobileMenuVisibility"
-    >
-      <div
-        v-for="(item, itemIndex) of menuOptions"
-        :key="'menu-item-' + itemIndex"
-        class="menu-item"
-      >
-        <nuxt-link style="text-decoration: none; " :to="item.path">
-          {{ item.name }}
-        </nuxt-link>
-      </div>
-    </nav>
   </header>
 </template>
 
@@ -110,35 +115,64 @@ export default {
 .header {
   width: 100%;
   background: white;
-  height:50px;
+  height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   z-index: 90;
   text-align: center;
 }
-/*Color of the text inside the menu and elimination of the underline*/
-.header *{
-  text-decoration: none;
-  color:inherit;
-  text-align: center;
-  font-size: 13px;
-  padding-bottom:9px;
-
+.desktop-nav {
+  margin-right: 1vw;
 }
-/* Main header containers */
-.header-content {
-  height: inherit;
-  font-family: "Josefin Sans";
-  text-align: center;
+.menu-item {
+  width: auto;
+  padding: 0;
+  margin-right: 4vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-color: transparent;
 }
-.header-content .mdi {
-  font-size: 50px;
-  margin-right: 20px;
+.menu-item-mobile {
+  height: 6.5vh;
+  display: flex;
+  align-items: center;
 }
-.header-content .menu-item {
-  padding-right: 40px;
-  padding-left: 40px ;
+.nuxt-link-active > .menu-item {
+  border-bottom: 7px solid #c13939;
+  border-top: 7px solid transparent;
+}
+.menu-item:hover .label-container,
+.menu-item.hover .label-container {
+  color: #c13939;
+}
+.menu-item-mobile:hover .label-container.mobile-label,
+.menu-item-mobile.hover .label-container.mobile-label {
+  color: white;
+  transition: color 200ms;
+}
+.label-container {
+  font-family: 'Josefin Sans';
+  font-size: 1vw;
+  color: black;
+  height: 20px;
+  width: auto;
+  text-underline: none;
+  /*border: blue 2px solid;*/
+  margin-bottom: 10px;
+  margin-top: 13px;
+  transition: color 200ms;
+}
+.label-container.mobile-label {
+  font-size: 1.8vh;
+  transition: color 200ms;
+}
+.nuxt-link-active .label-container {
+  color: #c13939;
+}
+.nuxt-link-active .label-container.mobile-label {
+  color: white;
 }
 nav {
   align-items: center;
@@ -150,44 +184,53 @@ nav {
 }
 /* Appearance of the mobile navbar elements */
 .dropdown-list {
-  display: block;
+  display: flex;
   width: 100vw;
-  height: 350px;
+  height: 40vh;
   background: rgb(193, 57, 57);
   color: white;
+  justify-content: center;
+  flex-direction: column;
 }
-.dropdown-list .mdi {
+.menu-button-container {
+  display: flex;
+  border: none;
+  background: transparent;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
   text-align: center;
-  vertical-align: bottom;
-  margin-left: 0px;
-}
-.mdi-menu{
-  padding-top: 25px;
+  vertical-align: center;
+  margin: auto;
   cursor: pointer;
+  line-height: 50px;
 }
-.mdi-close{
-  padding-top: 25px;
-  cursor: pointer;
+.mdi-menu {
+  font-size: 50px;
 }
-.dropdown-list .menu-item {
+.mdi-menu:hover {
+  color: #c13939;
+  transition: color 300ms;
+}
+.mdi-close {
+  font-size: 50px;
+}
+.mdi-close:hover {
+  color: #c13939;
+  transition: color 300ms;
+}
+
+.dropdown-list {
   text-align: center;
-  margin-top: 25px;
-}
-.mobile-nav{
-  margin-top: -2px;
-}
-/* Appearance of the landmark to current page */
-.nuxt-link-active {
-  font-weight: bolder;
-  color:#C13939;
 }
 /* Logo layout */
 .responsive.center {
   width: 150px;
   float: left;
   margin-top: 6px;
-  margin-left:100px;
+  margin-left: 100px;
 }
+
 /* Mobile navbar if viewport <=1270 px */
 @media screen and (max-width: 1270px) {
   .desktop-nav {
@@ -196,59 +239,38 @@ nav {
   .responsive.center {
     max-width: 100%;
     height: auto;
-    display: table;
-    margin: 5px auto 0;
+    margin-left: calc(50vw - 74px);
   }
-  .responsive{
-    max-width:100%;
-    max-height:100%;
-  }
-  .center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .menu-item:hover {
-    color: #000000;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  .nuxt-link-active {
-    font-weight: bolder;
-    color: #000000;
+
+  .responsive {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 /* Desktop navbar if viewport >=1271 px */
 @media screen and (min-width: 1271px) {
-  .mobile-nav {
+  .mobile-nav,
+  .dropdown-list {
     display: none;
   }
+
   .menu-item {
     position: relative;
-    padding-right:20px;
-    padding-top: 19px;
-    height: inherit;
+    transition: border 0.3s, color 0.3s;
+    border-bottom: 0 solid #c13939;
+    border-top: 0 solid transparent;
   }
-  .menu-item::after {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 0;
-    background: #C13939;
-    transition: height 0.3s, color 0.3s;
-    -webkit-transition: height 0.3s, color 0.3s;
+
+  .menu-item:hover {
+    border-bottom: 7px solid #c13939;
+    border-top: 7px solid transparent;
+    transition: border 0.3s, color 0.3s;
+    -webkit-transition: border 0.3s, color 0.3s;
   }
+
   .menu-item:hover::after {
     height: 9px;
     transition: height 0.3s, color 0.3s;
-  }
-  .menu-item:hover {
-    color: #3969c1;
-    -webkit-text-decoration-color: #C13939;
-    cursor: pointer;
   }
 }
 </style>

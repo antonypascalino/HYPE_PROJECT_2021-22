@@ -1,88 +1,75 @@
 <template>
-    <button @click="change"
-            class = "carousel-indicator"
-            :style = "getTextColor(index,visibleSlide)"
-    >
-            {{ title }}
-      <i
-        :class = "getSymbol(index,visibleSlide)"
-        :style = "getColor(index,visibleSlide)"
-      />
-    </button>
+  <button
+    @click="change"
+    class="carousel-indicator"
+    :style="getTextColor(index, visibleSlide)"
+  >
+    {{ title }}
+    <i :class="getSymbol(index, visibleSlide)" />
+  </button>
 </template>
 
 <script>
 export default {
-  name: "Carousel-indicator",
+  name: 'Carousel-indicator',
 
   data() {
-    return {
-
-    }
+    return {}
   },
-  props: ['title', 'selected', 'index','visibleSlide'],
+  props: ['title', 'selected', 'index', 'visibleSlide'],
   methods: {
     change() {
       this.$emit('change')
     },
-    getTextColor(index,visibleSlide) {
+    getTextColor(index, visibleSlide) {
       if (visibleSlide === index) {
-        return "color: #C13939;\n " +
-                "font-size: 1.4vw;"
+        return (
+          'color: #C13939;\n ' + 'font-size: 1.4vw;\n ' + 'transition: 1.1s'
+        )
       }
     },
     getSymbol(index, visibleSlide) {
       if (visibleSlide === index) {
-        return "dot mdi mdi-moon-full"
-      }
-      else return "dot mdi mdi-moon-new"
+        return 'dot mdi mdi-moon-full visible'
+      } else return 'dot mdi mdi-moon-new'
     },
-    getColor(index, visibleSlide) {
-      if (visibleSlide === index) {
-        return  "color: #C13939"
-      }
-      else return "color: black;"
-    }
-  }
+  },
 }
-
-
-
 </script>
 
 <style>
+.carousel-indicator * {
+  float: right;
+}
 
-  .carousel-indicator * {
-    float: right;
-  }
+.carousel-indicator {
+  width: 100%;
+  height: 3.8vh;
+  background-color: transparent;
+  color: black;
+  font-size: 1.1vw;
+  font-family: 'Josefin Sans';
+  float: right;
+  margin-right: 0;
+  text-align: right;
+  border: none;
+  transition: 200ms;
+}
 
-  .carousel-indicator {
-    width: 100%;
-    height: 3.8vh;
-    background-color: transparent;
-    color: black;
-    font-size: 1.1vw;
-    font-family: "Josefin Sans";
-    float: right;
-    margin-right: 0;
-    text-align: right;
-    border: none;
-    transition: 200ms;
-  }
+.carousel-indicator:hover {
+  color: #c13939;
+  font-size: 1.4vw;
+  transition: 200ms;
+}
+i {
+  margin-left: 5px;
+  color: black;
+}
 
-  .carousel-indicator:hover {
-    color: #C13939;
-    font-size: 1.4vw;
-    transition: 200ms;
-  }
+i.visible,
+.carousel-indicator:hover i {
+  color: #c13939;
+}
 
-  /*Per distanziare i pallini dal nome*/
-  i {
-    margin-left: 5px;
-  }
-
-
-
-
-
+/*Per distanziare i pallini dal nome*/
 </style>
