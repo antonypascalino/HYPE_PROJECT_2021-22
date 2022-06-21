@@ -693,6 +693,7 @@ export default async (models) => {
   const itineraryList = [
     {
       name: "Una passeggiata in Centro",
+      carousel_desc: "Scopri cosa ti aspetta nel cuore di Bologna, ne resterai di stucco!",
       description: "Partendo da Piazza Maggiore, cuore della città, passeremo in rassegna i principali monumenti del centro storico. La visita alla Basilica di San Petronio sarà seguita dai meravigliosi Palazzo D’Accursio e Re Enzo. Ci soffermeremo in Piazza Nettuno, dove si trova l’omonima e celebre fontana. Infine, passeggiando lungo via Rizzoli raggiungeremo il simbolo di Bologna: la Torre degli Asinelli insieme alla Garisenda.",
       map:"mapPasseggiataInCentro01.jpg",
       duration:"La durata è di 30 minuti e si percorrono circa 500m",
@@ -700,6 +701,7 @@ export default async (models) => {
     },
     {
       name: "I Portici e San Luca",
+      carousel_desc: "L'itinerario più lungo proposto dal team di insideBO, vi assicuriamo che ne vale assolutamente la pena!",
       description: "La partenza è appena fuori le mura, più precisamente a Porta Saragozza, dove percorreremo il famoso portico ed i suoi archi che ci conducono fino al Colle della Guardia, parte dell’appennino bolognese, dove ci attenderà il Santuario della Madonna di San Luca. Lungo il cammino ci fermeremo ad osservare lo stadio Renato Dall’Ara.",
       map:"mapPortici01.jpg",
       duration:"La durata è di 2 ore e si percorrono circa 4 km",
@@ -707,6 +709,7 @@ export default async (models) => {
     },
     {
       name: "Bologna La Dotta ",
+      carousel_desc: "Seguici in questo viaggio a scoprire il perché del soprannome 'la Dotta'!",
       description: "Partendo dalle sale mozzafiato dell’Archiginnasio, ci dirigeremo verso la biblioteca più importante della città, ovvero Sala Borsa. Continuando per Via Dell’Indipendenza, osserveremo la maestosa Cattedrale di San Pietro, per poi dirigerci verso Via Delle Moline, dove ci attenderà la suggestiva finestrella sull’omonimo canale. Da qui, proseguiremo verso il cuore dell’odierna zona universitaria, per ammirare gli splendidi edifici medievali di Via Zamboni e Piazza Verdi.",
       map:"mapLaDotta01.jpg",
       duration:"La durata è di 1 ora e si percorrono circa 2km",
