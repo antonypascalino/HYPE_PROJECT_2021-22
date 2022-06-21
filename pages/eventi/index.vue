@@ -9,9 +9,10 @@
     </section>
     <div class="carouselDiv">
       <div class="indicatorList">
+        <select-filter @filter-change="filterBySeason"/>
         <div class="list">
           <carousel-indicator
-            v-for="(ev, index) in eventList"
+            v-for="(ev, index) in filteredList"
             :key="ev.id"
             :index="index"
             :visibleSlide="visibleSlide"
@@ -45,7 +46,7 @@
       </carousel>
       <div
         class="carouselScroll"
-        v-for="(ev, index) in eventList"
+        v-for="(ev, index) in filteredList"
         :key="index"
         :id="ev.id"
       >
@@ -71,6 +72,7 @@ import CarouselSlide from '~/components/CarouselSlide'
 import CarouselIndicator from '~/components/CarouselIndicator'
 import TheHeader from '~/components/TheHeader'
 import Breadcrumb from '~/components/Breadcrumb'
+import selectFilter from "~/components/SelectFilter";
 
 export default {
   layout: 'empty',
@@ -81,7 +83,7 @@ export default {
       visibleSlide: 0,
       direction: 'left',
       loading: false,
-
+      filteredList: [],
       scrollingDirection: 0,
       lastScroll: 9999,
       scrollIdleTime: 90, // time interval that we consider a new scroll event: 80 is quite good
@@ -93,12 +95,13 @@ export default {
     const { data } = await $axios.get('http://localhost:3000/api/events')
     return {
       eventList: data,
+      filteredList: data,
     }
   },
 
   computed: {
     slidesLen() {
-      return this.eventList.length
+      return this.filteredList.length
     },
   },
 
@@ -127,7 +130,23 @@ export default {
       }
       this.visibleSlide = index - 1
     },
-
+    // Change the season filter option
+    filterBySeason (chosenValue) {
+      this.filteredList = [];
+      if(chosenValue === 'Estate'){
+        for (const x of this.eventList){
+          if(x.type === 0)
+            this.filteredList.push(x)
+        }
+      }else if (chosenValue === 'Inverno'){
+        for (const x of this.eventList){
+          if(x.type === 1)
+            this.filteredList.push(x)
+        }
+      }else{
+        this.filteredList = this.eventList
+      }
+    },
     wheel(deltaY) {
       // adding .once in the template after @wheel
       // if(deltaY > 0) {
@@ -157,9 +176,6 @@ export default {
       this.lastScroll = performance.now()
     },
 
-    selected(crumb) {
-      console.log(crumb)
-    },
     goToDetails() {
       this.$router.push(`/details/${this.id}`)
     },
@@ -170,6 +186,7 @@ export default {
     TheHeader,
     CarouselIndicator,
     Breadcrumb,
+    selectFilter
   },
 }
 </script>
