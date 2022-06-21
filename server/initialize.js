@@ -259,6 +259,7 @@ export default async (models) => {
   const eventList = [
     {
       name: "Il Cinema Ritrovato",
+      carousel_desc: "Lasciati travolgere dai film più belli al chiaro di luna, nella suggestiva atmosfera del centro!",
       description: "Il Cinema Ritrovato è un evento sia per cinefili che per semplici amanti del cinema e impegna per alcuni giorni diverse sale cinematografiche e arene all’aperto ospitando da mattina a notte centinaia di film di tutte le epoche: un vero paradiso!",
       imgBackground: "ilCinemaRitrovato01.jpg",
       imgArray:["ilCinemaRitrovato02.jpg","ilCinemaRitrovato03.jpg"],
@@ -271,6 +272,7 @@ export default async (models) => {
     },
     {
       name: "Cersaie",
+      carousel_desc: "Dove c'é innovazione c'é Cersaie, il salone internazionale dell'arredobagno",
       description: "Cersaie è la rinomata esposizione internazionale delle ceramiche e dell'arredobagno. Si tiene ogni anno a BolognaFiere ma non mancano gli allestimenti all'interno delle mura dove è possibile osservare delle meravigliose composizioni di design e materiali all'avanguardia",
       imgBackground: "cersaie05.jpg",
       imgArray: ["cersaie02.jpg", "cersaie03.jpg","cersaie04.jpg"],
@@ -283,6 +285,7 @@ export default async (models) => {
     },
     {
       name: "Festival della Mortadella",
+      carousel_desc: "Non è Bologna senza mortadella, scopri il suo festiva a lei dedicato!",
       description: "La mortadella, \"regina rosa\" della gastronomia bolognese, è senza dubbio il salume che più di tutti rappresenta il territorio nel mondo, tanto che i termini \"mortadella\" e \"Bologna\" sono spesso usati come sinonimi. Per la precisione è nella cittadina di Zola Predosa che la mortadella ha la sua capitale mondiale: qui hanno sede le principali aziende produttrici della mortadella e qui ogni anno si organizza il festival più rosa e gustoso del mondo: \"Mortadella, please\", che quest'anno festeggia l'edizione numero 13.\n",
       imgBackground: "festivalMortadella01.jpg",
       imgArray:["festivalMortadella02.jpg","festivalMortadella03.jpg"],
@@ -295,6 +298,7 @@ export default async (models) => {
     },
     {
       name: "Arte Fiera",
+      carousel_desc: "Uno degli eventi più attesi della città, dove arte, cultura e avanguardia si uniscono.",
       description: "Arte Fiera ha riaperto le porte dal 13 al 15 maggio 2022, animata da uno spirito di ripresa e dal desiderio di poter ritrovare in presenza gli operatori e il pubblico dell’arte, dopo la decisione di rimandare la tradizionale edizione di fine gennaio a causa della pandemia.\n" +
         "\n" +
         "Terza edizione fisica sotto la direzione artistica di Simone Menegoi - quella del 2021 è stata sostituita dal progetto culturale online Playlist - Arte Fiera 2022 ha riproposto i punti di forza della formula messa a punto nelle due edizioni precedenti, puntando con decisione alla qualità espositiva. “Arte Fiera si ripresenta a testa alta: con una selezione di gallerie senza cedimenti qualitativi, e che si arricchisce anzi di alcune interessanti new entry; con allestimenti rinnovati; con un percorso di visita più razionale ed efficiente”, dichiarava Menegoi.",
@@ -309,6 +313,7 @@ export default async (models) => {
     },
     {
       name: "Fiera del Libro",
+      carousel_desc: "Un evento amato da tutti e che coinvolge tutte le età. Scoprilo ora!",
       description: "Dalla prima edizione del 1927, la Fiera del Libro è diventata un appuntamento fisso nell’agenda cittadina, atteso non solo dai bibliofili, ma anche dai semplici appassionati.\n" +
         "\n" +
         "Passeggiando per porta Galliera —a pochi passi dalla Stazione Centrale— potrete trovare una vasta e specializzata offerta di libri, sviluppata in oltre 400 metri quadri d’esposizione: non solo rare edizioni antiche e ricercate, ma anche migliaia di libri di seconda mano o nuovi a metà prezzo, oltre ad una vasta collezione di fumetti, poster vintage e dischi in vinile.",
@@ -323,6 +328,7 @@ export default async (models) => {
     },
     {
       name: "StraBologna",
+      carousel_desc: "Per gli amanti dello sport o per chi vuole semplicemente prendere fare un po' di moto all'aria aperta, la Strabologna accoglierà tutti!",
       description: "StraBologna è la camminata ludico motoria non competitiva organizzata da UISP Bologna che si svolge nel cuore della città in una domenica di primavera anticipata da due giorni di eventi in Piazza Maggiore, per promuovere gli ideali di benessere, lo sport per tutti, l’inclusione sociale e il divertimento.\n" +
         "L’evento è adatto a: runner, podisti, famiglie anche con passeggini, bambini, disabili, anziani, cani al guinzaglio... insomma è proprio per tutt*! Un’occasione per vivere insieme le bellezze del centro storico di Bologna e per scoprire la città da un nuovo punto di vista.",
       imgBackground: "straBologna01.jpg",
@@ -337,6 +343,7 @@ export default async (models) => {
     },
     {
       name: "roBOt",
+      carousel_desc: "Festival eclettico ed internazionale per amanti di musica d'autore, ma che amano anche scatenarsi in pista da ballo!",
       description: "roBOt Festival è una manifestazione internazionale nata nel 2008 a Bologna e dedicata alla musica elettronica e alle arti visuali. La direzione artistica del festival è affidata fin dalla sua prima edizione a Marco Ligurgo e Antonio Puglisi. Il festival, che si svolge in autunno, propone ogni anno oltre 100 eventi tra concerti, dj set, performance, proiezioni, installazioni digitali e workshop[2].\n" +
         "\n" +
         "Vi hanno partecipato artisti internazionali come Ryūichi Sakamoto, Alva Noto, Francesco Tristano Schlimé, Nathan Fake, Plaid, Yann Tiersen, Gianluca Petrella, Carl Craig e Pan Sonic.",
@@ -351,6 +358,7 @@ export default async (models) => {
     },
     {
       name: "Cosmoprof",
+      carousel_desc: "Fiera mondiale dell'industria cosmetica dove ogni anno vengono mostrate le più recenti innovazioni di questo settore.",
       description: "Cosmoprof è la fiera leader mondiale per l'intera industria della cosmetica e della bellezza professionale.",
       imgBackground: "cosmoprof01.jpg",
       imgArray:["cosmoprof02.jpg", "cosmoprof03.jpg", "cosmoprof04.jpg"],
@@ -363,6 +371,7 @@ export default async (models) => {
     },
     {
       name: "Cioccoshow",
+      carousel_desc: "Chi non ama il cioccolato? Questo è il festival che fa per voi!",
       description: "Il Cioccoshow , ossia il Cioccolato tradizionale di alta qualità in fiera, giunto alla sua 15° edizione, si svolge nel centro storico di Bologna. Tra assaggi, degustazioni, laboratori curati da grandi Maestri Cioccolatieri ed esperti di settore.",
       imgBackground: "cioccoShow01.jpg",
       imgArray:["cioccoShow02.jpg", "cioccoShow03.jpg", "cioccoShow04.jpg", "cioccoShow05.jpg"],
@@ -375,6 +384,7 @@ export default async (models) => {
     },
     {
       name: "BilBOlBul",
+      carousel_desc: "BilBOlBul non è solo una semplice fiera del fumetto, qui l'arte viene proposta nelle tavole nella sua massima espressione.",
       description: "Per tre giorni all'anno, BilBOlbul è un festival internazionale di fumetto che si tiene a Bologna. Il festival porta in Italia artiste e artisti da tutto il mondo, e attraverso il fumetto prova a leggere il presente.",
       imgBackground: "bilbolbul02.jpg",
       imgArray:["bilbolbul01.jpg","bilbolbul03.jpg", "bilbolbul04.jpg"],
@@ -387,6 +397,7 @@ export default async (models) => {
     },
     {
       name: "Bologna Jazz Festival",
+      carousel_desc: "Uno dei più importanti ed antichi festival Jazz italiani: lasciati travolgere da questa meravigliosa musica.",
       description: "Bologna Jazz Festival (abbreviato BJF) è considerato il più antico festival musicale italiano dedicato al jazz; fu fondato nel 1958. Si svolge annualmente a Bologna, con eventi anche a Ferrara e Modena, nel mese di novembre",
       imgBackground: "jazzFestival04.jpeg",
       imgArray:["jazzFestival01.jpg", "jazzFestival02.jpg", "jazzFestival03.jpg"],
