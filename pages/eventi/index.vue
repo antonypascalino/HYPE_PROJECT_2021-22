@@ -38,9 +38,10 @@
                 :src="require(`@/static/Events/${ev.imgBackground}`)"
                 :alt="ev.name"
               />
-            </nuxt-link>
+
             <div class="textContainer-carousel">{{ ev.name }}</div>
-            <div class="hoverText">Scopri di più</div>
+            <div class="hoverText" style="font-size: 30px; width: 100%; ">{{ev.carousel_desc}}</div>
+            </nuxt-link>
           </div>
         </carousel-slide>
       </carousel>
@@ -59,7 +60,7 @@
             />
           </nuxt-link>
           <div class="textContainer-scroll">{{ ev.name }}</div>
-          <div class="hoverText">Scopri di più</div>
+          <div class="hoverText">{{ev.carousel_desc}}</div>
         </div>
       </div>
     </div>

@@ -37,8 +37,9 @@
                 :src="require(`@/static/Poi/${poi.imgBackground}`)"
                 :alt="poi.name"
               />
+
             <div class="textContainer-carousel">{{ poi.name }}</div>
-            <div class="hoverText" style="font-size: 30px; width: 100%;">{{ poi.carousel_desc }}</div>
+            <div class="hoverText" style="font-size: 30px; width: 100%; ">{{poi.carousel_desc}}</div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -56,9 +57,10 @@
               :src="require(`@/static/Poi/${poi.imgBackground}`)"
               :alt="poi.name"
             />
-          </nuxt-link>
+
           <div class="textContainer-scroll">{{ poi.name }}</div>
-          <div class="hoverText">{{ poi.carousel_desc }}</div>
+          <div class="hoverText">{{poi.carousel_desc}}</div>
+          </nuxt-link>
         </div>
       </div>
     </div>

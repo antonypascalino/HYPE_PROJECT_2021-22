@@ -37,9 +37,10 @@
                 :src="require(`@/static/Itineraries/${it.imgBackground}`)"
                 :alt="it.name"
               />
-            </nuxt-link>
+
             <div class="textContainer-carousel">{{ it.name }}</div>
-            <div class="hoverText">Scopri di più</div>
+            <div class="hoverText"  style="font-size: 30px; width: 100%; ">{{it.carousel_desc}}</div>
+            </nuxt-link>
           </div>
         </carousel-slide>
       </carousel>
@@ -58,7 +59,7 @@
             />
           </nuxt-link>
           <div class="textContainer-scroll">{{ it.name }}</div>
-          <div class="hoverText">Scopri di più</div>
+          <div class="hoverText">{{it.carousel_desc}}</div>
         </div>
       </div>
     </div>

@@ -44,7 +44,8 @@ async function initializeDatabaseConnection() {
     website:DataTypes.STRING,
     price:DataTypes.STRING,
     type:DataTypes.INTEGER,
-    firstDay:DataTypes.DATEONLY
+    firstDay:DataTypes.DATEONLY,
+    carousel_desc:DataTypes.STRING
   })
 
   const Itinerary = database.define("itinerary", {
@@ -53,6 +54,7 @@ async function initializeDatabaseConnection() {
     imgBackground: DataTypes.STRING,
     map: DataTypes.STRING,
     duration: DataTypes.STRING,
+    carousel_desc:DataTypes.STRING
 
   })
   const ServiceType = database.define("servicetype", {
@@ -156,7 +158,8 @@ async function runMainApi() {
         imgBackground:element.imgBackground,
         price:element.price,
         website:element.website,
-        type:element.type
+        type:element.type,
+        carousel_desc:element.carousel_desc
       })
     }
     return res.json(filtered)
@@ -270,7 +273,8 @@ async function runMainApi() {
         map:element.map,
         id: element.id,
         imgBackground:element.imgBackground,
-        description:element.description
+        description:element.description,
+        carousel_desc:element.carousel_desc
       })
     }
     return res.json(filtered)

@@ -35,11 +35,12 @@
               <img
                 class="carouselImg"
                 :src="require(`@/static/Services/${service.imgBackground}`)"
-                :alt="service.name"
-              />
-            </nuxt-link>
+                :alt="service.name"/>
+
             <div class="textContainer-carousel">{{ service.name }}</div>
             <div class="hoverText" style="font-size: 30px; width: 100%; ">{{service.carousel_desc}}</div>
+
+            </nuxt-link>
           </div>
         </carousel-slide>
       </carousel>
@@ -56,9 +57,10 @@
               :src="require(`@/static/Services/${service.imgBackground}`)"
               :alt="service.name"
             />
-          </nuxt-link>
+
           <div class="textContainer-scroll">{{ service.name }}</div>
           <div class="hoverText">Scopri di più</div>
+          </nuxt-link>
         </div>
       </div>
     </div>
