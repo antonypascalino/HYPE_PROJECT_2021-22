@@ -35,9 +35,6 @@
       <section class="section-description">
         <div class="title-container">MAPPA ITINERARIO</div>
 
-        <div class="map-container">
-          <img class="img-map" :src="require(`@/static/Itineraries/${map}`)"/>
-        </div>
       </section>
       <div class="button-container">
         <button

@@ -56,17 +56,16 @@ async function initializeDatabaseConnection() {
   })
   const ServiceType = database.define("servicetype", {
     name: DataTypes.STRING,
-    address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING,
     description: DataTypes.TEXT,
-    website: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
   })
 
   const Service = database.define("service", {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING
+    opening_hours: DataTypes.STRING,
+    website: DataTypes.STRING,
+    phone_number: DataTypes.STRING
   })
 
   // Creating the N -> N association between Itinerary and Poi
@@ -223,11 +222,28 @@ async function runMainApi() {
     }
     return res.json(filtered)
   })
-
+  // HTTP GET api that returns a specific point of interest
+  app.get('/specificService/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.ServiceType.findAll({ where: { id }})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        address: element.visit_info,
+        opening_hours:element.opening_hours,
+        id: element.id,
+        imgBackground:element.imgBackground,
+        website:element.website,
+        description:element.description
+      })
+    }
+    return res.json(filtered)
+  })
 
 
   // HTTP GET api that returns a specific point of interest
-  app.get('/services/:id', async (req, res) => {
+  app.get('/Services/:id', async (req, res) => {
     const id = +req.params.id
     const result = await models.Service.findAll({ where: { servicetypeId: id },include: [{model: models.ServiceType}]})
     const filtered = []
@@ -237,6 +253,8 @@ async function runMainApi() {
         address: element.address,
         opening_hours:element.opening_hours,
         id: element.id,
+        website:element.website,
+        phone_number:element.phone_number
       })
     }
     return res.json(filtered)

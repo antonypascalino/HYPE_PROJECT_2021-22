@@ -1,6 +1,20 @@
 <template>
   <main class="page-container">
     <div class="body-container">
+      <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title=nameTypeService />
+      <section class="breadcrumb-section3">
+        <breadcrumb
+          :default-route="[{ title: 'HOME', path: '/' },{ title: 'Servizi', path: '/servizi/' }]"
+          :current-page="nameTypeService"
+        />
+      </section>
+
+
+      <section class="container1">
+        <div class="title-container">DESCRIZIONE</div>
+        <p class="text-container">{{descriptionServiceType}}</p>
+
+      </section>
 
       <section class="container1">
         <div class="title-container">INFORMAZIONI</div>
@@ -14,20 +28,16 @@
               :name="s.name"
               :address="s.address"
               :opening_hours="s.opening_hours"
-
+              :phone="s.phone_number"
+              :website="s.website"
             />
           </div>
 
       </section>
 
       <div class="button-container">
-        <button
-          type="button"
-          class="btn btn-outline-secondary px-4"
-          @click="backToList"
-        >
-          Torna indietro
-        </button>
+        <baseButton title="Tutti i tipi di servizi" goto="/servizi/">
+        </baseButton>
       </div>
     </div>
 
@@ -49,16 +59,16 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     // const { data } = await $axios.get('api/services/'+ id)
-    const { data } = await $axios.get('http://localhost:3000/api/services/'+ id)
+    const serviceType = await $axios.get('http://localhost:3000/api/specificService/'+ id)
+    const service = await $axios.get('http://localhost:3000/api/Services/'+ id)
     return {
-      serviceList: data,
+      nameTypeService:(serviceType.data)[0].name,
+      imgTypeService:(serviceType.data)[0].imgBackground,
+      descriptionServiceType:(serviceType.data)[0].description,
+      serviceList: service.data
     }
   },
-  data() {
-    return {
-      crumbs: ['HOME', 'SERVIZI', ],
-    };
-  },
+
   methods: {
     backToList() {
       this.$router.push('/servizi/')
@@ -66,7 +76,7 @@ export default {
   },
   head(){
     return {
-      title: "insideBO | "+this.name
+      title: "insideBO | "+this.nameTypeService
     }
   },
   mounted(){
@@ -118,16 +128,16 @@ section-description{
 
 }
 .button-container{
+  text-align: right;
   width: 100%;
   height: 60px;
   padding: 20px;
 }
-.btn{
+
+.breadcrumb-section3{
   float:right;
-  color:black
-}
-.text-container{
-  padding: 10px ;
+  margin-right: 20px;
+  margin-top: -10px;
 }
 
 </style>

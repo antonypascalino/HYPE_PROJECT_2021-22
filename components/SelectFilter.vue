@@ -8,8 +8,8 @@
     <!--<label for="filter">Filter</label> -->
     <select id="filter" ref="select" name="filter" @change="onChange">
       <option value="Tutti">Tutti</option>
-      <option value="Estate">Estate</option>
-      <option value="Inverno">Inverno</option>
+      <option value="Estate">Estivi</option>
+      <option value="Inverno">Invernali</option>
     </select>
   </form>
 </template>
