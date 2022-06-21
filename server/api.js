@@ -56,8 +56,9 @@ async function initializeDatabaseConnection() {
   })
   const ServiceType = database.define("servicetype", {
     name: DataTypes.STRING,
-    description: DataTypes.TEXT,
     imgBackground: DataTypes.STRING,
+    carousel_desc:DataTypes.STRING,
+    service_desc: DataTypes.TEXT,
   })
 
   const Service = database.define("service", {
@@ -122,7 +123,6 @@ async function runMainApi() {
       filtered.push({
         name: element.name,
         imgBackground: element.imgBackground,
-        visit_info: element.visit_info,
         id: element.id,
         imgArray:element.imgArray
       })
@@ -212,12 +212,10 @@ async function runMainApi() {
     for (const element of result) {
       filtered.push({
         name: element.name,
-        address: element.visit_info,
-        opening_hours:element.opening_hours,
         id: element.id,
         imgBackground:element.imgBackground,
-        website:element.website,
-        description:element.description
+        service_desc:element.service_desc,
+        carousel_desc:element.carousel_desc
       })
     }
     return res.json(filtered)
@@ -230,12 +228,10 @@ async function runMainApi() {
     for (const element of result) {
       filtered.push({
         name: element.name,
-        address: element.visit_info,
-        opening_hours:element.opening_hours,
         id: element.id,
         imgBackground:element.imgBackground,
-        website:element.website,
-        description:element.description
+        service_desc:element.service_desc,
+        carousel_desc:element.carousel_desc
       })
     }
     return res.json(filtered)

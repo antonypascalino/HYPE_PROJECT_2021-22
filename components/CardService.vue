@@ -34,6 +34,7 @@
   color:#C13939;
 }
 .mdi{color:black}
+p{text-align: center}
 </style>
 
 <script>

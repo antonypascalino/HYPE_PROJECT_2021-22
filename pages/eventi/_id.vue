@@ -5,7 +5,7 @@
       <StaticHalfImage :slide="`../Events/${imgBackground}`" :title=name />
       <section class="breadcrumb-section2">
         <breadcrumb
-          :default-route="[{ title: 'Home', path: '/' },{ title: 'Eventi', path: '/eventi/' }]"
+          :default-route="[{ title: 'HOME', path: '/' },{ title: 'Eventi', path: '/eventi/' }]"
           :current-page=name
         />  </section>
 
@@ -144,8 +144,12 @@ export default {
 }
 
 .text-container{
-  padding: 10px ;
+  padding-top: 10px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 22px
 }
+
 
 .row{
   margin: auto;

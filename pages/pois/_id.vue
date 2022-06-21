@@ -102,9 +102,8 @@ export default {
 <style>
 
 .section-description{
-  font-family: 'Inria Sans';
+  font-family: 'Helvetica';
   font-style: normal;
-  font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -137,7 +136,10 @@ export default {
 }
 
 .text-container{
-  padding: 10px ;
+  padding-top: 10px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 22px
 }
 
 .row{
@@ -156,5 +158,7 @@ export default {
 .button-container{
   text-align: right;
 }
+
+
 
 </style>

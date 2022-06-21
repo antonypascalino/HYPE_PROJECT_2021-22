@@ -13,27 +13,34 @@
     <div class="body-container">
       <section class="section-chi-siamo">
         <div class="title-container">La nostra Sede e contatti</div>
-        <Map :x=43.78198 :y=11.28143 ></Map>
-         <p class="address-container">
-            <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
+        <div class="row">
+          <div class="col-sm-9"><Map :x=43.78198 :y=11.28143 ></Map></div>
+          <div class="col-sm-3">
+            <br><br><br>
+            <p class="address-container">
+              <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
+
+              <br />
+              <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
+            </p>
 
             <br />
-            <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
-          </p>
+            <div class="phone-number">
+              <span class="mdi mdi-phone"></span> Tel:
+              <a href="tel:+393347711504"> +39 3319212318</a>
+            </div>
+            <div class="fax-number">
+              <span class="mdi mdi-fax"></span> Fax:
+              <a href="fax:+393347711504">+39 011 7234011</a>
+            </div>
+            <div class="mail">
+              <span class="mdi mdi-email"></span>
+              <a href="insideBO@gmail.com">insideBO@gmail.com</a>
+            </div>
+          </div>
+        </div>
 
-        <br />
-          <div class="phone-number">
-            <span class="mdi mdi-phone"></span> Tel:
-            <a href="tel:+393347711504"> +39 3319212318</a>
-          </div>
-          <div class="fax-number">
-            <span class="mdi mdi-fax"></span> Fax:
-            <a href="fax:+393347711504">+39 011 7234011</a>
-          </div>
-          <div class="mail">
-            <span class="mdi mdi-email"></span>
-            <a href="insideBO@gmail.com">insideBO@gmail.com</a>
-          </div>
+
       </section>
 
       <section class="section-la-nostra-missione">

@@ -3,7 +3,7 @@
     <TheHeader/>
     <section class="breadcrumb-section">
       <breadcrumb
-        :default-route="[{ title: 'HOME', path: '/' }]"
+        :default-route="[{ title: 'Home', path: '/' }]"
         current-page="Itinerari"
       />
     </section>
