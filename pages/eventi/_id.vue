@@ -147,7 +147,7 @@ export default {
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
-  font-size: 1.2vw
+  font-size: 22px
 }
 
 
