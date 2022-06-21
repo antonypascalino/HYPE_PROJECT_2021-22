@@ -64,7 +64,7 @@ export default {
     return {
       nameTypeService:(serviceType.data)[0].name,
       imgTypeService:(serviceType.data)[0].imgBackground,
-      descriptionServiceType:(serviceType.data)[0].description,
+      descriptionServiceType:(serviceType.data)[0].service_desc,
       serviceList: service.data
     }
   },
@@ -91,6 +91,12 @@ export default {
 <style>
 
 
+.text-container{
+  padding-top: 10px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 1.2vw
+}
 section-description{
 
   font-family: 'Inria Sans';

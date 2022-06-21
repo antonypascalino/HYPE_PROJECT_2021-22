@@ -3,9 +3,11 @@
 
     <div class="body-container">
       <StaticHalfImage :slide="`../Itineraries/${imgBackground}`" :title=name />
-      <section class="breadcrumb-section">
-        <Breadcrumb :crumbs="crumbs" :optional=name @selected="selected"/>
-      </section>
+      <section class="breadcrumb-section5">
+        <breadcrumb
+          :default-route="[{ title: 'HOME', path: '/' },{ title: 'Itinerari', path: '/Itinerari/' }]"
+          :current-page=name
+        />  </section>
 
       <section class="section-description">
         <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
@@ -37,13 +39,8 @@
 
       </section>
       <div class="button-container">
-        <button
-          type="button"
-          class="btn btn-outline-secondary px-4"
-          @click="backToList"
-        >
-          Torna indietro
-        </button>
+        <baseButton title="Tutti gli itinerari" goto="/itinerari/">
+        </baseButton>
       </div>
     </div>
 
@@ -147,19 +144,24 @@ section-description{
   height: 100px;
   padding: 20px;
 }
-.btn{
-  float:right;
-  color:black
-}
+
 .text-container{
-  padding: 10px ;
+  padding-top: 10px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 1.2vw
 }
-.map-container{
-  width:95vw;
-  height:40vw;
-  display: flex;
+
+
+.button-container{
+  text-align: right;
 }
-.img-map{
-  width: 90%;
+
+.breadcrumb-section5{
+  float:right;
+  margin-right: 20px;
+  margin-top: -10px;
 }
+
+
 </style>

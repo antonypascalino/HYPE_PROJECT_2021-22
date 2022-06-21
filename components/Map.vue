@@ -43,11 +43,19 @@ export default {
 
 <style scoped>
 #mapContainer {
-  width: 92vw;
   height: 40vh;
-  margin: 3vw;
+  left:3vw;
+  margin-top: 2vw;
   z-index: 2;
   -moz-box-shadow:  10px  10px 5px #dedede;
   -webkit-box-shadow:  10px  10px 5px #dedede;
+  width: 70vw;
+}
+
+@media screen and (max-width: 900px ){
+  #mapContainer{
+    width: 90vw;
+  }
+
 }
 </style>
