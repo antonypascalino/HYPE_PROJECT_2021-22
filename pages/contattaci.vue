@@ -117,8 +117,11 @@ export default {
   margin-right: 8px;
 }
 p{
-  margin-top: 20px;
 
+  padding-top: 10px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 22px
 }
 a{
   text-decoration: none;

@@ -95,7 +95,7 @@ export default {
   font-family: 'Inria Sans';
   font-style: normal;
 
-  font-size: 17px;
+  font-size: 20px;
   margin-left: 8px;
   margin-right: 8px;
 }
