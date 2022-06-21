@@ -13,6 +13,7 @@ export default async (models) => {
     {
       name: "Piazza Maggiore",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      carousel_desc: "Il cuore di Bologna, da qui inizia il nostro viaggio.",
       description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.\n" +
         "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere).\n" +
         "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
@@ -24,6 +25,7 @@ export default async (models) => {
     {
       name: "Fontana del Nettuno",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      carousel_desc: "Il Dio dei Mari si erge imponente nel cuore della città, vieni a rinfrescarti al suo cospetto!",
       description: "Situata al centro dell’omonima piazza, la fontana troneggiata dalla divinità conduce alla più grande Piazza Maggiore. Soprannominata in dialetto al Żigànt (il Gigante), fu ultimata nel 1566 per mano di Giambologna e Tommaso Laureto al fine di glorificare il governo pontificio di Pio IV.\n" +
         "La figura in bronzo del Nettuno è alta circa 3,2 metri. La posa solenne è un simbolo della potenza dello stato pontificio di quell’epoca: la mano sinistra dal palmo aperto diretta controvento quasi a voler calmare i flutti e la mano destra che regge un imponente tridente. L’intera composizione è caratterizzata da un grande slancio e dinamismo dovuta alle figure implementate sul blocco centrale ricoperto di marmo di Verona, come le nereidi e i delfini.\n" +
         "Il tridente impugnato dal Nettuno è stata fonte di ispirazione per il logo della casa di auto sportive Maserati che lo introdusse a partire dal 1926.\n",
@@ -35,6 +37,7 @@ export default async (models) => {
     {
       name: "Basilica di San Petronio",
       visit_info:"Tutti i giorni ingresso libero dalle 8.30 alle 13.30 e dalle 15.00 alle 18.30.",
+      carousel_desc: "Mai ultimata, è una delle più grandi chiese italiane e la sua costruzione fu fermata dal Papa in persona. Ecco la Basilica di San Petronio!",
       description: "La basilica di San Petronio è la chiesa più grande della città, nonché una delle più grandi basiliche italiane ed europee. La sua estensione raggiunge i 132 metri di lunghezza e 51 di altezza. La peculiarità, tuttavia è che risulta incompiuta: lo si può chiaramente notare dalla facciata, ricoperta solo per metà in marmo.\n" +
         "Iniziata nel 1390, è l’ultima grande opera tardo gotica italiana. Il progetto inizialmente era a carico di Antonio di Vincenzo ma nel 1514, durante i lavori di costruzione, Arduino degli Arriguzzi propose un nuovo piano: un’imponente pianta a croce latina che superava le dimensioni della basilica di San Pietro a Roma. Per questo motivo, secondo la leggenda, il papa Pio IV interruppe la realizzazione, focalizzando le risorse sull’Archiginnasio.\n" +
         "L’interno è suddiviso in tre navate e fu attuato in epoche diverse. Si contano ben ventidue cappelle, dove si possono scorgere dipinti e decorazioni di illustri artisti del tempo, tra cui Donato Creti e Girolamo Mazzola detto “Parmigianino”. Tra queste raffigurazioni, tuttavia, vi è un affresco che suscita tutt’ora controversie: ispirandosi all’inferno di Dante, l’autore Giovanni da Modena ha rappresentato una serie di peccatori e dannati tra cui Maometto che viene scuoiato da un diavolo.\n" +
@@ -47,6 +50,7 @@ export default async (models) => {
     {
       name: "Palazzo Re Enzo",
       visit_info:"Ingressi ogni 10 minuti, dalle 10:00 alle 12:20 e dalle 14 alle 18:00.",
+      carousel_desc: "Uno dei monumenti più importanti del centro bolognese.",
       description: "Palazzo Re Enzo è un palazzo storico situato in Piazza Maggiore di fronte alla basilica di San Petronio. Fu costruito tra il 1244 e il 1246 per soddisfare un’esigenza di ampliamento degli edifici del comune. Il nome fu attribuito poiché nel 1249 divenne la “dimora” di Enzo, re di Sardegna, figlio di Federico II di Svevia, catturato durante la battaglia di Fossalta che vide le truppe felsinee sormontare l’esercito imperiale. Dopo 23 anni di prigionia, Re Enzo morì e fu sepolto come sua volontà nella basilica bolognese di San Domenico, dove tutt’oggi è presente la sua tomba.\n" +
         "Il palazzo ha uno stile gotico-medievale frutto anche degli importanti restauri avvenuti nel 1905.\n" ,
       imgBackground: "palazzoReEnzo01.jpg",
@@ -57,6 +61,7 @@ export default async (models) => {
     {
       name: "Palazzo D’Accursio",
       visit_info:"martedì, mercoledì, giovedì, sabato e domenica dalle ore 10.00 alle ore 18.30 e venerdì dalle 15 alle 18.30 (lunedì chiuso). INGRESSO LIBERO.",
+      carousel_desc: "La sede del comune di Bologna e molto altro ancora!",
       description: "Sede del comune dal 1336, Palazzo d’Accursio è uno degli edifici che completano Piazza Maggiore. Deve il nome all’importante giurista e maestro di diritto Accursio (1184-1236). L’imponente edificio di circa 15.000 mq è caratterizzato da una torre con un orologio, costruito nella seconda metà del XV secolo. La facciata su Piazza Grande presenta anche una statua del Papa Gregorio XIII ed ulteriori decorazioni caratteristiche, come una rappresentazione della Madonna con bambino. \n" +
         "Si hanno due ingressi principali, quello su Piazza del Nettuno però non conduce alle camere del comune, bensì alla biblioteca Sala Borsa, la più grande ed importante della città. \n" +
         "Superato il cortile interno dall’ingresso di Piazza Maggiore, si arriva ad una particolare scalinata attribuita al Bramante, l’ampiezza della costruzione facilitava l’ingresso a cavallo dei rappresentanti comunali.\n" +
@@ -71,6 +76,7 @@ export default async (models) => {
       visit_info:"La Torre degli Asinelli è aperta CON PRENOTAZIONE OBBLIGATORIA con i seguenti orari:\n" +
         "Tutti i giorni\n" +
         "Quattro ingressi all'ora (ai 00, ai 15, ai 30 e ai 45), primo ingresso ore 10:00, ultimo ore 17:00.",
+      carousel_desc: "Simbolo della città di Bologna: ecco a voi la Torre degli Asinelli e la Garisenda!",
       description: "Il simbolo della città, poste in Piazza di Porta Ravegnana, punto di incontro delle principali vie del centro, sono l’elemento più riconoscibile di Bologna. \n" +
         "La prima, la torre degli Asinelli deve presumibilmente la sua realizzazione al cavaliere ghibellino Gerardo Asinelli. I lavori iniziarono nel 1109 e terminarono dieci anni più tardi. L’altezza è di circa 97 metri e presenta una scalinata di 498 gradini.\n" +
         "La torre Garisenda invece fu sempre costruita per mano ghibellina, per il volere della famiglia omonima. Inizialmente alta 60 metri, venne ridotta a 48 per via di cedimenti strutturali insorti durante la realizzazione che ne conferirono la peculiare pendenza. La torre fu anche soggetto di paragone nella Divina Commedia, dove Dante la utilizzò come similitudine per indicare il Gigante Anteo nel canto XXXI dell’Inferno.\n" ,
@@ -82,6 +88,7 @@ export default async (models) => {
     {
       name: "Archiginnasio",
       visit_info:"Lunedì-venerdì 9-19. Sabato ore 9-14.",
+      carousel_desc: "Una delle biblioteche più suggestive e antiche d'Italia, scoprite di più sull'Archiginnasio.",
       description: "A pochi passi dalla basilica di San Petronio e da Piazza Maggiore si colloca uno degli edifici più significativi della città. La biblioteca comunale dell’Archiginnasio, divenuta tale nel 1838, presenta una ricca collezione di volumi antichi. \n" +
         "L’interno è costituito da diverse sale studio riccamente decorate dagli stemmi delle ricche famiglie felsinee dell’epoca. \n" +
         "La sala più caratteristica è certamente il teatro anatomico, un anfiteatro in legno d’abete corredato da statue.\n" +
@@ -94,6 +101,7 @@ export default async (models) => {
     {
       name: "Sala Borsa",
       visit_info:"Salaborsa è aperta dal lunedì al venerdì dalle 13 alle 19.",
+      carousel_desc: "La più importante biblioteca della città. Qui potrete trovare qualsiasi cosa, da libri a film, da riviste a volumi antichi.",
       description: "Situata all’ingresso di Piazza del Nettuno di Palazzo d’Accursio, Sala Borsa è la biblioteca pubblica multimediale più celebre di Bologna. Al suo interno possono essere consultati sia volumi cartacei che digitali, oltre che a CD, DVD e fumetti.\n" +
         "Numerosi sono gli eventi e gli ospiti illustri che vi partecipano ogni anno. Solo nel 2019 a Sala Borsa sono stati effettuati 530.000 prestiti. \n" +
         "Nell’androne principale, il pavimento in vetro rivela delle rovine romane visitabili.\n" ,
@@ -105,6 +113,7 @@ export default async (models) => {
     {
       name: "Piazza Santo Stefano",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      carousel_desc: "Una delle piazze più belle della città.",
       description: "Proseguendo dalle due Torri e superando piazza della Mercanzia si può facilmente raggiungere Piazza Santo Stefano. \n" +
         "Lo slargo triangolare è circondato da importanti palazzi, tra cui Corte Isolani. La piazza è anche comunemente chiamata “Piazza delle Sette Chiese”, poiché sul fronte opposto si erge il complesso della Basilica di Santo Stefano.\n" +
         "La piazza è celebre anche per le manifestazioni ed il mercato di antiquariato che si svolge ogni primo week end del mese.\n" ,
@@ -116,6 +125,7 @@ export default async (models) => {
     {
       name: "Basilica di Santo Stefano",
       visit_info:"Aperta tutti i giorni 8.00 – 19.00 (durante le funzioni religiose la visita turistica potrebbe essere limitata o sospesa.",
+      carousel_desc: "Un complesso di chiese antichissimo e ricco di storia.",
       description: "Conosciuto anche come il complesso delle “Sette Chiese”, si affaccia sul lato sud-est della piazza omonima.\n" +
         "Fondata in epoca romana intorno al 100 d.C., la basilica, inizialmente tempio pagano dedicato ad Iside, fu soggetto di numerose ricostruzioni ed ampliamenti che passano dall’epoca romana alle prime invasioni longobarde. Gli ultimi edifici risalgono al periodo tra il X e il XIII secolo e furono edificati dall’organo dei Benedettini.\n" +
         "La chiesa del Crocefisso di origine longobarda si affaccia su Piazza Santo Stefano mentre all’interno si hanno cortili di stampo romano, come il cortile di Pilato ed il museo che conserva opere di diverse epoche.\n" ,
@@ -127,6 +137,7 @@ export default async (models) => {
     {
       name: "Il Mercato del Quadrilatero",
       visit_info:"Segue gli abituali orari di apertura dei negozi.",
+      carousel_desc: "Il cuore della 'Grassa', il mercato nel centro di Bologna.",
       description: "A partire dalle prime ore del giorno un insieme di schiamazzi, odori, bancarelle e botteghe contenenti cibi di ogni genere fanno da sfondo al vivo brulicare di venditori e clienti che si accalcano nelle sinuose vie adiacenti a Piazza Maggiore denominate “il Quadrilatero”. Qui è possibile trovare le fresche pietanze bolognesi ricche di gusto e sapore. Dai salumi più pregiati al pesce fresco, pasta sfoglia e tortellini fatti a mano con cura. In questo mercato si può scorgere un lato più vero della città e meno turistico" ,
       imgBackground: "quadrilatero01.jpg",
       imgArray:["quadrilatero02.jpg","quadrilatero03.jpg"],
@@ -136,6 +147,7 @@ export default async (models) => {
     {
       name: "Via D’Azeglio",
       visit_info:"via D’Azeglio è liberamente accessibile senza limitazioni di orario. La casa di Lucio Dalla viene aperta solo in alcuni periodi dell’anno.",
+      carousel_desc: "Una delle vie più storiche di Bologna. Casa dell'immortale cantautore Lucio Dalla",
       description: "Celebre via del centro storico di Bologna che collega Piazza Maggiore a Via San Mamolo, deve il nome al politico, storico, scrittore e patriota italiano Massimo D’Azeglio.\n" +
         "Via di importanza sociale per i cittadini bolognesi, è suddivisa in una parte pedonale dove sono presenti un insieme di negozi moderni e botteghe storiche e una parte dove è consentita anche la circolazione dei mezzi. \n" +
         "Nella via vi è la dimora del defunto cantautore bolognese di fama internazionale Lucio Dalla. \n" ,
@@ -147,6 +159,7 @@ export default async (models) => {
     {
       name: "La Cattedrale di San Pietro",
       visit_info:"Orari di apertura ; Giovedi, 08:00 - 18:45 ; Venerdi, 08:00 - 18:45 ; Sabato, 08:00 - 18:45 ; Domenica, 08:00 - 18:45.",
+      carousel_desc: "La cattedrale di Bologna, unica nel suo genere.",
       description: "San Pietro è la cattedrale della città. Collocata in Via Indipendenza, la chiesa fu consacrata ufficialmente nel 1184.\n" +
         "La cattedrale fu soggetta a diversi cambiamenti fino ad assestarsi con uno stile barocco, che tuttavia, fece perdere ogni traccia del precedente impianto romano. La facciata è composta da mattoni rossi e decorazioni in marmo bianco che lasciano spazio ai mastodontici portali che suggeriscono l’impianto interno a tre navate.\n" +
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
@@ -158,6 +171,7 @@ export default async (models) => {
     {
       name: "La finestrella sul Canale",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      carousel_desc: "La suggestiva finestra sul Canale delle Moline, uno scorcio di storia ormai dimenticata.",
       description: "Raggiungendo via Piella è possibile scorgere una piccola apertura quadrata che affaccia su un canale. Questa “finestrella” è celebre poiché suggerisce il passato di Bologna, tanto che quell’insieme di vie è soprannominato “la piccola Venezia”. \n" +
         "Fino al primo dopoguerra, Bologna era pervasa da canali che estendevano il corso del fiume Reno e semplificavano il trasporto di materie prime che giungevano per essere lavorate nei vari opifici, in particolare nei laboratori di produzione della seta.\n" +
         "Dai primi anni del Novecento, i canali furono tutti cementati, fatta eccezione per quello di via delle Moline, osservabile dalla suggestiva finestra.\n" ,
@@ -169,6 +183,7 @@ export default async (models) => {
     {
       name: "I Portici",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      carousel_desc: "Bologna è la città con più portici al mondo. Scopri il perché di questa caratteristica unica!",
       description: "Nominati patrimonio dell’umanità dall’Unesco, i portici sono la caratteristica dominante e più peculiare della città. Solamente nel centro storico si dipanano per circa 40 km e aggiungendo anche le strade fuori porta raggiungono la lunghezza di quasi 65km, tanto da rendere Bologna l’unica città al mondo ad averne un così alto numero.\n" +
         "Nacquero nel tardo medioevo per espandere inizialmente gli spazi abitativi dei piani superiori, successivamente vennero impiegati per commerciare nelle strade con qualsiasi condizione atmosferica.\n" +
         "Vi sono diversi stili che delineano le varie epoche di realizzazione. I più antichi di epoca medievale possono essere trovati in via Marsala o in Strada Maggiore, sono di semplice costruzione poiché utilizzano principalmente delle travi in legno. \n" +
@@ -181,6 +196,7 @@ export default async (models) => {
     {
       name: "San Luca e i Portici",
       visit_info:"L'ingresso è gratuito durante la settimana e a pagamento nei giorni festivi",
+      carousel_desc: "Visibile anche dalla lontana campagna, il Santuario della Madonna di San Luca osserva la città sottostante. Ma come si può raggiungere?",
       description: "Partendo da Porta Saragozza si può procedere con una lunga camminata di quasi 4km interamente all’ombra di un complesso di un numero simbolico 666 portici. Giunti a destinazione in cima al Colle della Guardia si potrà accedere al Santuario della Madonna di San Luca. \n" +
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
@@ -192,6 +208,7 @@ export default async (models) => {
     {
       name: "Mura e Porte",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      carousel_desc: "Le porte danno accesso al centro storico di Bologna, che fino agli anni 40 era protetto da ben tre cinte murarie.",
       description: "Le mura hanno cinto la città di Bologna a partire dal III secolo d.C. e l’hanno fatto fino all’inizio del XX secolo quando sono state parzialmente abbattute per lasciare spazio ai viali di circonvallazione.\n" +
         "I resti più antichi sono stati edificati in corrispondenza del crollo dell’Impero Romano di Occidente al fine di difendersi dalle invasioni barbariche. Il materiale di cui erano composte era la selenite. Una seconda cinta fu costruita in epoca medievale intorno all’anno 1100, di proporzioni maggiori rispetto alle precedenti mura. La terza cerchia è nominata “Circla” è la più recente e corrisponde come forma a quella degli attuali viali.\n" +
         "Le porte sono uno degli ultimi baluardi delle antiche mura che dal III secolo d.C. hanno accerchiato e difeso la città. Si hanno in totale 12 porte, di cui due non sono più esistenti. Ogni porta, di stampo romano, ha uno stile diverso. Porta Castiglione, ad esempio è alta ed imponente, mentre Porta Saragozza, con le sue torri ha uno sviluppo più orizzontale che ne conferisce stabilità.\n" ,
@@ -203,6 +220,7 @@ export default async (models) => {
     {
       name: "Zona Universitaria",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
+      carousel_desc: "Il cuore della 'Dotta' Bologna, la più antica città universitaria d'Europa!",
       description: "“La Dotta”, uno degli appellativi con cui si fa riferimento a Bologna, deve la propria origine alla lunga storia universitaria della città. Attualmente la maggior parte delle sedi sono concentrate nella zona lungo Via Zamboni, che è diventata inoltre negli anni uno dei centri della vita notturna degli studenti. \n" +
         "La strada che inizia a partire da Piazza di Porta Ravegnana, sotto le due torri, vede un susseguirsi di locali e bar, superando il conservatorio, si termina nella celebre Piazza Verdi, denominata così in onore del compositore italiano. È il principale luogo di ritrovo dei giovani. Qui possiamo osservare gli splendidi edifici di stampo medievale e l’importante Teatro Comunale.\n" +
         "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato.\n" ,
@@ -214,6 +232,7 @@ export default async (models) => {
     {
       name: "Giardini Margherita",
       visit_info:"Il parco è aperto tutti i giorni della settimana 24h al giorno.",
+      carousel_desc: "Per gli amanti della natura e non solo, scopri il parco più importante della città!",
       description: "Con i suoi 26 ettari, si tratta del parco più grande di Bologna. I Giardini Margherita furono inaugurati nel 1879. Ispirati ai giardini inglesi del periodo romantico, tutt’ora mantengono le caratteristiche originali del tempo. Gli ampi prati e la vegetazione rigogliosa lasciano spazio al laghetto centrale, abitato da numerosi pesci e tartarughe.\n" +
         "Luogo prediletto dai bolognesi durante le afose giornate estive, durante la costruzione fu rinvenuta una tomba etrusca tutt’ora presente.\n" ,
       imgBackground: "giardiniMargherita01.jpg",
@@ -224,6 +243,7 @@ export default async (models) => {
     {
       name: "Stadio Renato Dall’Ara ",
       visit_info:"Aperto in occasione di eventi e partite.",
+      carousel_desc: "Lo stadio più grande della città, vivilo!",
       description: "Lo stadio più importante e grande della città. La storica arena è stata teatro delle più grandi imprese calcistiche della nazionale italiana e dalla squadra del Bologna, oggi allenata da Sinisa Mihajlovic. \n" +
         "Lo stadio fu inaugurato durante l’epoca fascista, più precisamente nel 1927. La caratteristica più particolare è sicuramente la Torre di Maratona, che si erge con i suoi 42 metri di altezza a sostegno della tribuna est.\n" ,
       imgBackground: "stadio01.jpg",
