@@ -30,7 +30,8 @@ async function initializeDatabaseConnection() {
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
     x:DataTypes.FLOAT,
-    y:DataTypes.FLOAT
+    y:DataTypes.FLOAT,
+    carousel_desc:DataTypes.STRING
   })
 
   const Events = database.define("event", {
@@ -109,7 +110,8 @@ async function runMainApi() {
         id: element.id,
         imgArray:element.imgArray,
         x:element.x,
-        y:element.y
+        y:element.y,
+        carousel_desc:element.carousel_desc
       })
     }
     return res.json(filtered)
