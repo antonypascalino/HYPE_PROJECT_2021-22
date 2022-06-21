@@ -26,7 +26,7 @@
         </div>
       </section>
 
-      <section class="container1">
+      <section class="container4">
         <div class="title-container">INFORMAZIONI</div>
         <br>
         <div class="row row1">
@@ -166,7 +166,9 @@ export default {
 
 .row1{
   text-align: center;
-  border: 1px solid grey;
+  border: 3px solid #C13939;
+  font-size: 20px;
+  font-family: "Josefin Sans";
 }
 .mdi-map-marker-check-outline{
   color: #C13939;
@@ -179,5 +181,9 @@ export default {
 }
 .mdi-tag{
   color: #C13939;
+}
+
+.container4{
+  margin:30px
 }
 </style>

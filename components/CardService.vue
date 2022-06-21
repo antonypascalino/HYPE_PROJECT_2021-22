@@ -1,34 +1,39 @@
 <template>
-  <div class="card" style="width: 18rem">
-    <div class="card-body">
+  <div class="card" style="width: 60rem">
+
+      <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
-      <p class="card-text">
+      <p class="card-text mdi mdi-map-marker-check-outline" >
         {{ address }}
       </p>
-      <p class="card-text">
+      <p class="card-text mdi mdi-clock-outline">
         {{ opening_hours }}
       </p>
+        <p class="card-text mdi mdi-phone">
+          {{ phone }}
+        </p>
+        <p class="card-text mdi mdi-web">
+        <a :href="website">  {{ website }} </a>
+        </p>
+      </div>
     </div>
-  </div>
+
 </template>
 
 <style scoped>
 .card {
-  border: 2px solid lightgray;
+  border: 3px solid lightgray;
+  font-size: 20px;
+  font-family: "Josefin Sans";
 }
 .card:hover {
-  border: 2px solid orange;
+  border: 3px solid #C13939;
 }
-.btn-orange {
-  background-color: orange;
-  border: 2px solid orange;
+.card-title{
+  font-size: 30px;
+  color:#C13939;
 }
-.card-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 160px;
-}
+.mdi{color:black}
 </style>
 
 <script>
@@ -51,6 +56,14 @@ export default {
       type: String,
       required: true,
     },
+    phone:{
+      type: String,
+      required: true,
+    },
+    website:{
+      type: String,
+      required: true,
+    }
   },
   methods: {
     goToDetails() {

@@ -47,5 +47,7 @@ export default {
   height: 40vh;
   margin: 3vw;
   z-index: 2;
+  -moz-box-shadow:  10px  10px 5px #dedede;
+  -webkit-box-shadow:  10px  10px 5px #dedede;
 }
 </style>

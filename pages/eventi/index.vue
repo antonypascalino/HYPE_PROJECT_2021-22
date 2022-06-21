@@ -1,14 +1,14 @@
 <template>
   <div class="App">
-    <TheHeader />
+    <TheHeader/>
     <section class="breadcrumb-section">
       <breadcrumb
-        :default-route="[{ title: 'Home', path: '/' }]"
+        :default-route="[{ title: 'HOME', path: '/' }]"
         current-page="Eventi"
       />
     </section>
     <div class="carouselDiv">
-      <div class="indicatorList events">
+      <div class="indicatorList">
         <select-filter @filter-change="filterBySeason"/>
         <div class="list">
           <carousel-indicator
@@ -18,7 +18,7 @@
             :visibleSlide="visibleSlide"
             :title="ev.name"
             @change="change(ev.id)"
-          ></carousel-indicator>
+          />
         </div>
       </div>
       <carousel @next="next" @prev="prev" class="carousel">
@@ -46,7 +46,7 @@
       </carousel>
       <div
         class="carouselScroll"
-        v-for="(ev, index) in eventList"
+        v-for="(ev, index) in filteredList"
         :key="index"
         :id="ev.id"
       >
@@ -72,19 +72,18 @@ import CarouselSlide from '~/components/CarouselSlide'
 import CarouselIndicator from '~/components/CarouselIndicator'
 import TheHeader from '~/components/TheHeader'
 import Breadcrumb from '~/components/Breadcrumb'
-import SelectFilter from "~/components/SelectFilter";
+import selectFilter from "~/components/SelectFilter";
 
 export default {
   layout: 'empty',
 
   data() {
     return {
-      filteredList: [],
       eventList: [],
       visibleSlide: 0,
       direction: 'left',
       loading: false,
-
+      filteredList: [],
       scrollingDirection: 0,
       lastScroll: 9999,
       scrollIdleTime: 90, // time interval that we consider a new scroll event: 80 is quite good
@@ -95,8 +94,8 @@ export default {
     // const { data } = await $axios.get('api/events')
     const { data } = await $axios.get('http://localhost:3000/api/events')
     return {
-      filteredList: data,
       eventList: data,
+      filteredList: data,
     }
   },
 
@@ -124,6 +123,11 @@ export default {
       this.direction = 'right'
     },
     change(index) {
+      if (this.visibleSlide < index - 1) {
+        this.direction = 'left'
+      } else {
+        this.direction = 'right'
+      }
       this.visibleSlide = index - 1
     },
     // Change the season filter option
@@ -182,18 +186,194 @@ export default {
     TheHeader,
     CarouselIndicator,
     Breadcrumb,
-    SelectFilter
+    selectFilter
   },
 }
 </script>
 
 <style>
-div.indicatorList.events {
-  margin-top: 20vh;
-  height: 40vh;
+.breadcrumb-section {
+  margin-top: 70px;
+  background: transparent;
 }
 
-.indicatorList.events .carousel-indicator {
-  height: 5vh;
+.carouselDiv {
+  padding-top: 2%;
+  padding-left: 4%;
+  width: 100%;
+  height: 90vh;
+}
+
+/*Tolto carosuelSlide e spostato in CarouselSlide component*/
+
+.imageContainer {
+  position: relative;
+  width: 70vw;
+  height: 74vh;
+  margin-top: 7vh;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.imageContainer:hover .hoverText,
+.imageContainer.hover .hoverText {
+  visibility: visible;
+  opacity: 1;
+  bottom: 20%;
+  transition: 350ms ease-in-out;
+}
+
+.imageContainer:hover .carouselImg,
+.imageContainer.hover .carouselImg {
+  -webkit-filter: blur(4px);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.imageContainer:hover .carouselImg.image-scroll,
+.imageContainer.hover .carouselImg.image-scroll {
+  -webkit-filter: blur(4px);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.imageContainer:hover .textContainer-carousel,
+.imageContainer.hover .textContainer-carousel {
+  bottom: 40%;
+  transition: 400ms ease-in-out;
+}
+
+.imageContainer:hover .textContainer-scroll,
+.imageContainer.hover .textContainer-scroll {
+  bottom: 40%;
+  transition: 400ms ease-in-out;
+}
+
+.carouselImg {
+  display: block;
+  margin-left: 0;
+  width: 100%;
+  height: 74vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+  transition: 200ms ease-in-out;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.carouselScroll {
+  width: auto;
+  left: 0;
+  margin-right: 0;
+}
+
+.imageContainer.container-scroll {
+  position: relative;
+  height: 38vh;
+  width: 70vh;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  margin-left: 15vw;
+}
+
+.carouselImg.image-scroll {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: 0;
+  width: 70vw;
+  height: 38vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+div.textContainer-scroll {
+  color: white;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 100%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+}
+
+div.textContainer-carousel {
+  color: white;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 56%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+  transition: 400ms ease-in-out;
+}
+
+div.hoverText {
+  color: white;
+  font-size: 3vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  float: left;
+  position: absolute;
+  width: 30%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 350ms ease-in-out;
+}
+
+span {
+  top: 50%;
+  /*border: solid 2px yellow;*/
+}
+
+.App {
+  background-color: #f2f2f2;
+  height: auto;
+}
+
+body {
+  overscroll-behavior: none;
+  background-color: #f2f2f2;
+}
+
+div.indicatorList {
+  /*border: solid 2px blue;*/
+  width: 23vw;
+  height: 76vh;
+  position: relative;
+  float: right;
+  margin-top: 4%;
+  margin-right: 2%;
+  padding: 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 880px) {
+  .indicatorList {
+    display: none;
+  }
+  .carousel {
+    display: none;
+  }
+
+  .carouselDiv {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 881px) {
+  .carouselScroll {
+    display: none;
+  }
 }
 </style>

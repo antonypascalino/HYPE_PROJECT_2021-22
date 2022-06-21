@@ -252,7 +252,7 @@ export default async (models) => {
     {
       name: "Cersaie",
       description: "Cersaie è la rinomata esposizione internazionale delle ceramiche e dell'arredobagno. Si tiene ogni anno a BolognaFiere ma non mancano gli allestimenti all'interno delle mura dove è possibile osservare delle meravigliose composizioni di design e materiali all'avanguardia",
-      imgBackground: "cersaie01.jpg",
+      imgBackground: "cersaie05.jpg",
       imgArray: ["cersaie02.jpg", "cersaie03.jpg","cersaie04.jpg"],
       address: "Viale della Fiera 20, 40128 Bologna (BO)",
       date: "26 Settembre 2022 - 30 Settembre 2022",
@@ -265,7 +265,7 @@ export default async (models) => {
       name: "Festival della Mortadella",
       description: "La mortadella, \"regina rosa\" della gastronomia bolognese, è senza dubbio il salume che più di tutti rappresenta il territorio nel mondo, tanto che i termini \"mortadella\" e \"Bologna\" sono spesso usati come sinonimi. Per la precisione è nella cittadina di Zola Predosa che la mortadella ha la sua capitale mondiale: qui hanno sede le principali aziende produttrici della mortadella e qui ogni anno si organizza il festival più rosa e gustoso del mondo: \"Mortadella, please\", che quest'anno festeggia l'edizione numero 13.\n",
       imgBackground: "festivalMortadella01.jpg",
-      imgArray:["festivalMortadella02.jpg"],
+      imgArray:["festivalMortadella02.jpg","festivalMortadella03.jpg"],
       address:"Piazza Grande, 40069 Zola Predosa (BO)",
       date:"20 Settembre 2022 - 22 Settembre 2022",
       price:"ingresso libero, ristorazione a pagamento",
