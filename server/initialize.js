@@ -385,23 +385,45 @@ export default async (models) => {
   const serviceTypeList = [
     {
       name: "Banche",
-      imgBackground: "banche01.jpg"
+      imgBackground: "banche01.jpg",
+      carousel_desc: "Devi prelevare? Scopri le banche del centro di Bologna!",
+      service_desc: "Avete bisogno di effettuare un prelievo o di svolgere una qualsiasi commissione in banca? \n" +
+        "Abbiamo stilato una lista delle banche del centro più comode da raggiungere. Potete trovarle il via Rizzoli, strada centrale che conduce alle due torri, oppure nelle zone adiacenti, in modo da non sviare dai vostri divertenti tour della città!\n"
     },
     {
       name: "Cinema",
-      imgBackground: "cinema01.jpg"
+      imgBackground: "cinema01.jpg",
+      carousel_desc: "Voglia di film? Ecco a voi la lista dei cinema più celebri del centro!",
+      service_desc: "Bologna è storicamente una città molto legata alla cultura cinematografica, tanto da essere città natale di diversi registi e attori di fama nazionale e internazionale come Matilda De Angelis, Pupi Avati, il poliedrico Pasolini o Stefano Accorsi.\n" +
+        "Questa atmosfera si riflette nei cinema della città, dove vengono proiettati i film del momento che lasciano spazio anche a pellicole d’epoca o d’autore. \n" +
+        "Nella lista qui sotto potete trovare quindi le sale che più aggradano i vostri gusti: dai blockbuster a film più eclettici, senza però allontanarsi dalle suggestive architetture del centro felsineo.\n"
+
     },
     {
       name: "Divertimento",
       imgBackground: "discoteca01.jpg",
+      carousel_desc: "Vuoi scatenarti sulla pista da ballo? Qui le discoteche e club di Bologna!",
+      service_desc: "Sappiamo che durante un soggiorno o una vacanza non si possono visitare musei tutto il giorno, per questo qui sotto vi proponiamo un elenco delle migliori discoteche e club della città, così da soddisfare il vostro più sfrenato divertimento!\n" +
+        "I locali bolognesi sono rinomati per il clima sereno e spensierato. Siamo sicuri che le vostre serate voleranno via in un batter d’occhio!\n" +
+        "I club indicati qui possono essere raggiunti comodamente con i mezzi pubblici e sono situati sia dentro che appena fuori le mura.\n"
     },
     {
       name: "Salute",
       imgBackground: "farmacie01.jpg",
+      carousel_desc: "Ecco la lista delle farmacie, sempre a disposizione per qualsiasi necessità!",
+      service_desc: "Sappiamo che durante qualsiasi viaggio gli imprevisti sono sempre in agguato dietro l’angolo, per questo abbiamo qui elencato una serie di farmacie che possono esservi d’aiuto rapidamente per gestire qualsiasi esigenza. \n" +
+        "Molti degli edifici qui presentati sono storici, poiché situati nel centro cittadino, come ad esempio la meravigliosa Farmacia Alberani o in particolare la Lloyds Centrale, situata all’interno di Palazzo D’Accursio, che offre servizio 24 ore su 24.\n"
     },
     {
       name: "Ristorazione",
       imgBackground: "ristorazione01.jpg",
+      carousel_desc: "Non sapete dove mangiare? Qui la selezione dei ristoranti del team di insideBO!",
+      service_desc: "Bologna viene definita “la Grassa” proprio per la sua storia culinaria. L’Emilia-Romagna ed in particolare il suo capoluogo sono una delle mete preferite dai turisti sotto questo punto di vista. \n" +
+        "Per questo motivo ci si può ritrovare sopraffatti dall’incredibile quantità di osterie e ristoranti che tappezzano il centro cittadino. \n" +
+        "Il team di insideBO vi propone quindi una lista dei migliori ristoranti che secondo noi vale la pena provare durante il vostro soggiorno a Bologna. \n" +
+        "Le prime tre osterie, ovvero 051, Osteria del Cappello e Al Pappagallo, offrono il gusto dei piatti tradizionali come tortellini e lasagne avvolti dall’accogliente atmosfera del centro storico. 051 infatti si trova a lato della chiesa di San Petronio, mente Al Pappagallo è situato in Piazza della Mercanzia. \n" +
+        "Osteria Bartolini e Vasinikò invece non si allontanano molto dal centro storico, ma offrono un’esperienza culinaria diversa seppur sempre di qualità eccelsa. Il primo ristorante è di pesce mentre il secondo propone pizze napoletane di livello.\n" +
+        "Concludiamo con Ca’ Shin e La Bottega di Franco che si spostano dal centro per lasciare spazio al verde dei colli e della campagna bolognese, proposte per coloro che amano la natura ma non vogliono rinunciare ad un buon piatto di tagliatelle al ragù!\n"
     },
   ]
   const servicetype0 = await models.ServiceType.create(serviceTypeList[0])
