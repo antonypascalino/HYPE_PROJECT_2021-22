@@ -9,7 +9,7 @@
     </section>
     <div class="carouselDiv">
       <div class="indicatorList">
-        <select-filter @filter-change="filterBySeason" />
+        <select-filter class="select-filter" @filter-change="filterBySeason" />
         <div class="list">
           <carousel-indicator
             v-for="(ev, index) in filteredList"

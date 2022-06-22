@@ -42,6 +42,7 @@ label {
   vertical-align: top;
   float: right;
 } */
+
 /* Appearance of the select item */
 select {
   width: auto;
@@ -52,10 +53,10 @@ select {
   padding-bottom: 5px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #C13939;
+  background-color: #c13939;
   color: #ffffff;
-  border: 2px solid #C13939;
-  font-family: "Josefin Sans";
+  border: 2px solid #c13939;
+  font-family: 'Josefin Sans';
   font-size: 1.1vw;
   float: right;
   width: 50%;
@@ -66,11 +67,11 @@ select {
 select:focus,
 select:hover {
   background-color: white;
-  color: #C13939;
-  font-family: "Josefin Sans";
+  color: #c13939;
+  font-family: 'Josefin Sans';
   font-size: 1.1vw;
   height: 3.8vh;
   transition: 200ms;
+  cursor: pointer;
 }
-
 </style>

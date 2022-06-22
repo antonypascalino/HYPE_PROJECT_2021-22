@@ -1,10 +1,10 @@
 <template>
   <div class="App">
-    <TheHeader/>
+    <TheHeader />
     <section class="breadcrumb-section">
       <breadcrumb
-      :default-route="[{ title: 'HOME', path: '/' }]"
-      current-page="Punti di Interesse"
+        :default-route="[{ title: 'HOME', path: '/' }]"
+        current-page="Punti di Interesse"
       />
     </section>
     <div class="carouselDiv">
@@ -12,11 +12,11 @@
         <div class="list">
           <carousel-indicator
             v-for="(poi, index) in poiList"
-            :key="poi.id"
+            :key="index"
             :index="index"
             :visibleSlide="visibleSlide"
             :title="poi.name"
-            @change="change(poi.id)"
+            @change="change(index)"
           />
         </div>
       </div>
@@ -38,8 +38,10 @@
                 :alt="poi.name"
               />
 
-            <div class="textContainer-carousel">{{ poi.name }}</div>
-            <div class="hoverText" style="font-size: 30px; width: 100%; ">{{poi.carousel_desc}}</div>
+              <div class="textContainer-carousel">{{ poi.name }}</div>
+              <div class="hoverText" style="font-size: 30px; width: 100%">
+                {{ poi.carousel_desc }}
+              </div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -58,8 +60,8 @@
               :alt="poi.name"
             />
 
-          <div class="textContainer-scroll">{{ poi.name }}</div>
-          <div class="hoverText">{{poi.carousel_desc}}</div>
+            <div class="textContainer-scroll">{{ poi.name }}</div>
+            <div class="hoverText">{{ poi.carousel_desc }}</div>
           </nuxt-link>
         </div>
       </div>
@@ -123,12 +125,12 @@ export default {
       this.direction = 'right'
     },
     change(index) {
-      if (this.visibleSlide < index - 1) {
+      if (this.visibleSlide < index) {
         this.direction = 'left'
       } else {
         this.direction = 'right'
       }
-      this.visibleSlide = index - 1
+      this.visibleSlide = index
     },
 
     wheel(deltaY) {
