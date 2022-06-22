@@ -39,7 +39,7 @@
               />
 
               <div class="textContainer-carousel">{{ poi.name }}</div>
-              <div class="hoverText" style="font-size: 30px; width: 100%">
+              <div class="hoverText">
                 {{ poi.carousel_desc }}
               </div>
             </nuxt-link>
@@ -61,7 +61,7 @@
             />
 
             <div class="textContainer-scroll">{{ poi.name }}</div>
-            <div class="hoverText">{{ poi.carousel_desc }}</div>
+            <div class="hoverText scroll">{{ poi.carousel_desc }}</div>
           </nuxt-link>
         </div>
       </div>
@@ -206,34 +206,39 @@ export default {
 .imageContainer.hover .hoverText {
   visibility: visible;
   opacity: 1;
-  bottom: 20%;
-  transition: 350ms ease-in-out;
+  bottom: 5%;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
 }
 
 .imageContainer:hover .carouselImg,
 .imageContainer.hover .carouselImg {
-  -webkit-filter: blur(4px);
+  -webkit-filter: blur(4px) brightness(70%);
   cursor: pointer;
-  transition: 200ms ease-in-out;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
 }
 
 .imageContainer:hover .carouselImg.image-scroll,
 .imageContainer.hover .carouselImg.image-scroll {
-  -webkit-filter: blur(4px);
+  -webkit-filter: blur(4px) brightness(70%);
   cursor: pointer;
-  transition: 200ms ease-in-out;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
 }
 
 .imageContainer:hover .textContainer-carousel,
 .imageContainer.hover .textContainer-carousel {
-  bottom: 40%;
+  bottom: 20%;
   transition: 400ms ease-in-out;
+  transition-delay: 200ms;
 }
 
 .imageContainer:hover .textContainer-scroll,
 .imageContainer.hover .textContainer-scroll {
-  bottom: 40%;
+  bottom: 20%;
   transition: 400ms ease-in-out;
+  transition-delay: 200ms;
 }
 
 .carouselImg {
@@ -243,7 +248,7 @@ export default {
   height: 74vh;
   aspect-ratio: auto;
   object-fit: cover;
-  transition: 200ms ease-in-out;
+  transition: 400ms ease-in-out;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -279,10 +284,11 @@ div.textContainer-scroll {
   text-transform: uppercase;
   float: left;
   position: absolute;
-  width: 100%;
+  width: 56%;
   /*border: solid 2px blue;*/
   margin-bottom: 0;
   bottom: 0;
+  transition: 400ms ease-in-out;
 }
 
 div.textContainer-carousel {
@@ -302,21 +308,25 @@ div.textContainer-carousel {
 
 div.hoverText {
   color: white;
-  font-size: 3vw;
+  font-size: 2vw;
   line-height: normal;
   font-family: 'Josefin Sans';
   font-style: italic;
   float: left;
   position: absolute;
-  width: 30%;
   /*border: solid 2px blue;*/
   margin-bottom: 0;
   bottom: 0;
   height: auto;
-  left: 0;
+  left: 5px;
   visibility: hidden;
   opacity: 0;
-  transition: 350ms ease-in-out;
+  transition: 400ms ease-in-out;
+  width: 100%;
+}
+
+div.hoverText.scroll {
+  width: 70vw;
 }
 
 span {

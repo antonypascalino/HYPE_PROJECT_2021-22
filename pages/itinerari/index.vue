@@ -1,6 +1,6 @@
 <template>
   <div class="App">
-    <TheHeader/>
+    <TheHeader />
     <section class="breadcrumb-section">
       <breadcrumb
         :default-route="[{ title: 'Home', path: '/' }]"
@@ -38,8 +38,10 @@
                 :alt="it.name"
               />
 
-            <div class="textContainer-carousel">{{ it.name }}</div>
-            <div class="hoverText"  style="font-size: 30px; width: 100%; ">{{it.carousel_desc}}</div>
+              <div class="textContainer-carousel">{{ it.name }}</div>
+              <div class="hoverText" style="font-size: 30px; width: 100%">
+                {{ it.carousel_desc }}
+              </div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -59,7 +61,7 @@
             />
           </nuxt-link>
           <div class="textContainer-scroll">{{ it.name }}</div>
-          <div class="hoverText">{{it.carousel_desc}}</div>
+          <div class="hoverText scroll">{{ it.carousel_desc }}</div>
         </div>
       </div>
     </div>
@@ -168,7 +170,6 @@ export default {
     Breadcrumb,
   },
 }
-
 </script>
 
 <style>

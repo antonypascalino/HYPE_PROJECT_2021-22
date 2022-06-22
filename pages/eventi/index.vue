@@ -8,9 +8,14 @@
       />
     </section>
     <div class="carouselDiv">
-      <div class="indicatorList">
-        <select-filter class="select-filter" @filter-change="filterBySeason" />
-        <div class="list">
+      <div class="indicatorList events">
+        <div class="filter-container">
+          <select-filter
+            class="select-filter"
+            @filter-change="filterBySeason"
+          />
+        </div>
+        <div class="list events">
           <carousel-indicator
             v-for="(ev, index) in filteredList"
             :key="ev.id"
@@ -62,7 +67,7 @@
             />
           </nuxt-link>
           <div class="textContainer-scroll">{{ ev.name }}</div>
-          <div class="hoverText">{{ ev.carousel_desc }}</div>
+          <div class="hoverText scroll">{{ ev.carousel_desc }}</div>
         </div>
       </div>
     </div>
@@ -194,187 +199,31 @@ export default {
 </script>
 
 <style>
-.breadcrumb-section {
-  margin-top: 70px;
-  background: transparent;
+div.indicatorList.events {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
 }
 
-.carouselDiv {
-  padding-top: 2%;
-  padding-left: 4%;
-  width: 100%;
-  height: 90vh;
-}
-
-/*Tolto carosuelSlide e spostato in CarouselSlide component*/
-
-.imageContainer {
-  position: relative;
-  width: 70vw;
-  height: 74vh;
-  margin-top: 7vh;
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-}
-
-.imageContainer:hover .hoverText,
-.imageContainer.hover .hoverText {
-  visibility: visible;
-  opacity: 1;
-  bottom: 20%;
-  transition: 350ms ease-in-out;
-}
-
-.imageContainer:hover .carouselImg,
-.imageContainer.hover .carouselImg {
-  -webkit-filter: blur(4px);
-  cursor: pointer;
-  transition: 200ms ease-in-out;
-}
-
-.imageContainer:hover .carouselImg.image-scroll,
-.imageContainer.hover .carouselImg.image-scroll {
-  -webkit-filter: blur(4px);
-  cursor: pointer;
-  transition: 200ms ease-in-out;
-}
-
-.imageContainer:hover .textContainer-carousel,
-.imageContainer.hover .textContainer-carousel {
-  bottom: 40%;
-  transition: 400ms ease-in-out;
-}
-
-.imageContainer:hover .textContainer-scroll,
-.imageContainer.hover .textContainer-scroll {
-  bottom: 40%;
-  transition: 400ms ease-in-out;
-}
-
-.carouselImg {
-  display: block;
-  margin-left: 0;
-  width: 100%;
-  height: 74vh;
-  aspect-ratio: auto;
-  object-fit: cover;
-  transition: 200ms ease-in-out;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.carouselScroll {
+div.list.events {
   width: auto;
-  left: 0;
-  margin-right: 0;
-}
-
-.imageContainer.container-scroll {
-  position: relative;
-  height: 38vh;
-  width: 70vh;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  margin-left: 15vw;
-}
-
-.carouselImg.image-scroll {
-  display: block;
-  margin-bottom: 50px;
-  margin-left: 0;
-  width: 70vw;
-  height: 38vh;
-  aspect-ratio: auto;
-  object-fit: cover;
-}
-
-div.textContainer-scroll {
-  color: white;
-  font-size: 5vw;
-  line-height: normal;
-  font-family: 'Josefin Sans';
-  text-transform: uppercase;
-  float: left;
-  position: absolute;
-  width: 100%;
-  /*border: solid 2px blue;*/
-  margin-bottom: 0;
-  bottom: 0;
-}
-
-div.textContainer-carousel {
-  color: white;
-  font-size: 5vw;
-  line-height: normal;
-  font-family: 'Josefin Sans';
-  text-transform: uppercase;
-  float: left;
-  position: absolute;
-  width: 56%;
-  /*border: solid 2px blue;*/
-  margin-bottom: 0;
-  bottom: 0;
-  transition: 400ms ease-in-out;
-}
-
-div.hoverText {
-  color: white;
-  font-size: 3vw;
-  line-height: normal;
-  font-family: 'Josefin Sans';
-  font-style: italic;
-  float: left;
-  position: absolute;
-  width: 30%;
-  /*border: solid 2px blue;*/
-  margin-bottom: 0;
-  bottom: 0;
-  height: auto;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: 350ms ease-in-out;
-}
-
-span {
-  top: 50%;
   /*border: solid 2px yellow;*/
+  margin-top: 50px;
 }
 
-.App {
-  background-color: #f2f2f2;
+.filter-container {
+  /*border: solid 2px black;*/
   height: auto;
+  width: auto;
 }
 
-body {
-  overscroll-behavior: none;
-  background-color: #f2f2f2;
-}
-
-div.indicatorList {
-  /*border: solid 2px blue;*/
-  width: 23vw;
-  height: 76vh;
-  position: relative;
-  float: right;
-  margin-top: 4%;
-  margin-right: 2%;
-  padding: 0;
-  font-size: 20px;
+.indicatorList.events .carousel-indicator {
+  height: 5vh;
 }
 
 @media screen and (max-width: 880px) {
-  .indicatorList {
-    display: none;
-  }
-  .carousel {
-    display: none;
-  }
-
-  .carouselDiv {
-    padding-left: 0;
-  }
-}
-
-@media screen and (min-width: 881px) {
-  .carouselScroll {
+  div.indicatorList.events {
     display: none;
   }
 }
