@@ -261,12 +261,12 @@ export default {
 .imageContainer.container-scroll {
   position: relative;
   height: 38vh;
-  width: 70vh;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   margin-left: 15vw;
+  margin-right: 0;
 }
 
-.carouselImg.image-scroll {
+img.carouselImg.image-scroll {
   display: block;
   margin-bottom: 50px;
   margin-left: 0;
