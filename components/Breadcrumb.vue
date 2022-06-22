@@ -50,6 +50,9 @@ ul.breadcrumb {
   margin-left: 12px;
   margin-bottom:-30px;
   font-size: 20px;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bold;
 
 }
 /* Apperence of the list elements  */

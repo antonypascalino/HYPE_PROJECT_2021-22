@@ -144,7 +144,7 @@ export default {
 
 }
 .section-la-nostra-missione{
-  font-family: 'Inria Sans';
+  font-family: 'Raleway';
   font-style: normal;
   font-size: 17px;
   margin-left: 8px;

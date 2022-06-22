@@ -14,11 +14,13 @@ export default async (models) => {
       name: "Piazza Maggiore",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       carousel_desc: "Il cuore di Bologna, da qui inizia il nostro viaggio.",
-      description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.\n" +
+      description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.\n\n" +
         "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere).\n" +
         "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
-      imgBackground: "piazzaMaggiore01.jpg",
-      imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore03.jpg","piazzaMaggiore04.jpg"],
+      imgBackground: "piazzaMaggiore03.jpg",
+      imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore01.jpg","piazzaMaggiore04.jpg"],
+      poi_address: "",
+      poi_website: "",
       x:44.49371,
       y:11.34304
     },
@@ -124,13 +126,13 @@ export default async (models) => {
     },
     {
       name: "Basilica di Santo Stefano",
-      visit_info:"Aperta tutti i giorni 8.00 – 19.00 (durante le funzioni religiose la visita turistica potrebbe essere limitata o sospesa.",
+      visit_info:"Aperta tutti i giorni 8.00 – 19.00 (durante le funzioni religiose la visita turistica potrebbe essere limitata o sospesa).",
       carousel_desc: "Un complesso di chiese antichissimo e ricco di storia.",
       description: "Conosciuto anche come il complesso delle “Sette Chiese”, si affaccia sul lato sud-est della piazza omonima.\n" +
         "Fondata in epoca romana intorno al 100 d.C., la basilica, inizialmente tempio pagano dedicato ad Iside, fu soggetto di numerose ricostruzioni ed ampliamenti che passano dall’epoca romana alle prime invasioni longobarde. Gli ultimi edifici risalgono al periodo tra il X e il XIII secolo e furono edificati dall’organo dei Benedettini.\n" +
         "La chiesa del Crocefisso di origine longobarda si affaccia su Piazza Santo Stefano mentre all’interno si hanno cortili di stampo romano, come il cortile di Pilato ed il museo che conserva opere di diverse epoche.\n" ,
-      imgBackground: "basilicaSantoStefano01.jpg",
-      imgArray:["basilicaSantoStefano02.jpg","basilicaSantoStefano03.jpg"],
+      imgBackground: "basilicaSantoStefano04.jpg",
+      imgArray:["basilicaSantoStefano01.jpg","basilicaSantoStefano02.jpg","basilicaSantoStefano03.jpg"],
       x:44.49207,
       y:11.34877
     },
@@ -200,8 +202,8 @@ export default async (models) => {
       description: "Partendo da Porta Saragozza si può procedere con una lunga camminata di quasi 4km interamente all’ombra di un complesso di un numero simbolico 666 portici. Giunti a destinazione in cima al Colle della Guardia si potrà accedere al Santuario della Madonna di San Luca. \n" +
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
-      imgBackground: "porticiSanLuca01.png",
-      imgArray:["porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
+      imgBackground: "porticiSanLuca04.jpg",
+      imgArray:["porticiSanLuca01.jpg","porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
       x:44.47909,
       y:11.29812
     },

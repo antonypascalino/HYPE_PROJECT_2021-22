@@ -257,6 +257,7 @@ export default {
   aspect-ratio: auto;
   object-fit: cover;
   transition: 200ms ease-in-out;
+  filter: brightness(90%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -310,6 +311,7 @@ div.textContainer-carousel {
   /*border: solid 2px blue;*/
   margin-bottom: 0;
   bottom: 0;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.35);
   transition: 400ms ease-in-out;
 }
 

@@ -101,11 +101,21 @@ export default {
 </script>
 <style>
 
+.page-container{
+  background-color: #f2f2f2;
+}
+
+
+
 .section-description{
-  font-family: 'Helvetica';
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
+  font-weight: 500;
+  background-color: #f2f2f2;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .page-container{
@@ -114,6 +124,7 @@ export default {
 .body-container{
   margin-top: 110px;
 }
+
 .title-container{
   margin-top: 40px;
   width: 100%;
@@ -125,8 +136,10 @@ export default {
   line-height: 50px;
   display: flex;
   color: #C13939;
-  background-color: #EBEBEB;
+  background-color: #f2f2f2;
   padding-left: 5px;
+  margin-left: 80px;
+
 }
 
 .button-container{
@@ -139,7 +152,7 @@ export default {
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
-  font-size: 22px
+  font-size: 22px;
 }
 
 .row{
@@ -158,6 +171,7 @@ export default {
 .button-container{
   text-align: right;
 }
+
 
 
 
