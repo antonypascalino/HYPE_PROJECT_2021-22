@@ -1,6 +1,6 @@
 <template>
   <div class="App">
-    <TheHeader/>
+    <TheHeader />
     <section class="breadcrumb-section">
       <breadcrumb
         :default-route="[{ title: 'HOME', path: '/' }]"
@@ -9,7 +9,7 @@
     </section>
     <div class="carouselDiv">
       <div class="indicatorList">
-        <select-filter @filter-change="filterBySeason"/>
+        <select-filter @filter-change="filterBySeason" />
         <div class="list">
           <carousel-indicator
             v-for="(ev, index) in filteredList"
@@ -17,13 +17,13 @@
             :index="index"
             :visibleSlide="visibleSlide"
             :title="ev.name"
-            @change="change(ev.id)"
+            @change="change(index)"
           />
         </div>
       </div>
       <carousel @next="next" @prev="prev" class="carousel">
         <carousel-slide
-          v-for="(ev, index) in eventList"
+          v-for="(ev, index) in filteredList"
           :key="index"
           :index="index"
           :visibleSlide="visibleSlide"
@@ -39,8 +39,10 @@
                 :alt="ev.name"
               />
 
-            <div class="textContainer-carousel">{{ ev.name }}</div>
-            <div class="hoverText" style="font-size: 30px; width: 100%; ">{{ev.carousel_desc}}</div>
+              <div class="textContainer-carousel">{{ ev.name }}</div>
+              <div class="hoverText" style="font-size: 30px; width: 100%">
+                {{ ev.carousel_desc }}
+              </div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -60,7 +62,7 @@
             />
           </nuxt-link>
           <div class="textContainer-scroll">{{ ev.name }}</div>
-          <div class="hoverText">{{ev.carousel_desc}}</div>
+          <div class="hoverText">{{ ev.carousel_desc }}</div>
         </div>
       </div>
     </div>
@@ -73,7 +75,7 @@ import CarouselSlide from '~/components/CarouselSlide'
 import CarouselIndicator from '~/components/CarouselIndicator'
 import TheHeader from '~/components/TheHeader'
 import Breadcrumb from '~/components/Breadcrumb'
-import selectFilter from "~/components/SelectFilter";
+import selectFilter from '~/components/SelectFilter'
 
 export default {
   layout: 'empty',
@@ -124,29 +126,28 @@ export default {
       this.direction = 'right'
     },
     change(index) {
-      if (this.visibleSlide < index - 1) {
+      if (this.visibleSlide < index) {
         this.direction = 'left'
       } else {
         this.direction = 'right'
       }
-      this.visibleSlide = index - 1
+      this.visibleSlide = index
     },
     // Change the season filter option
-    filterBySeason (chosenValue) {
-      this.filteredList = [];
-      if(chosenValue === 'Estate'){
-        for (const x of this.eventList){
-          if(x.type === 0)
-            this.filteredList.push(x)
+    filterBySeason(chosenValue) {
+      this.filteredList = []
+      if (chosenValue === 'Estate') {
+        for (const x of this.eventList) {
+          if (x.type === 0) this.filteredList.push(x)
         }
-      }else if (chosenValue === 'Inverno'){
-        for (const x of this.eventList){
-          if(x.type === 1)
-            this.filteredList.push(x)
+      } else if (chosenValue === 'Inverno') {
+        for (const x of this.eventList) {
+          if (x.type === 1) this.filteredList.push(x)
         }
-      }else{
+      } else {
         this.filteredList = this.eventList
       }
+      this.visibleSlide = 0
     },
     wheel(deltaY) {
       // adding .once in the template after @wheel
@@ -187,7 +188,7 @@ export default {
     TheHeader,
     CarouselIndicator,
     Breadcrumb,
-    selectFilter
+    selectFilter,
   },
 }
 </script>
