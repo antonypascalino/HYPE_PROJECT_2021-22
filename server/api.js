@@ -72,15 +72,16 @@ async function initializeDatabaseConnection() {
     phone_number: DataTypes.STRING
   })
 
+
   // Creating the N -> N association between Itinerary and Poi
-  Itinerary.belongsToMany(Poi, { through: 'poiInItinerary',foreignKey: 'ItineraryId'}) // to show poi in itinerary page
-  Poi.belongsToMany(Itinerary, { through: 'poiInItinerary',foreignKey: 'PoiId'}) // to show poi in itinerary page
+  Itinerary.belongsToMany(Poi, { through: 'PoiItinerary',foreignKey: 'ItineraryId'}) // to show poi in itinerary page
+  Poi.belongsToMany(Itinerary, { through: 'PoiItinerary',foreignKey: 'PoiId'}) // to show poi in itinerary page
 
   // Creating the 1 -> N association between POI and Event
   Poi.hasMany(Events)
   Events.belongsTo(Poi)
 
-  // Creating the 1 -> N association between POI and Event
+  // Creating the 1 -> N association between Service and Service Type
   ServiceType.hasMany(Service)
   Service.belongsTo(ServiceType)
 
@@ -90,7 +91,7 @@ async function initializeDatabaseConnection() {
     Events,
     Itinerary,
     ServiceType,
-    Service,
+    Service
   }
 }
 
