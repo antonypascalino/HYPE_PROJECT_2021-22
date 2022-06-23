@@ -1,10 +1,10 @@
 <template>
   <div class="App">
-    <TheHeader/>
+    <TheHeader />
     <section class="breadcrumb-section">
       <breadcrumb
-      :default-route="[{ title: 'HOME', path: '/' }]"
-      current-page="Punti di Interesse"
+        :default-route="[{ title: 'HOME', path: '/' }]"
+        current-page="Punti di Interesse"
       />
     </section>
     <div class="carouselDiv">
@@ -37,9 +37,10 @@
                 :src="require(`@/static/Poi/${poi.imgBackground}`)"
                 :alt="poi.name"
               />
-
-            <div class="textContainer-carousel">{{ poi.name }}</div>
-            <div class="hoverText" style="font-size: 30px; width: 100%; ">{{poi.carousel_desc}}</div>
+              <div class="textContainer-carousel">{{ poi.name }}</div>
+              <div class="hoverText" style="font-size: 30px; width: 100%">
+                {{ poi.carousel_desc }}
+              </div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -58,8 +59,8 @@
               :alt="poi.name"
             />
 
-          <div class="textContainer-scroll">{{ poi.name }}</div>
-          <div class="hoverText">{{poi.carousel_desc}}</div>
+            <div class="textContainer-scroll">{{ poi.name }}</div>
+            <div class="hoverText">{{ poi.carousel_desc }}</div>
           </nuxt-link>
         </div>
       </div>
@@ -192,14 +193,6 @@ export default {
 
 /*Tolto carosuelSlide e spostato in CarouselSlide component*/
 
-.imageContainer {
-  position: relative;
-  width: 70vw;
-  height: 74vh;
-  margin-top: 7vh;
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-}
-
 .imageContainer:hover .hoverText,
 .imageContainer.hover .hoverText {
   visibility: visible;
@@ -234,6 +227,14 @@ export default {
   transition: 400ms ease-in-out;
 }
 
+.imageContainer {
+  position: relative;
+  width: 70vw;
+  height: 74vh;
+  margin-top: 7vh;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
 .carouselImg {
   display: block;
   margin-left: 0;
@@ -243,6 +244,21 @@ export default {
   object-fit: cover;
   transition: 200ms ease-in-out;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.textContainer-carousel {
+  color: white;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 56%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+  transition: 400ms ease-in-out;
 }
 
 .carouselScroll {
@@ -281,21 +297,6 @@ div.textContainer-scroll {
   /*border: solid 2px blue;*/
   margin-bottom: 0;
   bottom: 0;
-}
-
-div.textContainer-carousel {
-  color: white;
-  font-size: 5vw;
-  line-height: normal;
-  font-family: 'Josefin Sans';
-  text-transform: uppercase;
-  float: left;
-  position: absolute;
-  width: 56%;
-  /*border: solid 2px blue;*/
-  margin-bottom: 0;
-  bottom: 0;
-  transition: 400ms ease-in-out;
 }
 
 div.hoverText {
