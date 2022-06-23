@@ -31,7 +31,6 @@ export default {
         attribution:'© OpenStreetMap'
       }).addTo(this.map);
       L.marker([parseFloat(this.x), parseFloat(this.y)]).addTo(this.map);
-      L.marker([parseFloat(this.x), parseFloat(this.y)]).addTo(this.map);
   },
   beforeDestroy() {
     if (this.map) {

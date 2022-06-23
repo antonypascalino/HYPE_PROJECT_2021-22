@@ -22,7 +22,7 @@
 <style scoped>
 .card {
   border: 2px solid lightgray;
-  background-color: #EBEBEB;
+  background-color: white;
 }
 .card-title{
   height:30px
