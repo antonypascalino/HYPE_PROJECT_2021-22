@@ -140,7 +140,7 @@ export default {
   line-height: 50px;
   display: flex;
   color: #C13939;
-  background-color: #EBEBEB;
+  background-color: #f2f2f2;
 
 }
 .section-la-nostra-missione{

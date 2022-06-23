@@ -9,8 +9,14 @@
           :current-page=name
         />  </section>
 
+      <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
+
+      <div class = "itinerario-container" >
+        <img class = "itinerario-img" src = "@/static/itinerarioidea1.jpg"/>
+      </div>
+
       <section class="section-description">
-        <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
+
         <div class="poi-card-container row mt-4">
           <cardInfo
             v-for="(poi, index) of poiList"
@@ -162,6 +168,29 @@ section-description{
   float:right;
   margin-right: 20px;
   margin-top: -10px;
+}
+
+.itinerario-container{
+  width:100%;
+  height: 300px;
+  margin-left: 0;
+  margin-top: 0;
+  align-content: center;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+}
+
+.itinerario-img{
+  object-fit: cover;
+  width: auto;
+  height: auto;
+  aspect-ratio: auto;
+  margin-left: 0;
+  vertical-align: center;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
 }
 
 
