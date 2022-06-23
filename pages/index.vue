@@ -14,7 +14,7 @@
     <!--Points of interest section -->
     <section class="section-container">
      <h1 class="section-title">IN PRIMO PIANO</h1>
-      <!--Cards of Points of interest (Bootstrap)  -->
+      <!--Cards of Points of interest (Bootstrap)-->
       <div class="">
         <div class="poi-card-container row mt-4">
           <cardInfo
@@ -66,13 +66,12 @@ import cardInfo from "~/components/CardInfo";
 import staticFullImage from "~/components/StaticFullImage";
 import baseButton from "~/components/BaseButton";
 export default {
-
   components:{
     cardInfo,
     staticFullImage,
     baseButton
   },
-  // function to implement the scroll
+  // function to implement the scroll in the homepage
   methods: {
     goto(refName) {
       const element = this.$refs[refName];

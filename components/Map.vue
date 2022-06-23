@@ -54,7 +54,8 @@ export default {
 
 @media screen and (max-width: 590px ){
   #mapContainer{
-    width: 90vw;
+    width: 93vw;
+    left: 2px;
   }
 
 }

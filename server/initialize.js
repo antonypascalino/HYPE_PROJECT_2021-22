@@ -412,7 +412,7 @@ export default async (models) => {
   ]
   await models.Events.bulkCreate(eventList)
 
-  //Service Table
+
   const serviceTypeList = [
     {
       name: "Banche",

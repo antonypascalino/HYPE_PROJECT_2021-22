@@ -95,11 +95,12 @@ export default {
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
-  font-size: 22px
+  font-size: 22px;
+  font-family: 'Raleway';
 }
 section-description{
 
-  font-family: 'Inria Sans';
+  font-family: 'Raleway';
   font-style: normal;
   font-size: 17px;
   margin-left: 8px;

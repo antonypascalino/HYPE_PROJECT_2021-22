@@ -12,15 +12,14 @@
 
     <div class="body-container">
       <section class="section-chi-siamo">
+
         <div class="title-container">La nostra Sede e contatti</div>
-        <div class="row">
-          <div class="col-sm-9"><Map :x=43.78198 :y=11.28143 ></Map></div>
-          <div class="col-sm-3">
-            <br><br><br>
+        <Map :x=44.49693 :y=11.33797 ></Map>
+ <br><br>
+
             <p class="address-container">
               <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
-
-              <br />
+             <br>
               <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
             </p>
 
@@ -37,15 +36,12 @@
               <span class="mdi mdi-email"></span>
               <a href="insideBO@gmail.com">insideBO@gmail.com</a>
             </div>
-          </div>
-        </div>
-
 
       </section>
 
       <section class="section-la-nostra-missione">
         <div class="title-container">La nostra Missione</div>
-        <p>Per noi non è il Cittadino che deve arrivare all’informazione ma è l’informazione a doverlo raggiungere, in un' ottica "Prima l'Utente" . Sempre. InsideBO è la nostra piccola rivoluzione.
+        <p class="text-container">Per noi non è il Cittadino che deve arrivare all’informazione ma è l’informazione a doverlo raggiungere, in un' ottica "Prima l'Utente" . Sempre. InsideBO è la nostra piccola rivoluzione.
           Il nostro intento è quello di attirare i turisti nella nostra bellissima Italia. Dopo 2 anni così difficili per tutti noi, è il momento di tornare a scoprire tutto ciò che di bello la nostra Bologna offre. </p>
       </section>
 
@@ -102,10 +98,7 @@ export default {
 .section-chi-siamo{
   font-family: 'Inria Sans';
   font-style: normal;
-
   font-size: 17px;
-  margin-left: 8px;
-  margin-right: 8px;
 }
 
 .section-la-nostra-missione{
@@ -113,11 +106,9 @@ export default {
   font-style: normal;
 
   font-size: 17px;
-  margin-left: 8px;
-  margin-right: 8px;
-}
-p{
 
+}
+.text-container{
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
@@ -144,5 +135,6 @@ a{
 .breadcrumb-section{
   margin-top: 60px;
 }
+
 
 </style>
