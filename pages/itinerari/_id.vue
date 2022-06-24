@@ -86,13 +86,14 @@ export default {
     const { data } = await $axios.get(
       'http://localhost:3000/api/itineraries/' + id
     )
+    // const data2 = await $axios.get('http://localhost:3000/api/itPoi/' + id)
     return {
       name: data.name,
       duration: data.duration,
       imgBackground: data.imgBackground,
       description: data.description,
       map: data.map,
-      link:data.link
+      link:data.link,
     }
   },
   data() {

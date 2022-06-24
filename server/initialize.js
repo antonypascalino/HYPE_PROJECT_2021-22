@@ -723,4 +723,11 @@ export default async (models) => {
   ]
   await models.Itinerary.bulkCreate(itineraryList)
 
+  const Itinerary_PoiList = [
+    {
+      ItineraryId:1,
+      PoiId:1
+    }
+  ]
+  await models.Itinerary_Poi.bulkCreate(Itinerary_PoiList)
 }

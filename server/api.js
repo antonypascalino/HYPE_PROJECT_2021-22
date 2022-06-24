@@ -74,9 +74,16 @@ async function initializeDatabaseConnection() {
   })
 
 
-  // Creating the N -> N association between Itinerary and Poi
-  Itinerary.belongsToMany(Poi, { through: 'PoiItinerary',foreignKey: 'ItineraryId'}) // to show poi in itinerary page
-  Poi.belongsToMany(Itinerary, { through: 'PoiItinerary',foreignKey: 'PoiId'}) // to show poi in itinerary page
+  const Itinerary_Poi = database.define('Itineray_Poi', {})
+  Itinerary.belongsToMany(Poi, {
+    through: 'Itinerary_Poi',
+    foreignKey: 'ItineraryId',
+  }) // to show poi in itinerary page
+  Poi.belongsToMany(Itinerary, {
+    through: 'Itinerary_Poi',
+    foreignKey: 'PoiId',
+  }) // to show poi in itinerary page
+
 
   // Creating the 1 -> N association between POI and Event
   Poi.hasMany(Events)
@@ -92,7 +99,8 @@ async function initializeDatabaseConnection() {
     Events,
     Itinerary,
     ServiceType,
-    Service
+    Service,
+    Itinerary_Poi
   }
 }
 
@@ -288,6 +296,19 @@ async function runMainApi() {
     const id = +req.params.id
     const result = await models.Itinerary.findOne({ where: { id }})
     return res.json(result)
+  })
+
+  // HTTP GET api that returns a specific point of interest
+  app.get('/itPoi/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Itinerary_Poi.findOne({ where: { ItineraryId:id }})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        poiId: element.poiId,
+      })
+    }
+    return res.json(filtered)
   })
 
 }
