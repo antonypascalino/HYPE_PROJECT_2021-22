@@ -128,7 +128,6 @@ export default {
     height: 60%;
     width: 100%;
   }
-
   .round-container {
     width: 80px;
     height: 80px;

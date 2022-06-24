@@ -45,7 +45,16 @@
 
       <section class="section-description">
         <div class="title-container">MAPPA ITINERARIO</div>
+        <div class="map-container">
+          <a  target="_blank" :href=link>
+
+          <img class="map-image" :src="require(`@/static/Itineraries/${this.map}`)"/>
+          </a>
+          <div class="map-text"> <a target="_blank" style="text-decoration: none;color: #C13939" :href=link> Apri in Maps</a></div>
+        </div>
+
       </section>
+
       <div class="button-container">
         <baseButton title="Tutti gli itinerari" goto="/itinerari/">
         </baseButton>
@@ -83,6 +92,7 @@ export default {
       imgBackground: data.imgBackground,
       description: data.description,
       map: data.map,
+      link:data.link
     }
   },
   data() {
@@ -169,5 +179,49 @@ export default {
 }
 .main-page {
   background-color: #f2f2f2;
+}
+
+.map-container{
+  margin:20px;
+  width:60%;
+  overflow: hidden;
+  transition: 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+}
+
+.map-image {
+  aspect-ratio: auto;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 300ms ease-in-out;
+  text-align: center;
+}
+
+.map-container:hover .map-text,
+.map-container.hover .map-text {
+  opacity: 100%;
+  transition: 300ms ease-in-out;
+}
+
+.map-container:hover .map-image,
+.map-container.hover .map-image {
+  opacity: 30%;
+  transition: 300ms ease-in-out;
+}
+.map-text {
+  opacity: 0;
+  color: #c13939;
+  position: absolute;
+  text-align: center;
+  text-justify: inter-word;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  font-size: 1.2vw;
 }
 </style>

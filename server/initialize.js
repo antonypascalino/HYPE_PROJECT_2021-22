@@ -699,23 +699,26 @@ export default async (models) => {
       description: "Partendo da Piazza Maggiore, cuore della città, passeremo in rassegna i principali monumenti del centro storico. La visita alla Basilica di San Petronio sarà seguita dai meravigliosi Palazzo D’Accursio e Re Enzo. Ci soffermeremo in Piazza Nettuno, dove si trova l’omonima e celebre fontana. Infine, passeggiando lungo via Rizzoli raggiungeremo il simbolo di Bologna: la Torre degli Asinelli insieme alla Garisenda.",
       map:"mapPasseggiataInCentro01.jpg",
       duration:"La durata è di 30 minuti e si percorrono circa 500m",
-      imgBackground:"unaPasseggiataInCentro01.jpg"
+      imgBackground:"unaPasseggiataInCentro01.jpg",
+      link:"https://www.google.it/maps/dir/Piazza+Maggiore,+Piazza+Maggiore,+Bologna,+BO/Basilica+di+San+Petronio,+Piazza+Galvani,+Bologna,+BO/Palazzo+d'Accursio,+Piazza+Maggiore,+Bologna,+BO/Palazzo+Re+Enzo,+Piazza+del+Nettuno,+Bologna,+BO/Fontana+del+Nettuno,+Piazza+del+Nettuno,+Bologna,+BO/Torri+degli+Asinelli+e+della+Garisenda,+Piazza+di+Porta+Ravegnana,+Bologna,+BO/@44.4938722,11.34243,551m/data=!3m2!1e3!4b1!4m38!4m37!1m5!1m1!1s0x477fd49586d65539:0x3ec4fc9a3ae6b51e!2m2!1d11.3430945!2d44.4937544!1m5!1m1!1s0x477fd495860346b7:0xa17d71587906b0a5!2m2!1d11.3431292!2d44.4929435!1m5!1m1!1s0x477fd4959b6b5b61:0x2059a5c0518cc24!2m2!1d11.3424071!2d44.4939611!1m5!1m1!1s0x477fd4be190446a5:0x45430544efddaa74!2m2!1d11.3430307!2d44.4945242!1m5!1m1!1s0x477fd495860346b7:0x8ed55aa49aac8271!2m2!1d11.3426587!2d44.4943042!1m5!1m1!1s0x477fd4be8ea29f71:0x28631a8b221623ea!2m2!1d11.3467312!2d44.4942094!3e2?utm_medium=s2email&shorturl=1"
     },
     {
       name: "I Portici e San Luca",
       carousel_desc: "L'itinerario più lungo proposto dal team di insideBO, vi assicuriamo che ne vale assolutamente la pena!",
       description: "La partenza è appena fuori le mura, più precisamente a Porta Saragozza, dove percorreremo il famoso portico ed i suoi archi che ci conducono fino al Colle della Guardia, parte dell’appennino bolognese, dove ci attenderà il Santuario della Madonna di San Luca. Lungo il cammino ci fermeremo ad osservare lo stadio Renato Dall’Ara.",
-      map:"mapPortici01.jpg",
+      map:"mapPortici01.JPG",
       duration:"La durata è di 2 ore e si percorrono circa 4 km",
-      imgBackground:"portici01.jpg"
+      imgBackground:"portici01.jpg",
+      link:"https://www.google.it/maps/dir/Santuario+Madonna+di+San+Luca,+Santuario+Madonna+di+San+Luca,+Via+di+San+Luca,+Bologna,+BO/Portici+di+Via+san+Luca,+Via+di+San+Luca,+320,+40135+Bologna+BO/Stadio+Renato+Dall'Ara,+Via+Andrea+Costa,+Bologna,+BO/Porta+Maggiore,+Piazza+di+Porta+Maggiore,+Bologna,+BO/Colli+Bolognesi+D'Origine,+Via+Andrea+Costa,+Bologna,+BO/Portici+di+Bologna+-+Unesco,+Via+Farini,+Bologna,+BO/@44.4894026,11.2885914,8824m/data=!3m2!1e3!4b1!4m38!4m37!1m5!1m1!1s0x477fd44cf425d3d3:0xe9ab95d7f1659899!2m2!1d11.2980641!2d44.4791156!1m5!1m1!1s0x477fd5264302ebf5:0x1dff30d78fb1ecd8!2m2!1d11.3104799!2d44.4900017!1m5!1m1!1s0x477fd45d0f1547d1:0x6dbca3585c33186f!2m2!1d11.3099448!2d44.4921623!1m5!1m1!1s0x477fd4b63ad4511d:0x981028aebd6c2321!2m2!1d11.3572973!2d44.4900137!1m5!1m1!1s0x477fd443c2900001:0xebd12eb8b4f76786!2m2!1d11.3017952!2d44.4915593!1m5!1m1!1s0x477fd58ed00a9479:0xea6f44eff686a679!2m2!1d11.3435665!2d44.4913859!3e0?utm_medium=s2email&shorturl=1"
     },
     {
       name: "Bologna La Dotta ",
       carousel_desc: "Seguici in questo viaggio a scoprire il perché del soprannome 'la Dotta'!",
       description: "Partendo dalle sale mozzafiato dell’Archiginnasio, ci dirigeremo verso la biblioteca più importante della città, ovvero Sala Borsa. Continuando per Via Dell’Indipendenza, osserveremo la maestosa Cattedrale di San Pietro, per poi dirigerci verso Via Delle Moline, dove ci attenderà la suggestiva finestrella sull’omonimo canale. Da qui, proseguiremo verso il cuore dell’odierna zona universitaria, per ammirare gli splendidi edifici medievali di Via Zamboni e Piazza Verdi.",
-      map:"mapLaDotta01.jpg",
+      map:"mapLaDotta01.JPG",
       duration:"La durata è di 1 ora e si percorrono circa 2km",
-      imgBackground:"viaDelleMoline01.jpg"
+      imgBackground:"viaDelleMoline01.jpg",
+      link:"https://www.google.it/maps/dir/Archiginnasio+de+Bolonia,+Piazza+Galvani,+Bologna,+BO/Biblioteca+Salaborsa,+Piazza+del+Nettuno,+Bologna,+BO/Cattedrale+Metropolitana+di+San+Pietro,+Via+dell'Indipendenza,+Bologna,+BO/Finestrella,+Via+Piella,+Bologna,+BO/Alma+Mater+Studiorum+-+Universit%C3%A0+di+Bologna,+Via+Zamboni,+Bologna,+BO/@44.4953072,11.3440607,1103m/data=!3m2!1e3!4b1!4m32!4m31!1m5!1m1!1s0x477fd4bfc278adc1:0x991786b52ce6d4bc!2m2!1d11.34342!2d44.491972!1m5!1m1!1s0x477fd4bfc278adc1:0xc266fcbe4097cdfd!2m2!1d11.3423806!2d44.4946112!1m5!1m1!1s0x477fd4be0705c4a5:0xf8e25b961d073f1b!2m2!1d11.3444266!2d44.4956867!1m5!1m1!1s0x477fd4bd617e45e1:0x2929ff96df8e4709!2m2!1d11.3451952!2d44.4985959!1m5!1m1!1s0x477fd4bb9753a277:0xac40824c35d31af1!2m2!1d11.354157!2d44.4962318!3e2?utm_medium=s2email&shorturl=1"
     },
   ]
   await models.Itinerary.bulkCreate(itineraryList)

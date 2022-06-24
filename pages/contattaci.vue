@@ -14,7 +14,7 @@
       <section class="section-chi-siamo">
         <div class="title-container">La nostra Sede e contatti</div>
         <div class="row">
-          <div class="col-sm-9"><Map :x=43.78198 :y=11.28143 ></Map></div>
+          <div class="col-sm-9"><Map :x=43.78198 :y=11.28143 name="Via San Gervasio, 12"></Map></div>
           <div class="col-sm-3">
             <br><br><br>
             <p class="address-container">
