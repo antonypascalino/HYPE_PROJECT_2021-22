@@ -1,38 +1,41 @@
 <template>
   <main class="page-container">
     <div class="body-container">
-      <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title=nameTypeService />
+      <StaticHalfImage
+        :slide="`../Services/${imgTypeService}`"
+        :title="nameTypeService"
+      />
       <section class="breadcrumb-section3">
         <breadcrumb
-          :default-route="[{ title: 'HOME', path: '/' },{ title: 'Servizi', path: '/servizi/' }]"
+          :default-route="[
+            { title: 'HOME', path: '/' },
+            { title: 'Servizi', path: '/servizi/' },
+          ]"
           :current-page="nameTypeService"
         />
       </section>
 
-
       <section class="container1">
         <div class="title-container">DESCRIZIONE</div>
-        <p class="text-container">{{descriptionServiceType}}</p>
-
+        <p class="text-container">{{ descriptionServiceType }}</p>
       </section>
 
       <section class="container1">
         <div class="title-container">INFORMAZIONI</div>
         <!--Cards of events -->
 
-          <div class="event-card-container row mt-4">
-            <cardService
-              v-for="(s, index) of serviceList"
-              class="col-sm-1 m-2"
-              :key="`index-${index}`"
-              :name="s.name"
-              :address="s.address"
-              :opening_hours="s.opening_hours"
-              :phone="s.phone_number"
-              :website="s.website"
-            />
-          </div>
-
+        <div class="event-card-container row mt-4">
+          <cardService
+            v-for="(s, index) of serviceList"
+            class="col-sm-1 m-2"
+            :key="`index-${index}`"
+            :name="s.name"
+            :address="s.address"
+            :opening_hours="s.opening_hours"
+            :phone="s.phone_number"
+            :website="s.website"
+          />
+        </div>
       </section>
 
       <div class="button-container">
@@ -40,79 +43,68 @@
         </baseButton>
       </div>
     </div>
-
   </main>
 </template>
 
 <script>
-
 import CommonMixin from '~/mixins/common'
-import cardService from "~/components/CardService";
+import cardService from '~/components/CardService'
 
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
-  components:{
-    cardService
+  components: {
+    cardService,
   },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
     // const { data } = await $axios.get('api/services/'+ id)
-    const serviceType = await $axios.get('http://localhost:3000/api/specificService/'+ id)
-    const service = await $axios.get('http://localhost:3000/api/Services/'+ id)
+    const serviceType = await $axios.get(
+      'http://localhost:3000/api/specificService/' + id
+    )
+    const service = await $axios.get('http://localhost:3000/api/Services/' + id)
     return {
-      nameTypeService:(serviceType.data)[0].name,
-      imgTypeService:(serviceType.data)[0].imgBackground,
-      descriptionServiceType:(serviceType.data)[0].service_desc,
-      serviceList: service.data
+      nameTypeService: serviceType.data[0].name,
+      imgTypeService: serviceType.data[0].imgBackground,
+      descriptionServiceType: serviceType.data[0].service_desc,
+      serviceList: service.data,
     }
   },
 
   methods: {
     backToList() {
       this.$router.push('/servizi/')
-    }
+    },
   },
-  head(){
+  head() {
     return {
-      title: "insideBO | "+this.nameTypeService
+      title: 'insideBO | ' + this.nameTypeService,
     }
   },
-  mounted(){
+  mounted() {
     const date = new Date()
     // Example on hwo to use mixinx
     console.log(this.formatMyDate(date.toLocaleDateString()))
   },
-
-
 }
 </script>
 <style>
-
-
-.text-container{
+.text-container {
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
-  font-size: 22px
-}
-section-description{
-
-  font-family: 'Inria Sans';
-  font-style: normal;
-  font-size: 17px;
-  margin-left: 8px;
-  margin-right: 8px;
+  font-size: 22px;
 }
 
-.page-container{
+.page-container {
   margin-top: -65px;
+  background-color: #f2f2f2;
 }
-.body-container{
+.body-container {
   margin-top: 110px;
 }
-.title-container{
+.title-container {
   margin-top: 40px;
   width: 100%;
   margin-top: 40px;
@@ -122,28 +114,48 @@ section-description{
   font-size: 30px;
   line-height: 50px;
   display: flex;
-  color: #C13939;
-  background-color: #EBEBEB;
-  padding-left: 5px;
+  color: #c13939;
+  background-color: #f2f2f2;
+  padding-left: 80px;
 }
-.row{
+
+.button-container {
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+}
+
+.text-container {
+  padding-top: 10px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 22px;
+}
+
+.row {
   margin: auto;
   width: 100%;
   justify-content: center;
   padding: 10px;
-
 }
-.button-container{
+.button-container {
   text-align: right;
   width: 100%;
   height: 60px;
   padding: 20px;
 }
 
-.breadcrumb-section3{
-  float:right;
+.breadcrumb-section3 {
+  float: right;
   margin-right: 20px;
   margin-top: -10px;
 }
 
+.button-container {
+  text-align: right;
+}
+
+.main-page {
+  background-color: #f2f2f2;
+}
 </style>

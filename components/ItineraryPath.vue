@@ -41,7 +41,7 @@ export default {
 .path-container {
   width: 100%;
   height: 300px;
-  /*border: 8px solid blue;*/
+  /*border: 4px solid blue;*/
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -116,5 +116,22 @@ export default {
 .round-container.hover .round-image {
   opacity: 20%;
   transition: 300ms ease-in-out;
+}
+
+@media screen and (max-width: 630px) {
+  .path-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .dashed-line {
+    transform: rotate(90deg);
+    height: 60%;
+    width: 100%;
+  }
+
+  .round-container {
+    width: 80px;
+    height: 80px;
+  }
 }
 </style>

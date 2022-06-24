@@ -108,16 +108,20 @@ export default {
 }
 </script>
 <style>
-section-description {
-  font-family: 'Inria Sans';
+.section-description {
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
-  font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;
+  font-weight: 500;
+  background-color: #f2f2f2;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .page-container {
   margin-top: -65px;
+  background-color: #f2f2f2;
 }
 .body-container {
   margin-top: 110px;
@@ -125,7 +129,6 @@ section-description {
 .title-container {
   margin-top: 40px;
   width: 100%;
-  margin-top: 40px;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 600;
@@ -134,7 +137,7 @@ section-description {
   display: flex;
   color: #c13939;
   background-color: #f2f2f2;
-  padding-left: 5px;
+  padding-left: 80px;
 }
 .row {
   margin: auto;
@@ -149,7 +152,6 @@ section-description {
 }
 
 .text-container {
-  font-family: Raleway;
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
@@ -164,5 +166,8 @@ section-description {
   float: right;
   margin-right: 20px;
   margin-top: -10px;
+}
+.main-page {
+  background-color: #f2f2f2;
 }
 </style>
