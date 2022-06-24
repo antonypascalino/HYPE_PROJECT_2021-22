@@ -12,14 +12,15 @@
 
     <div class="body-container">
       <section class="section-chi-siamo">
-
         <div class="title-container">La nostra Sede e contatti</div>
-        <Map :x=44.49693 :y=11.33797 ></Map>
- <br><br>
-
+        <div class="row">
+          <div class="col-sm-9"><Map :x=43.78198 :y=11.28143 name="Via San Gervasio, 12"></Map></div>
+          <div class="col-sm-3">
+            <br><br><br>
             <p class="address-container">
               <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
-             <br>
+
+              <br />
               <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
             </p>
 
@@ -36,6 +37,9 @@
               <span class="mdi mdi-email"></span>
               <a href="insideBO@gmail.com">insideBO@gmail.com</a>
             </div>
+          </div>
+        </div>
+
 
       </section>
 
@@ -104,10 +108,11 @@ export default {
 .section-la-nostra-missione{
   font-family: 'Inria Sans';
   font-style: normal;
-
   font-size: 17px;
-
+  margin-left: 8px;
+  margin-right: 8px;
 }
+
 .text-container{
   padding-top: 10px;
   padding-left: 8vw;
@@ -135,6 +140,5 @@ a{
 .breadcrumb-section{
   margin-top: 60px;
 }
-
 
 </style>

@@ -54,7 +54,8 @@ async function initializeDatabaseConnection() {
     imgBackground: DataTypes.STRING,
     map: DataTypes.STRING,
     duration: DataTypes.STRING,
-    carousel_desc:DataTypes.STRING
+    carousel_desc:DataTypes.STRING,
+    link: DataTypes.TEXT
 
   })
   const ServiceType = database.define("servicetype", {
@@ -275,7 +276,8 @@ async function runMainApi() {
         id: element.id,
         imgBackground:element.imgBackground,
         description:element.description,
-        carousel_desc:element.carousel_desc
+        carousel_desc:element.carousel_desc,
+        link:element.link
       })
     }
     return res.json(filtered)

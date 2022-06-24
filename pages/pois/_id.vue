@@ -1,18 +1,20 @@
 <template>
   <main class="page-container">
-
     <div class="body-container">
-      <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title=name />
+      <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
       <section class="breadcrumb-section1">
         <breadcrumb
-          :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' }]"
+          :default-route="[
+            { title: 'HOME', path: '/' },
+            { title: 'Punti di Interesse', path: '/pois/' },
+          ]"
           :current-page="name"
         />
       </section>
 
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
-        <p class="text-container">{{description}}</p>
+        <p class="text-container">{{ description }}</p>
       </section>
 
       <section class="section-description">
@@ -29,136 +31,135 @@
 
       <section class="section-description">
         <div class="title-container">DOVE SI TROVA</div>
-          <Map :x=x :y=y> </Map>
+        <Map :x="x" :y="y" :name=name> </Map>
       </section>
 
       <section class="section-description">
         <div class="title-container">INFORMAZIONI</div>
-        <p class="text-container">{{visit_info}}</p>
+        <p class="text-container">{{ visit_info }}</p>
       </section>
 
       <div class="button-container">
-    <baseButton title="Tutti i Punti di interesse" goto="/pois/">
-      </baseButton>
+        <baseButton title="Tutti i Punti di interesse" goto="/pois/">
+        </baseButton>
       </div>
     </div>
-
   </main>
 </template>
 
 <script>
-
 import CommonMixin from '~/mixins/common'
-import staticHalfImage from "~/components/StaticHalfImage";
-import Breadcrumb from '~/components/Breadcrumb.vue';
-import Map from "~/components/Map";
-import baseButton from "~/components/BaseButton";
+import staticHalfImage from '~/components/StaticHalfImage'
+import Breadcrumb from '~/components/Breadcrumb.vue'
+import Map from '~/components/Map'
+import baseButton from '~/components/BaseButton'
 
 export default {
   name: 'DetailsPage',
   mixins: [CommonMixin],
-  components:{
+  components: {
     staticHalfImage,
     Breadcrumb,
     Map,
-    baseButton
+    baseButton,
   },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
     // const { data } = await $axios.get('api/pois/'+ id)
-    const { data } = await $axios.get('http://localhost:3000/api/pois/'+ id)
+    const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
       name: data.name,
       visit_info: data.visit_info,
       imgBackground: data.imgBackground,
-      imgArray:data.imgArray,
+      imgArray: data.imgArray,
       description: data.description,
-      x:data.x,
-      y:data.y
+      x: data.x,
+      y: data.y,
     }
   },
   data() {
     return {
-      name1:this.name,
+      name1: this.name,
       crumbs: ['HOME', 'PUNTI DI INTERESSE'],
-    };
-  },
-
-  head(){
-    return {
-      title: "insideBO | "+this.name
     }
   },
-  mounted(){
+
+  head() {
+    return {
+      title: 'insideBO | ' + this.name,
+    }
+  },
+  mounted() {
     const date = new Date()
     // Example on hwo to use mixinx
     console.log(this.formatMyDate(date.toLocaleDateString()))
   },
-
-
 }
 </script>
 <style>
+.page-container {
+  background-color: #f2f2f2;
+}
 
-.section-description{
-  font-family: 'Helvetica';
+.section-description {
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
+  font-weight: 500;
+  background-color: #f2f2f2;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-.page-container{
+.page-container {
   margin-top: -65px;
 }
-.body-container{
+.body-container {
   margin-top: 110px;
 }
-.title-container{
+
+.title-container {
   margin-top: 40px;
   width: 100%;
-  margin-top: 40px;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
   display: flex;
-  color: #C13939;
-  background-color: #EBEBEB;
-  padding-left: 5px;
+  color: #c13939;
+  background-color: #f2f2f2;
+  padding-left: 80px;
 }
 
-.button-container{
+.button-container {
   width: 100%;
   height: 60px;
   padding: 20px;
 }
 
-.text-container{
+.text-container {
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
-  font-size: 22px
+  font-size: 22px;
 }
 
-.row{
+.row {
   margin: auto;
   width: 100%;
   justify-content: center;
   padding: 10px;
-
 }
-.breadcrumb-section1{
-  float:right;
+.breadcrumb-section1 {
+  float: right;
   margin-right: 20px;
   margin-top: -10px;
 }
 
-.button-container{
+.button-container {
   text-align: right;
 }
-
-
-
 </style>

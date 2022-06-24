@@ -41,10 +41,10 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4"></h6>
             <p>
-              <a href="https://www.bolognatoday.it/meteo/" class="text">> Meteo</a>
+              <a target="_blank" href="https://www.bolognatoday.it/meteo/" class="text">> Meteo</a>
             </p>
             <p>
-              <a href="https://www.skylinewebcams.com/en/webcam/italia/emilia-romagna/bologna/bologna-torre-degli-asinelli.html" class="text">> Webcam</a>
+              <a target="_blank" href="https://www.skylinewebcams.com/en/webcam/italia/emilia-romagna/bologna/bologna-torre-degli-asinelli.html" class="text">> Webcam</a>
             </p>
           </div>
           <!-- Grid column -->

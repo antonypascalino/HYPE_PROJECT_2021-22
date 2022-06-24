@@ -1,6 +1,6 @@
 <template>
   <div class="App">
-    <TheHeader />
+    <TheHeader/>
     <section class="breadcrumb-section">
       <breadcrumb
         :default-route="[{ title: 'HOME', path: '/' }]"
@@ -8,27 +8,22 @@
       />
     </section>
     <div class="carouselDiv">
-      <div class="indicatorList events">
-        <div class="filter-container">
-          <select-filter
-            class="select-filter"
-            @filter-change="filterBySeason"
-          />
-        </div>
-        <div class="list events">
+      <div class="indicatorList">
+        <select-filter @filter-change="filterBySeason"/>
+        <div class="list">
           <carousel-indicator
             v-for="(ev, index) in filteredList"
             :key="ev.id"
             :index="index"
             :visibleSlide="visibleSlide"
             :title="ev.name"
-            @change="change(index)"
+            @change="change(ev.id)"
           />
         </div>
       </div>
       <carousel @next="next" @prev="prev" class="carousel">
         <carousel-slide
-          v-for="(ev, index) in filteredList"
+          v-for="(ev, index) in eventList"
           :key="index"
           :index="index"
           :visibleSlide="visibleSlide"
@@ -44,10 +39,8 @@
                 :alt="ev.name"
               />
 
-              <div class="textContainer-carousel">{{ ev.name }}</div>
-              <div class="hoverText" style="font-size: 30px; width: 100%">
-                {{ ev.carousel_desc }}
-              </div>
+            <div class="textContainer-carousel">{{ ev.name }}</div>
+            <div class="hoverText" style="font-size: 30px; width: 100%; ">{{ev.carousel_desc}}</div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -67,7 +60,7 @@
             />
           </nuxt-link>
           <div class="textContainer-scroll">{{ ev.name }}</div>
-          <div class="hoverText scroll">{{ ev.carousel_desc }}</div>
+          <div class="hoverText">{{ev.carousel_desc}}</div>
         </div>
       </div>
     </div>
@@ -80,7 +73,7 @@ import CarouselSlide from '~/components/CarouselSlide'
 import CarouselIndicator from '~/components/CarouselIndicator'
 import TheHeader from '~/components/TheHeader'
 import Breadcrumb from '~/components/Breadcrumb'
-import selectFilter from '~/components/SelectFilter'
+import selectFilter from "~/components/SelectFilter";
 
 export default {
   layout: 'empty',
@@ -131,28 +124,29 @@ export default {
       this.direction = 'right'
     },
     change(index) {
-      if (this.visibleSlide < index) {
+      if (this.visibleSlide < index - 1) {
         this.direction = 'left'
       } else {
         this.direction = 'right'
       }
-      this.visibleSlide = index
+      this.visibleSlide = index - 1
     },
     // Change the season filter option
-    filterBySeason(chosenValue) {
-      this.filteredList = []
-      if (chosenValue === 'Estate') {
-        for (const x of this.eventList) {
-          if (x.type === 0) this.filteredList.push(x)
+    filterBySeason (chosenValue) {
+      this.filteredList = [];
+      if(chosenValue === 'Estate'){
+        for (const x of this.eventList){
+          if(x.type === 0)
+            this.filteredList.push(x)
         }
-      } else if (chosenValue === 'Inverno') {
-        for (const x of this.eventList) {
-          if (x.type === 1) this.filteredList.push(x)
+      }else if (chosenValue === 'Inverno'){
+        for (const x of this.eventList){
+          if(x.type === 1)
+            this.filteredList.push(x)
         }
-      } else {
+      }else{
         this.filteredList = this.eventList
       }
-      this.visibleSlide = 0
     },
     wheel(deltaY) {
       // adding .once in the template after @wheel
@@ -193,37 +187,195 @@ export default {
     TheHeader,
     CarouselIndicator,
     Breadcrumb,
-    selectFilter,
+    selectFilter
   },
 }
 </script>
 
 <style>
-div.indicatorList.events {
-  margin-top: 7%;
-  display: flex;
-  flex-direction: column;
-  vertical-align: middle;
+.breadcrumb-section {
+  margin-top: 70px;
+  background: transparent;
 }
 
-div.list.events {
+.carouselDiv {
+  padding-top: 2%;
+  padding-left: 4%;
+  width: 100%;
+  height: 90vh;
+}
+
+/*Tolto carosuelSlide e spostato in CarouselSlide component*/
+
+.imageContainer {
+  position: relative;
+  width: 70vw;
+  height: 74vh;
+  margin-top: 7vh;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.imageContainer:hover .hoverText,
+.imageContainer.hover .hoverText {
+  visibility: visible;
+  opacity: 1;
+  bottom: 20%;
+  transition: 350ms ease-in-out;
+}
+
+.imageContainer:hover .carouselImg,
+.imageContainer.hover .carouselImg {
+  -webkit-filter: blur(4px);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.imageContainer:hover .carouselImg.image-scroll,
+.imageContainer.hover .carouselImg.image-scroll {
+  -webkit-filter: blur(4px);
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.imageContainer:hover .textContainer-carousel,
+.imageContainer.hover .textContainer-carousel {
+  bottom: 40%;
+  transition: 400ms ease-in-out;
+}
+
+.imageContainer:hover .textContainer-scroll,
+.imageContainer.hover .textContainer-scroll {
+  bottom: 40%;
+  transition: 400ms ease-in-out;
+}
+
+.carouselImg {
+  display: block;
+  margin-left: 0;
+  width: 100%;
+  height: 74vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+  transition: 200ms ease-in-out;
+  filter: brightness(90%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.carouselScroll {
   width: auto;
-  /*border: solid 2px yellow;*/
-  margin-top: 50px;
+  left: 0;
+  margin-right: 0;
 }
 
-.filter-container {
-  /*border: solid 2px black;*/
+.imageContainer.container-scroll {
+  position: relative;
+  height: 38vh;
+  width: 70vh;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  margin-left: 15vw;
+}
+
+.carouselImg.image-scroll {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: 0;
+  width: 70vw;
+  height: 38vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+div.textContainer-scroll {
+  color: white;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 100%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+}
+
+div.textContainer-carousel {
+  color: white;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 56%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.35);
+  transition: 400ms ease-in-out;
+}
+
+div.hoverText {
+  color: white;
+  font-size: 3vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  float: left;
+  position: absolute;
+  width: 30%;
+  /*border: solid 2px blue;*/
+  margin-bottom: 0;
+  bottom: 0;
   height: auto;
-  width: auto;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 350ms ease-in-out;
 }
 
-.indicatorList.events .carousel-indicator {
-  height: 5vh;
+span {
+  top: 50%;
+  /*border: solid 2px yellow;*/
+}
+
+.App {
+  background-color: #f2f2f2;
+  height: auto;
+}
+
+body {
+  overscroll-behavior: none;
+  background-color: #f2f2f2;
+}
+
+div.indicatorList {
+  /*border: solid 2px blue;*/
+  width: 23vw;
+  height: 76vh;
+  position: relative;
+  float: right;
+  margin-top: 4%;
+  margin-right: 2%;
+  padding: 0;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 880px) {
-  div.indicatorList.events {
+  .indicatorList {
+    display: none;
+  }
+  .carousel {
+    display: none;
+  }
+
+  .carouselDiv {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 881px) {
+  .carouselScroll {
     display: none;
   }
 }
