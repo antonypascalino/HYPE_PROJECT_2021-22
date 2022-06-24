@@ -39,7 +39,7 @@
               />
 
               <div class="textContainer-carousel">{{ service.name }}</div>
-              <div class="hoverText" style="font-size: 30px; width: 100%">
+              <div class="hoverText">
                 {{ service.carousel_desc }}
               </div>
             </nuxt-link>

@@ -31,7 +31,7 @@
 
       <section class="section-description">
         <div class="title-container">DOVE SI TROVA</div>
-        <Map :x="x" :y="y" :name=name> </Map>
+        <Map :x="x" :y="y" :name="name"> </Map>
       </section>
 
       <section class="section-description">
@@ -161,5 +161,9 @@ export default {
 
 .button-container {
   text-align: right;
+}
+
+.main-page {
+  background-color: #f2f2f2;
 }
 </style>

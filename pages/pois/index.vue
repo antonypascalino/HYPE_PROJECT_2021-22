@@ -322,7 +322,7 @@ div.hoverText {
   visibility: hidden;
   opacity: 0;
   transition: 400ms ease-in-out;
-  width: 100%;
+  width: 70vw;
 }
 
 div.hoverText.scroll {
