@@ -222,6 +222,13 @@ export default {
   text-justify: inter-word;
   font-family: 'Josefin Sans';
   text-transform: uppercase;
-  font-size: 1.2vw;
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .map-container{
+    width:100%;
+  }
+
 }
 </style>

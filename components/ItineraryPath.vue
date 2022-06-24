@@ -2,7 +2,7 @@
   <div class="path-container">
     <img class="dashed-line" src="@/static/itineraries/LineaDrittaPNG.png" />
 
-    <nuxt-link :to="'pois/poi1'">
+    <nuxt-link :to="'../pois/1'">
       <div class="round-container round-poi-1">
         <img class="round-image poi1" src="@/static/Poi/piazzaMaggiore02.jpg" />
         <div class="round-text">Piazza Maggiore</div>
