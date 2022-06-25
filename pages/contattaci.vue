@@ -13,30 +13,33 @@
     <div class="body-container">
       <section class="section-chi-siamo">
         <div class="title-container">La nostra Sede e contatti</div>
-        <div class="row">
-          <div class="col-sm-9"><Map :x=43.78198 :y=11.28143 name="Via San Gervasio, 12"></Map></div>
-          <div class="col-sm-3">
-            <br><br><br>
-            <p class="address-container">
-              <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
 
-              <br />
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+          <p class="address-container">
+            <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
+            <br>
               <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
             </p>
+            </div>
 
-            <br />
+            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 20px">
             <div class="phone-number">
               <span class="mdi mdi-phone"></span> Tel:
               <a href="tel:+393347711504"> +39 3319212318</a>
             </div>
+              <br>
             <div class="fax-number">
               <span class="mdi mdi-fax"></span> Fax:
               <a href="fax:+393347711504">+39 011 7234011</a>
             </div>
+              <br>
             <div class="mail">
               <span class="mdi mdi-email"></span>
               <a href="insideBO@gmail.com">insideBO@gmail.com</a>
             </div>
+          </div>
           </div>
         </div>
 
@@ -56,12 +59,11 @@
 
 <script>
 import Breadcrumb from '~/components/Breadcrumb.vue'
-import map from "~/components/Map";
+
 export default {
   layout: 'default',
   components: {
     Breadcrumb,
-    map
   },
 
   head(){
@@ -79,66 +81,60 @@ export default {
 }
 </script>
 <style scoped>
-.page-container{
-  margin-top: -5px;
+.page-container {
+  margin-top: -40px;
 }
-.body-container{
-  margin-top: 40px;
+.body-container {
+  margin-top: 60px;
 }
-.title-container{
+.breadcrumb-section {
+  margin-top: 110px;
+}
+.title-container {
   margin-top: 40px;
   width: 100%;
-  margin-top: 40px;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
   display: flex;
-  color: #C13939;
-  background-color: #EBEBEB;
-
+  color: #c13939;
 }
-.section-chi-siamo{
-  font-family: 'Inria Sans';
-  font-style: normal;
-  font-size: 17px;
-}
-
-.section-la-nostra-missione{
-  font-family: 'Inria Sans';
+.section-la-nostra-missione {
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;
+  justify-content: center;
+  align-content: center;
 }
-
-.text-container{
+p {
   padding-top: 10px;
-  padding-left: 8vw;
-  padding-right: 8vw;
-  font-size: 22px
-}
-a{
-  text-decoration: none;
-  color:black
-}
-.address-container{
-  text-align: center;
-}
-.phone-number{
-  text-align: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  font-size: 20px;
+  margin-left: 30px;
 }
 
-.mail{
-  text-align: center;
-}
-.fax-number{
-  text-align: center;
-}
 
-.breadcrumb-section{
-  margin-top: 60px;
+
+.container-fluid {
+  margin-top: 10px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  border: 3px solid lightgray;
+  background-color: white;
+  width: 70%;
+  vertical-align: center;
+
+}
+.row {
+  align-content: center;
+  justify-content: center;
+
 }
 
 </style>

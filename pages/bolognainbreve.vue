@@ -221,7 +221,6 @@ export default {
   line-height: 50px;
   display: flex;
   color: #c13939;
-  background-color: #f2f2f2;
 }
 .section-la-nostra-missione {
   font-family: 'Raleway', sans-serif;
