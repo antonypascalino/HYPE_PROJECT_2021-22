@@ -17,7 +17,7 @@
 
       <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
 
-      <ItineraryPath :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" />
+      <ItineraryPath :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" :id2="idPoi2" :id3="idPoi3" :id4="idPoi4" :id5="idPoi5" :img1="img1" :img2="img2" :img3="img3" :img4="img4" :img5="img5" />
 
       <!--      <section class="section-description">-->
       <!--        <div class="poi-card-container row mt-4">-->
@@ -104,7 +104,16 @@ export default {
       namePoi3:data2.data[0].pois[2].name,
       namePoi4:data2.data[0].pois[3].name,
       namePoi5:data2.data[0].pois[4].name,
-      idPoi1:data2.data[0].pois[1].id
+      idPoi1:data2.data[0].pois[0].id,
+      idPoi2:data2.data[0].pois[1].id,
+      idPoi3:data2.data[0].pois[2].id,
+      idPoi4:data2.data[0].pois[3].id,
+      idPoi5:data2.data[0].pois[4].id,
+      img1:data2.data[0].pois[0].imgBackground,
+      img2:data2.data[0].pois[1].imgBackground,
+      img3:data2.data[0].pois[2].imgBackground,
+      img4:data2.data[0].pois[3].imgBackground,
+      img5:data2.data[0].pois[4].imgBackground,
     }
   },
   data() {

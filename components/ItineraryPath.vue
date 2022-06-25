@@ -1,32 +1,41 @@
 <template>
   <div class="path-container">
     <img class="dashed-line" src="@/static/itineraries/LineaDrittaPNG.png" />
-    <nuxt-link :to="`../pois/${this.id1}`">
+    <nuxt-link :to="`/itinerari/pois/${this.id1}`">
       <div class="round-container round-poi-1">
-        <img class="round-image poi1" :src="`@/static/Poi/${this.img}`" />
+        <img class="round-image poi1" :src="`../Poi/${img1}`" />
         <div class="round-text">{{name1}}</div>
       </div>
     </nuxt-link>
 
+    <nuxt-link :to="`/itinerari/pois/${this.id2}`">
     <div class="round-container round-poi-2">
-      <img class="round-image poi2" src="@/static/Poi/palazzoAccursio03.jpg" />
+      <img class="round-image poi2" :src="`../Poi/${img2}`" />
       <div class="round-text">{{name2}}</div>
     </div>
+    </nuxt-link>
 
+    <nuxt-link :to="`/itinerari/pois/${this.id3}`">
     <div class="round-container round-poi-3">
-      <img class="round-image poi3" src="@/static/Poi/palazzoReEnzo02.jpg" />
+      <img class="round-image poi3" :src="`../Poi/${img3}`" />
       <div class="round-text">{{name3}}</div>
     </div>
+    </nuxt-link>
 
+    <nuxt-link :to="`/itinerari/pois/${this.id4}`">
     <div class="round-container round-poi-4">
-      <img class="round-image poi4" src="@/static/Poi/fontanaNettuno02.jpg" />
+      <img class="round-image poi4" :src="`../Poi/${img4}`" />
       <div class="round-text">{{name4}}</div>
     </div>
+    </nuxt-link>
 
+    <nuxt-link :to="`/itinerari/pois/${this.id5}`">
     <div class="round-container round-poi-5">
-      <img class="round-image poi5" src="@/static/Poi/torri03.jpg" />
-      <div class="round-text">{{name5}}</div>
-    </div>
+      <img class="round-image poi5" :src="`../Poi/${img5}`" />
+      <div class="round-text">{{name5}}
+      </div>
+
+    </div></nuxt-link>
   </div>
 </template>
 
@@ -49,7 +58,19 @@ export default {
     name5:{
       type: String
     },
-    img:{
+    img1:{
+      type:String
+    },
+    img2:{
+      type:String
+    },
+    img3:{
+      type:String
+    },
+    img4:{
+      type:String
+    },
+    img5:{
       type:String
     },
     id1:{
