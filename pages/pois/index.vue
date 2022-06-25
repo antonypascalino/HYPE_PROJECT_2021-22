@@ -346,7 +346,7 @@ body {
 
 div.indicatorList {
   /*border: solid 2px blue;*/
-  width: 23vw;
+  width: 20vw;
   height: 76vh;
   position: relative;
   float: right;

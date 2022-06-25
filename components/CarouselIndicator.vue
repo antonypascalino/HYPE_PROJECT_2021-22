@@ -24,7 +24,9 @@ export default {
     getTextColor(index, visibleSlide) {
       if (visibleSlide === index) {
         return (
-          'color: #C13939;\n ' + 'font-size: 1.4vw;\n ' + 'transition: 1.1s'
+          'color: #C13939;\n ' +
+          'transform: scale(1.3);\n ' +
+          'transform-origin: right;'
         )
       }
     },
@@ -43,6 +45,7 @@ export default {
 }
 
 .carousel-indicator {
+  /*border: solid 2px yellow;*/
   width: 100%;
   height: 3.8vh;
   background-color: transparent;
@@ -54,11 +57,13 @@ export default {
   text-align: right;
   border: none;
   transition: 200ms;
+  transform-origin: right;
 }
 
 .carousel-indicator:hover {
   color: #c13939;
-  font-size: 1.4vw;
+  transform: scale(1.3);
+  transform-origin: right;
   transition: 200ms;
 }
 i {
