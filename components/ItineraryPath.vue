@@ -1,32 +1,31 @@
 <template>
   <div class="path-container">
     <img class="dashed-line" src="@/static/itineraries/LineaDrittaPNG.png" />
-
     <nuxt-link :to="'../pois/1'">
       <div class="round-container round-poi-1">
-        <img class="round-image poi1" src="@/static/Poi/piazzaMaggiore02.jpg" />
-        <div class="round-text">Piazza Maggiore</div>
+        <img class="round-image poi1" :src="`@/static/Poi/${this.img}`" />
+        <div class="round-text">{{name1}}</div>
       </div>
     </nuxt-link>
 
     <div class="round-container round-poi-2">
       <img class="round-image poi2" src="@/static/Poi/palazzoAccursio03.jpg" />
-      <div class="round-text">Palazzo Accursio</div>
+      <div class="round-text">{{name2}}</div>
     </div>
 
     <div class="round-container round-poi-3">
       <img class="round-image poi3" src="@/static/Poi/palazzoReEnzo02.jpg" />
-      <div class="round-text">Palazzo Re Enzo</div>
+      <div class="round-text">{{name3}}</div>
     </div>
 
     <div class="round-container round-poi-4">
       <img class="round-image poi4" src="@/static/Poi/fontanaNettuno02.jpg" />
-      <div class="round-text">Fontana del Nettuno</div>
+      <div class="round-text">{{name4}}</div>
     </div>
 
     <div class="round-container round-poi-5">
       <img class="round-image poi5" src="@/static/Poi/torri03.jpg" />
-      <div class="round-text">Le torri</div>
+      <div class="round-text">{{name5}}</div>
     </div>
   </div>
 </template>
@@ -34,6 +33,41 @@
 <script>
 export default {
   name: 'ItineraryPath',
+  props:{
+   name1:{
+     type: String
+   },
+    name2:{
+      type: String
+    },
+    name3:{
+      type: String
+    },
+    name4:{
+      type: String
+    },
+    name5:{
+      type: String
+    },
+    img:{
+      type:String
+    },
+    id1:{
+      type:Number
+    },
+    id2:{
+      type:Number
+    },
+    id3:{
+      type:Number
+    },
+    id4:{
+      type:Number
+    },
+    id5:{
+      type:Number
+    },
+  }
 }
 </script>
 

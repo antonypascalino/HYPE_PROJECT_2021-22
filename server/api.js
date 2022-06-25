@@ -74,7 +74,7 @@ async function initializeDatabaseConnection() {
   })
 
 
-  const Itinerary_Poi = database.define('Itineray_Poi', {})
+  const Itinerary_Poi = database.define('Itinerary_Poi', {})
   Itinerary.belongsToMany(Poi, {
     through: 'Itinerary_Poi',
     foreignKey: 'ItineraryId',
@@ -92,6 +92,8 @@ async function initializeDatabaseConnection() {
   // Creating the 1 -> N association between Service and Service Type
   ServiceType.hasMany(Service)
   Service.belongsTo(ServiceType)
+
+
 
   await database.sync({ force: true })
   return {
@@ -294,25 +296,29 @@ async function runMainApi() {
   // HTTP GET api that returns a specific point of interest
   app.get('/itineraries/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Itinerary.findOne({ where: { id }})
-    return res.json(result)
-  })
-
-  // HTTP GET api that returns a specific point of interest
-  app.get('/itPoi/:id', async (req, res) => {
-    const id = +req.params.id
-    const result = await models.Itinerary_Poi.findOne({ where: { ItineraryId:id }})
+    const result = await models.Itinerary.findAll({ where: { id }})
     const filtered = []
     for (const element of result) {
       filtered.push({
-        poiId: element.poiId,
+        name: element.name,
+        id: element.id,
+        duration:element.duration,
+        description:element.description,
+        map:element.map,
+        link:element.link,
+        imgBackground:element.imgBackground
       })
     }
     return res.json(filtered)
   })
 
+  // HTTP GET api that returns a specific point of interest
+  app.get('/itPoi/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Itinerary.findAll({where: { id: id },include: [{model: models.Poi}]})
+    return res.json(result)
+  })
 }
-
 runMainApi()
 
 
