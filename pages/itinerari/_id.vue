@@ -194,9 +194,8 @@ export default {
 }
 
 .breadcrumb-section5 {
-  float: right;
   margin-right: 20px;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 .main-page {
   background-color: #f2f2f2;

@@ -173,9 +173,8 @@ export default {
   padding: 10px;
 }
 .breadcrumb-section2 {
-  float: right;
   margin-right: 20px;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .button-container {
@@ -188,7 +187,8 @@ export default {
 
 .row.row1 {
   text-align: center;
-  border: 3px solid #c13939;
+  background-color: white;
+  border: 4px solid #c13939;
   font-size: 20px;
   font-family: 'Josefin Sans';
   margin-left: 60px;

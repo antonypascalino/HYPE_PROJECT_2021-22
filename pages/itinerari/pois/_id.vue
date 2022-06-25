@@ -154,9 +154,8 @@ export default {
   padding: 10px;
 }
 .breadcrumb-section1 {
-  float: right;
   margin-right: 20px;
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .button-container {
