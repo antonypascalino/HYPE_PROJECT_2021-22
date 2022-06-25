@@ -70,7 +70,7 @@ export default {
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
 }
 
 .round-container:hover {
@@ -114,7 +114,7 @@ export default {
 
 .round-container:hover .round-image,
 .round-container.hover .round-image {
-  opacity: 20%;
+  opacity: 0;
   transition: 300ms ease-in-out;
 }
 

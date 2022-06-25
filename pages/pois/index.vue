@@ -199,7 +199,8 @@ export default {
   width: 70vw;
   height: 74vh;
   margin-top: 7vh;
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
+  filter: brightness(90%);
 }
 
 .imageContainer:hover .hoverText,

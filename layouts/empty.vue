@@ -10,13 +10,13 @@
 
 <script>
 export default {
-  name: "empty"
+  name: 'empty',
 }
 </script>
 
 <style>
 /*Color of the page */
-.main-page{
-  background: #E5E5E5;
+.main-page {
+  background: #f2f2f2;
 }
 </style>

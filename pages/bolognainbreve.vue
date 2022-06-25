@@ -221,6 +221,7 @@ export default {
   line-height: 50px;
   display: flex;
   color: #c13939;
+  text-transform: uppercase;
 }
 .section-la-nostra-missione {
   font-family: 'Raleway', sans-serif;
@@ -236,6 +237,7 @@ p.bologna-paragraph {
   padding-left: 2vw;
   padding-right: 2vw;
   font-size: 20px;
+  text-align: justify;
 }
 
 p.bologna-paragraph.end-paragraph {
