@@ -726,63 +726,63 @@ export default async (models) => {
   const Itinerary_PoiList = [
     {
       ItineraryId:1,
-      PoiId:
+      PoiId:1
     },
     {
       ItineraryId:1,
-      PoiId:
+      PoiId:3
     },
     {
       ItineraryId:1,
-      PoiId:
+      PoiId:2
     },
     {
       ItineraryId:1,
-      PoiId:
+      PoiId:4
     },
     {
       ItineraryId:1,
-      PoiId:
+      PoiId:5
     },
     {
       ItineraryId:2,
-      PoiId:
+      PoiId:15
     },
     {
       ItineraryId:2,
-      PoiId:
+      PoiId:16
     },
     {
       ItineraryId:2,
-      PoiId:
+      PoiId:17
     },
     {
       ItineraryId:2,
-      PoiId:
+      PoiId:19
     },
     {
       ItineraryId:2,
-      PoiId:
+      PoiId:20
     },
     {
       ItineraryId:3,
-      PoiId:
+      PoiId:7
     },
     {
       ItineraryId:3,
-      PoiId:
+      PoiId:8
     },
     {
       ItineraryId:3,
-      PoiId:
+      PoiId:13
     },
     {
       ItineraryId:3,
-      PoiId:
+      PoiId:14
     },
     {
       ItineraryId:3,
-      PoiId:
+      PoiId:18
     },
   ]
   await models.Itinerary_Poi.bulkCreate(Itinerary_PoiList)

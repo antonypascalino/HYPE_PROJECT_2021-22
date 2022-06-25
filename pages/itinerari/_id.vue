@@ -17,7 +17,7 @@
 
       <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
 
-      <ItineraryPath :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" />
+      <ItineraryPath :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" />
 
       <!--      <section class="section-description">-->
       <!--        <div class="poi-card-container row mt-4">-->
@@ -41,7 +41,6 @@
       <section class="section-description">
         <div class="title-container">DURATA</div>
         <p class="text-container">{{ duration }}</p>
-        {{namePoi}}
       </section>
 
       <section class="section-description">
@@ -105,6 +104,7 @@ export default {
       namePoi3:data2.data[0].pois[2].name,
       namePoi4:data2.data[0].pois[3].name,
       namePoi5:data2.data[0].pois[4].name,
+      idPoi1:data2.data[0].pois[1].id
     }
   },
   data() {

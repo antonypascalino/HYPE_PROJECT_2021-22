@@ -1,7 +1,7 @@
 <template>
   <div class="path-container">
     <img class="dashed-line" src="@/static/itineraries/LineaDrittaPNG.png" />
-    <nuxt-link :to="'../pois/1'">
+    <nuxt-link :to="`../pois/${this.id1}`">
       <div class="round-container round-poi-1">
         <img class="round-image poi1" :src="`@/static/Poi/${this.img}`" />
         <div class="round-text">{{name1}}</div>
