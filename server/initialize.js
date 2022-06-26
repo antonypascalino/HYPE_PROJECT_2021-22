@@ -267,7 +267,7 @@ export default async (models) => {
       mapLink: "https://www.google.com/maps/place/Piazza+Giuseppe+Verdi/@44.4962248,11.3508051,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd5c92e96d791:0x6e0ad24fb1f7ca56!8m2!3d44.4962248!4d11.3508051"
     },
     {
-      name: "I colli bolognese",
+      name: "I colli bolognesi",
       visit_info:"E' sempre possibile visitare i colli!",
       carousel_desc: "Ma quanto è bello andare in giro per i colli bolognesi... Scoprili",
       description: "L’appennino bolognese si estende a partire dalla parte sud della città e fa da sfondo ai suggestivi palazzi medievali del centro.\n" +
