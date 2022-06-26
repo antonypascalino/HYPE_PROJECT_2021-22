@@ -31,7 +31,9 @@ async function initializeDatabaseConnection() {
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
     x:DataTypes.FLOAT,
     y:DataTypes.FLOAT,
-    carousel_desc:DataTypes.STRING
+    carousel_desc:DataTypes.STRING,
+    address:DataTypes.STRING,
+    mapLink:DataTypes.STRING
   })
 
   const Events = database.define("event", {
@@ -125,7 +127,9 @@ async function runMainApi() {
         imgArray:element.imgArray,
         x:element.x,
         y:element.y,
-        carousel_desc:element.carousel_desc
+        carousel_desc:element.carousel_desc,
+        address:element.address,
+        mapLink:element.mapLink
       })
     }
     return res.json(filtered)

@@ -19,10 +19,10 @@ export default async (models) => {
         "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
       imgBackground: "piazzaMaggiore03.jpg",
       imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore01.jpg","piazzaMaggiore04.jpg"],
-      poi_address: "",
-      poi_website: "",
       x:44.49371,
-      y:11.34304
+      y:11.34304,
+      address:"Piazza Maggiore, 40124 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Piazza+Maggiore,+Bologna+BO/@44.493977,11.3430258,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4958809a823:0xac6b828612b7247!8m2!3d44.493977!4d11.3430258"
     },
     {
       name: "Fontana del Nettuno",
@@ -34,7 +34,9 @@ export default async (models) => {
       imgBackground: "fontanaNettuno04.jpg",
       imgArray:["fontanaNettuno01.jpg","fontanaNettuno05.jpg", "fontanaNettuno02.jpg"],
       x:44.49426,
-      y:11.34266
+      y:11.34266,
+      address: "Piazza del Nettuno, 40124 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Fountain+of+Neptune/@44.494308,11.34047,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd495860346b7:0x8ed55aa49aac8271!8m2!3d44.4943042!4d11.3426587"
     },
     {
       name: "Basilica di San Petronio",
@@ -47,7 +49,9 @@ export default async (models) => {
       imgBackground: "sanPetronio07.jpg",
       imgArray:["sanPetronio05.jpg","sanPetronio06.jpg","sanPetronio04.jpg"],
       x:44.49273,
-      y:11.34303
+      y:11.34303,
+      address: "Piazza Galvani, 5, 40124 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Basilica+di+San+Petronio/@44.4929473,11.3409405,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd495860346b7:0xa17d71587906b0a5!8m2!3d44.4929435!4d11.3431292"
     },
     {
       name: "Palazzo Re Enzo",
@@ -58,7 +62,9 @@ export default async (models) => {
       imgBackground: "palazzoReEnzo01.jpg",
       imgArray:["palazzoReEnzo02.jpg","palazzoReEnzo03.jpg"],
       x:44.49491,
-      y:11.34317
+      y:11.34317,
+      address:"Piazza del Nettuno, 1/C, 40125 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Palazzo+Re+Enzo/@44.494528,11.340842,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4be190446a5:0x45430544efddaa74!8m2!3d44.4945242!4d11.3430307"
     },
     {
       name: "Palazzo D’Accursio",
@@ -71,7 +77,10 @@ export default async (models) => {
       imgBackground: "palazzoAccursio01.jpg",
       imgArray:["palazzoAccursio02.jpg","palazzoAccursio03.jpg"],
       x:44.49399,
-      y:11.34217
+      y:11.34217,
+      address: "Piazza Maggiore, 6, 40121 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Palazzo+d'Accursio/@44.4939611,11.3424071,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4959b6b5b61:0x2059a5c0518cc24!8m2!3d44.4939611!4d11.3424071"
+
     },
     {
       name: "Torre degli Asinelli e Garisenda",
@@ -85,7 +94,9 @@ export default async (models) => {
       imgBackground: "torri01.jpg",
       imgArray:["torri02.jpg","torri03.jpg"],
       x:44.49420,
-      y:11.34677
+      y:11.34677,
+      address: "P.za di Porta Ravegnana, 40126 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Two+Towers/@44.4942132,11.3445425,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4be8ea29f71:0x28631a8b221623ea!8m2!3d44.4942094!4d11.3467312"
     },
     {
       name: "Archiginnasio",
@@ -98,7 +109,9 @@ export default async (models) => {
       imgBackground: "archiginnasio01.jpg",
       imgArray:["archiginnasio02.jpg","archiginnasio03.jpg"],
       x:44.49205,
-      y:11.34341
+      y:11.34341,
+      address: "Piazza Galvani, 1, 40124 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Biblioteca+Comunale+dell'Archiginnasio/@44.4919758,11.3412313,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4bfc278adc1:0x991786b52ce6d4bc!8m2!3d44.491972!4d11.34342"
     },
     {
       name: "Sala Borsa",
@@ -110,7 +123,9 @@ export default async (models) => {
       imgBackground: "salaBorsa03.jpg",
       imgArray:["salaBorsa01.jpg","salaBorsa04.jpg", "salaBorsa06.jpg"],
       x:44.49469,
-      y:11.34214
+      y:11.34214,
+      address: "Piazza del Nettuno, 3, 40124 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Biblioteca+Salaborsa/@44.494615,11.3401919,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4bfc278adc1:0xc266fcbe4097cdfd!8m2!3d44.4946112!4d11.3423806"
     },
     {
       name: "Piazza Santo Stefano",
@@ -122,7 +137,9 @@ export default async (models) => {
       imgBackground: "piazzaSantoStefano01.jpg",
       imgArray:["piazzaSantoStefano02.jpg","piazzaSantoStefano03.jpg"],
       x:44.49213,
-      y:11.34828
+      y:11.34828,
+      address: "Via Santo Stefano, 40125 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Piazza+Santo+Stefano/@44.4922769,11.3460771,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4c79571fe61:0x30d8d5e8e9c7385!8m2!3d44.4922731!4d11.3482658"
     },
     {
       name: "Basilica di Santo Stefano",
@@ -134,7 +151,9 @@ export default async (models) => {
       imgBackground: "basilicaSantoStefano04.jpg",
       imgArray:["basilicaSantoStefano01.jpg","basilicaSantoStefano02.jpg","basilicaSantoStefano03.jpg"],
       x:44.49207,
-      y:11.34877
+      y:11.34877,
+      address: "Via Santo Stefano, 24, 40125 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Basilica+Santo+Stefano/@44.4921485,11.3463037,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd5b452722fc1:0xe05c963953602828!8m2!3d44.4921447!4d11.3484924"
     },
     {
       name: "Il Mercato del Quadrilatero",
@@ -193,7 +212,9 @@ export default async (models) => {
       imgBackground: "portici01.jpg",
       imgArray:["portici02.jpg","portici03.jpg"],
       x:44.49181,
-      y:11.34398
+      y:11.34398,
+      address: "Str. Maggiore, 43, 40125 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Portico+dei+Servi,+Str.+Maggiore,+43,+40125+Bologna+BO/@44.4911796,11.3504885,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4b83e58399b:0x5d7ec6eb7c812a94!8m2!3d44.4911758!4d11.3526772"
     },
     {
       name: "San Luca e i Portici",
@@ -205,7 +226,9 @@ export default async (models) => {
       imgBackground: "porticiSanLuca04.jpg",
       imgArray:["porticiSanLuca01.jpg","porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
       x:44.47909,
-      y:11.29812
+      y:11.29812,
+      address: "Via di San Luca & Portico di S. Luca 40135 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Via+di+San+Luca+%26+Portico+di+S.+Luca,+40135+Bologna+BO/@44.4816266,11.2995405,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd44e11fd6079:0x8bd82fad98caafeb!8m2!3d44.4816228!4d11.3017292"
     },
     {
       name: "Mura e Porte",
@@ -217,7 +240,9 @@ export default async (models) => {
       imgBackground: "porta01.jpg",
       imgArray:["porta02.jpg", "porta03.jpg", "porta04.jpg"],
       x:44.4470,
-      y:11.4138
+      y:11.4138,
+      address: "Mura di Porta Saragozza, 40123 Bologna BO",
+      mapLink:"https://www.google.com/maps/place/Porta+Saragozza/@44.4905287,11.3299908,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4ed62b0dd37:0x817981cbf64507ba!8m2!3d44.4905287!4d11.3299908"
     },
     {
       name: "Zona Universitaria",
@@ -229,7 +254,9 @@ export default async (models) => {
       imgBackground: "universita01.jpg",
       imgArray:["universita02.jpg", "universita03.jpg"],
       x:44.49748,
-      y:11.35341
+      y:11.35341,
+      address: "Piazza Giuseppe Verdi, 2a, 40126 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Piazza+Giuseppe+Verdi/@44.4962248,11.3508051,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd5c92e96d791:0x6e0ad24fb1f7ca56!8m2!3d44.4962248!4d11.3508051"
     },
     {
       name: "I colli bolognese",
@@ -243,7 +270,9 @@ export default async (models) => {
       imgBackground: "colliBolognesi01.jpg",
       imgArray:["colliBolognesi02.jpg","colliBolognesi03.jpg","colliBolognesi04.jpg"],
       x:44.44354,
-      y:11.30372
+      y:11.30372,
+      address: "Via Cavaioni, 3, 40136 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Parco+Cavaioni/@44.4440416,11.3037843,17z/data=!3m1!4b1!4m5!3m4!1s0x132ad4d3dbcff619:0xc6a8360d7a74ab0c!8m2!3d44.4440378!4d11.305973"
     },
     {
       name: "Stadio Renato Dall’Ara ",
@@ -254,7 +283,9 @@ export default async (models) => {
       imgBackground: "stadio02.jpg",
       imgArray:["stadio01.jpg","stadio03.jpg"],
       x:44.49229,
-      y:11.30997
+      y:11.30997,
+      address: "Via Andrea Costa, 174, 40134 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Renato+Dall'Ara+Stadium/@44.4921661,11.3077561,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd45d0f1547d1:0x6dbca3585c33186f!8m2!3d44.4921623!4d11.3099448"
     }
 
   ]
@@ -420,11 +451,15 @@ export default async (models) => {
 
   const serviceTypeList = [
     {
-      name: "Banche",
-      imgBackground: "banche01.jpg",
-      carousel_desc: "Devi prelevare? Scopri le banche del centro di Bologna!",
-      service_desc: "Avete bisogno di effettuare un prelievo o di svolgere una qualsiasi commissione in banca? \n" +
-        "Abbiamo stilato una lista delle banche del centro più comode da raggiungere. Potete trovarle il via Rizzoli, strada centrale che conduce alle due torri, oppure nelle zone adiacenti, in modo da non sviare dai vostri divertenti tour della città!\n"
+      name: "Ristorazione",
+      imgBackground: "ristorazione02.jpg",
+      carousel_desc: "Non sapete dove mangiare? Qui la selezione dei ristoranti del team di insideBO!",
+      service_desc: "Bologna viene definita “la Grassa” proprio per la sua storia culinaria. L’Emilia-Romagna ed in particolare il suo capoluogo sono una delle mete preferite dai turisti sotto questo punto di vista. \n" +
+        "Per questo motivo ci si può ritrovare sopraffatti dall’incredibile quantità di osterie e ristoranti che tappezzano il centro cittadino. \n" +
+        "Il team di insideBO vi propone quindi una lista dei migliori ristoranti che secondo noi vale la pena provare durante il vostro soggiorno a Bologna. \n" +
+        "Le prime tre osterie, ovvero 051, Osteria del Cappello e Al Pappagallo, offrono il gusto dei piatti tradizionali come tortellini e lasagne avvolti dall’accogliente atmosfera del centro storico. 051 infatti si trova a lato della chiesa di San Petronio, mente Al Pappagallo è situato in Piazza della Mercanzia. \n" +
+        "Osteria Bartolini e Vasinikò invece non si allontanano molto dal centro storico, ma offrono un’esperienza culinaria diversa seppur sempre di qualità eccelsa. Il primo ristorante è di pesce mentre il secondo propone pizze napoletane di livello.\n" +
+        "Concludiamo con Ca’ Shin e La Bottega di Franco che si spostano dal centro per lasciare spazio al verde dei colli e della campagna bolognese, proposte per coloro che amano la natura ma non vogliono rinunciare ad un buon piatto di tagliatelle al ragù!\n"
     },
     {
       name: "Cinema",
@@ -451,15 +486,11 @@ export default async (models) => {
         "Molti degli edifici qui presentati sono storici, poiché situati nel centro cittadino, come ad esempio la meravigliosa Farmacia Alberani o in particolare la Lloyds Centrale, situata all’interno di Palazzo D’Accursio, che offre servizio 24 ore su 24.\n"
     },
     {
-      name: "Ristorazione",
-      imgBackground: "ristorazione01.jpg",
-      carousel_desc: "Non sapete dove mangiare? Qui la selezione dei ristoranti del team di insideBO!",
-      service_desc: "Bologna viene definita “la Grassa” proprio per la sua storia culinaria. L’Emilia-Romagna ed in particolare il suo capoluogo sono una delle mete preferite dai turisti sotto questo punto di vista. \n" +
-        "Per questo motivo ci si può ritrovare sopraffatti dall’incredibile quantità di osterie e ristoranti che tappezzano il centro cittadino. \n" +
-        "Il team di insideBO vi propone quindi una lista dei migliori ristoranti che secondo noi vale la pena provare durante il vostro soggiorno a Bologna. \n" +
-        "Le prime tre osterie, ovvero 051, Osteria del Cappello e Al Pappagallo, offrono il gusto dei piatti tradizionali come tortellini e lasagne avvolti dall’accogliente atmosfera del centro storico. 051 infatti si trova a lato della chiesa di San Petronio, mente Al Pappagallo è situato in Piazza della Mercanzia. \n" +
-        "Osteria Bartolini e Vasinikò invece non si allontanano molto dal centro storico, ma offrono un’esperienza culinaria diversa seppur sempre di qualità eccelsa. Il primo ristorante è di pesce mentre il secondo propone pizze napoletane di livello.\n" +
-        "Concludiamo con Ca’ Shin e La Bottega di Franco che si spostano dal centro per lasciare spazio al verde dei colli e della campagna bolognese, proposte per coloro che amano la natura ma non vogliono rinunciare ad un buon piatto di tagliatelle al ragù!\n"
+      name: "Banche",
+      imgBackground: "banche01.jpg",
+      carousel_desc: "Devi prelevare? Scopri le banche del centro di Bologna!",
+      service_desc: "Avete bisogno di effettuare un prelievo o di svolgere una qualsiasi commissione in banca? \n" +
+        "Abbiamo stilato una lista delle banche del centro più comode da raggiungere. Potete trovarle il via Rizzoli, strada centrale che conduce alle due torri, oppure nelle zone adiacenti, in modo da non sviare dai vostri divertenti tour della città!\n"
     },
   ]
   const servicetype0 = await models.ServiceType.create(serviceTypeList[0])
