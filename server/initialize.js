@@ -31,8 +31,8 @@ export default async (models) => {
       description: "Situata al centro dell’omonima piazza, la fontana troneggiata dalla divinità conduce alla più grande Piazza Maggiore. Soprannominata in dialetto al Żigànt (il Gigante), fu ultimata nel 1566 per mano di Giambologna e Tommaso Laureto al fine di glorificare il governo pontificio di Pio IV.\n" +
         "La figura in bronzo del Nettuno è alta circa 3,2 metri. La posa solenne è un simbolo della potenza dello stato pontificio di quell’epoca: la mano sinistra dal palmo aperto diretta controvento quasi a voler calmare i flutti e la mano destra che regge un imponente tridente. L’intera composizione è caratterizzata da un grande slancio e dinamismo dovuta alle figure implementate sul blocco centrale ricoperto di marmo di Verona, come le nereidi e i delfini.\n" +
         "Il tridente impugnato dal Nettuno è stata fonte di ispirazione per il logo della casa di auto sportive Maserati che lo introdusse a partire dal 1926.\n",
-      imgBackground: "fontanaNettuno01.jpg",
-      imgArray:["fontanaNettuno02.jpg","fontanaNettuno03.jpg"],
+      imgBackground: "fontanaNettuno04.jpg",
+      imgArray:["fontanaNettuno01.jpg","fontanaNettuno05.jpg", "fontanaNettuno02.jpg"],
       x:44.49426,
       y:11.34266
     },
@@ -44,8 +44,8 @@ export default async (models) => {
         "Iniziata nel 1390, è l’ultima grande opera tardo gotica italiana. Il progetto inizialmente era a carico di Antonio di Vincenzo ma nel 1514, durante i lavori di costruzione, Arduino degli Arriguzzi propose un nuovo piano: un’imponente pianta a croce latina che superava le dimensioni della basilica di San Pietro a Roma. Per questo motivo, secondo la leggenda, il papa Pio IV interruppe la realizzazione, focalizzando le risorse sull’Archiginnasio.\n" +
         "L’interno è suddiviso in tre navate e fu attuato in epoche diverse. Si contano ben ventidue cappelle, dove si possono scorgere dipinti e decorazioni di illustri artisti del tempo, tra cui Donato Creti e Girolamo Mazzola detto “Parmigianino”. Tra queste raffigurazioni, tuttavia, vi è un affresco che suscita tutt’ora controversie: ispirandosi all’inferno di Dante, l’autore Giovanni da Modena ha rappresentato una serie di peccatori e dannati tra cui Maometto che viene scuoiato da un diavolo.\n" +
         "Un’ulteriore caratteristica di San Petronio è la meridiana che si trova al suo interno e che si estende nella pavimentazione per una lunghezza di circa 67 metri, rendendola la più lunga al mondo.\n" ,
-      imgBackground: "sanPetronio01.jpg",
-      imgArray:["sanPetronio02.jpg","sanPetronio03.jpg","sanPetronio04.jpg"],
+      imgBackground: "sanPetronio07.jpg",
+      imgArray:["sanPetronio05.jpg","sanPetronio06.jpg","sanPetronio04.jpg"],
       x:44.49273,
       y:11.34303
     },
@@ -95,8 +95,8 @@ export default async (models) => {
         "L’interno è costituito da diverse sale studio riccamente decorate dagli stemmi delle ricche famiglie felsinee dell’epoca. \n" +
         "La sala più caratteristica è certamente il teatro anatomico, un anfiteatro in legno d’abete corredato da statue.\n" +
         "L’Archiginnasio fu gravemente colpito dai bombardamenti della Seconda Guerra Mondiale. Oggi, tuttavia, lo si può ammirare in tutto il suo splendore grazie ai restauri e ricostruzioni effettuati nei decenni successivi.\n" ,
-      imgBackground: "archiginnasio02.jpg",
-      imgArray:["archiginnasio01.jpg","archiginnasio03.jpg"],
+      imgBackground: "archiginnasio01.jpg",
+      imgArray:["archiginnasio02.jpg","archiginnasio03.jpg"],
       x:44.49205,
       y:11.34341
     },
@@ -107,8 +107,8 @@ export default async (models) => {
       description: "Situata all’ingresso di Piazza del Nettuno di Palazzo d’Accursio, Sala Borsa è la biblioteca pubblica multimediale più celebre di Bologna. Al suo interno possono essere consultati sia volumi cartacei che digitali, oltre che a CD, DVD e fumetti.\n" +
         "Numerosi sono gli eventi e gli ospiti illustri che vi partecipano ogni anno. Solo nel 2019 a Sala Borsa sono stati effettuati 530.000 prestiti. \n" +
         "Nell’androne principale, il pavimento in vetro rivela delle rovine romane visitabili.\n" ,
-      imgBackground: "salaBorsa01.jpg",
-      imgArray:["salaBorsa02.jpg","salaBorsa03.jpg"],
+      imgBackground: "salaBorsa03.jpg",
+      imgArray:["salaBorsa01.jpg","salaBorsa04.jpg", "salaBorsa06.jpg"],
       x:44.49469,
       y:11.34214
     },
@@ -153,8 +153,8 @@ export default async (models) => {
       description: "Celebre via del centro storico di Bologna che collega Piazza Maggiore a Via San Mamolo, deve il nome al politico, storico, scrittore e patriota italiano Massimo D’Azeglio.\n" +
         "Via di importanza sociale per i cittadini bolognesi, è suddivisa in una parte pedonale dove sono presenti un insieme di negozi moderni e botteghe storiche e una parte dove è consentita anche la circolazione dei mezzi. \n" +
         "Nella via vi è la dimora del defunto cantautore bolognese di fama internazionale Lucio Dalla. \n" ,
-      imgBackground: "viaAzeglio01.jpg",
-      imgArray:["viaAzeglio02.jpg","viaAzeglio03.jpg"],
+      imgBackground: "viaAzeglio02.jpg",
+      imgArray:["viaAzeglio01.jpg","viaAzeglio03.jpg", "viaAzeglio04.jpg"],
       x:44.48856,
       y:11.33986
     },
@@ -165,8 +165,8 @@ export default async (models) => {
       description: "San Pietro è la cattedrale della città. Collocata in Via Indipendenza, la chiesa fu consacrata ufficialmente nel 1184.\n" +
         "La cattedrale fu soggetta a diversi cambiamenti fino ad assestarsi con uno stile barocco, che tuttavia, fece perdere ogni traccia del precedente impianto romano. La facciata è composta da mattoni rossi e decorazioni in marmo bianco che lasciano spazio ai mastodontici portali che suggeriscono l’impianto interno a tre navate.\n" +
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
-      imgBackground: "cattedraleSanPietro01.jpg",
-      imgArray:["cattedraleSanPietro02.jpg","cattedraleSanPietro03.jpg"],
+      imgBackground: "cattedraleSanPietro06.jpg",
+      imgArray:["cattedraleSanPietro04.jpg","cattedraleSanPietro05.jpg","cattedraleSanPietro01.jpg"],
       x:44.49570,
       y:11.34350
     },
@@ -248,8 +248,8 @@ export default async (models) => {
       carousel_desc: "Lo stadio più grande della città, vivilo!",
       description: "Lo stadio più importante e grande della città. La storica arena è stata teatro delle più grandi imprese calcistiche della nazionale italiana e dalla squadra del Bologna, oggi allenata da Sinisa Mihajlovic. \n" +
         "Lo stadio fu inaugurato durante l’epoca fascista, più precisamente nel 1927. La caratteristica più particolare è sicuramente la Torre di Maratona, che si erge con i suoi 42 metri di altezza a sostegno della tribuna est.\n" ,
-      imgBackground: "stadio01.jpg",
-      imgArray:["stadio02.jpg","stadio03.jpg"],
+      imgBackground: "stadio02.jpg",
+      imgArray:["stadio01.jpg","stadio03.jpg"],
       x:44.49229,
       y:11.30997
     }
