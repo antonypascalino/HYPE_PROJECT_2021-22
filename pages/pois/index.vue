@@ -162,12 +162,14 @@ export default {
       this.lastScroll = performance.now()
     },
 
-    selected(crumb) {
-      console.log(crumb)
-    },
     goToDetails() {
       this.$router.push(`/details/${this.id}`)
     },
+  },
+  head() {
+    return {
+      title: 'insideBO | Punti di Interesse',
+    }
   },
   components: {
     Carousel,

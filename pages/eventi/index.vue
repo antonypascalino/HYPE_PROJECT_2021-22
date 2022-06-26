@@ -187,6 +187,11 @@ export default {
       this.$router.push(`/details/${this.id}`)
     },
   },
+  head() {
+    return {
+      title: 'insideBO | Eventi',
+    }
+  },
   components: {
     Carousel,
     CarouselSlide,
