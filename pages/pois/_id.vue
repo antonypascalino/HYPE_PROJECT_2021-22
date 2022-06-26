@@ -37,9 +37,9 @@
               class="mdi mdi-map-marker-check-outline"
               style="margin: 0; color: #c13939"
             />
-            Giardini Margherita
+            {{ address }}
           </div>
-          <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+          <a target="_blank" :href="mapLink">
             <baseButton title="Vedi su Google Maps" goto="" />
           </a>
         </div>
@@ -88,6 +88,8 @@ export default {
       description: data.description,
       x: data.x,
       y: data.y,
+      address: data.address,
+      mapLink: data.mapLink,
     }
   },
   data() {

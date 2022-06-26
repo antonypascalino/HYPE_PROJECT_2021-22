@@ -1,98 +1,117 @@
 <template>
   <div class="path-container">
     <img class="dashed-line" src="@/static/itineraries/LineaDrittaPNG.png" />
-    <nuxt-link :to="`/itinerari/pois/${this.id1}`">
-      <div class="round-container round-poi-1">
-        <img class="round-image poi1" :src="`../Poi/${img1}`" />
-        <div class="round-text">{{name1}}</div>
-      </div>
-    </nuxt-link>
 
-    <nuxt-link :to="`/itinerari/pois/${this.id2}`">
-    <div class="round-container round-poi-2">
-      <img class="round-image poi2" :src="`../Poi/${img2}`" />
-      <div class="round-text">{{name2}}</div>
+    <div class="poi-and-label">
+      <nuxt-link :to="`/itinerari/pois/${this.id1}`">
+        <div class="round-container round-poi-1">
+          <img class="round-image poi1" :src="`../Poi/${img1}`" />
+          <div class="round-text">{{ name1 }}</div>
+        </div>
+      </nuxt-link>
+      <div class="poi-label">{{ name1 }}</div>
     </div>
-    </nuxt-link>
 
-    <nuxt-link :to="`/itinerari/pois/${this.id3}`">
-    <div class="round-container round-poi-3">
-      <img class="round-image poi3" :src="`../Poi/${img3}`" />
-      <div class="round-text">{{name3}}</div>
+    <div class="poi-and-label">
+      <nuxt-link :to="`/itinerari/pois/${this.id2}`">
+        <div class="round-container round-poi-2">
+          <img class="round-image poi2" :src="`../Poi/${img2}`" />
+          <div class="round-text">{{ name2 }}</div>
+        </div>
+      </nuxt-link>
+      <div class="poi-label">{{ name2 }}</div>
     </div>
-    </nuxt-link>
 
-    <nuxt-link :to="`/itinerari/pois/${this.id4}`">
-    <div class="round-container round-poi-4">
-      <img class="round-image poi4" :src="`../Poi/${img4}`" />
-      <div class="round-text">{{name4}}</div>
+    <div class="poi-and-label">
+      <nuxt-link :to="`/itinerari/pois/${this.id3}`">
+        <div class="round-container round-poi-3">
+          <img class="round-image poi3" :src="`../Poi/${img3}`" />
+          <div class="round-text">{{ name3 }}</div>
+        </div>
+      </nuxt-link>
+      <div class="poi-label">{{ name3 }}</div>
     </div>
-    </nuxt-link>
 
-    <nuxt-link :to="`/itinerari/pois/${this.id5}`">
-    <div class="round-container round-poi-5">
-      <img class="round-image poi5" :src="`../Poi/${img5}`" />
-      <div class="round-text">{{name5}}
-      </div>
+    <div class="poi-and-label">
+      <nuxt-link :to="`/itinerari/pois/${this.id4}`">
+        <div class="round-container round-poi-4">
+          <img class="round-image poi4" :src="`../Poi/${img4}`" />
+          <div class="round-text">{{ name4 }}</div>
+        </div>
+      </nuxt-link>
+      <div class="poi-label">{{ name4 }}</div>
+    </div>
 
-    </div></nuxt-link>
+    <div class="poi-and-label">
+      <nuxt-link :to="`/itinerari/pois/${this.id5}`">
+        <div class="round-container round-poi-5">
+          <img class="round-image poi5" :src="`../Poi/${img5}`" />
+          <div class="round-text">{{ name5 }}</div>
+        </div>
+      </nuxt-link>
+      <div class="poi-label">{{ name5 }}</div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'ItineraryPath',
-  props:{
-   name1:{
-     type: String
-   },
-    name2:{
-      type: String
+  props: {
+    name1: {
+      type: String,
     },
-    name3:{
-      type: String
+    name2: {
+      type: String,
     },
-    name4:{
-      type: String
+    name3: {
+      type: String,
     },
-    name5:{
-      type: String
+    name4: {
+      type: String,
     },
-    img1:{
-      type:String
+    name5: {
+      type: String,
     },
-    img2:{
-      type:String
+    img1: {
+      type: String,
     },
-    img3:{
-      type:String
+    img2: {
+      type: String,
     },
-    img4:{
-      type:String
+    img3: {
+      type: String,
     },
-    img5:{
-      type:String
+    img4: {
+      type: String,
     },
-    id1:{
-      type:Number
+    img5: {
+      type: String,
     },
-    id2:{
-      type:Number
+    id1: {
+      type: Number,
     },
-    id3:{
-      type:Number
+    id2: {
+      type: Number,
     },
-    id4:{
-      type:Number
+    id3: {
+      type: Number,
     },
-    id5:{
-      type:Number
+    id4: {
+      type: Number,
     },
-  }
+    id5: {
+      type: Number,
+    },
+  },
 }
 </script>
 
 <style scoped>
+.poi-label {
+  display: none;
+}
+
 .path-container {
   width: 100%;
   height: 300px;
@@ -102,7 +121,6 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 10vw;
-  overflow: hidden;
 }
 
 .dashed-line {
@@ -177,15 +195,35 @@ export default {
   .path-container {
     flex-direction: column;
     height: auto;
+    /*border: 2px solid blue;*/
   }
   .dashed-line {
     transform: rotate(90deg);
     height: 60%;
     width: 100%;
+    right: 15vw;
   }
   .round-container {
     width: 80px;
     height: 80px;
+  }
+
+  .poi-and-label {
+    display: flex;
+    /*border: 2px solid blue;*/
+    width: 50vw;
+    margin-left: 8vw;
+  }
+
+  .poi-label {
+    display: flex;
+    align-items: center;
+    /*border: 2px solid red;*/
+    color: #c13939;
+    font-family: 'Josefin Sans';
+    font-size: 4vw;
+    padding-left: 20px;
+    width: 60vw;
   }
 }
 </style>
