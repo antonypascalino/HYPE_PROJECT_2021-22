@@ -89,7 +89,7 @@ export default {
 
       scrollingDirection: 0,
       lastScroll: 9999,
-      scrollIdleTime: 90, // time interval that we consider a new scroll event: 80 is quite good
+      scrollIdleTime: 1200, // time interval that we consider a new scroll event: 80 is quite good
     }
   },
 
@@ -115,6 +115,7 @@ export default {
         this.visibleSlide++
       }
       this.direction = 'left'
+      this.lastScroll = performance.now()
     },
     prev() {
       if (this.visibleSlide <= 0) {
@@ -123,6 +124,7 @@ export default {
         this.visibleSlide--
       }
       this.direction = 'right'
+      this.lastScroll = performance.now()
     },
     change(index) {
       if (this.visibleSlide < index) {
@@ -132,14 +134,13 @@ export default {
       }
       this.visibleSlide = index
     },
-
     wheel(deltaY) {
-      // adding .once in the template after @wheel
-      // if(deltaY > 0) {
-      //   this.next();
-      // } else {
-      //   this.prev();
-      // }
+      //   if (deltaY > 0) {
+      //     this.next()
+      //   } else {
+      //     this.prev()
+      //   }
+      // },
       const scrollingDirection = this.scrollingDirection
       const lastScroll = this.lastScroll
       const scrollIdleTime = this.scrollIdleTime
@@ -159,7 +160,7 @@ export default {
         this.prev()
         this.scrollingDirection = 2
       }
-      this.lastScroll = performance.now()
+      // this.lastScroll = performance.now()
     },
 
     selected(crumb) {
