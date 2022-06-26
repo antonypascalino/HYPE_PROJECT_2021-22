@@ -33,7 +33,7 @@ async function initializeDatabaseConnection() {
     y:DataTypes.FLOAT,
     carousel_desc:DataTypes.STRING,
     address:DataTypes.STRING,
-    mapLink:DataTypes.STRING
+    mapLink:DataTypes.TEXT
   })
 
   const Events = database.define("event", {
