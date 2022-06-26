@@ -163,7 +163,9 @@ export default async (models) => {
       imgBackground: "quadrilatero01.jpg",
       imgArray:["quadrilatero02.jpg","quadrilatero03.jpg"],
       x:44.49353,
-      y:11.34518
+      y:11.34518,
+      address: "Via Drapperie, Bologna, BO",
+      mapLink: "https://www.google.com/maps/place/Via+Drapperie,+40124+Bologna+BO/@44.4935462,11.3429683,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4be4fe7c3b5:0xc59f4146c32c020f!8m2!3d44.4935462!4d11.345157"
     },
     {
       name: "Via D’Azeglio",
@@ -175,7 +177,9 @@ export default async (models) => {
       imgBackground: "viaAzeglio02.jpg",
       imgArray:["viaAzeglio01.jpg","viaAzeglio03.jpg", "viaAzeglio04.jpg"],
       x:44.48856,
-      y:11.33986
+      y:11.33986,
+      address: "Via d'Azeglio, Bologna, BO",
+      mapLink: "https://www.google.com/maps/place/Via+d'Azeglio,+Bologna+BO/@44.4899977,11.3388936,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4eaa35e2ac7:0xb9dd04b1d9b5bb8e!8m2!3d44.4899977!4d11.3410823"
     },
     {
       name: "La Cattedrale di San Pietro",
@@ -187,7 +191,9 @@ export default async (models) => {
       imgBackground: "cattedraleSanPietro06.jpg",
       imgArray:["cattedraleSanPietro04.jpg","cattedraleSanPietro05.jpg","cattedraleSanPietro01.jpg"],
       x:44.49570,
-      y:11.34350
+      y:11.34350,
+      address: "Via dell'Indipendenza, 7, 40125 Bologna BO",
+      mapLink: "https://www.google.com/maps/place/Cattedrale+Metropolitana+di+San+Pietro/@44.4957417,11.341203,17z/data=!4m9!1m2!2m1!1sLa+Cattedrale+di+San+Pietro!3m5!1s0x477fd4be0705c4a5:0xf8e25b961d073f1b!8m2!3d44.4956867!4d11.3444266!15sChtMYSBDYXR0ZWRyYWxlIGRpIFNhbiBQaWV0cm9aHSIbbGEgY2F0dGVkcmFsZSBkaSBzYW4gcGlldHJvkgEJY2F0aGVkcmFsmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU0wYUU1dGFFMW5FQUU"
     },
     {
       name: "La finestrella sul Canale",
@@ -199,7 +205,9 @@ export default async (models) => {
       imgBackground: "finestra01.jpg",
       imgArray:["finestra02.jpg","finestra03.jpg"],
       x:44.49856,
-      y:11.34520
+      y:11.34520,
+      address: "Via Piella, 40126 Bologna, BO",
+      mapLink: "https://www.google.com/maps/place/Via+Piella,+40126+Bologna+BO/@44.4982823,11.3429643,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4bd7ce59bc1:0xab959bc78e33c6bf!8m2!3d44.4982823!4d11.345153"
     },
     {
       name: "I Portici",
