@@ -227,7 +227,7 @@ nav {
 .responsive.center {
   width: 150px;
   float: left;
-  margin-top: 6px;
+  margin-top: 7px;
   margin-left: 100px;
 }
 
