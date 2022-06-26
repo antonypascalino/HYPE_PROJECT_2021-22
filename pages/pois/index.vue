@@ -89,7 +89,7 @@ export default {
 
       scrollingDirection: 0,
       lastScroll: 9999,
-      scrollIdleTime: 1200, // time interval that we consider a new scroll event: 80 is quite good
+      scrollIdleTime: 2200, // time interval that we consider a new scroll event
     }
   },
 
@@ -141,21 +141,18 @@ export default {
       //     this.prev()
       //   }
       // },
-      const scrollingDirection = this.scrollingDirection
-      const lastScroll = this.lastScroll
-      const scrollIdleTime = this.scrollIdleTime
-
-      const delta = deltaY
       const timeNow = performance.now()
       if (
-        delta > 0 &&
-        (scrollingDirection !== 1 || timeNow > lastScroll + scrollIdleTime)
+        deltaY > 0 &&
+        (this.scrollingDirection !== 1 ||
+          timeNow > this.lastScroll + this.scrollIdleTime)
       ) {
         this.next()
         this.scrollingDirection = 1
       } else if (
-        delta < 0 &&
-        (scrollingDirection !== 2 || timeNow > lastScroll + scrollIdleTime)
+        deltaY < 0 &&
+        (this.scrollingDirection !== 2 ||
+          timeNow > this.lastScroll + this.scrollIdleTime)
       ) {
         this.prev()
         this.scrollingDirection = 2
@@ -163,9 +160,6 @@ export default {
       // this.lastScroll = performance.now()
     },
 
-    selected(crumb) {
-      console.log(crumb)
-    },
     goToDetails() {
       this.$router.push(`/details/${this.id}`)
     },

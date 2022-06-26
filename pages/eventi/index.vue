@@ -94,7 +94,7 @@ export default {
       filteredList: [],
       scrollingDirection: 0,
       lastScroll: 9999,
-      scrollIdleTime: 1200, // time interval that we consider a new scroll event: 80 is quite good
+      scrollIdleTime: 2200, // time interval that we consider a new scroll event: 80 is quite good
     }
   },
 

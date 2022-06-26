@@ -26,6 +26,7 @@ export default {
         return (
           'color: #C13939;\n ' +
           'transform: scale(1.3);\n ' +
+          'transition: 1100ms;\n ' +
           'transform-origin: right;'
         )
       }
@@ -74,6 +75,7 @@ i {
 i.visible,
 .carousel-indicator:hover i {
   color: #c13939;
+  /*transition: 200ms;*/
 }
 
 /*Per distanziare i pallini dal nome*/

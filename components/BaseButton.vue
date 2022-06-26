@@ -3,41 +3,53 @@
   Description: This is the component for the design and the implementation of a button
 -->
 <template>
-  <button type="button" class="btn btn-outline-secondary btn-lg" @click="gotoFunction">
+  <button
+    type="button"
+    class="btn btn-outline-secondary btn-lg"
+    @click="gotoFunction"
+  >
     {{ title }}
   </button>
 </template>
 
 <script>
 export default {
-  name: "BaseButton",
+  name: 'BaseButton',
   props: {
-    title:{
-      type:String,
-      required: true
+    title: {
+      type: String,
+      required: true,
     },
-    goto:{
-      type:String,
-      required: false
+    goto: {
+      type: String,
+      required: false,
     },
   },
   methods: {
     gotoFunction() {
       this.$router.push(this.goto)
     },
-  }
+  },
 }
 </script>
 
 <style scoped>
-.btn{
-  background-color: #C13939;
+.btn {
+  background-color: #c13939;
   color: #ffffff;
-  border: 2px solid #C13939;
+  border: 2px solid #c13939;
+  outline: none;
 }
-.btn:hover{
+.btn:hover {
   background-color: #ffffff;
   color: black;
+  cursor: pointer;
 }
 
+.btn:active,
+.btn:focus {
+  outline: 0;
+  border: none;
+  /*outline-style: none;*/
+}
 </style>
