@@ -232,15 +232,18 @@ export default async (models) => {
       y:11.35341
     },
     {
-      name: "Giardini Margherita",
-      visit_info:"Il parco è aperto tutti i giorni della settimana 24h al giorno.",
-      carousel_desc: "Per gli amanti della natura e non solo, scopri il parco più importante della città!",
-      description: "Con i suoi 26 ettari, si tratta del parco più grande di Bologna. I Giardini Margherita furono inaugurati nel 1879. Ispirati ai giardini inglesi del periodo romantico, tutt’ora mantengono le caratteristiche originali del tempo. Gli ampi prati e la vegetazione rigogliosa lasciano spazio al laghetto centrale, abitato da numerosi pesci e tartarughe.\n" +
-        "Luogo prediletto dai bolognesi durante le afose giornate estive, durante la costruzione fu rinvenuta una tomba etrusca tutt’ora presente.\n" ,
-      imgBackground: "giardiniMargherita01.jpg",
-      imgArray:["giardiniMargherita02.jpg","giardiniMargherita03.jpg"],
-      x:44.4822,
-      y:11.3526
+      name: "I colli bolognese",
+      visit_info:"E' sempre possibile visitare i colli!",
+      carousel_desc: "Ma quanto è bello andare in giro per i colli bolognesi... Scoprili",
+      description: "L’appennino bolognese si estende a partire dalla parte sud della città e fa da sfondo ai suggestivi palazzi medievali del centro.\n" +
+        "Vi sono numerosi sentieri, parchi e camminate che possono offrire ai visitatori pace e tranquillità a differenza delle vie affollate del centro.\n" +
+        "Da notare Parco Cavaioni, ex podere del ‘700 che, partendo da Via San Mamolo è raggiungibile all’incrocio tra Via dei Colli e Via di Casaglia. \n" +
+        "Celebre è la Via degli Dei, lungo sentiero di 130 km che collega Bologna a Firenze attraverso l’appenino. \n" +
+        "Tra i santuari arroccati sulle cime dei colli possiamo trovare San Michele in Bosco, ancora nella zona Urbana, la chiesa di Monte Donato e il più famoso Santuario della Madonna di San Luca\n",
+      imgBackground: "colliBolognesi01.jpg",
+      imgArray:["colliBolognesi02.jpg","colliBolognesi03.jpg","colliBolognesi04.jpg"],
+      x:44.44354,
+      y:11.30372
     },
     {
       name: "Stadio Renato Dall’Ara ",
