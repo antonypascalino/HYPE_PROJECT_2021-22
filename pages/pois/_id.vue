@@ -29,8 +29,20 @@
         </div>
       </section>
 
-      <section class="section-description">
+      <section class="section-description dove-si-trova">
         <div class="title-container">DOVE SI TROVA</div>
+        <div class="poi-address-container">
+          <div class="poi-address">
+            <i
+              class="mdi mdi-map-marker-check-outline"
+              style="margin: 0; color: #c13939"
+            />
+            Giardini Margherita
+          </div>
+          <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <baseButton title="Vedi su Google Maps" goto="" />
+          </a>
+        </div>
         <Map :x="x" :y="y" :name="name"> </Map>
       </section>
 
@@ -138,6 +150,37 @@ export default {
   width: 100%;
   height: 60px;
   padding: 20px;
+}
+
+.section-description.dove-si-trova {
+  /*border: 2px solid blue;*/
+}
+
+.poi-address-container {
+  position: absolute;
+  width: 20vw;
+  height: 40vh;
+  /*border: 2px solid #c13939;*/
+  /*z-index: 2;*/
+  right: 5vw;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.poi-address {
+  font-family: 'Josefin Sans';
+  font-size: 1.5vw;
+}
+
+.poi-to-maps {
+  border: none;
+  width: 10vw;
+  height: 20px;
+  background-color: #c13939;
 }
 
 .text-container {

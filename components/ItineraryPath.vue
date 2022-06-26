@@ -125,11 +125,11 @@ export default {
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: #e5e5e5;
+  background-color: #f2f2f2;
 }
 
 .round-container:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transform-origin: center;
   transition: 300ms ease-in-out;
   cursor: pointer;
@@ -155,7 +155,7 @@ export default {
   /*display: flex;*/
   font-family: 'Josefin Sans';
   text-transform: uppercase;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   transition: 100ms ease-in-out;
   /*border: 2px solid blue;*/
@@ -169,7 +169,7 @@ export default {
 
 .round-container:hover .round-image,
 .round-container.hover .round-image {
-  opacity: 20%;
+  opacity: 0;
   transition: 300ms ease-in-out;
 }
 

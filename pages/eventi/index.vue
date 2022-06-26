@@ -94,7 +94,7 @@ export default {
       filteredList: [],
       scrollingDirection: 0,
       lastScroll: 9999,
-      scrollIdleTime: 90, // time interval that we consider a new scroll event: 80 is quite good
+      scrollIdleTime: 2200, // time interval that we consider a new scroll event: 80 is quite good
     }
   },
 
@@ -121,6 +121,7 @@ export default {
         this.visibleSlide++
       }
       this.direction = 'left'
+      this.lastScroll = performance.now()
     },
     prev() {
       if (this.visibleSlide <= 0) {
@@ -129,6 +130,7 @@ export default {
         this.visibleSlide--
       }
       this.direction = 'right'
+      this.lastScroll = performance.now()
     },
     change(index) {
       if (this.visibleSlide < index) {
@@ -180,7 +182,7 @@ export default {
         this.prev()
         this.scrollingDirection = 2
       }
-      this.lastScroll = performance.now()
+      // this.lastScroll = performance.now()
     },
 
     goToDetails() {

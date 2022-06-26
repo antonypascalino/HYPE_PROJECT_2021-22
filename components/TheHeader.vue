@@ -77,16 +77,16 @@ export default {
           path: '/pois/',
         },
         {
-          name: 'SERVIZI',
-          path: '/servizi/',
-        },
-        {
           name: 'EVENTI',
           path: '/eventi/',
         },
         {
           name: 'ITINERARI',
           path: '/itinerari/',
+        },
+        {
+          name: 'SERVIZI',
+          path: '/servizi/',
         },
         {
           name: 'CONTATTACI',

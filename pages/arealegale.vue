@@ -73,7 +73,7 @@ export default {
   line-height: 50px;
   display: flex;
   color: #C13939;
-  background-color: #EBEBEB;
+  background-color: #f2f2f2;
 
 }
 .section-chi-siamo{
@@ -93,5 +93,9 @@ h4{
 }
 .copyright{
   margin-top: 20px;
+}
+
+.main-page {
+  background-color: #f2f2f2;
 }
 </style>

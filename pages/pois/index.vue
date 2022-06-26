@@ -89,7 +89,7 @@ export default {
 
       scrollingDirection: 0,
       lastScroll: 9999,
-      scrollIdleTime: 90, // time interval that we consider a new scroll event: 80 is quite good
+      scrollIdleTime: 2200, // time interval that we consider a new scroll event
     }
   },
 
@@ -115,6 +115,7 @@ export default {
         this.visibleSlide++
       }
       this.direction = 'left'
+      this.lastScroll = performance.now()
     },
     prev() {
       if (this.visibleSlide <= 0) {
@@ -123,6 +124,7 @@ export default {
         this.visibleSlide--
       }
       this.direction = 'right'
+      this.lastScroll = performance.now()
     },
     change(index) {
       if (this.visibleSlide < index) {
@@ -132,34 +134,30 @@ export default {
       }
       this.visibleSlide = index
     },
-
     wheel(deltaY) {
-      // adding .once in the template after @wheel
-      // if(deltaY > 0) {
-      //   this.next();
-      // } else {
-      //   this.prev();
-      // }
-      const scrollingDirection = this.scrollingDirection
-      const lastScroll = this.lastScroll
-      const scrollIdleTime = this.scrollIdleTime
-
-      const delta = deltaY
+      //   if (deltaY > 0) {
+      //     this.next()
+      //   } else {
+      //     this.prev()
+      //   }
+      // },
       const timeNow = performance.now()
       if (
-        delta > 0 &&
-        (scrollingDirection !== 1 || timeNow > lastScroll + scrollIdleTime)
+        deltaY > 0 &&
+        (this.scrollingDirection !== 1 ||
+          timeNow > this.lastScroll + this.scrollIdleTime)
       ) {
         this.next()
         this.scrollingDirection = 1
       } else if (
-        delta < 0 &&
-        (scrollingDirection !== 2 || timeNow > lastScroll + scrollIdleTime)
+        deltaY < 0 &&
+        (this.scrollingDirection !== 2 ||
+          timeNow > this.lastScroll + this.scrollIdleTime)
       ) {
         this.prev()
         this.scrollingDirection = 2
       }
-      this.lastScroll = performance.now()
+      // this.lastScroll = performance.now()
     },
 
     goToDetails() {
@@ -201,7 +199,8 @@ export default {
   width: 70vw;
   height: 74vh;
   margin-top: 7vh;
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
+  filter: brightness(90%);
 }
 
 .imageContainer:hover .hoverText,
@@ -348,7 +347,7 @@ body {
 
 div.indicatorList {
   /*border: solid 2px blue;*/
-  width: 23vw;
+  width: 20vw;
   height: 76vh;
   position: relative;
   float: right;
