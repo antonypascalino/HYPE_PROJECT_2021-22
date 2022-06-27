@@ -93,8 +93,8 @@ export default {
   },
 
   async asyncData({ $axios }) {
-   // const { data } = await $axios.get('api/itineraries')
-    const { data } = await $axios.get('http://localhost:3000/api/itineraries')
+    const { data } = await $axios.get('api/itineraries')
+    // const { data } = await $axios.get('http://localhost:3000/api/itineraries')
     return {
       itList: data,
     }
