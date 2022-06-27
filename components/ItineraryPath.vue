@@ -3,12 +3,10 @@
     <img class="dashed-line" src="@/static/itineraries/LineaDrittaPNG.png" />
 
     <div class="poi-and-label">
-      <nuxt-link :to="`/itinerari/pois/${this.id1}`">
-        <div class="round-container round-poi-1">
-          <img class="round-image poi1" :src="`../Poi/${img1}`" />
-          <div class="round-text">{{ name1 }}</div>
-        </div>
-      </nuxt-link>
+      <div class="round-container round-poi-1">
+        <img class="round-image poi1" :src="`../Poi/${img1}`" />
+        <div class="round-text">{{ name1 }}</div>
+      </div>
       <div class="poi-label">{{ name1 }}</div>
     </div>
 
