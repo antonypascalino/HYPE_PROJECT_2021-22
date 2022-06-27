@@ -6,7 +6,7 @@
 <template>
   <main class="page-container">
     <div class="body-container">
-      <StaticHalfImage slide="/bolognaInBreve.jpg" title="BOLOGNA" />
+      <StaticHalfImage slide="/bolognaInBreve.jpg" title="BOLOGNA IN BREVE" />
       <div class="breadcrumb-section">
         <breadcrumb
           :default-route="[{ title: 'HOME', path: '/' }]"
@@ -14,22 +14,25 @@
         />
       </div>
       <br /><br />
+
       <section class="section-la-nostra-missione">
         <p class="bologna-paragraph end-paragraph">
-          <b>Capoluogo</b> della Città metropolitana e della regione Emilia
-          Romagna, Bologna è situata tra le montagne dell'Appennino
-          tosco-emiliano ed il cuore della <b>Pianura Padana</b>. Punto
-          d’incontro tra nord e sud, tra est e ovest, da Bologna si raggiungono
-          facilmente la Riviera Adriatica nonché Venezia, Firenze, Milano e
-          Roma.a città, i cui primi insediamenti risalirebbero almeno al I
-          millennio a.C., fu un importante centro urbano dapprima sotto gli
-          Etruschi e i Celti, poi sotto i Romani e, nel Medioevo, come libero
-          comune. Capitale settentrionale dello Stato Pontificio a partire dal
-          Cinquecento, ebbe un ruolo molto importante durante il Risorgimento e,
-          durante la seconda guerra mondiale, fu uno dei fulcri della
-          Resistenza. Nel secondo dopoguerra, come buona parte dell'Emilia, è
-          stata governata quasi ininterrottamente da amministrazioni di
-          sinistra.
+          <span style="font-weight: bold; color: #C13939; font-style: italic">Capoluogo</span> della Città metropolitana e della regione Emilia-Romagna, Bologna è situata tra le montagne dell'Appennino
+          tosco-emiliano ed il cuore della <b>Pianura Padana</b>.
+        </p>
+        <p class="bologna-paragraph end-paragraph">
+        Punto d’incontro tra nord e sud, tra est e ovest, da Bologna si raggiungono
+        facilmente la Riviera Adriatica nonché Venezia, Firenze, Milano e
+        Roma.
+        </p>
+        <p class="bologna-paragraph end-paragraph">
+          La città, i cui primi insediamenti risalirebbero almeno al I
+        millennio a.C., fu un importante centro urbano dapprima sotto gli
+        Etruschi e i Celti, poi sotto i Romani e, nel Medioevo, come libero
+        comune. Capitale settentrionale dello Stato Pontificio a partire dal
+        Cinquecento, ebbe un ruolo molto importante durante il Risorgimento e,
+        durante la seconda guerra mondiale, fu uno dei fulcri della
+        Resistenza.
         </p>
       </section>
 
@@ -40,13 +43,16 @@
             <div class="col-xl-3 col-lg-4 col-md-6">
               <img
                 src="~/static/bolognaInBreve02.jpg"
-                alt="responsive webite"
-                class="img-fluid"
+                alt="responsive website"
+                class="img-fluid img1"
               />
             </div>
             <div class="col-xl-6 col-lg-8 col-md-6">
               <p class="bologna-paragraph">
-                Città d’arte, cultura e commercio con un'efficiente struttura
+                <span style="font-size: 40px; font-style: italic; color: #C13939; opacity: 0.75"> "Città d’arte, cultura e commercio"</span>
+              </p>
+              <p class="bologna-paragraph">
+                con un'efficiente struttura
                 fieristica e una rinomata tradizione manifatturiera e
                 motoristica, Bologna è nota per i quasi 40 km di portici, i più
                 lunghi del mondo. Chiamata anche la <b>“Dotta”</b>, per via
@@ -81,7 +87,7 @@
               <img
                 src="~/static/bolognaStoria01.jpg"
                 alt="responsive webite"
-                class="img-fluid"
+                class="img-fluid img2"
               />
             </div>
           </div>
@@ -96,10 +102,14 @@
               <img
                 src="~/static/aTavolaBologna.jpg"
                 alt="responsive webite"
-                class="img-fluid"
+                class="img-fluid img3"
               />
             </div>
             <div class="col-xl-6 col-lg-8 col-md-6">
+              <p class="bologna-paragraph">
+                <span style="font-size: 40px; font-style: italic; color: #C13939; opacity: 0.75"> "Mortadella, ragù, tortellini, lasagne e
+                  tagliatelle"</span>
+              </p>
               <p class="bologna-paragraph">
                 Bologna è sinonimo di enogastronomia.
                 <b
@@ -124,6 +134,9 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-6 col-lg-8 col-md-6">
+              <p class="bologna-paragraph">
+                <span style="font-size: 40px; font-style: italic; color: #C13939; opacity: 0.75"> "La città pulsa di vita di giorno e di notte"</span>
+              </p>
               <p class="bologna-paragraph">
                 La città pulsa di vita di giorno e di notte nelle
                 <b
@@ -165,6 +178,7 @@
           individuare i punti di riferimento e conoscere meglio la città.
         </p>
       </section>
+
     </div>
   </main>
 </template>
@@ -172,7 +186,6 @@
 <script>
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import StaticHalfImage from '~/components/StaticHalfImage'
-
 export default {
   layout: 'default',
   components: {
@@ -193,17 +206,22 @@ export default {
     }
   },
 }
+
 </script>
 <style scoped>
+
 .page-container {
   margin-top: -40px;
 }
+
 .body-container {
   margin-top: 60px;
 }
+
 .breadcrumb-section {
   margin-top: 10px;
 }
+
 .title-container {
   margin-top: 40px;
   width: 100%;
@@ -216,6 +234,7 @@ export default {
   color: #c13939;
   text-transform: uppercase;
 }
+
 .section-la-nostra-missione {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -225,6 +244,7 @@ export default {
   justify-content: center;
   align-content: center;
 }
+
 p.bologna-paragraph {
   padding-top: 10px;
   padding-left: 2vw;
@@ -242,8 +262,14 @@ p.bologna-paragraph.end-paragraph {
   justify-content: center;
   align-content: center;
 }
+
 .row {
   align-content: center;
   justify-content: center;
 }
+
+.img-fluid {
+  width: 1500px;
+}
+
 </style>

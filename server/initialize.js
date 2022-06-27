@@ -18,7 +18,7 @@ export default async (models) => {
         "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere).\n" +
         "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
       imgBackground: "piazzaMaggiore03.jpg",
-      imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore01.jpg","piazzaMaggiore04.jpg"],
+      imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore01.jpg"],
       x:44.49371,
       y:11.34304,
       address:"Piazza Maggiore, 40124 Bologna (BO)",
@@ -32,7 +32,7 @@ export default async (models) => {
         "La figura in bronzo del Nettuno è alta circa 3,2 metri. La posa solenne è un simbolo della potenza dello stato pontificio di quell’epoca: la mano sinistra dal palmo aperto diretta controvento quasi a voler calmare i flutti e la mano destra che regge un imponente tridente. L’intera composizione è caratterizzata da un grande slancio e dinamismo dovuta alle figure implementate sul blocco centrale ricoperto di marmo di Verona, come le nereidi e i delfini.\n" +
         "Il tridente impugnato dal Nettuno è stata fonte di ispirazione per il logo della casa di auto sportive Maserati che lo introdusse a partire dal 1926.\n",
       imgBackground: "fontanaNettuno04.jpg",
-      imgArray:["fontanaNettuno01.jpg","fontanaNettuno05.jpg", "fontanaNettuno02.jpg"],
+      imgArray:["fontanaNettuno01.jpg","fontanaNettuno05.jpg"],
       x:44.49426,
       y:11.34266,
       address: "Piazza del Nettuno, 40124 Bologna (BO)",
@@ -47,7 +47,7 @@ export default async (models) => {
         "L’interno è suddiviso in tre navate e fu attuato in epoche diverse. Si contano ben ventidue cappelle, dove si possono scorgere dipinti e decorazioni di illustri artisti del tempo, tra cui Donato Creti e Girolamo Mazzola detto “Parmigianino”. Tra queste raffigurazioni, tuttavia, vi è un affresco che suscita tutt’ora controversie: ispirandosi all’inferno di Dante, l’autore Giovanni da Modena ha rappresentato una serie di peccatori e dannati tra cui Maometto che viene scuoiato da un diavolo.\n" +
         "Un’ulteriore caratteristica di San Petronio è la meridiana che si trova al suo interno e che si estende nella pavimentazione per una lunghezza di circa 67 metri, rendendola la più lunga al mondo.\n" ,
       imgBackground: "sanPetronio07.jpg",
-      imgArray:["sanPetronio05.jpg","sanPetronio06.jpg","sanPetronio04.jpg"],
+      imgArray:["sanPetronio05.jpg","sanPetronio06.jpg"],
       x:44.49273,
       y:11.34303,
       address: "Piazza Galvani 5, 40124 Bologna (BO)",
@@ -121,7 +121,7 @@ export default async (models) => {
         "Numerosi sono gli eventi e gli ospiti illustri che vi partecipano ogni anno. Solo nel 2019 a Sala Borsa sono stati effettuati 530.000 prestiti. \n" +
         "Nell’androne principale, il pavimento in vetro rivela delle rovine romane visitabili.\n" ,
       imgBackground: "salaBorsa06.jpg",
-      imgArray:["salaBorsa01.jpg","salaBorsa04.jpg", "salaBorsa03.jpg"],
+      imgArray:["salaBorsa01.jpg","salaBorsa04.jpg"],
       x:44.49469,
       y:11.34214,
       address: "Piazza del Nettuno 3, 40124 Bologna (BO)",
@@ -149,7 +149,7 @@ export default async (models) => {
         "Fondata in epoca romana intorno al 100 d.C., la basilica, inizialmente tempio pagano dedicato ad Iside, fu soggetto di numerose ricostruzioni ed ampliamenti che passano dall’epoca romana alle prime invasioni longobarde. Gli ultimi edifici risalgono al periodo tra il X e il XIII secolo e furono edificati dall’organo dei Benedettini.\n" +
         "La chiesa del Crocefisso di origine longobarda si affaccia su Piazza Santo Stefano mentre all’interno si hanno cortili di stampo romano, come il cortile di Pilato ed il museo che conserva opere di diverse epoche.\n" ,
       imgBackground: "basilicaSantoStefano04.jpg",
-      imgArray:["basilicaSantoStefano01.jpg","basilicaSantoStefano02.jpg","basilicaSantoStefano03.jpg"],
+      imgArray:["basilicaSantoStefano01.jpg","basilicaSantoStefano02.jpg"],
       x:44.49207,
       y:11.34877,
       address: "Via Santo Stefano 24, 40125 Bologna (BO)",
@@ -175,7 +175,7 @@ export default async (models) => {
         "Via di importanza sociale per i cittadini bolognesi, è suddivisa in una parte pedonale dove sono presenti un insieme di negozi moderni e botteghe storiche e una parte dove è consentita anche la circolazione dei mezzi. \n" +
         "Nella via vi è la dimora del defunto cantautore bolognese di fama internazionale Lucio Dalla. \n" ,
       imgBackground: "viaAzeglio02.jpg",
-      imgArray:["viaAzeglio01.jpg","viaAzeglio03.jpg", "viaAzeglio04.jpg"],
+      imgArray:["viaAzeglio03.jpg", "viaAzeglio04.jpg"],
       x:44.48856,
       y:11.33986,
       address: "Via d'Azeglio, Bologna, (BO)",
@@ -189,7 +189,7 @@ export default async (models) => {
         "La cattedrale fu soggetta a diversi cambiamenti fino ad assestarsi con uno stile barocco, che tuttavia, fece perdere ogni traccia del precedente impianto romano. La facciata è composta da mattoni rossi e decorazioni in marmo bianco che lasciano spazio ai mastodontici portali che suggeriscono l’impianto interno a tre navate.\n" +
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
       imgBackground: "cattedraleSanPietro06.jpg",
-      imgArray:["cattedraleSanPietro04.jpg","cattedraleSanPietro05.jpg","cattedraleSanPietro01.jpg"],
+      imgArray:["cattedraleSanPietro04.jpg","cattedraleSanPietro05.jpg"],
       x:44.49570,
       y:11.34350,
       address: "Via dell'Indipendenza 7, 40125 Bologna (BO)",
@@ -232,7 +232,7 @@ export default async (models) => {
         "La chiesa barocca color mattone è sormontata da una cupola dotata di osservatorio alta ben 42 metri. All’interno della struttura dalla pianta a croce greca è custodita l’icona della Vergine col Bambino, che ritualmente una volta ogni anno nel mese di maggio viene prelevata e portata seguita da una lunga processione di prelati e fedeli di tutta la città nella cattedrale di San Pietro in Via dell’Indipendenza.\n" +
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
       imgBackground: "porticiSanLuca04.jpg",
-      imgArray:["porticiSanLuca01.jpg","porticiSanLuca02.jpg", "porticiSanLuca03.jpg"],
+      imgArray:["porticiSanLuca01.jpg","porticiSanLuca02.jpg"],
       x:44.47909,
       y:11.29812,
       address: "Via di San Luca & Portico di S. Luca 40135 Bologna (BO)",
@@ -246,7 +246,7 @@ export default async (models) => {
         "I resti più antichi sono stati edificati in corrispondenza del crollo dell’Impero Romano di Occidente al fine di difendersi dalle invasioni barbariche. Il materiale di cui erano composte era la selenite. Una seconda cinta fu costruita in epoca medievale intorno all’anno 1100, di proporzioni maggiori rispetto alle precedenti mura. La terza cerchia è nominata “Circla” è la più recente e corrisponde come forma a quella degli attuali viali.\n" +
         "Le porte sono uno degli ultimi baluardi delle antiche mura che dal III secolo d.C. hanno accerchiato e difeso la città. Si hanno in totale 12 porte, di cui due non sono più esistenti. Ogni porta, di stampo romano, ha uno stile diverso. Porta Castiglione, ad esempio è alta ed imponente, mentre Porta Saragozza, con le sue torri ha uno sviluppo più orizzontale che ne conferisce stabilità.\n" ,
       imgBackground: "porta01.jpg",
-      imgArray:["porta02.jpg", "porta03.jpg", "porta04.jpg"],
+      imgArray:["porta02.jpg", "porta03.jpg"],
       x:44.4470,
       y:11.4138,
       address: "Mura di Porta Saragozza, 40123 Bologna (BO)",
@@ -276,7 +276,7 @@ export default async (models) => {
         "Celebre è la Via degli Dei, lungo sentiero di 130 km che collega Bologna a Firenze attraverso l’appenino. \n" +
         "Tra i santuari arroccati sulle cime dei colli possiamo trovare San Michele in Bosco, ancora nella zona Urbana, la chiesa di Monte Donato e il più famoso Santuario della Madonna di San Luca\n",
       imgBackground: "colliBolognesi01.jpg",
-      imgArray:["colliBolognesi02.jpg","colliBolognesi03.jpg","colliBolognesi04.jpg"],
+      imgArray:["colliBolognesi02.jpg","colliBolognesi03.jpg"],
       x:44.44354,
       y:11.30372,
       address: "Via Cavaioni 3, 40136 Bologna (BO)",
@@ -308,7 +308,7 @@ export default async (models) => {
       imgBackground: "ilCinemaRitrovato01.jpg",
       imgArray:["ilCinemaRitrovato02.jpg","ilCinemaRitrovato03.jpg"],
       address:"Piazza Maggiore, 40124 Bologna (BO)",
-      date:"25 Giu 2022 - 03 Lug 2022",
+      date:"25 Giugno 2022 - 03 Luglio 2022",
       price:"Ingresso gratuito",
       website:"https://festival.ilcinemaritrovato.it/",
       type:0,
@@ -319,7 +319,7 @@ export default async (models) => {
       carousel_desc: "Dove c'é innovazione c'é Cersaie, il salone internazionale dell'arredobagno",
       description: "Cersaie è la rinomata esposizione internazionale delle ceramiche e dell'arredobagno. Si tiene ogni anno a BolognaFiere ma non mancano gli allestimenti all'interno delle mura dove è possibile osservare delle meravigliose composizioni di design e materiali all'avanguardia",
       imgBackground: "cersaie05.jpg",
-      imgArray: ["cersaie02.jpg", "cersaie03.jpg","cersaie04.jpg"],
+      imgArray: ["cersaie02.jpg", "cersaie03.jpg"],
       address: "Viale della Fiera 20, 40128 Bologna (BO)",
       date: "26 Settembre 2022 - 30 Settembre 2022",
       price: "Ingresso gratuito",
@@ -376,7 +376,7 @@ export default async (models) => {
       description: "StraBologna è la camminata ludico motoria non competitiva organizzata da UISP Bologna che si svolge nel cuore della città in una domenica di primavera anticipata da due giorni di eventi in Piazza Maggiore, per promuovere gli ideali di benessere, lo sport per tutti, l’inclusione sociale e il divertimento.\n" +
         "L’evento è adatto a: runner, podisti, famiglie anche con passeggini, bambini, disabili, anziani, cani al guinzaglio... insomma è proprio per tutt*! Un’occasione per vivere insieme le bellezze del centro storico di Bologna e per scoprire la città da un nuovo punto di vista.",
       imgBackground: "straBologna01.jpg",
-      imgArray:["straBologna02.jpg","straBologna03.jpg","straBologna04.jpg"],
+      imgArray:["straBologna03.jpg","straBologna04.jpg"],
       address:"Piazza Maggiore, 40124 Bologna (BO)",
       date:"22 MAGGIO 2022\n" +
         "ORE 10:30",
@@ -391,8 +391,8 @@ export default async (models) => {
       description: "roBOt Festival è una manifestazione internazionale nata nel 2008 a Bologna e dedicata alla musica elettronica e alle arti visuali. La direzione artistica del festival è affidata fin dalla sua prima edizione a Marco Ligurgo e Antonio Puglisi. Il festival, che si svolge in autunno, propone ogni anno oltre 100 eventi tra concerti, dj set, performance, proiezioni, installazioni digitali e workshop[2].\n" +
         "\n" +
         "Vi hanno partecipato artisti internazionali come Ryūichi Sakamoto, Alva Noto, Francesco Tristano Schlimé, Nathan Fake, Plaid, Yann Tiersen, Gianluca Petrella, Carl Craig e Pan Sonic.",
-      imgBackground: "robot01.jpg",
-      imgArray:["robot02.png","robot03.jpg"],
+      imgBackground: "robot02.png",
+      imgArray:["robot01.jpg","robot03.jpg"],
       address:"Via Camillo Casarini 19, 40131 Bologna (BO)",
       date:"23 Settembre 2022 -24 Settembre 2022",
       price:"30 euro",
@@ -405,7 +405,7 @@ export default async (models) => {
       carousel_desc: "Fiera mondiale dell'industria cosmetica dove ogni anno vengono mostrate le più recenti innovazioni di questo settore.",
       description: "Cosmoprof è la fiera leader mondiale per l'intera industria della cosmetica e della bellezza professionale.",
       imgBackground: "cosmoprof01.jpg",
-      imgArray:["cosmoprof02.jpg", "cosmoprof03.jpg", "cosmoprof04.jpg"],
+      imgArray:["cosmoprof03.jpg", "cosmoprof04.jpg"],
       address:"Viale della Fiera 20, 40128 Bologna (BO)",
       date:"16 Marzo 2023 - 23 Marzo 2023",
       price:"Ingresso gratuito",
@@ -418,7 +418,7 @@ export default async (models) => {
       carousel_desc: "Chi non ama il cioccolato? Questo è il festival che fa per voi!",
       description: "Il Cioccoshow , ossia il Cioccolato tradizionale di alta qualità in fiera, giunto alla sua 15° edizione, si svolge nel centro storico di Bologna. Tra assaggi, degustazioni, laboratori curati da grandi Maestri Cioccolatieri ed esperti di settore.",
       imgBackground: "cioccoShow01.jpg",
-      imgArray:["cioccoShow02.jpg", "cioccoShow03.jpg", "cioccoShow04.jpg", "cioccoShow05.jpg"],
+      imgArray:["cioccoShow02.jpg", "cioccoShow03.jpg"],
       address: "Piazza XX Settembre (Porta Galliera), 40121 Bologna (BO)",
       date: "17 Novembre 2022 - 20 Novembre 2022",
       price: "Ingresso gratuito, consumazioni a pagamento",
@@ -431,7 +431,7 @@ export default async (models) => {
       carousel_desc: "BilBOlBul non è solo una semplice fiera del fumetto, qui l'arte viene proposta nelle tavole nella sua massima espressione.",
       description: "Per tre giorni all'anno, BilBOlbul è un festival internazionale di fumetto che si tiene a Bologna. Il festival porta in Italia artiste e artisti da tutto il mondo, e attraverso il fumetto prova a leggere il presente.",
       imgBackground: "bilbolbul02.jpg",
-      imgArray:["bilbolbul01.jpg","bilbolbul03.jpg", "bilbolbul04.jpg"],
+      imgArray:["bilbolbul01.jpg","bilbolbul03.jpg"],
       address:"Via del Porto 11/2, 40121 Bologna (BO)",
       date:"03 Dicembre 2022 - 05 Dicembre 2022",
       price:"Ingresso gratuito",
@@ -444,7 +444,7 @@ export default async (models) => {
       carousel_desc: "Uno dei più importanti ed antichi festival Jazz italiani: lasciati travolgere da questa meravigliosa musica.",
       description: "Bologna Jazz Festival (abbreviato BJF) è considerato il più antico festival musicale italiano dedicato al jazz; fu fondato nel 1958. Si svolge annualmente a Bologna, con eventi anche a Ferrara e Modena, nel mese di novembre",
       imgBackground: "jazzFestival04.jpeg",
-      imgArray:["jazzFestival01.jpg", "jazzFestival02.jpg", "jazzFestival03.jpg"],
+      imgArray:["jazzFestival01.jpg", "jazzFestival02.jpg"],
       address:"PalaDozza, Piazza Manfredi Azzarita 3, 40122 Bologna (BO)",
       date:"20 Novembre 2022 - 30 Novembre 2022",
       price:"10 euro",
