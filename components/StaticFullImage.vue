@@ -10,6 +10,7 @@
     <div class="scopri-container" :class="{change_color1: scrollPosition > 130,change_color2: scrollPosition > 150,change_color3: scrollPosition > 170}">{{ title1 }}</div>
     <div class="bologna-container" :class="{change_color1: scrollPosition > 200,change_color2: scrollPosition > 200,change_color3: scrollPosition > 230}">{{ title2 }}</div>
     <div class="arrow-down mdi mdi-chevron-double-down" :class="{change_color1: scrollPosition > 700,change_color2: scrollPosition > 750,change_color3: scrollPosition > 800}"  @click="$emit('scrollto', 'anchor')"></div>
+
   </div>
 </template>
 
@@ -54,12 +55,8 @@ export default {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom;
   margin-top:50px;
   margin-left: 0;
-
 }
 .scopri-container{
   position: absolute;
@@ -94,13 +91,10 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .scopri-container{
-    display: none;
+    margin-top: 25px;
   }
   .bologna-container{
-    display: none;
-  }
-  .image-container1{
-    height:400px
+    margin-top: 25px;
   }
 }
 @media screen and (min-width: 900px) {
