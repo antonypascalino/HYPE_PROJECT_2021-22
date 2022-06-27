@@ -74,14 +74,7 @@
                 città fiorente, con ventimila abitanti, imponenti costruzioni ed
                 un vasto teatro. Mantenne il suo prestigio nei secoli imperiali,
                 ma dell'impero seguì il declino ed il suo perimetro si ridusse a
-                poco a poco. Nel V secolo della nostra era, al tempo di San
-                Petronio vescovo, la città iniziò la sua rinascita sino a
-                conoscere, nell'XI secolo, una nuova fase di prosperità. Bologna
-                raggiunse il suo massimo splendore nel XIII secolo. Con l'arrivo
-                di Napoleone, Bologna diventa prima capitale della Repubblica
-                Cispadana e poi il secondo centro, dopo Milano, della repubblica
-                Cisalpina. A partire dal XVII secolo la città divenne famosa
-                anche per l'industria alimentare e la culinaria.
+                poco a poco.
               </p>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6">
