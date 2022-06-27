@@ -17,7 +17,7 @@
 
       <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
 
-      <ItineraryPath line="/itineraries/LineaDrittaPNG.png" :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" :id2="idPoi2" :id3="idPoi3" :id4="idPoi4" :id5="idPoi5" :img1="img1" :img2="img2" :img3="img3" :img4="img4" :img5="img5" />
+      <ItineraryPath line="/Itineraries/LineaDrittaPNG.png" :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" :id2="idPoi2" :id3="idPoi3" :id4="idPoi4" :id5="idPoi5" :img1="img1" :img2="img2" :img3="img3" :img4="img4" :img5="img5" />
 
       <!--      <section class="section-description">-->
       <!--        <div class="poi-card-container row mt-4">-->

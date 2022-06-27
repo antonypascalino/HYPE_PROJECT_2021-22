@@ -1,6 +1,6 @@
 <template>
   <div class="path-container">
-    <img class="dashed-line" :src=line />
+    <img class="dashed-line" :src="line" />
 
     <div class="poi-and-label">
       <nuxt-link :to="`/itinerari/pois/${this.id1}`">
