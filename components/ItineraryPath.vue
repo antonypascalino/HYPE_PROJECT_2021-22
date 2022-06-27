@@ -1,6 +1,6 @@
 <template>
   <div class="path-container">
-    <img class="dashed-line" src="@/static/itineraries/LineaDrittaPNG.png" />
+    <img class="dashed-line" :src="line" />
 
     <div class="poi-and-label">
       <div class="round-container round-poi-1">
@@ -56,6 +56,9 @@
 export default {
   name: 'ItineraryPath',
   props: {
+    line: {
+      type: String,
+    },
     name1: {
       type: String,
     },

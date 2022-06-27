@@ -17,7 +17,7 @@
 
       <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
 
-      <ItineraryPath :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" :id2="idPoi2" :id3="idPoi3" :id4="idPoi4" :id5="idPoi5" :img1="img1" :img2="img2" :img3="img3" :img4="img4" :img5="img5" />
+      <ItineraryPath line="/Itineraries/LineaDrittaPNG.png" :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" :id2="idPoi2" :id3="idPoi3" :id4="idPoi4" :id5="idPoi5" :img1="img1" :img2="img2" :img3="img3" :img4="img4" :img5="img5" />
 
       <!--      <section class="section-description">-->
       <!--        <div class="poi-card-container row mt-4">-->
@@ -83,8 +83,10 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const [data1,data2] = await Promise.all([
-      $axios.get('http://localhost:3000/api/itineraries/' + id),
-      $axios.get('http://localhost:3000/api/itPoi/' +id),
+      // $axios.get('http://localhost:3000/api/itineraries/' + id),
+      // $axios.get('http://localhost:3000/api/itPoi/' +id),
+      $axios.get('api/itineraries/' + id),
+      $axios.get('api/itPoi/' +id),
     ])
 
     // const { data } = await $axios.get('api/itineraries/'+ id)

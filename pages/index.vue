@@ -54,7 +54,7 @@
         </div>
 
         <!--Button for display all the events -->
-        <baseButton title="Tutti gli eventi" goto="pois"></baseButton>
+        <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
 
       </div>
     </section>
@@ -81,10 +81,10 @@ export default {
   },
 
   async asyncData({ route, $axios }) {
-    const events = await $axios.get(`http://localhost:3000/api/4events1`)
-    // const events = await $axios.get(`api/4events`)
-    const pois = await $axios.get(`http://localhost:3000/api/4pois`)
-    // const pois = await $axios.get(`api/4pois`)
+    // const events = await $axios.get(`http://localhost:3000/api/4events1`)
+    const events = await $axios.get(`api/4events1`)
+    // const pois = await $axios.get(`http://localhost:3000/api/4pois`)
+    const pois = await $axios.get(`api/4pois`)
       return {
       eventList: events.data,
       poiList:pois.data

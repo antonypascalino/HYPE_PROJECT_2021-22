@@ -29,8 +29,20 @@
         </div>
       </section>
 
-      <section class="section-description">
+      <section class="section-description dove-si-trova">
         <div class="title-container">DOVE SI TROVA</div>
+        <div class="poi-address-container">
+          <div class="poi-address">
+            <i
+              class="mdi mdi-map-marker-check-outline"
+              style="margin: 0; color: #c13939"
+            />
+            {{ address }}
+          </div>
+          <a target="_blank" :href="mapLink">
+            <baseButton title="Vedi su Google Maps" goto="" />
+          </a>
+        </div>
         <Map :x="x" :y="y" :name="name"> </Map>
       </section>
 
@@ -66,8 +78,8 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    // const { data } = await $axios.get('api/pois/'+ id)
-    const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
+    const { data } = await $axios.get('api/pois/'+ id)
+    // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
       name: data.name,
       visit_info: data.visit_info,
@@ -76,6 +88,8 @@ export default {
       description: data.description,
       x: data.x,
       y: data.y,
+      address: data.address,
+      mapLink: data.mapLink,
     }
   },
   data() {
@@ -165,4 +179,25 @@ export default {
 .main-page {
   background-color: #f2f2f2;
 }
+
+.poi-address-container {
+  position: absolute;
+  width: 20vw;
+  height: 40vh;
+  /*border: 2px solid #c13939;*/
+  /*z-index: 2;*/
+  right: 5vw;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.poi-address {
+  font-family: 'Josefin Sans';
+  font-size: 1.5vw;
+}
+
 </style>
