@@ -46,10 +46,8 @@ export default {
   cursor: pointer;
 }
 
-.btn:active,
 .btn:focus {
-  outline: 0;
-  border: none;
-  /*outline-style: none;*/
+  outline: none;
+  box-shadow: none;
 }
 </style>
