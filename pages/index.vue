@@ -129,7 +129,11 @@ export default {
   padding: 5px;
 }
 h1.section-title{
-  color:#C13939;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #c13939;
+  text-align: center;
 }
-
 </style>

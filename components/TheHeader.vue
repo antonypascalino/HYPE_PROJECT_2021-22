@@ -191,6 +191,7 @@ nav {
   color: white;
   justify-content: center;
   flex-direction: column;
+  margin-top: -2px;
 }
 .menu-button-container {
   display: flex;
@@ -230,9 +231,14 @@ nav {
   margin-top: 7px;
   margin-left: 100px;
 }
+@media screen and (max-width: 315px) {
+  img.responsive.center{
+    margin-left:0px;
+  }
+}
 
 /* Mobile navbar if viewport <=1270 px */
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 870px) {
   .desktop-nav {
     display: none;
   }
@@ -248,7 +254,7 @@ nav {
   }
 }
 /* Desktop navbar if viewport >=1271 px */
-@media screen and (min-width: 1271px) {
+@media screen and (min-width: 871px) {
   .mobile-nav,
   .dropdown-list {
     display: none;
