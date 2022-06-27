@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: false,
+  ssr: true,
   serverMiddleware: [
     {
       path: "/api",
