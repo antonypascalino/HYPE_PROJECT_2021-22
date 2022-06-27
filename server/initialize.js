@@ -46,8 +46,8 @@ export default async (models) => {
         "Iniziata nel 1390, è l’ultima grande opera tardo gotica italiana. Il progetto inizialmente era a carico di Antonio di Vincenzo ma nel 1514, durante i lavori di costruzione, Arduino degli Arriguzzi propose un nuovo piano: un’imponente pianta a croce latina che superava le dimensioni della basilica di San Pietro a Roma. Per questo motivo, secondo la leggenda, il papa Pio IV interruppe la realizzazione, focalizzando le risorse sull’Archiginnasio.\n" +
         "L’interno è suddiviso in tre navate e fu attuato in epoche diverse. Si contano ben ventidue cappelle, dove si possono scorgere dipinti e decorazioni di illustri artisti del tempo, tra cui Donato Creti e Girolamo Mazzola detto “Parmigianino”. Tra queste raffigurazioni, tuttavia, vi è un affresco che suscita tutt’ora controversie: ispirandosi all’inferno di Dante, l’autore Giovanni da Modena ha rappresentato una serie di peccatori e dannati tra cui Maometto che viene scuoiato da un diavolo.\n" +
         "Un’ulteriore caratteristica di San Petronio è la meridiana che si trova al suo interno e che si estende nella pavimentazione per una lunghezza di circa 67 metri, rendendola la più lunga al mondo.\n" ,
-      imgBackground: "sanPetronio07.jpg",
-      imgArray:["sanPetronio05.jpg","sanPetronio06.jpg"],
+      imgBackground: "sanPetronio06.jpg",
+      imgArray:["sanPetronio05.jpg","sanPetronio07.jpg"],
       x:44.49273,
       y:11.34303,
       address: "Piazza Galvani 5, 40124 Bologna (BO)",
@@ -188,8 +188,8 @@ export default async (models) => {
       description: "San Pietro è la cattedrale della città. Collocata in Via Indipendenza, la chiesa fu consacrata ufficialmente nel 1184.\n" +
         "La cattedrale fu soggetta a diversi cambiamenti fino ad assestarsi con uno stile barocco, che tuttavia, fece perdere ogni traccia del precedente impianto romano. La facciata è composta da mattoni rossi e decorazioni in marmo bianco che lasciano spazio ai mastodontici portali che suggeriscono l’impianto interno a tre navate.\n" +
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
-      imgBackground: "cattedraleSanPietro06.jpg",
-      imgArray:["cattedraleSanPietro04.jpg","cattedraleSanPietro05.jpg"],
+      imgBackground: "cattedraleSanPietro04.jpg",
+      imgArray:["cattedraleSanPietro06.jpg","cattedraleSanPietro05.jpg"],
       x:44.49570,
       y:11.34350,
       address: "Via dell'Indipendenza 7, 40125 Bologna (BO)",
@@ -288,8 +288,8 @@ export default async (models) => {
       carousel_desc: "Lo stadio più grande della città, vivilo!",
       description: "Lo stadio più importante e grande della città. La storica arena è stata teatro delle più grandi imprese calcistiche della nazionale italiana e dalla squadra del Bologna, oggi allenata da Sinisa Mihajlovic. \n" +
         "Lo stadio fu inaugurato durante l’epoca fascista, più precisamente nel 1927. La caratteristica più particolare è sicuramente la Torre di Maratona, che si erge con i suoi 42 metri di altezza a sostegno della tribuna est.\n" ,
-      imgBackground: "stadio01.jpg",
-      imgArray:["stadio02.jpg","stadio03.jpg"],
+      imgBackground: "stadio03.jpg",
+      imgArray:["stadio02.jpg","stadio01.jpg"],
       x:44.49229,
       y:11.30997,
       address: "Via Andrea Costa 174, 40134 Bologna (BO)",
