@@ -42,7 +42,7 @@
           <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-6">
               <img
-                src="~/static/bolognaInBreve02.jpg"
+                src="~/static/bolognaInBreve.jpg"
                 alt="responsive website"
                 class="img-fluid img1"
               />
