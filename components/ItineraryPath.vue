@@ -1,19 +1,21 @@
 <template>
   <div class="path-container">
-    <img class="dashed-line" :src="line" />
+    <img class="dashed-line" :src="line" alt="image" />
 
     <div class="poi-and-label">
-      <div class="round-container round-poi-1">
-        <img class="round-image poi1" :src="`../Poi/${img1}`" />
-        <div class="round-text">{{ name1 }}</div>
-      </div>
+      <nuxt-link :to="`/itinerari/pois/${this.id1}`">
+        <div class="round-container round-poi-1">
+          <img class="round-image poi1" :src="`../Poi/${img1}`" alt="image" />
+          <div class="round-text">{{ name1 }}</div>
+        </div>
+      </nuxt-link>
       <div class="poi-label">{{ name1 }}</div>
     </div>
 
     <div class="poi-and-label">
       <nuxt-link :to="`/itinerari/pois/${this.id2}`">
         <div class="round-container round-poi-2">
-          <img class="round-image poi2" :src="`../Poi/${img2}`" />
+          <img class="round-image poi2" :src="`../Poi/${img2}`" alt="image" />
           <div class="round-text">{{ name2 }}</div>
         </div>
       </nuxt-link>
@@ -23,7 +25,7 @@
     <div class="poi-and-label">
       <nuxt-link :to="`/itinerari/pois/${this.id3}`">
         <div class="round-container round-poi-3">
-          <img class="round-image poi3" :src="`../Poi/${img3}`" />
+          <img class="round-image poi3" :src="`../Poi/${img3}`" alt="image" />
           <div class="round-text">{{ name3 }}</div>
         </div>
       </nuxt-link>
@@ -33,7 +35,7 @@
     <div class="poi-and-label">
       <nuxt-link :to="`/itinerari/pois/${this.id4}`">
         <div class="round-container round-poi-4">
-          <img class="round-image poi4" :src="`../Poi/${img4}`" />
+          <img class="round-image poi4" :src="`../Poi/${img4}`" alt="image" />
           <div class="round-text">{{ name4 }}</div>
         </div>
       </nuxt-link>
@@ -43,7 +45,7 @@
     <div class="poi-and-label">
       <nuxt-link :to="`/itinerari/pois/${this.id5}`">
         <div class="round-container round-poi-5">
-          <img class="round-image poi5" :src="`../Poi/${img5}`" />
+          <img class="round-image poi5" :src="`../Poi/${img5}`" alt="image" />
           <div class="round-text">{{ name5 }}</div>
         </div>
       </nuxt-link>
@@ -175,7 +177,7 @@ export default {
   font-family: 'Josefin Sans';
   text-transform: uppercase;
   font-size: 1.1vw;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   transition: 100ms ease-in-out;
   /*border: 2px solid blue;*/
 }

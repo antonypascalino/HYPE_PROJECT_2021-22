@@ -1,24 +1,22 @@
 <template>
   <div class="card" style="width: 25rem">
-    <a >
-    <div
-      class="card-image"
-      :style="{ 'background-image': 'url(' + img + ')' }"
-    >
-    </div>
+    <a>
+      <div
+        class="card-image"
+        :style="{ 'background-image': 'url(' + img + ')' }"
+      ></div>
       <div class="overlay">
-      <a target="_blank" :href=img class="icon" title="User Profile">
-        <i class="mdi mdi-magnify-plus-outline"></i>
-      </a>
+        <a target="_blank" :href="img" class="icon" title="User Profile">
+          <i class="mdi mdi-magnify-plus-outline"></i>
+        </a>
       </div>
     </a>
   </div>
 </template>
 
 <style scoped>
-
-.card{
-  border: 0px solid transparent;;
+.card {
+  border: 0px solid transparent;
 }
 
 .card {
@@ -43,15 +41,14 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .3s ease;
+  transition: 0.3s ease;
   background-color: rgba(255, 255, 255, 0.4);
   vertical-align: center;
   justify-content: center;
   text-align: center;
-
 }
 
-.icon{
+.icon {
   position: relative;
   top: 40%;
   transform: translateY(-50%);
@@ -66,7 +63,6 @@
 @media screen and (min-width: 600px) {
   .card:hover {
     -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5);
     z-index: 2;
   }
@@ -80,7 +76,7 @@ export default {
     img: {
       type: String,
       required: true,
-    }
+    },
   },
 }
 </script>
