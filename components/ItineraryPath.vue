@@ -184,7 +184,7 @@ export default {
 
 .round-container:hover .round-text,
 .round-container.hover .round-text {
-  opacity: 100%;
+  opacity: 1;
   transition: 300ms ease-in-out;
 }
 

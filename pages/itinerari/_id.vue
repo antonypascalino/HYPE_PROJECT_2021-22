@@ -17,7 +17,24 @@
 
       <div class="title-container">I LUOGHI DELL'ITINERARIO</div>
 
-      <ItineraryPath line="/Itineraries/LineaDrittaPNG.png" :name1="namePoi1" :name2="namePoi2" :name3="namePoi3" :name4="namePoi4" :name5="namePoi5" :id1="idPoi1" :id2="idPoi2" :id3="idPoi3" :id4="idPoi4" :id5="idPoi5" :img1="img1" :img2="img2" :img3="img3" :img4="img4" :img5="img5" />
+      <ItineraryPath
+        line="/Itineraries/LineaDrittaPNG.png"
+        :name1="namePoi1"
+        :name2="namePoi2"
+        :name3="namePoi3"
+        :name4="namePoi4"
+        :name5="namePoi5"
+        :id1="idPoi1"
+        :id2="idPoi2"
+        :id3="idPoi3"
+        :id4="idPoi4"
+        :id5="idPoi5"
+        :img1="img1"
+        :img2="img2"
+        :img3="img3"
+        :img4="img4"
+        :img5="img5"
+      />
 
       <!--      <section class="section-description">-->
       <!--        <div class="poi-card-container row mt-4">-->
@@ -46,13 +63,22 @@
       <section class="section-description">
         <div class="title-container">MAPPA ITINERARIO</div>
         <div class="map-container">
-          <a  target="_blank" :href=link>
-
-          <img class="map-image" :src="require(`@/static/Itineraries/${this.map}`)"/>
+          <a target="_blank" :href="link">
+            <img
+              class="map-image"
+              :src="require(`@/static/Itineraries/${this.map}`)"
+            />
           </a>
-          <div class="map-text"> <a target="_blank" style="text-decoration: none;color: #C13939" :href=link> Apri in Maps</a></div>
+          <div class="map-text">
+            <a
+              target="_blank"
+              style="text-decoration: none; color: #c13939"
+              :href="link"
+            >
+              Apri in Maps</a
+            >
+          </div>
         </div>
-
       </section>
 
       <div class="button-container">
@@ -82,40 +108,40 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const [data1,data2] = await Promise.all([
+    const [data1, data2] = await Promise.all([
       // $axios.get('http://localhost:3000/api/itineraries/' + id),
       // $axios.get('http://localhost:3000/api/itPoi/' +id),
       $axios.get('api/itineraries/' + id),
-      $axios.get('api/itPoi/' +id),
+      $axios.get('api/itPoi/' + id),
     ])
 
     // const { data } = await $axios.get('api/itineraries/'+ id)
     // const { data } = await $axios.get(
-      // 'http://localhost:3000/api/itineraries/' + id
+    // 'http://localhost:3000/api/itineraries/' + id
     // )
-   // const data2 = await $axios.get('http://localhost:3000/api/itPoi/' + id)
+    // const data2 = await $axios.get('http://localhost:3000/api/itPoi/' + id)
     return {
       Itname: data1.data[0].name,
       duration: data1.data[0].duration,
       imgBackground: data1.data[0].imgBackground,
       description: data1.data[0].description,
       map: data1.data[0].map,
-      link:data1.data[0].link,
-      namePoi1:data2.data[0].pois[0].name,
-      namePoi2:data2.data[0].pois[1].name,
-      namePoi3:data2.data[0].pois[2].name,
-      namePoi4:data2.data[0].pois[3].name,
-      namePoi5:data2.data[0].pois[4].name,
-      idPoi1:data2.data[0].pois[0].id,
-      idPoi2:data2.data[0].pois[1].id,
-      idPoi3:data2.data[0].pois[2].id,
-      idPoi4:data2.data[0].pois[3].id,
-      idPoi5:data2.data[0].pois[4].id,
-      img1:data2.data[0].pois[0].imgBackground,
-      img2:data2.data[0].pois[1].imgBackground,
-      img3:data2.data[0].pois[2].imgBackground,
-      img4:data2.data[0].pois[3].imgBackground,
-      img5:data2.data[0].pois[4].imgBackground,
+      link: data1.data[0].link,
+      namePoi1: data2.data[0].pois[0].name,
+      namePoi2: data2.data[0].pois[1].name,
+      namePoi3: data2.data[0].pois[2].name,
+      namePoi4: data2.data[0].pois[3].name,
+      namePoi5: data2.data[0].pois[4].name,
+      idPoi1: data2.data[0].pois[0].id,
+      idPoi2: data2.data[0].pois[1].id,
+      idPoi3: data2.data[0].pois[2].id,
+      idPoi4: data2.data[0].pois[3].id,
+      idPoi5: data2.data[0].pois[4].id,
+      img1: data2.data[0].pois[0].imgBackground,
+      img2: data2.data[0].pois[1].imgBackground,
+      img3: data2.data[0].pois[2].imgBackground,
+      img4: data2.data[0].pois[3].imgBackground,
+      img5: data2.data[0].pois[4].imgBackground,
     }
   },
   data() {
@@ -203,9 +229,9 @@ export default {
   background-color: #f2f2f2;
 }
 
-.map-container{
-  margin:20px;
-  width:60%;
+.map-container {
+  margin: 20px;
+  width: 60%;
   overflow: hidden;
   transition: 300ms ease-in-out;
   display: flex;
@@ -227,13 +253,13 @@ export default {
 
 .map-container:hover .map-text,
 .map-container.hover .map-text {
-  opacity: 100%;
+  opacity: 1;
   transition: 300ms ease-in-out;
 }
 
 .map-container:hover .map-image,
 .map-container.hover .map-image {
-  opacity: 30%;
+  opacity: 0.3;
   transition: 300ms ease-in-out;
 }
 .map-text {
@@ -248,9 +274,8 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-  .map-container{
-    width:100%;
+  .map-container {
+    width: 100%;
   }
-
 }
 </style>

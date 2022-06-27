@@ -231,8 +231,14 @@ nav {
   margin-left: 100px;
 }
 
+@media screen and (max-width: 315px) {
+  img.responsive.center {
+    margin-left: 0;
+  }
+}
+
 /* Mobile navbar if viewport <=1270 px */
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 870px) {
   .desktop-nav {
     display: none;
   }
@@ -248,7 +254,7 @@ nav {
   }
 }
 /* Desktop navbar if viewport >=1271 px */
-@media screen and (min-width: 1271px) {
+@media screen and (min-width: 871px) {
   .mobile-nav,
   .dropdown-list {
     display: none;
