@@ -54,7 +54,7 @@
         </div>
 
         <!--Button for display all the events -->
-        <baseButton title="Tutti gli eventi" goto="pois"></baseButton>
+        <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
 
       </div>
     </section>
