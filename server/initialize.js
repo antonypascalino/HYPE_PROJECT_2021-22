@@ -444,7 +444,7 @@ export default async (models) => {
       carousel_desc: "Uno dei più importanti ed antichi festival Jazz italiani: lasciati travolgere da questa meravigliosa musica.",
       description: "Bologna Jazz Festival (abbreviato BJF) è considerato il più antico festival musicale italiano dedicato al jazz; fu fondato nel 1958. Si svolge annualmente a Bologna, con eventi anche a Ferrara e Modena, nel mese di novembre",
       imgBackground: "jazzFestival04.jpeg",
-      imgArray:["jazzFestival01.jpg", "jazzFestival02.jpg"],
+      imgArray:["jazzFestival02.jpg"],
       address:"PalaDozza, Piazza Manfredi Azzarita 3, 40122 Bologna (BO)",
       date:"20 Novembre 2022 - 30 Novembre 2022",
       price:"10 euro",
