@@ -63,7 +63,7 @@ export default async (models) => {
       imgArray:["palazzoReEnzo02.jpg","palazzoReEnzo03.jpg"],
       x:44.49491,
       y:11.34317,
-      address:"Piazza del Nettuno 1/C, 40125 Bologna (BO)",
+      address:"Piazza del Nettuno 1/C, Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Palazzo+Re+Enzo/@44.494528,11.340842,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4be190446a5:0x45430544efddaa74!8m2!3d44.4945242!4d11.3430307"
     },
     {
