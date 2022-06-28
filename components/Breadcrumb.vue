@@ -49,9 +49,8 @@ ul.breadcrumb {
   font-family: "Josefin Sans";
   margin-left: 12px;
   margin-bottom:-30px;
-  font-size: 20px;
+  font-size: 15px;
   text-transform: uppercase;
-  font-size: small;
   font-weight: bold;
 
 }
@@ -67,6 +66,10 @@ ul.breadcrumb li + li:before {
 ul.breadcrumb li a:hover {
   text-decoration: none;
 }
-
+@media screen and (max-width: 500px) {
+  ul.breadcrumb{
+    font-size:10px;
+  }
+}
 
 </style>

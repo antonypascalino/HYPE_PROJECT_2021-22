@@ -90,6 +90,7 @@ export default {
 .breadcrumb-section {
   margin-top: 110px;
 }
+
 .title-container {
   margin-top: 40px;
   width: 100%;
@@ -98,8 +99,10 @@ export default {
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
-  display: flex;
+
   color: #c13939;
+  background-color: #f2f2f2;
+  padding-left: 80px;
 }
 .section-la-nostra-missione {
   font-family: 'Raleway', sans-serif;
@@ -118,8 +121,6 @@ p {
   margin-left: 30px;
 }
 
-
-
 .container-fluid {
   margin-top: 10px;
   justify-content: center;
@@ -136,5 +137,11 @@ p {
   justify-content: center;
 
 }
+@media screen and (max-width: 500px) {
+  .title-container{
+    padding-left: 0px;
+    text-align: center;
+  }
 
+}
 </style>

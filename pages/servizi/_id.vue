@@ -104,21 +104,20 @@ export default {
 .body-container {
   margin-top: 110px;
 }
+
 .title-container {
   margin-top: 40px;
   width: 100%;
-  margin-top: 40px;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
-  display: flex;
+
   color: #c13939;
   background-color: #f2f2f2;
   padding-left: 80px;
 }
-
 .button-container {
   width: 100%;
   height: 60px;

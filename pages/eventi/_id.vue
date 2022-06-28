@@ -58,7 +58,7 @@
             <h6 class="mdi mdi-web text-uppercase fw-bold mb-4">SITO WEB</h6>
 
             <a :href="website"
-              ><p>{{ website }}</p>
+              ><p class="p-website">{{ website }}</p>
             </a>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
      const { data } = await $axios.get('api/events/'+ id)
-   //  const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
+     // const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
     return {
       name: data.name,
       date: data.date,
@@ -139,6 +139,7 @@ export default {
 .body-container {
   margin-top: 110px;
 }
+
 .title-container {
   margin-top: 40px;
   width: 100%;
@@ -147,7 +148,6 @@ export default {
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
-  display: flex;
   color: #c13939;
   background-color: #f2f2f2;
   padding-left: 80px;
@@ -217,6 +217,10 @@ export default {
     padding-left: 0px;
     text-align: center;
   }
-
+  .p-website{
+    font-size: 13px;
+  }
 }
+
+
 </style>

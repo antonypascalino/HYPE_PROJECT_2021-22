@@ -215,7 +215,7 @@ export default {
     display: flex;
     /*border: 2px solid blue;*/
     width: 50vw;
-    margin-left: 8vw;
+    margin-left: 1vw;
   }
 
   .poi-label {

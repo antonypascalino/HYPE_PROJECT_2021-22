@@ -56,9 +56,6 @@
   font-size: 30px;
 }
 
-.card:hover .overlay {
-  opacity: 1;
-}
 
 @media screen and (min-width: 600px) {
   .card:hover {
@@ -66,6 +63,18 @@
     transform: scale(1.5);
     z-index: 2;
   }
+  .card:hover .overlay {
+
+    opacity: 1;
+  }
+
+}
+@media screen and (max-width: 500px) {
+
+.overlay{
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 1;}
+
 }
 </style>
 

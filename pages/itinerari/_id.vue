@@ -111,8 +111,8 @@ export default {
     const [data1, data2] = await Promise.all([
       // $axios.get('http://localhost:3000/api/itineraries/' + id),
       // $axios.get('http://localhost:3000/api/itPoi/' +id),
-      $axios.get('api/itineraries/' + id),
-      $axios.get('api/itPoi/' + id),
+       $axios.get('api/itineraries/' + id),
+        $axios.get('api/itPoi/' + id),
     ])
 
     // const { data } = await $axios.get('api/itineraries/'+ id)
@@ -185,6 +185,7 @@ export default {
 .body-container {
   margin-top: 110px;
 }
+
 .title-container {
   margin-top: 40px;
   width: 100%;
@@ -193,7 +194,6 @@ export default {
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
-  display: flex;
   color: #c13939;
   background-color: #f2f2f2;
   padding-left: 80px;
@@ -274,17 +274,21 @@ export default {
   font-size: 2vw;
 }
 
+@media screen and (max-width: 500px) {
+  .title-container{
+    padding-left: 0px;
+    text-align: center;
+  }
+  .map-container{
+    border: none;
+    border-radius: 0;
+  }
+}
 @media screen and (max-width: 1000px) {
   .map-container {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .title-container{
-    padding-left: 0px;
-    text-align: center;
-  }
 
-}
 </style>

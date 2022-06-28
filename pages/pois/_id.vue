@@ -82,8 +82,8 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/pois/'+ id)
-    // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
+     const { data } = await $axios.get('api/pois/'+ id)
+   //  const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
       name: data.name,
       visit_info: data.visit_info,
@@ -164,7 +164,7 @@ export default {
 
 .poi-address-container {
   position: absolute;
-  width: 25vw;
+  width: 30vw;
   height: 40vh;
   /*border: 2px solid #c13939;*/
   /*z-index: 2;*/
@@ -229,6 +229,5 @@ export default {
     padding-left: 0px;
     text-align: center;
   }
-
 }
 </style>

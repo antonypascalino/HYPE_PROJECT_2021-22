@@ -57,6 +57,9 @@ export default {
   width: 100%;
   margin-top:50px;
   margin-left: 0;
+  height:95vh;
+  object-fit: cover;
+
 }
 .scopri-container{
   position: absolute;
@@ -79,7 +82,7 @@ export default {
 }
 .arrow-down{
   position: absolute;
-  top:45vw ;
+  top:90vh ;
   left: calc(50% - 2vw);
   font-size: 4vw;
   color:white;
@@ -89,12 +92,16 @@ export default {
   -webkit-animation: bounce 2s;
   animation: bounce 2s infinite;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
   .scopri-container{
     margin-top: 25px;
   }
   .bologna-container{
     margin-top: 25px;
+  }
+  .image-container1{
+    max-width: 100%;
+    height : auto
   }
 }
 @media screen and (min-width: 900px) {
@@ -114,4 +121,5 @@ export default {
   transition: opacity 0.5s linear;
   opacity: 0%;
 }
+
 </style>

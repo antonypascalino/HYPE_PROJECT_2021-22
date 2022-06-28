@@ -95,7 +95,7 @@ export default {
 
   async asyncData({ $axios }) {
     const { data } = await $axios.get('api/services')
-   // const { data } = await $axios.get('http://localhost:3000/api/services')
+    // const { data } = await $axios.get('http://localhost:3000/api/services')
     return {
       serviceList: data,
     }

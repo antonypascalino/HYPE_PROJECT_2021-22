@@ -37,7 +37,7 @@
       </section>
 
       <section class="section-la-nostra-missione">
-        <div class="title-container">Perchè visitarla</div>
+        <div class="title-container">PERCHÈ VISITARLA</div>
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-6">
@@ -68,7 +68,7 @@
       </section>
 
       <section class="section-la-nostra-missione">
-        <div class="title-container">Un po' di Storia</div>
+        <div class="title-container">UN PO' DI STORIA</div>
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-6 col-lg-8 col-md-6">
@@ -95,7 +95,7 @@
       </section>
 
       <section class="section-la-nostra-missione">
-        <div class="title-container">Sulla Tavola</div>
+        <div class="title-container">SULLA TAVOLA</div>
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-6">
@@ -130,7 +130,7 @@
       </section>
 
       <section class="section-la-nostra-missione">
-        <div class="title-container">Per Divertirsi</div>
+        <div class="title-container">PER DIVERTIRSI</div>
         <div class="container-fluid">
           <div class="row">
             <div class="col-xl-6 col-lg-8 col-md-6">
@@ -164,7 +164,7 @@
       </section>
 
       <section class="section-la-nostra-missione">
-        <div class="title-container">Informazioni e consigli utili</div>
+        <div class="title-container">CONSIGLI UTILI</div>
         <p class="bologna-paragraph end-paragraph">
           Bologna è ancora una città a misura d’uomo e, almeno nella zona del
           centro storico, le distanze si coprono a piedi in poco tempo. Arrivati
@@ -222,6 +222,7 @@ export default {
   margin-top: 10px;
 }
 
+
 .title-container {
   margin-top: 40px;
   width: 100%;
@@ -230,11 +231,11 @@ export default {
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
-  display: flex;
-  color: #c13939;
-  text-transform: uppercase;
-}
 
+  color: #c13939;
+  background-color: #f2f2f2;
+  padding-left: 80px;
+}
 .section-la-nostra-missione {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -243,6 +244,7 @@ export default {
   margin-right: 8px;
   justify-content: center;
   align-content: center;
+
 }
 
 p.bologna-paragraph {
@@ -251,11 +253,14 @@ p.bologna-paragraph {
   padding-right: 2vw;
   font-size: 20px;
   text-align: justify;
+
 }
 
-p.bologna-paragraph.end-paragraph {
-  margin-left: 30px;
+p.end-paragraph{
+  padding-left: 8vw;
+  padding-right: 8vw;
 }
+
 
 .container-fluid {
   margin-top: 10px;
@@ -271,5 +276,10 @@ p.bologna-paragraph.end-paragraph {
 .img-fluid {
   width: 1500px;
 }
-
+@media screen and (max-width: 500px) {
+  .title-container{
+    padding-left: 0px;
+    text-align: center;
+  }
+}
 </style>
