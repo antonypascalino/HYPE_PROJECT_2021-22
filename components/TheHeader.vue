@@ -208,6 +208,7 @@ nav {
 }
 .mdi-menu {
   font-size: 50px;
+  color: black;
 }
 .mdi-menu:hover {
   color: #c13939;
@@ -215,6 +216,7 @@ nav {
 }
 .mdi-close {
   font-size: 50px;
+  color: black;
 }
 .mdi-close:hover {
   color: #c13939;
