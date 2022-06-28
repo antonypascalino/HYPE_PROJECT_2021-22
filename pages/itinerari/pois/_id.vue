@@ -29,7 +29,7 @@
         </div>
       </section>
 
-      <section class="section-description dove-si-trova">
+      <section class="section-description1 dove-si-trova">
         <div class="title-container">DOVE SI TROVA</div>
         <div class="poi-address-container">
           <div class="poi-address">
@@ -197,7 +197,11 @@ export default {
 
 .poi-address {
   font-family: 'Josefin Sans';
-  font-size: 1.5vw;
+  font-size: 1.3vw;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media screen and (max-width: 500px) {

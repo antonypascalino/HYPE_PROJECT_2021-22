@@ -239,7 +239,8 @@ export default {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 25px;
+  border-radius: 10px;
+  border: 5px solid #C13939;
 }
 
 .map-image {
