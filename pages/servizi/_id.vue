@@ -91,10 +91,12 @@ export default {
 </script>
 <style>
 .text-container {
+
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
   font-size: 22px;
+  font-family: Raleway;
 }
 
 .page-container {
