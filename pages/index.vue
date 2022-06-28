@@ -101,7 +101,6 @@ export default {
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
-  display: flex;
   color: #c13939;
 }
 .page-container{
