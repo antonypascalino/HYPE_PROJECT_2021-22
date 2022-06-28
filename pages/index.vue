@@ -95,6 +95,15 @@ export default {
 
 <style scoped>
 
+.section-title{
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  display: flex;
+  color: #c13939;
+}
 .page-container{
   margin-top:0px ;
 }

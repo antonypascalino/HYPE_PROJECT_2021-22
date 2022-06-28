@@ -191,6 +191,7 @@ nav {
   color: white;
   justify-content: center;
   flex-direction: column;
+  margin-top: -2px;
 }
 .menu-button-container {
   display: flex;
