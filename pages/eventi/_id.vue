@@ -86,8 +86,8 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/events/'+ id)
-    // const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
+    // const { data } = await $axios.get('api/events/'+ id)
+    const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
     return {
       name: data.name,
       date: data.date,
@@ -210,5 +210,13 @@ export default {
 
 .main-page {
   background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 500px) {
+  .title-container{
+    padding-left: 0px;
+    text-align: center;
+  }
+
 }
 </style>

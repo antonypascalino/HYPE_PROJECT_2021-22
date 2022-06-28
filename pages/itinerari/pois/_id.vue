@@ -78,8 +78,8 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/pois/'+ id)
-    // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
+    // const { data } = await $axios.get('api/pois/'+ id)
+    const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
       name: data.name,
       visit_info: data.visit_info,
@@ -200,4 +200,11 @@ export default {
   font-size: 1.5vw;
 }
 
+@media screen and (max-width: 500px) {
+  .title-container{
+    padding-left: 0px;
+    text-align: center;
+  }
+
+}
 </style>

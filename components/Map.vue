@@ -67,12 +67,13 @@ export default {
   margin-top: 2vw;
   margin-right: 0;
   z-index: 2;
-  width: 70vw;
+  width: 55vw;
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 930px) {
   #mapContainer {
-    width: 90vw;
+    width: 100%;
+    left: 0;
   }
 }
 </style>

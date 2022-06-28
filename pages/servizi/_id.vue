@@ -60,10 +60,10 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
 
-    const serviceType = await $axios.get('api/specificService/' + id)
-    // const serviceType = await $axios.get('http://localhost:3000/api/specificService/' + id)
-    const service = await $axios.get('api/Services/' + id)
-   // const service = await $axios.get('http://localhost:3000/api/Services/' + id)
+    // const serviceType = await $axios.get('api/specificService/' + id)
+    const serviceType = await $axios.get('http://localhost:3000/api/specificService/' + id)
+    // const service = await $axios.get('api/Services/' + id)
+    const service = await $axios.get('http://localhost:3000/api/Services/' + id)
     return {
       nameTypeService: serviceType.data[0].name,
       imgTypeService: serviceType.data[0].imgBackground,
@@ -156,5 +156,12 @@ export default {
 
 .main-page {
   background-color: #f2f2f2;
+}
+@media screen and (max-width: 500px) {
+  .title-container{
+    padding-left: 0px;
+    text-align: center;
+  }
+
 }
 </style>
