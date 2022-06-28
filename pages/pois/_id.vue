@@ -81,7 +81,7 @@ export default {
   },
 
   async asyncData({ route, $axios }) {
-    // const { id } = route.params
+    const { id } = route.params
     const { data } = await $axios.get('api/pois/'+ id)
     // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
