@@ -90,14 +90,6 @@ export default {
 }
 </script>
 <style>
-.text-container {
-
-  padding-top: 10px;
-  padding-left: 8vw;
-  padding-right: 8vw;
-  font-size: 22px;
-  font-family: Raleway;
-}
 
 .page-container {
   margin-top: -65px;
@@ -153,6 +145,16 @@ export default {
 
 .button-container {
   text-align: right;
+}
+.container1{
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-weight: 500;
+  background-color: #f2f2f2;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .main-page {
