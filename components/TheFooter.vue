@@ -116,6 +116,7 @@ footer{
 }
 .logo{
   margin: auto;
+  margin-left: -20px;
 }
 img{
   float:inherit;

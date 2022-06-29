@@ -232,5 +232,6 @@ div.list.events {
   div.indicatorList.events {
     display: none;
   }
+
 }
 </style>
