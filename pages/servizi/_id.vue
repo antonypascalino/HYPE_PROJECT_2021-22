@@ -6,12 +6,12 @@
 <template>
   <main class="page-container">
 
-      <!-- Static Half image Section -->
-      <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title="nameTypeService"/>
-      <!-- BreadCrumb Section -->
-      <section class="breadcrumb-section1">
-        <breadcrumb :default-route="[{ title: 'HOME', path: '/' }, { title: 'Servizi', path: '/servizi/' },]" :current-page="nameTypeService"/>
-      </section>
+    <!-- Static Half image Section -->
+    <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title="nameTypeService"/>
+    <!-- BreadCrumb Section -->
+    <section class="breadcrumb-section1">
+      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }, { title: 'Servizi', path: '/servizi/' },]" :current-page="nameTypeService"/>
+    </section>
 
     <!-- Body Section -->
     <div class="body-container">
@@ -105,7 +105,7 @@ export default {
   margin-top: 110px;
 }
 .title-container {
-  margin-top: 40px;
+  margin-top: 10px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;

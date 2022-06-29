@@ -1,6 +1,6 @@
 <!--
   Page: pois/_id
-  Description: In this page is described a specific service
+  Description: In this page is described a specific poi
 -->
 
 <template>
@@ -12,12 +12,17 @@
     <section class="breadcrumb-section1">
       <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' },]" :current-page="name"/>
     </section>
+
+    <!-- Body Section -->
     <div class="body-container">
+
+      <!-- Description Section -->
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
         <p class="text-container">{{ description }}</p>
       </section>
 
+      <!-- Gallery Section -->
       <section class="section-description">
         <div class="title-container">GALLERY</div>
         <div class="row mt-1">
@@ -30,37 +35,31 @@
         </div>
       </section>
 
-
-
+      <!-- Map Section -->
       <section class="section-description1 dove-si-trova">
         <div class="title-container">DOVE SI TROVA</div>
         <div class="poi-address-container">
           <div class="poi-address">
-            <i
-              class="mdi mdi-map-marker-check-outline"
-              style="margin: 0; color: #c13939"
-            />
-            {{ address }}
-
-
-          <a  target="_blank" :href="mapLink">
+            <i class="mdi mdi-map-marker-check-outline" style="margin: 0; color: #c13939"/> {{ address }}
+            <a target="_blank" :href="mapLink">
             <baseButton style="margin-top: 20px;" title="Vedi su Google Maps" goto="" />
-          </a>
+            </a>
         </div>
         </div>
         <Map :x="x" :y="y" :name="name"> </Map>
       </section>
 
+      <!-- Information Section -->
       <section class="section-description">
         <div class="title-container">INFORMAZIONI</div>
         <p class="text-container">{{ visit_info }}</p>
       </section>
 
       <div class="button-container">
-        <baseButton title="Tutti i Punti di interesse" goto="/pois/">
-        </baseButton>
+        <baseButton title="Tutti i Punti di interesse" goto="/pois/"/>
       </div>
     </div>
+
   </main>
 </template>
 
@@ -83,8 +82,8 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-     const { data } = await $axios.get('api/pois/'+ id)
-   //  const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
+    const { data } = await $axios.get('api/pois/'+ id)
+    // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
       name: data.name,
       visit_info: data.visit_info,
@@ -100,7 +99,6 @@ export default {
   data() {
     return {
       name1: this.name,
-      crumbs: ['HOME', 'PUNTI DI INTERESSE'],
     }
   },
 
@@ -117,10 +115,13 @@ export default {
 }
 </script>
 <style>
+.body-container {
+  margin-top: 110px;
+}
 .page-container {
   background-color: #f2f2f2;
+  margin-top: -65px;
 }
-
 .section-description {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -131,38 +132,23 @@ export default {
   text-align: justify;
   text-justify: inter-word;
 }
-
-.page-container {
-  margin-top: -65px;
-}
-.body-container {
-  margin-top: 110px;
-}
-
 .title-container {
-  margin-top: 40px;
+  margin-top: 10px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 50px;
-
   color: #c13939;
   background-color: #f2f2f2;
   padding-left: 80px;
 }
-
 .button-container {
   width: 100%;
   height: 60px;
   padding: 20px;
 }
-
-.section-description.dove-si-trova {
-  /*border: 2px solid blue;*/
-}
-
 .poi-address-container {
   position: absolute;
   width: 30vw;
@@ -176,7 +162,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
 .poi-address {
   font-family: 'Josefin Sans';
   font-size: 1.3vw;
@@ -185,21 +170,12 @@ export default {
   top: 50%;
   transform: translateY(-50%);
 }
-
-.poi-to-maps {
-  border: none;
-  width: 10vw;
-  height: 20px;
-  background-color: #c13939;
-}
-
 .text-container {
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
   font-size: 22px;
 }
-
 .row {
   margin: auto;
   width: 100%;
@@ -210,13 +186,8 @@ export default {
   margin-right: 20px;
   margin-top: -5px;
 }
-
 .button-container {
   text-align: right;
-}
-
-.main-page {
-  background-color: #f2f2f2;
 }
 
 @media screen and (max-width: 930px) {
