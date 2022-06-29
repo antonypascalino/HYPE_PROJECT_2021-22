@@ -142,5 +142,8 @@ export default {
   .text-container{
     font-size: 16px;
   }
+  .container-fluid{
+    width: 80%;
+  }
 }
 </style>

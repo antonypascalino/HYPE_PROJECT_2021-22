@@ -8,7 +8,7 @@ export default {
     }
   ],
   head: {
-    title: 'insideBO: Scopri Bologna',
+    title: 'insideBO • Scopri Bologna',
     htmlAttrs: {
       lang: 'it',
     },
