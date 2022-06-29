@@ -2,9 +2,9 @@
   Page: Privacy
   Description: In this page is described the privacy of the website. It's a static page.
 -->
-
 <template>
   <main class="page-container">
+
     <!-- BreadCrumb Section -->
     <section class="breadcrumb-section">
       <breadcrumb :default-route="[{ title: 'HOME', path: '/' }]" current-page="Privacy" />
@@ -111,6 +111,7 @@ import Breadcrumb from '~/components/Breadcrumb.vue'
 
 export default {
   layout: 'default',
+
   components: {
     Breadcrumb
   },
@@ -162,9 +163,7 @@ export default {
   display: flex;
   color: #c13939;
 }
-
 h4.privacy-title {
   font-weight: bold;
 }
-
 </style>
