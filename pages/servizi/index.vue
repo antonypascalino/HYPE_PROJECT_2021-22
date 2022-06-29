@@ -83,10 +83,8 @@ export default {
     return {
       serviceList: [],
       visibleSlide: 0,
-      crumbs: ['HOME', 'SERVIZI'],
       direction: 'left',
       loading: false,
-
       scrollingDirection: 0,
       lastScroll: 9999,
       scrollIdleTime: 2200, // time interval that we consider a new scroll event: 80 is quite good
