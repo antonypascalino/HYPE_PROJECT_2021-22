@@ -6,7 +6,7 @@
   <!-- Footer -->
   <footer class="page-footer text-center text-lg-start text-muted">
     <!-- Section: Links  -->
-    <section class="container1">
+    <section class="container10">
       <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
@@ -105,7 +105,7 @@
 footer{
   bottom: 0;
 }
-.container1{
+.container10{
   background-color: #c13939;
   color: white;
   border-bottom: 1px solid #F2F2F2;
