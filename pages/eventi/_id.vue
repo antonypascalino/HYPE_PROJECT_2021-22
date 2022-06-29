@@ -1,22 +1,27 @@
+<!--
+  Page: eventi/_id
+  Description: In this page is described a specific event
+-->
+
 <template>
   <main class="page-container">
+    <!-- Body Section -->
     <div class="body-container">
+
+      <!-- Static Half image Section -->
       <StaticHalfImage :slide="`../Events/${imgBackground}`" :title="name" />
+      <!-- BreadCrumb Section -->
       <section class="breadcrumb-section2">
-        <breadcrumb
-          :default-route="[
-            { title: 'HOME', path: '/' },
-            { title: 'Eventi', path: '/eventi/' },
-          ]"
-          :current-page="name"
-        />
+        <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Eventi', path: '/eventi/' },]" :current-page="name"/>
       </section>
 
+      <!-- Description Section -->
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
         <p class="text-container">{{ description }}</p>
       </section>
 
+      <!-- Gallery Section -->
       <section class="section-description">
         <div class="title-container">GALLERY</div>
         <div class="row mt-1">
@@ -29,20 +34,17 @@
         </div>
       </section>
 
+      <!-- Information Section -->
       <section class="container4">
         <div class="title-container">INFORMAZIONI</div>
-        <br />
+        <br>
         <div class="row row1">
           <div class="col-sm-3">
             <h6 class="text-uppercase fw-bold mb-4 mdi mdi-tag">PREZZO</h6>
             <p>{{ price }}</p>
           </div>
           <div class="col-sm-3">
-            <h6
-              class="mdi mdi-map-marker-check-outline text-uppercase fw-bold mb-4"
-            >
-              INDIRIZZO
-            </h6>
+            <h6 class="mdi mdi-map-marker-check-outline text-uppercase fw-bold mb-4">INDIRIZZO</h6>
 
             <p>{{ address }}</p>
           </div>

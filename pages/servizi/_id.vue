@@ -5,16 +5,16 @@
 
 <template>
   <main class="page-container">
-
-    <!-- Static Half image Section -->
-    <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title="nameTypeService"/>
-    <!-- BreadCrumb Section -->
-    <section class="breadcrumb-section1">
-      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }, { title: 'Servizi', path: '/servizi/' },]" :current-page="nameTypeService"/>
-    </section>
-
     <!-- Body Section -->
     <div class="body-container">
+      <!-- Static Half image Section -->
+      <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title="nameTypeService"/>
+      <!-- BreadCrumb Section -->
+      <section class="breadcrumb-section3">
+        <breadcrumb :default-route="[{ title: 'HOME', path: '/' }, { title: 'Servizi', path: '/servizi/' },]" :current-page="nameTypeService"/>
+      </section>
+
+
       <section class="container1">
         <div class="title-container">DESCRIZIONE</div>
         <p class="text-container">{{ descriptionServiceType }}</p>
@@ -117,7 +117,7 @@ export default {
   padding-left: 80px;
 }
 .text-container {
-  padding-top: 10px;
+  padding-top: 40px;
   padding-left: 8vw;
   padding-right: 8vw;
   font-size: 22px;

@@ -8,13 +8,12 @@
     <!-- Body Section -->
     <div class="body-container">
 
-    <!-- Static Half image Section -->
-    <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
-    <!-- BreadCrumb Section -->
-    <section class="breadcrumb-section1">
-      <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' },]" :current-page="name"/>
-    </section>
-
+      <!-- Static Half image Section -->
+      <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
+      <!-- BreadCrumb Section -->
+      <section class="breadcrumb-section1">
+        <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' },]" :current-page="name"/>
+      </section>
 
       <!-- Description Section -->
       <section class="section-description">
@@ -171,7 +170,7 @@ export default {
   transform: translateY(-50%);
 }
 .text-container {
-  padding-top: 10px;
+  padding-top: 40px;
   padding-left: 8vw;
   padding-right: 8vw;
   font-size: 22px;
