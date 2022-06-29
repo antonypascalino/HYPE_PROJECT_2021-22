@@ -102,22 +102,19 @@ export default {
 .section-la-nostra-missione {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
-  font-size: 17px;
   margin-left: 8px;
   margin-right: 8px;
-  justify-content: center;
-  align-content: center;
-}
-p {
-  padding-top: 10px;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  font-size: 20px;
-  margin-left: 30px;
+  font-weight: 500;
+  background-color: #f2f2f2;
   text-align: justify;
   text-justify: inter-word;
 }
-
+.text-container {
+  padding-top: 10px;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 22px;
+}
 .container-fluid {
   margin-top: 10px;
   justify-content: center;
