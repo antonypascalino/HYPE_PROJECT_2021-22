@@ -1,26 +1,25 @@
-*/This page is the "Chi siamo" page that describes the company insideBo, in
-particular the team. It's a static page.*/
+<!--
+  Page: Privacy
+  Description: In this page is described the privacy of the website. It's a static page.
+-->
 
 <template>
   <main class="page-container">
+    <!-- BreadCrumb Section -->
     <section class="breadcrumb-section">
-      <breadcrumb
-        :default-route="[{ title: 'HOME', path: '/' }]"
-        current-page="Privacy"
-      />
+      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }]" current-page="Privacy" />
     </section>
 
+    <!-- Body Section -->
     <div class="body-container">
-      <section class="section-chi-siamo">
+      <section class="section-privacy">
         <div class="title-container">PRIVACY</div>
         <p>
           Ai sensi dell’art. 13 Regolamento (UE) n. 2016/679 (“Regolamento”),
           insideBO fornisce le seguenti informazioni in merito alle modalità di
           gestione e ai trattamenti dei dati.
         </p>
-        <h4>
-          1. Tipi di dati raccolti, finalità e base giuridica del trattamento
-        </h4>
+        <h4 class="privacy-title">1. Tipi di dati raccolti, finalità e base giuridica del trattamento </h4>
         <p>
           sistemi informatici e le procedure software preposte al funzionamento
           del Sito acquisiscono, nel corso del loro normale esercizio, alcuni
@@ -35,7 +34,8 @@ particular the team. It's a static page.*/
           dal server (buon fine, errore, ecc.) ed altri parametri relativi al
           sistema operativo e all’ambiente informatico dell’utente.
         </p>
-        <h4>2. Periodo di conservazione dei dati</h4>
+
+        <h4 class="privacy-title">2. Periodo di conservazione dei dati</h4>
         <p>
           I Dati raccolti ed elaborati a seguito della navigazione del Sito
           saranno conservati per tutto il periodo di erogazione del servizio e
@@ -48,7 +48,8 @@ particular the team. It's a static page.*/
           amministrative o per adempiere ad altri obblighi di legge e per
           documentare le attività svolte.
         </p>
-        <h4>3. Modalità del trattamento</h4>
+
+        <h4 class="privacy-title">3. Modalità del trattamento</h4>
         <p>
           I Dati saranno trattati dal personale interno a Confimprese a ciò
           espressamente autorizzato, con strumenti elettronici, saranno
@@ -59,7 +60,8 @@ particular the team. It's a static page.*/
           di terzi non autorizzati. Il trattamento di Dati svolto da Confimprese
           non comporta processi decisionali automatizzati.
         </p>
-        <h4>4. Conferimento dei Dati</h4>
+
+        <h4 class="privacy-title">4. Conferimento dei Dati</h4>
         <p>
           Il conferimento dei Dati di Navigazione è necessario per la fornitura
           del servizio richiesto (navigazione sul sito) e obbligatoria per tale
@@ -68,7 +70,8 @@ particular the team. It's a static page.*/
           degli ulteriori Dati è facoltativo; il mancato conferimento non
           comporta conseguenza in capo all’Interessato.
         </p>
-        <h4>5. Comunicazione dei Dati</h4>
+
+        <h4 class="privacy-title">5. Comunicazione dei Dati</h4>
         <p>
           I Dati potranno essere comunicati a: (i) soggetti a cui sia
           riconosciuta la facoltà e l’interesse di accedervi da norme di legge;
@@ -80,15 +83,14 @@ particular the team. It's a static page.*/
           riportati in un elenco disponibile presso Confimprese (da richiedersi
           ai recapiti indicati al punto 9). I Dati non saranno diffusi.
         </p>
-        <h4>
-          6. Trasferimento di Dati in Paesi che non fanno parte dell’Unione
-          Europea o ad organizzazioni internazionali
-        </h4>
+
+        <h4 class="privacy-title">6. Trasferimento di Dati in Paesi che non fanno parte dell’Unione Europea o ad organizzazioni internazionali</h4>
         <p>
           insideBO non trasferisce i Dati in Paesi che non fanno parte
           dell’Unione Europea o ad organizzazioni internazionali.
         </p>
-        <h4>7. Collegamento a siti o servizi di soggetti terzi</h4>
+
+        <h4 class="privacy-title">7. Collegamento a siti o servizi di soggetti terzi</h4>
         <p>
           La presente informativa è resa solo per i trattamenti di dati
           personali effettuati attraverso il Sito o gli strumenti previsti dallo
@@ -110,16 +112,17 @@ import Breadcrumb from '~/components/Breadcrumb.vue'
 export default {
   layout: 'default',
   components: {
-    Breadcrumb,
+    Breadcrumb
   },
+
   head() {
     return {
-      title: 'insideBO | Privacy',
+      title: 'insideBO • Privacy',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: '',
+          content: 'Privacy Page of insideBO',
         },
       ],
     }
@@ -127,16 +130,25 @@ export default {
 }
 </script>
 <style scoped>
-.breadcrumb-section {
-  margin-top: 60px;
-  background-color: #f2f2f2;
-}
 .page-container {
   margin-top: -5px;
+  background-color: #f2f2f2;
 }
 .body-container {
   margin-top: 40px;
   background-color: #f2f2f2;
+}
+.breadcrumb-section {
+  margin-top: 60px;
+}
+.section-privacy {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .title-container {
   margin-top: 40px;
@@ -149,25 +161,10 @@ export default {
   line-height: 50px;
   display: flex;
   color: #c13939;
-  background-color: #f2f2f2;
-}
-.section-chi-siamo {
-  font-family: 'Inria Sans';
-  font-style: normal;
-
-  font-size: 20px;
-  margin-left: 8px;
-  margin-right: 8px;
 }
 
-p {
-  margin-top: 20px;
-}
-h4 {
+h4.privacy-title {
   font-weight: bold;
 }
 
-.main-page {
-  background-color: #f2f2f2;
-}
 </style>
