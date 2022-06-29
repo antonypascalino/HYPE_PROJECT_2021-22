@@ -126,7 +126,7 @@ export default {
   text-align: center;
   border: 3px solid lightgray;
   background-color: white;
-  width: 70%;
+  width: 60%;
   vertical-align: center;
 }
 .row{
