@@ -111,8 +111,8 @@ export default {
     const [data1, data2] = await Promise.all([
       // $axios.get('http://localhost:3000/api/itineraries/' + id),
       // $axios.get('http://localhost:3000/api/itPoi/' +id),
-       $axios.get('api/itineraries/' + id),
-        $axios.get('api/itPoi/' + id),
+      $axios.get('api/itineraries/' + id),
+      $axios.get('api/itPoi/' + id),
     ])
 
     // const { data } = await $axios.get('api/itineraries/'+ id)
@@ -156,7 +156,7 @@ export default {
   },
   head() {
     return {
-      title: 'insideBO | ' + this.Itname,
+      title: 'insideBO • ' + this.Itname,
     }
   },
   mounted() {

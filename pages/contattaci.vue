@@ -129,7 +129,6 @@ export default {
   background-color: white;
   width: 60%;
   vertical-align: center;
-  font-size: 24px;
 }
 .row{
   align-content: center;

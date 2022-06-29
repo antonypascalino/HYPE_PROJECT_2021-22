@@ -82,7 +82,6 @@ export default {
     return {
       itList: [],
       visibleSlide: 0,
-      crumbs: ['HOME', 'ITINERARI'],
       direction: 'left',
       loading: false,
 
@@ -168,7 +167,7 @@ export default {
   },
   head() {
     return {
-      title: 'insideBO | Itinerari',
+      title: 'insideBO • Itinerari',
     }
   },
   components: {

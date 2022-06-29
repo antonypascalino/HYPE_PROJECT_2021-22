@@ -103,7 +103,7 @@ export default {
 
   head() {
     return {
-      title: 'insideBO | ' + this.name,
+      title: 'insideBO • ' + this.name,
     }
   },
   mounted() {
