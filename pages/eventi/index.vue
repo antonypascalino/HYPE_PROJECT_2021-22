@@ -1,12 +1,18 @@
+<!--
+  Page: eventi/Index
+  Description: In this page are reported some of the events that the city guests represented in a carousel.
+-->
 <template>
-  <div class="App">
+  <main class="App">
+
+    <!-- Header Section -->
     <TheHeader />
+
+    <!-- BreadCrumb Section -->
     <section class="breadcrumb-section">
-      <breadcrumb
-        :default-route="[{ title: 'HOME', path: '/' }]"
-        current-page="Eventi"
-      />
+      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }]" current-page="Eventi"/>
     </section>
+
     <div class="carouselDiv">
       <div class="indicatorList events">
         <div class="filter-container">
@@ -38,16 +44,9 @@
         >
           <div class="imageContainer" @wheel="wheel($event.deltaY)">
             <nuxt-link :to="`/eventi/${ev.id}`">
-              <img
-                class="carouselImg"
-                :src="require(`@/static/Events/${ev.imgBackground}`)"
-                :alt="ev.name"
-              />
-
+              <img class="carouselImg" :src="require(`@/static/Events/${ev.imgBackground}`)" :alt="ev.name"/>
               <div class="textContainer-carousel">{{ ev.name }}</div>
-              <div class="hoverText">
-                {{ ev.carousel_desc }}
-              </div>
+              <div class="hoverText">{{ ev.carousel_desc }}</div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -60,18 +59,14 @@
       >
         <div class="imageContainer container-scroll">
           <nuxt-link :to="`/eventi/${ev.id}`">
-            <img
-              class="carouselImg image-scroll"
-              :src="require(`@/static/Events/${ev.imgBackground}`)"
-              :alt="ev.name"
-            />
+            <img class="carouselImg image-scroll" :src="require(`@/static/Events/${ev.imgBackground}`)" :alt="ev.name"/>
           </nuxt-link>
           <div class="textContainer-scroll">{{ ev.name }}</div>
           <div class="hoverText scroll">{{ ev.carousel_desc }}</div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -191,7 +186,7 @@ export default {
   },
   head() {
     return {
-      title: 'insideBO | Eventi',
+      title: 'insideBO • Eventi',
     }
   },
   components: {
@@ -212,18 +207,15 @@ div.indicatorList.events {
   flex-direction: column;
   vertical-align: middle;
 }
-
 div.list.events {
   width: auto;
   margin-top: 50px;
 }
-
 .filter-container {
   /*border: solid 2px black;*/
   height: auto;
   width: auto;
 }
-
 .indicatorList.events .carousel-indicator {
   height: 5vh;
 }

@@ -132,7 +132,7 @@ export default {
   text-justify: inter-word;
 }
 .title-container {
-  margin-top: 10px;
+  margin-top: 40px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;
@@ -170,7 +170,7 @@ export default {
   transform: translateY(-50%);
 }
 .text-container {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
   font-size: 22px;
@@ -195,6 +195,7 @@ export default {
  }
 }
 
+/*Mobile visualization*/
 @media screen and (max-width: 500px) {
   .title-container{
     padding-left: 0px;

@@ -105,7 +105,7 @@ export default {
   margin-top: 110px;
 }
 .title-container {
-  margin-top: 10px;
+  margin-top: 40px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;
@@ -117,7 +117,7 @@ export default {
   padding-left: 80px;
 }
 .text-container {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
   font-size: 22px;

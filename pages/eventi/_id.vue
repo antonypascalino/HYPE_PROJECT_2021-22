@@ -39,37 +39,34 @@
         <div class="title-container">INFORMAZIONI</div>
         <br>
         <div class="row row1">
+
           <div class="col-sm-3">
             <h6 class="text-uppercase fw-bold mb-4 mdi mdi-tag">PREZZO</h6>
             <p>{{ price }}</p>
           </div>
           <div class="col-sm-3">
             <h6 class="mdi mdi-map-marker-check-outline text-uppercase fw-bold mb-4">INDIRIZZO</h6>
-
             <p>{{ address }}</p>
           </div>
-          <div class="col-sm-3">
-            <h6 class="mdi mdi-calendar-blank text-uppercase fw-bold mb-4">
-              DATA
-            </h6>
 
+          <div class="col-sm-3">
+            <h6 class="mdi mdi-calendar-blank text-uppercase fw-bold mb-4">DATA</h6>
             <p>{{ date }}</p>
           </div>
-          <div class="col-sm-4">
-            <br />
-            <h6 class="mdi mdi-web text-uppercase fw-bold mb-4">SITO WEB</h6>
 
-            <a :href="website"
-              ><p class="p-website">{{ website }}</p>
-            </a>
+          <div class="col-sm-4">
+            <br>
+            <h6 class="mdi mdi-web text-uppercase fw-bold mb-4">SITO WEB</h6>
+            <a :href="website"><p class="p-website">{{ website }}</p></a>
           </div>
         </div>
       </section>
 
       <div class="button-container">
-        <baseButton title="Tutti gli eventi" goto="/eventi/"> </baseButton>
+        <baseButton title="Tutti gli eventi" goto="/eventi/"/>
       </div>
     </div>
+
   </main>
 </template>
 
@@ -88,7 +85,7 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-     const { data } = await $axios.get('api/events/'+ id)
+    const { data } = await $axios.get('api/events/'+ id)
      // const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
     return {
       name: data.name,
@@ -109,7 +106,7 @@ export default {
   },
   head() {
     return {
-      title: 'insideBO | ' + this.name,
+      title: 'insideBO • ' + this.name,
     }
   },
   mounted() {
@@ -120,10 +117,13 @@ export default {
 }
 </script>
 <style>
+.body-container {
+  margin-top: 110px;
+}
 .page-container {
   background-color: #f2f2f2;
+  margin-top: -65px;
 }
-
 .section-description {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -134,14 +134,6 @@ export default {
   text-align: justify;
   text-justify: inter-word;
 }
-
-.page-container {
-  margin-top: -65px;
-}
-.body-container {
-  margin-top: 110px;
-}
-
 .title-container {
   margin-top: 40px;
   width: 100%;
@@ -154,20 +146,17 @@ export default {
   background-color: #f2f2f2;
   padding-left: 80px;
 }
-
 .button-container {
   width: 100%;
   height: 60px;
   padding: 20px;
 }
-
 .text-container {
   padding-top: 10px;
   padding-left: 8vw;
   padding-right: 8vw;
   font-size: 22px;
 }
-
 .row {
   margin: auto;
   width: 100%;
@@ -183,10 +172,9 @@ export default {
   text-align: right;
 }
 
-.container4.title-container {
+.title-container {
   margin-left: 0;
 }
-
 .row.row1 {
   text-align: center;
   background-color: white;
@@ -210,10 +198,7 @@ export default {
   color: #c13939;
 }
 
-.main-page {
-  background-color: #f2f2f2;
-}
-
+/*Mobile visualization*/
 @media screen and (max-width: 500px) {
   .title-container{
     padding-left: 0px;
@@ -225,9 +210,5 @@ export default {
   .text-container{
     font-size: 16px;
   }
-
 }
-
-
-
 </style>
