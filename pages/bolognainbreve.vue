@@ -168,7 +168,7 @@ export default {
   margin-top: -40px;
 }
 .body-container {
-  margin-top: 60px;
+  margin-top: 10px;
 }
 .breadcrumb-section {
   margin-top: 10px;

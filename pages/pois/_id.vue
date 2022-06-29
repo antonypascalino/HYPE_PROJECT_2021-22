@@ -81,7 +81,7 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/pois/'+ id)
+    const { data } = await $axios.get('api/pois/' + id)
     // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
       name: data.name,
@@ -103,7 +103,7 @@ export default {
 
   head() {
     return {
-      title: 'insideBO | ' + this.name,
+      title: 'insideBO • ' + this.name,
     }
   },
   mounted() {
@@ -132,7 +132,7 @@ export default {
   text-justify: inter-word;
 }
 .title-container {
-  margin-top: 40px;
+  margin-top: 50px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;

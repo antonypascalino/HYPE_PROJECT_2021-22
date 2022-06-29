@@ -84,6 +84,7 @@ export default {
 <style scoped>
 .page-container {
   margin-top: -40px;
+  background-color: #f2f2f2;
 }
 .body-container {
   margin-top: 60px;
