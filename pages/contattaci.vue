@@ -27,16 +27,13 @@
               <span class="mdi mdi-phone"></span> Tel:
               <a href="tel:+393347711504"> +39 3319212318</a>
             </div>
-              <br>
             <div class="fax-number">
               <span class="mdi mdi-fax"></span> Fax:
               <a href="fax:+393347711504">+39 011 7234011</a>
             </div>
-              <br>
             <div class="mail">
               <span class="mdi mdi-email"></span>
               <a href="insideBO@gmail.com">insideBO@gmail.com</a>
-            </div>
           </div>
           </div>
         </div>
