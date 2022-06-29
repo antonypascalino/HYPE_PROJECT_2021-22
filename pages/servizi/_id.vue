@@ -163,6 +163,8 @@ export default {
     padding-left: 0px;
     text-align: center;
   }
-
+  .text-container{
+    font-size: 16px;
+  }
 }
 </style>

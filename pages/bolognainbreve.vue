@@ -281,5 +281,8 @@ p.end-paragraph{
     padding-left: 0px;
     text-align: center;
   }
+  p.bologna-paragraph{
+    font-size: 16px;
+  }
 }
 </style>

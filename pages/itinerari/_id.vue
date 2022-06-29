@@ -283,6 +283,9 @@ export default {
     border: none;
     border-radius: 0;
   }
+  .text-container{
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 1000px) {
   .map-container {
