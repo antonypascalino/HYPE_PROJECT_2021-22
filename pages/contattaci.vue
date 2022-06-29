@@ -16,7 +16,7 @@
 
         <div class="container-fluid">
           <div class="row" style="text-align: justify; text-justify: inter-word;">
-            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 30px">
+            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 15px">
             <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
             <br>
               <span class="mdi mdi-clock"></span> 8:00/12:00 da Lunedì a Venerdì
