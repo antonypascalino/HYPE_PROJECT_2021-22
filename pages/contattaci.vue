@@ -22,7 +22,7 @@
               <span class="mdi mdi-clock"></span> 8:00/12:00 da Lunedì a Venerdì
             </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 10px;">
+            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 10px; text-align: center">
             <div class="phone-number">
               <span class="mdi mdi-phone"></span> Tel:
               <a href="tel:+393347711504"> +39 3319212318</a>
