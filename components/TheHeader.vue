@@ -236,7 +236,7 @@ nav {
 
 @media screen and (max-width: 500px) {
   img.responsive.center {
-    margin-left: 5px;
+    margin-left: 20px;
   }
 }
 
