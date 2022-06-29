@@ -37,7 +37,7 @@
           </div>
           </div>
         </div>
-
+      </div>
 
       </section>
 
@@ -114,6 +114,8 @@ p {
   padding-right: 2vw;
   font-size: 20px;
   margin-left: 30px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .container-fluid {
