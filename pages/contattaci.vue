@@ -16,13 +16,13 @@
 
         <div class="container-fluid">
           <div class="row" style="text-align: justify; text-justify: inter-word;">
-            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 30px">
             <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
             <br>
-              <span class="mdi mdi-clock"></span>  8:00/12:00 da Lunedì a Venerdì
+              <span class="mdi mdi-clock"></span> 8:00/12:00 da Lunedì a Venerdì
             </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 20px">
+            <div class="col-xl-3 col-lg-4 col-md-6" style="margin-top: 10px;">
             <div class="phone-number">
               <span class="mdi mdi-phone"></span> Tel:
               <a href="tel:+393347711504"> +39 3319212318</a>
@@ -128,12 +128,10 @@ p {
   background-color: white;
   width: 70%;
   vertical-align: center;
-
 }
 .row {
   align-content: center;
   justify-content: center;
-
 }
 @media screen and (max-width: 500px) {
   .title-container{
