@@ -15,7 +15,7 @@
         <div class="title-container">La nostra Sede e contatti</div>
 
         <div class="container-fluid">
-          <div class="row">
+          <div class="row" style="text-align: justify; text-justify: inter-word;">
             <div class="col-xl-3 col-lg-4 col-md-6">
             <span class="mdi mdi-map-marker"></span> Via San Gervasio 12, Bologna
             <br>
