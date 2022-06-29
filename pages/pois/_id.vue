@@ -5,6 +5,8 @@
 
 <template>
   <main class="page-container">
+    <!-- Body Section -->
+    <div class="body-container">
 
     <!-- Static Half image Section -->
     <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
@@ -13,8 +15,6 @@
       <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' },]" :current-page="name"/>
     </section>
 
-    <!-- Body Section -->
-    <div class="body-container">
 
       <!-- Description Section -->
       <section class="section-description">

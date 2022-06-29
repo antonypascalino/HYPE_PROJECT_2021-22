@@ -15,12 +15,12 @@
 
     <!-- Body Section -->
     <div class="body-container">
-      <section class="container-servizi">
+      <section class="container1">
         <div class="title-container">DESCRIZIONE</div>
         <p class="text-container">{{ descriptionServiceType }}</p>
       </section>
 
-      <section class="container-servizi">
+      <section class="container1">
         <div class="title-container">INFORMAZIONI</div>
         <!--Cards of events -->
         <div class="event-card-container row mt-4">
@@ -134,11 +134,11 @@ export default {
   height: 60px;
   padding: 20px;
 }
-.breadcrumb-section1{
+.breadcrumb-section3{
   margin-right: 20px;
   margin-top: -5px;
 }
-.container-servizi{
+.container1{
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   margin-left: 8px;
