@@ -6,10 +6,10 @@
 <template>
   <main class="page-container">
 
-      <!-- BreadCrumb Section -->
+      <!-- Static Half image Section -->
       <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title="nameTypeService"/>
       <!-- BreadCrumb Section -->
-      <section class="breadcrumb-section">
+      <section class="breadcrumb-section1">
         <breadcrumb :default-route="[{ title: 'HOME', path: '/' }, { title: 'Servizi', path: '/servizi/' },]" :current-page="nameTypeService"/>
       </section>
 
@@ -84,7 +84,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'This page containes all the services for a specific service type.',
+          content: 'This page contains all the services for a specific service type.',
         }
       ]
     }
@@ -134,7 +134,7 @@ export default {
   height: 60px;
   padding: 20px;
 }
-.breadcrumb-section{
+.breadcrumb-section1{
   margin-right: 20px;
   margin-top: -5px;
 }

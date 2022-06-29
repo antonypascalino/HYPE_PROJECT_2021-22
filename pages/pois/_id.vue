@@ -1,17 +1,18 @@
+<!--
+  Page: pois/_id
+  Description: In this page is described a specific service
+-->
+
 <template>
   <main class="page-container">
-    <div class="body-container">
-      <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
-      <section class="breadcrumb-section1">
-        <breadcrumb
-          :default-route="[
-            { title: 'HOME', path: '/' },
-            { title: 'Punti di Interesse', path: '/pois/' },
-          ]"
-          :current-page="name"
-        />
-      </section>
 
+    <!-- Static Half image Section -->
+    <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
+    <!-- BreadCrumb Section -->
+    <section class="breadcrumb-section1">
+      <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' },]" :current-page="name"/>
+    </section>
+    <div class="body-container">
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
         <p class="text-container">{{ description }}</p>

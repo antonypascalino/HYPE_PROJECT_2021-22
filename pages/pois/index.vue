@@ -332,7 +332,7 @@ div.indicatorList {
   padding: 0;
   font-size: 20px;
 }
-
+/* Mobile visualization without indicator list*/
 @media screen and (max-width: 880px) {
   .indicatorList {
     display: none;
@@ -346,6 +346,7 @@ div.indicatorList {
   }
 }
 
+/* Desktop visualization */
 @media screen and (min-width: 881px) {
   .carouselScroll {
     display: none;
