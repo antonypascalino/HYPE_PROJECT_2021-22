@@ -128,17 +128,14 @@ export default {
   text-align: justify;
   text-justify: inter-word;
 }
-
 .page-container {
   margin-top: -65px;
 }
 .body-container {
   margin-top: 110px;
 }
-
-
 .title-container {
-  margin-top: 40px;
+  margin-top: 50px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;
@@ -154,6 +151,7 @@ export default {
   width: 100%;
   height: 60px;
   padding: 20px;
+  text-align: right;
 }
 
 .text-container {
@@ -172,14 +170,6 @@ export default {
 .breadcrumb-section1 {
   margin-right: 20px;
   margin-top: -5px;
-}
-
-.button-container {
-  text-align: right;
-}
-
-.main-page {
-  background-color: #f2f2f2;
 }
 
 .poi-address-container {

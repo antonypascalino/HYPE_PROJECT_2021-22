@@ -105,7 +105,7 @@ export default {
   margin-top: 110px;
 }
 .title-container {
-  margin-top: 40px;
+  margin-top: 50px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;
