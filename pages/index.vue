@@ -29,7 +29,7 @@
         </div>
         <!--Button for display all the points of interest -->
         <baseButton title="Scopri di più" goto="pois"></baseButton>
-    </div>
+      </div>
     </section>
 
     <br><br><br><br>
@@ -52,12 +52,11 @@
             :address="event.address"
           />
         </div>
-
         <!--Button for display all the events -->
         <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
-
       </div>
     </section>
+
   </div>
 </template>
 
@@ -80,11 +79,17 @@ export default {
     }
   },
 
+  //Query functions
   async asyncData({ route, $axios }) {
+
+    //GET on Local DB
     // const events = await $axios.get(`http://localhost:3000/api/4events1`)
-    const events = await $axios.get(`api/4events1`)
     // const pois = await $axios.get(`http://localhost:3000/api/4pois`)
+
+    //GET on Remote DB
+    const events = await $axios.get(`api/4events1`)
     const pois = await $axios.get(`api/4pois`)
+
       return {
       eventList: events.data,
       poiList:pois.data
@@ -94,15 +99,6 @@ export default {
 </script>
 
 <style scoped>
-
-.section-title{
-  text-align: center;
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  color: #c13939;
-}
 .page-container{
   margin-top:0px ;
 }
@@ -116,6 +112,14 @@ export default {
   text-align: center;
   align-content: center;
   justify-content: center;
+}
+.section-title{
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #c13939;
 }
 .events-container{
   width: 100%;
@@ -139,5 +143,4 @@ export default {
 h1.section-title{
   color:#C13939;
 }
-
 </style>

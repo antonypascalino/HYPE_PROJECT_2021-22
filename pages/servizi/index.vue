@@ -1,12 +1,15 @@
 <template>
-  <div class="App">
+  <main class="App">
+
+    <!-- Header Section -->
     <TheHeader />
+
+    <!-- BreadCrumb Section -->
     <section class="breadcrumb-section">
-      <breadcrumb
-        :default-route="[{ title: 'HOME', path: '/' }]"
-        current-page="Servizi"
-      />
+      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }]" current-page="Servizi" />
     </section>
+
+    <!-- Carousel Section -->
     <div class="carouselDiv">
       <div class="indicatorList services">
         <div class="list">
@@ -32,16 +35,9 @@
         >
           <div class="imageContainer" @wheel="wheel($event.deltaY)">
             <nuxt-link :to="`/servizi/${service.id}`">
-              <img
-                class="carouselImg"
-                :src="require(`@/static/Services/${service.imgBackground}`)"
-                :alt="service.name"
-              />
-
+              <img class="carouselImg" :src="require(`@/static/Services/${service.imgBackground}`)" :alt="service.name"/>
               <div class="textContainer-carousel">{{ service.name }}</div>
-              <div class="hoverText">
-                {{ service.carousel_desc }}
-              </div>
+              <div class="hoverText">{{ service.carousel_desc }}</div>
             </nuxt-link>
           </div>
         </carousel-slide>
@@ -54,19 +50,15 @@
       >
         <div class="imageContainer container-scroll">
           <nuxt-link class="scroll-link" :to="`/servizi/${service.id}`">
-            <img
-              class="carouselImg image-scroll"
-              :src="require(`@/static/Services/${service.imgBackground}`)"
-              :alt="service.name"
-            />
-
+            <img class="carouselImg image-scroll" :src="require(`@/static/Services/${service.imgBackground}`)" :alt="service.name"/>
             <div class="textContainer-scroll">{{ service.name }}</div>
             <div class="hoverText scroll">Scopri di più</div>
           </nuxt-link>
         </div>
       </div>
+
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -78,6 +70,14 @@ import Breadcrumb from '~/components/Breadcrumb'
 
 export default {
   layout: 'empty',
+
+  components: {
+    Carousel,
+    CarouselSlide,
+    TheHeader,
+    CarouselIndicator,
+    Breadcrumb,
+  },
 
   data() {
     return {
@@ -168,16 +168,16 @@ export default {
   },
   head() {
     return {
-      title: 'insideBO | Servizi',
+      title: 'insideBO • Servizi',
+      meta:[
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'This page groups some of the services offered by the city'
+        }
+      ]
     }
-  },
-  components: {
-    Carousel,
-    CarouselSlide,
-    TheHeader,
-    CarouselIndicator,
-    Breadcrumb,
-  },
+  }
 }
 </script>
 
@@ -186,8 +186,7 @@ div.indicatorList.services {
   margin-top: 30vh;
   height: 12vh;
 }
-
-.indicatorList.services .carousel-indicator {
+.indicatorList.services{
   height: 5vh;
 }
 </style>
