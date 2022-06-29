@@ -220,7 +220,12 @@ export default {
   .p-website{
     font-size: 13px;
   }
+  .text-container{
+    font-size: 15px;
+  }
+
 }
+
 
 
 </style>
