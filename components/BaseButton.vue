@@ -48,8 +48,15 @@ export default {
 
 .btn:active,
 .btn:focus {
-  outline: 0;
+  outline: none !important;;
   border: none;
   /*outline-style: none;*/
 }
+.btn:visited {
+  outline: none !important;;
+  border: none;
+  /*outline-style: none;*/
+}
+
+
 </style>
