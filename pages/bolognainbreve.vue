@@ -6,6 +6,8 @@
 <template>
   <main class="page-container">
 
+    <!-- Body Section -->
+    <div class="body-container">
     <!-- Static Half Image Section -->
     <StaticHalfImage slide="/bolognaInBreve.jpg" title="BOLOGNA IN BREVE" />
     <!-- BreadCrumb Section -->
@@ -14,8 +16,7 @@
     </div>
     <br><br>
 
-    <!-- Body Section -->
-    <div class="body-container">
+
       <!-- Start Section -->
       <section class="section-common section-start">
         <p class="bologna-paragraph end-paragraph">
@@ -168,7 +169,7 @@ export default {
   margin-top: -40px;
 }
 .body-container {
-  margin-top: 10px;
+  margin-top: 60px;
 }
 .breadcrumb-section {
   margin-top: 10px;
