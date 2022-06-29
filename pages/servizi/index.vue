@@ -1,3 +1,8 @@
+<!--
+  Page: Servizi/Index
+  Description: In this page are reported all the service types represented in a carousel.
+-->
+
 <template>
   <main class="App">
 
