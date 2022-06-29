@@ -1,4 +1,6 @@
 /*
+  Tables in the DB
+
 • Events – At least 10 instances
 • Points of Interest – At least 15 instances
       o There must be enough instances of POI to populate the 3 itineraries, assuming that
@@ -14,8 +16,8 @@ export default async (models) => {
       name: "Piazza Maggiore",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       carousel_desc: "Il cuore di Bologna, da qui inizia il nostro viaggio.",
-      description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi.\n\n" +
-        "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere).\n" +
+      description: "Cuore della città, Piazza Maggiore è il risultato di secolari trasformazioni che la arricchirono via via di importanti edifici: la Basilica di San Petronio, il Palazzo dei Notai, il Palazzo d’Accursio, il Palazzo del Podestà e il Palazzo dei Banchi." +
+        "Risale al 1200, quando il Comune iniziò ad acquisire case e terreni per costruire una piazza che da un lato avrebbe dovuto rappresentare l'importanza dell'istituzione comunale e dall'altro riunire le varie attività cittadine (scambi, commerci e servizi di vario genere)." +
         "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
       imgBackground: "piazzaMaggiore03.jpg",
       imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore01.jpg"],
@@ -28,13 +30,13 @@ export default async (models) => {
       name: "Fontana del Nettuno",
       visit_info:"Il luogo è pubblico e accessibile a tutti gratuitamente in qualsiasi momento della giornata.",
       carousel_desc: "Il Dio dei Mari si erge imponente nel cuore della città, vieni a rinfrescarti al suo cospetto!",
-      description: "Situata al centro dell’omonima piazza, la fontana troneggiata dalla divinità conduce alla più grande Piazza Maggiore. Soprannominata in dialetto al Żigànt (il Gigante), fu ultimata nel 1566 per mano di Giambologna e Tommaso Laureto al fine di glorificare il governo pontificio di Pio IV.\n" +
+      description: "Situata al centro dell’omonima piazza, la fontana troneggiata dalla divinità conduce alla più grande Piazza Maggiore. Soprannominata in dialetto al Żigànt (il Gigante), fu ultimata nel 1566 per mano di Giambologna e Tommaso Laureto al fine di glorificare il governo pontificio di Pio IV." +
         "La figura in bronzo del Nettuno è alta circa 3,2 metri. La posa solenne è un simbolo della potenza dello stato pontificio di quell’epoca: la mano sinistra dal palmo aperto diretta controvento quasi a voler calmare i flutti e la mano destra che regge un imponente tridente. L’intera composizione è caratterizzata da un grande slancio e dinamismo dovuta alle figure implementate sul blocco centrale ricoperto di marmo di Verona, come le nereidi e i delfini.\n" +
-        "Il tridente impugnato dal Nettuno è stata fonte di ispirazione per il logo della casa di auto sportive Maserati che lo introdusse a partire dal 1926.\n",
+        "Il tridente impugnato dal Nettuno è stata fonte di ispirazione per il logo della casa di auto sportive Maserati che lo introdusse a partire dal 1926.",
       imgBackground: "fontanaNettuno04.jpg",
       imgArray:["fontanaNettuno01.jpg","fontanaNettuno05.jpg"],
       x:44.49426,
-      y:11.34266,
+      y:11.3426,
       address: "Piazza del Nettuno, 40124 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Fountain+of+Neptune/@44.494308,11.34047,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd495860346b7:0x8ed55aa49aac8271!8m2!3d44.4943042!4d11.3426587"
     },
@@ -42,7 +44,7 @@ export default async (models) => {
       name: "Basilica di San Petronio",
       visit_info:"Tutti i giorni ingresso libero dalle 8.30 alle 13.30 e dalle 15.00 alle 18.30.",
       carousel_desc: "Mai ultimata, è una delle più grandi chiese italiane e la sua costruzione fu fermata dal Papa in persona. Ecco la Basilica di San Petronio!",
-      description: "La basilica di San Petronio è la chiesa più grande della città, nonché una delle più grandi basiliche italiane ed europee. La sua estensione raggiunge i 132 metri di lunghezza e 51 di altezza. La peculiarità, tuttavia è che risulta incompiuta: lo si può chiaramente notare dalla facciata, ricoperta solo per metà in marmo.\n" +
+      description: "La basilica di San Petronio è la chiesa più grande della città, nonché una delle più grandi basiliche italiane ed europee. La sua estensione raggiunge i 132 metri di lunghezza e 51 di altezza. La peculiarità, tuttavia è che risulta incompiuta: lo si può chiaramente notare dalla facciata, ricoperta solo per metà in marmo." +
         "Iniziata nel 1390, è l’ultima grande opera tardo gotica italiana. Il progetto inizialmente era a carico di Antonio di Vincenzo ma nel 1514, durante i lavori di costruzione, Arduino degli Arriguzzi propose un nuovo piano: un’imponente pianta a croce latina che superava le dimensioni della basilica di San Pietro a Roma. Per questo motivo, secondo la leggenda, il papa Pio IV interruppe la realizzazione, focalizzando le risorse sull’Archiginnasio.\n" +
         "L’interno è suddiviso in tre navate e fu attuato in epoche diverse. Si contano ben ventidue cappelle, dove si possono scorgere dipinti e decorazioni di illustri artisti del tempo, tra cui Donato Creti e Girolamo Mazzola detto “Parmigianino”. Tra queste raffigurazioni, tuttavia, vi è un affresco che suscita tutt’ora controversie: ispirandosi all’inferno di Dante, l’autore Giovanni da Modena ha rappresentato una serie di peccatori e dannati tra cui Maometto che viene scuoiato da un diavolo.\n" +
         "Un’ulteriore caratteristica di San Petronio è la meridiana che si trova al suo interno e che si estende nella pavimentazione per una lunghezza di circa 67 metri, rendendola la più lunga al mondo.\n" ,
@@ -456,7 +458,7 @@ export default async (models) => {
   ]
   await models.Events.bulkCreate(eventList)
 
-
+  //ServiceType Table
   const serviceTypeList = [
     {
       name: "Ristorazione",
@@ -483,8 +485,8 @@ export default async (models) => {
       imgBackground: "discoteca01.jpg",
       carousel_desc: "Vuoi scatenarti sulla pista da ballo? Qui le discoteche e club di Bologna!",
       service_desc: "Sappiamo che durante un soggiorno o una vacanza non si possono visitare musei tutto il giorno, per questo qui sotto vi proponiamo un elenco delle migliori discoteche e club della città, così da soddisfare il vostro più sfrenato divertimento!\n" +
-        "I locali bolognesi sono rinomati per il clima sereno e spensierato. Siamo sicuri che le vostre serate voleranno via in un batter d’occhio!\n" +
-        "I club indicati qui possono essere raggiunti comodamente con i mezzi pubblici e sono situati sia dentro che appena fuori le mura.\n"
+        "I locali bolognesi sono rinomati per il clima sereno e spensierato. Siamo sicuri che le vostre serate voleranno via in un batter d’occhio!" +
+        "I club indicati qui possono essere raggiunti comodamente con i mezzi pubblici e sono situati sia dentro che appena fuori le mura."
     },
     {
       name: "Salute",
@@ -497,7 +499,7 @@ export default async (models) => {
       name: "Banche",
       imgBackground: "banche01.jpg",
       carousel_desc: "Devi prelevare? Scopri le banche del centro di Bologna!",
-      service_desc: "Avete bisogno di effettuare un prelievo o di svolgere una qualsiasi commissione in banca? \n" +
+      service_desc: "Avete bisogno di effettuare un prelievo o di svolgere una qualsiasi commissione in banca?" +
         "Abbiamo stilato una lista delle banche del centro più comode da raggiungere. Potete trovarle il via Rizzoli, strada centrale che conduce alle due torri, oppure nelle zone adiacenti, in modo da non sviare dai vostri divertenti tour della città!\n"
     },
   ]
@@ -506,7 +508,8 @@ export default async (models) => {
   const servicetype2 = await models.ServiceType.create(serviceTypeList[2])
   const servicetype3 = await models.ServiceType.create(serviceTypeList[3])
   const servicetype4 = await models.ServiceType.create(serviceTypeList[4])
-  //Bank Table
+
+  //Service Table
   const serviceList = [
     {
       name: "BNL BNP Paribas",
@@ -732,7 +735,6 @@ export default async (models) => {
   ]
   await models.Service.bulkCreate(serviceList)
 
-
   //Itinerary Table
   const itineraryList = [
     {
@@ -765,6 +767,7 @@ export default async (models) => {
   ]
   await models.Itinerary.bulkCreate(itineraryList)
 
+  //Itinerary_Poi table (N-N association between Itinerary and Poi)
   const Itinerary_PoiList = [
     {
       ItineraryId:1,
