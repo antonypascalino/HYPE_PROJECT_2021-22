@@ -46,7 +46,7 @@ export default {
   css: ['leaflet/dist/leaflet.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{src:"https://unpkg.com/leaflet@1.8.0/dist/leaflet.js", ssr:false}],
+  plugins: [{src: '~node_modules/nuxt-plugin-leaflet', ssr: false},],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
