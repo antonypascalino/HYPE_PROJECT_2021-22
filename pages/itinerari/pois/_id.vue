@@ -97,7 +97,6 @@ export default {
   data() {
     return {
       name1: this.name,
-      crumbs: ['HOME', 'PUNTI DI INTERESSE'],
     }
   },
 
