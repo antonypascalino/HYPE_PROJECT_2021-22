@@ -29,4 +29,5 @@ The file of the final **Usability Report** can be found in the [Usability Delive
 This part of the project consists in the design and development of **insideBO** that is is the web site for the tourist office of the cultural tourism of Bologna.
  <br>
 The file of the final **Design Document** can be found in the [Design Document Folder](https://github.com/davidecarini/HYPE_PROJECT_2021-22/tree/main/Design%20Document).
+<br>
 The Read.me fpr the final **Technical Documentation** can be found in the [Technical Document Folder](https://github.com/davidecarini/HYPE_PROJECT_2021-22/tree/main/Technical%20Documentation).
