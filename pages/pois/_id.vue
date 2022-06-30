@@ -45,7 +45,9 @@
             </a>
         </div>
         </div>
+        <client-side>
         <Map :x="x" :y="y" :name="name"> </Map>
+        </client-side>
       </section>
 
       <!-- Information Section -->
