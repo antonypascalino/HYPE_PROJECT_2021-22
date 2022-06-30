@@ -11,7 +11,7 @@
       <!-- Static Half image Section -->
       <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
       <!-- BreadCrumb Section -->
-      <section class="breadcrumb-section11">
+      <section class="breadcrumb-section1">
         <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' },]" :current-page="name"/>
       </section>
 
@@ -45,9 +45,7 @@
             </a>
         </div>
         </div>
-        <client-side>
         <Map :x="x" :y="y" :name="name"> </Map>
-        </client-side>
       </section>
 
       <!-- Information Section -->
@@ -183,7 +181,7 @@ export default {
   justify-content: center;
   padding: 10px;
 }
-.breadcrumb-section11 {
+.breadcrumb-section1 {
   margin-right: 20px;
   margin-top: -5px;
 }

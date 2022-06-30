@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: true,
+  ssr: false, // if true there is an error on leaflet component
   serverMiddleware: [
     {
       path: "/api",
