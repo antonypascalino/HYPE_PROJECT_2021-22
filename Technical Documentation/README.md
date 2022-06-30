@@ -67,14 +67,15 @@ Some of the most notable responisive adaptions are:
 - The Header component, showing the complete navigation bar, is hidden and replaced by a burger menu on tight screen devices. (See more in the Components section **???METTERE LINK??**)
 - The Carousel component, used to show the items in Punti di interesse, Eventi, Itinerari and Servizi sections, drastically changes its design based on the viewport of the current device allowing to browse the items using the most intuitive method for each device's screen. (See more in the Components section **???METTERE LINK??**)
 - The ItineraryPath component used to show the points of interest belonging to a particular itinerary, is horizontally oriented on horizontally oriented screens, vertically oriented on vertically oriented screens. (See more in the Components section **???METTERE LINK??**)
-- The font size of paragraphs and header is always adaptive to the screen size, in order to allow a comfortable reading from the user.
+- The font size of paragraphs and headers is always adaptive to the screen size, in order to allow a comfortable reading from the user.
 
-<p float="left">
-<img src="./img/phone.png" height="200">
-<img src="./img/pc.png" height="300">
-<img src="./img/phone1.png" height="200">
-<img src="./img/pc1.png" height="300">
-</p>
+Here are shown some graphical instances where is possible to look at the differences just explained. 
+
+|                    Phone                    |                Computer                |
+|:-------------------------------------------:|:--------------------------------------:|
+|  <img src="./img/phone.png" height="200">   | <img src="./img/pc.png" height="300">  |
+|  <img src="./img/phone1.png" height="200">  | <img src="./img/pc1.png" height="300"> |
+
 
 <br>
 
@@ -89,8 +90,7 @@ Some of the most notable responisive adaptions are:
 
 We have developed the components of the website trying to maximize their _reusability_ on the various pages. This, in addition to allowing _modularity_, also has benefits on the _usability_ of the system. In fact, the user views familiar components while browsing the website. 
 
-
-- ## **_BaseButton_**
+## **_BaseButton_**
 
   A general purpose button, picking up the main colors of the website: red and white. On mouse hover the button is substituted with a version with white background.
   **Actual usage on the website:** as button for links to other sections of the website or to external links.
@@ -100,14 +100,26 @@ We have developed the components of the website trying to maximize their _reusab
   | `Title` | `String` | The label shown inside the button, clarify its purpose     |
   | `goTo`  | `String` | The link (internal or external) to which the button brings |
 
-  |      Method      | Parameter Type |                                  Note                                 |
-  |:----------------:|:---------------------------------------------------------------------:|:-----------------------------------------------------------------------|
-  | `goToFunction()` |      `/`       | Triggered by "click" event, bring to the path specified by goTo string|
+  |      Method      | Parameter Type |                                Note                                 |
+  |:----------------:|:-------------------------------------------------------------------:|:-----------------------------------------------------------------------|
+  | `goToFunction()` |      `/`       |Triggered by _click_ event, bring to the path specified by goTo string |
 
 
   #### Example
 
     <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
+
+<div style="align-items: center;">
+
+| <img src="./img/baseButton.png" height="64"> | <img src="./img/baseButton1.png" height="64">  |
+|:--------------------------------------------:|:----------------------------------------------:|
+|                 Base button                  |              Base button on hover              |
+ 
+</div>
+
+
+
+
 
 ***
 
