@@ -45,7 +45,7 @@
             </a>
           </div>
         </div>
-        <Map :googleLink="googleLink" :name="name"> </Map>
+        <Map :googleLink="googleLink"> </Map>
       </section>
 
       <section class="section-description">
