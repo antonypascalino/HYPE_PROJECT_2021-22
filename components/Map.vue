@@ -1,6 +1,6 @@
 <template>
-  <div  class="map-container">
-    <iframe :src=googleLink  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="map-container">
+    <iframe :src="googleLink"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </template>
 <script>
