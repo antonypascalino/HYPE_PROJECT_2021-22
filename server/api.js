@@ -34,8 +34,7 @@ async function initializeDatabaseConnection() {
     visit_info: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
-    x:DataTypes.FLOAT,
-    y:DataTypes.FLOAT,
+    googleLink:DataTypes.STRING,
     carousel_desc:DataTypes.STRING,
     address:DataTypes.STRING,
     mapLink:DataTypes.TEXT
@@ -132,8 +131,7 @@ async function runMainApi() {
         visit_info: element.visit_info,
         id: element.id,
         imgArray:element.imgArray,
-        x:element.x,
-        y:element.y,
+        googleLink:element.googleLink,
         carousel_desc:element.carousel_desc,
         address:element.address,
         mapLink:element.mapLink
