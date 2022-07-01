@@ -20,7 +20,6 @@ export default {
 .map-container {
   margin-left: 30px;
 }
-
 iframe {
   height: 40vh;
   margin:auto;

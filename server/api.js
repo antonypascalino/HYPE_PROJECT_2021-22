@@ -34,7 +34,7 @@ async function initializeDatabaseConnection() {
     visit_info: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
-    googleLink:DataTypes.STRING,
+    googleLink:DataTypes.TEXT,
     carousel_desc:DataTypes.STRING,
     address:DataTypes.STRING,
     mapLink:DataTypes.TEXT

@@ -78,13 +78,13 @@
       <!-- Right -->
       <div>
         <span>Seguici su:</span>
-        <a href="https://www.facebook.com" class="me-1 text-reset">
+        <a  target="_blank" href="https://www.facebook.com" class="me-1 text-reset">
           <i class="mdi mdi-facebook"></i>
         </a>
-        <a href="https://www.twitter.com" class="me-1 text-reset">
+        <a   target="_blank" href="https://www.twitter.com" class="me-1 text-reset">
           <i class="mdi mdi-twitter"></i>
         </a>
-        <a href="https://www.instagram.com" class="me-1 text-reset">
+        <a  target="_blank" href="https://www.instagram.com" class="me-1 text-reset">
           <i class="mdi mdi-instagram"></i>
         </a>
       </div>
