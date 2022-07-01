@@ -1,23 +1,19 @@
+<!--
+  Component: CardService
+  Description: This is the component for the design and the implementation of the card used in the services to describe a single service.
+-->
 <template>
   <div class="card" style="width: 60rem">
-
       <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
-      <p class="card-text mdi mdi-map-marker-check-outline" >
-        {{ address }}
+      <p class="card-text mdi mdi-map-marker-check-outline" >{{ address }}</p>
+      <p class="card-text mdi mdi-clock-outline">{{ opening_hours }}</p>
+      <p class="card-text mdi mdi-phone">{{ phone }}</p>
+      <p class="card-text mdi mdi-web">
+          <a :href="website">  {{ website }} </a>
       </p>
-      <p class="card-text mdi mdi-clock-outline">
-        {{ opening_hours }}
-      </p>
-        <p class="card-text mdi mdi-phone">
-          {{ phone }}
-        </p>
-        <p class="card-text mdi mdi-web">
-        <a :href="website">  {{ website }} </a>
-        </p>
       </div>
-    </div>
-
+  </div>
 </template>
 
 <style scoped>
@@ -33,8 +29,12 @@
   font-size: 30px;
   color:#C13939;
 }
-.mdi{color:black}
-p{text-align: center}
+.mdi{
+  color:black
+}
+p{
+  text-align: center
+}
 </style>
 
 <script>

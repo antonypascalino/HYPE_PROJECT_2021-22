@@ -1,6 +1,6 @@
 <!--
   Component: SelectFilter
-  Description: A select filter for the areas that emits 'filter-change' events on selection
+  Description: A select filter for the areas that emits 'filter-change' events on selection.
 -->
 
 <template>
@@ -17,7 +17,7 @@
 <script>
 export default {
   methods: {
-    /** Emit the filter-change event */
+    /* Emit the filter-change event */
     onChange(event) {
       this.$emit('filter-change', event.target.value)
     },
@@ -26,23 +26,6 @@ export default {
 </script>
 
 <style scoped>
-/* Componetn container */
-/*.component-container {*/
-/*  margin-top: 15px;*/
-/*  margin-bottom: 15px;*/
-/*}*/
-/*Appearence of the label
-label {
-  width: auto;
-  min-width: 40px;
-  display: inline-block;
-  margin: 8px;
-  font-weight: 500;
-  font-size: 18px;
-  vertical-align: top;
-  float: right;
-} */
-
 /* Appearance of the select item */
 select {
   min-width: 60px;
@@ -73,6 +56,4 @@ select:hover {
   cursor: pointer;
   outline: 0;
 }
-
-
 </style>

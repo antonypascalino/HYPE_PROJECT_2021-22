@@ -1,6 +1,6 @@
 <!--
   Component: StaticHalfImage
-  Description: It's the component for the display of small band at the top of some pages
+  Description: It's the component for the display of small band at the top of some pages.
 -->
 <template>
   <div class="staticHalfImage">
@@ -20,7 +20,6 @@ export default {
 
 <style scoped>
 /* Component containers  */
-
 .staticHalfImage {
   height: 300px;
   /*border: 20px solid orange;*/
@@ -30,7 +29,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
 .halfImage {
   position: absolute;
   object-fit: cover;
@@ -45,7 +43,6 @@ export default {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
 .text-block {
   width: 100vw;
   height: 300px;
@@ -65,7 +62,6 @@ export default {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
 @keyframes blurAnimation {
   0% {
     filter: brightness(100%) blur(0px);
@@ -74,7 +70,6 @@ export default {
     filter: brightness(90%) blur(5px);
   }
 }
-
 @keyframes textAnimation {
   0% {
     opacity: 0;

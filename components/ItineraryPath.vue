@@ -1,3 +1,7 @@
+<!--
+ Component: ItineraryPath
+ Description: This is the component for the design and the implementation of a path with the 5 circles contain point of interest.
+-->
 <template>
   <div class="path-container">
     <img class="dashed-line" :src="line" alt="image" />
@@ -168,18 +172,13 @@ export default {
   opacity: 0;
   color: #c13939;
   position: absolute;
-  /*float: left;*/
-  /*align-items: center;*/
-  /*justify-content: center;*/
   text-align: center;
   text-justify: inter-word;
-  /*display: flex;*/
   font-family: 'Josefin Sans';
   text-transform: uppercase;
   font-size: 1.1vw;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   transition: 100ms ease-in-out;
-  /*border: 2px solid blue;*/
 }
 
 .round-container:hover .round-text,
@@ -210,14 +209,12 @@ export default {
     width: 80px;
     height: 80px;
   }
-
   .poi-and-label {
     display: flex;
     /*border: 2px solid blue;*/
     width: 50vw;
     margin-left: 1vw;
   }
-
   .poi-label {
     display: flex;
     align-items: center;

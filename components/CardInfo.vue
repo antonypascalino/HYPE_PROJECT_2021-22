@@ -1,23 +1,21 @@
 <!--
-  Component: BaseButton
-  Description: This is the component for the design and the implementation of a button.
+  Component: CardInfo
+  Description: This is the component for the design and the implementation of the card used in the homepage to offer a skyline of events and pois to  users.
 -->
 <template>
   <div class="card" style="width: 18rem">
-    <div
-      class="card-img-top card-image" :style="{'background-image': 'url(' + img + ')'}"
-    ></div>
+    <div class="card-img-top card-image" :style="{'background-image': 'url(' + img + ')'}"></div>
     <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
+      <!-- !!firstDay and !!address is used because firstDay and address are fields only of Event table -->
       <h6 v-if="!!firstDay"  class="mdi mdi-calendar-blank-outline">{{firstDay}}</h6>
-     <h6 v-if="!!address"  class="add-container mdi mdi-map-marker">{{address}}</h6>
+      <h6 v-if="!!address"  class="add-container mdi mdi-map-marker">{{address}}</h6>
       <nuxt-link :to="`/${link}/${id}`">
        <base-button title="Vedi dettagli"></base-button>
       </nuxt-link>
     </div>
   </div>
 </template>
-
 
 <style scoped>
 .card {
@@ -27,7 +25,6 @@
 .card-title{
   height:30px
 }
-
 .card-image {
   margin-top: 10px;
   background-position: center;
@@ -44,7 +41,6 @@
 .add-container{
   height: 30px;
 }
-
 </style>
 
 <script>

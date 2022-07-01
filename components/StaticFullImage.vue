@@ -1,7 +1,6 @@
 <!--
   Component: StaticFullimage
-  Description: It's the component for the display of a full page image: In the insideBO website is used
-  in the homepage.
+  Description: It's the component for the display of a full page image: In the insideBO website is used in the homepage.
 -->
 
 <template>
@@ -10,7 +9,6 @@
     <div class="scopri-container" :class="{change_color1: scrollPosition > 130,change_color2: scrollPosition > 150,change_color3: scrollPosition > 170}">{{ title1 }}</div>
     <div class="bologna-container" :class="{change_color1: scrollPosition > 200,change_color2: scrollPosition > 200,change_color3: scrollPosition > 230}">{{ title2 }}</div>
     <div class="arrow-down mdi mdi-chevron-double-down" :class="{change_color1: scrollPosition > 700,change_color2: scrollPosition > 750,change_color3: scrollPosition > 800}"  @click="$emit('scrollto', 'anchor')"></div>
-
   </div>
 </template>
 
@@ -23,7 +21,6 @@ export default {
       changeColor:true,
       scrollPosition:null,
     };
-
   },
   name: 'StaticFullImage',
   props:{
@@ -34,7 +31,6 @@ export default {
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
-
     },
   },
   mounted() {
@@ -49,7 +45,6 @@ export default {
 .slider-container {
   position: relative;
 }
-
 .image-container1 {
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,7 +64,6 @@ export default {
   font-style: normal;
   font-size: 3vw;
 }
-
 .bologna-container{
   position: absolute;
   top: 15vw;

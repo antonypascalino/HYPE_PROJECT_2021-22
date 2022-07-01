@@ -1,6 +1,6 @@
 <!--
   Component: TheHeader
-  Description: Header of the website with company logo and responsive navbar
+  Description: Header of the website with company logo and responsive navbar.
 -->
 <template>
   <header class="header">
@@ -70,7 +70,7 @@
 export default {
   data() {
     return {
-      /** Names and paths of the navbar elements */
+      /* Names and paths of the navbar elements */
       menuOptions: [
         {
           name: 'PUNTI DI INTERESSE',
@@ -97,12 +97,12 @@ export default {
           path: '/bolognainbreve/',
         },
       ],
-      /** Expansion status of the mobile navbar menu */
+      /* Expansion status of the mobile navbar menu */
       mobileMenuVisibility: false,
     }
   },
   methods: {
-    /** Reduce/expand the dropdown menu of the mobile navbar */
+    /*Reduce/expand the dropdown menu of the mobile navbar */
     changeMobileMenuVisibility() {
       this.mobileMenuVisibility = !this.mobileMenuVisibility
     },
@@ -222,7 +222,6 @@ nav {
   color: #c13939;
   transition: color 300ms;
 }
-
 .dropdown-list {
   text-align: center;
 }
@@ -233,14 +232,13 @@ nav {
   margin-top: 7px;
   margin-left: 100px;
 }
-
+/* Smartphone visualization */
 @media screen and (max-width: 500px) {
   img.responsive.center {
     margin-left: 20px;
   }
 }
-
-/* Mobile navbar if viewport <=1270 px */
+/* Mobile navbar if viewport <=870 px */
 @media screen and (max-width: 870px) {
   .desktop-nav {
     display: none;
@@ -250,33 +248,29 @@ nav {
     height: auto;
     margin-left: calc(50vw - 74px);
   }
-
   .responsive {
     max-width: 100%;
     max-height: 100%;
   }
 }
-/* Desktop navbar if viewport >=1271 px */
+/* Desktop navbar if viewport >=871 px */
 @media screen and (min-width: 871px) {
   .mobile-nav,
   .dropdown-list {
     display: none;
   }
-
   .menu-item {
     position: relative;
     transition: border 0.3s, color 0.3s;
     border-bottom: 0 solid #c13939;
     border-top: 0 solid transparent;
   }
-
   .menu-item:hover {
     border-bottom: 7px solid #c13939;
     border-top: 7px solid transparent;
     transition: border 0.3s, color 0.3s;
     -webkit-transition: border 0.3s, color 0.3s;
   }
-
   .menu-item:hover::after {
     height: 9px;
     transition: height 0.3s, color 0.3s;

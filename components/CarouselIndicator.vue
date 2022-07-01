@@ -1,3 +1,7 @@
+<!--
+  Component: CarouselIndicator
+  Description: This is the component for the design and the implementation of list on right of the slide.
+-->
 <template>
   <button
     @click="change"
@@ -44,7 +48,6 @@ export default {
 .carousel-indicator * {
   float: right;
 }
-
 .carousel-indicator {
   /*border: solid 2px yellow;*/
   width: 100%;
@@ -60,7 +63,6 @@ export default {
   transition: 200ms;
   transform-origin: right;
 }
-
 .carousel-indicator:hover {
   color: #c13939;
   transform: scale(1.3);
@@ -71,12 +73,10 @@ i {
   margin-left: 5px;
   color: black;
 }
-
 i.visible,
 .carousel-indicator:hover i {
   color: #c13939;
   /*transition: 200ms;*/
 }
-
 /*Per distanziare i pallini dal nome*/
 </style>

@@ -1,3 +1,7 @@
+<!--
+  Component: Carouselslide
+  Description: This is the component for the design and the implementation of the slide in the carousel.
+-->
 <template>
   <transition :name="direction" mode="in-out">
     <div
