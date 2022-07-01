@@ -1,5 +1,5 @@
 <template>
-  <div class="map-container">
+  <div class="map-container2">
     <iframe :src="googleLink"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-.map-container {
+.map-container2 {
   margin-left: 50px;
   border-radius: 10px;
   border: 5px solid #C13939;
