@@ -4,13 +4,15 @@
 -->
 <template>
   <main class="App">
-
     <!-- Header Section -->
     <TheHeader />
 
     <!-- BreadCrumb Section -->
     <section class="breadcrumb-section">
-      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }]" current-page="Punti di Interesse"/>
+      <breadcrumb
+        :default-route="[{ title: 'HOME', path: '/' }]"
+        current-page="Punti di Interesse"
+      />
     </section>
 
     <div class="carouselDiv">
@@ -38,7 +40,11 @@
         >
           <div class="imageContainer" @wheel="wheel($event.deltaY)">
             <nuxt-link :to="`/pois/${poi.id}`">
-              <img class="carouselImg" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name"/>
+              <img
+                class="carouselImg"
+                :src="require(`@/static/Poi/${poi.imgBackground}`)"
+                :alt="poi.name"
+              />
               <div class="textContainer-carousel">{{ poi.name }}</div>
               <div class="hoverText">{{ poi.carousel_desc }}</div>
             </nuxt-link>
@@ -53,13 +59,16 @@
       >
         <div class="imageContainer container-scroll">
           <nuxt-link :to="`/pois/${poi.id}`">
-            <img class="carouselImg image-scroll" :src="require(`@/static/Poi/${poi.imgBackground}`)" :alt="poi.name"/>
+            <img
+              class="carouselImg image-scroll"
+              :src="require(`@/static/Poi/${poi.imgBackground}`)"
+              :alt="poi.name"
+            />
             <div class="textContainer-scroll">{{ poi.name }}</div>
             <div class="hoverText scroll">{{ poi.carousel_desc }}</div>
           </nuxt-link>
         </div>
       </div>
-
     </div>
   </main>
 </template>
@@ -160,13 +169,13 @@ export default {
   head() {
     return {
       title: 'insideBO • Punti di Interesse',
-      meta:[
+      meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'This page groups some of the pois situated in the city'
-        }
-      ]
+          content: 'This page groups some of the pois situated in the city',
+        },
+      ],
     }
   },
   components: {
@@ -318,7 +327,7 @@ span {
   height: auto;
 }
 body {
-  overscroll-behavior: none;
+  overscroll-behavior-y: none;
   background-color: #f2f2f2;
 }
 div.indicatorList {
