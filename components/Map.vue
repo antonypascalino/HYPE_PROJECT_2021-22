@@ -18,13 +18,15 @@ export default {
 
 <style scoped>
 .map-container {
-  margin-left: 30px;
+  margin-left: 50px;
+  border-radius: 10px;
+  border: 5px solid #C13939;
 }
 iframe {
   height: 40vh;
   margin:auto;
   z-index: 2;
-  width: 60vw;
+  width: 50vw;
 }
 @media screen and (max-width: 930px) {
   iframe {

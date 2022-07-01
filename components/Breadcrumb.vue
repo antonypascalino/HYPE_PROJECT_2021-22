@@ -1,3 +1,7 @@
+<!--
+  Component: Breadcrumb
+  Description: This is the component for the design and the implementation of the breadcrumb.
+-->
 <template>
   <header>
     <ul v-if="showRoute" class="breadcrumb">
@@ -71,6 +75,5 @@ ul.breadcrumb li a:hover {
     font-size:10px;
   }
 }
-
 
 </style>
