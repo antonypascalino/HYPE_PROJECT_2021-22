@@ -21,8 +21,7 @@ export default async (models) => {
         "Soltanto dal Cinquecento è iniziata a essere conosciuta come Piazza Maggiore, anche se dalla cacciata degli austriaci al 1944 alla piazza venne attribuito il nome del Re d'Italia, Vittorio Emanuele II. Quindi solo a partire dal 1945 la piazza e il territorio immediatamente circostante iniziarono a conoscersi ufficialmente con il nome attuale: Piazza Maggiore.",
       imgBackground: "piazzaMaggiore03.jpg",
       imgArray:["piazzaMaggiore02.jpg","piazzaMaggiore01.jpg"],
-      x:44.49371,
-      y:11.34304,
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.044342528252!2d11.340911180196688!3d44.4937582057897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd49586d65539%3A0x3ec4fc9a3ae6b51e!2sPiazza%20Maggiore!5e0!3m2!1sen!2sit!4v1656663470788!5m2!1sen!2sit",
       address:"Piazza Maggiore, 40124 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Piazza+Maggiore,+Bologna+BO/@44.493977,11.3430258,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4958809a823:0xac6b828612b7247!8m2!3d44.493977!4d11.3430258"
     },
@@ -35,8 +34,7 @@ export default async (models) => {
         "Il tridente impugnato dal Nettuno è stata fonte di ispirazione per il logo della casa di auto sportive Maserati che lo introdusse a partire dal 1926.",
       imgBackground: "fontanaNettuno04.jpg",
       imgArray:["fontanaNettuno01.jpg","fontanaNettuno05.jpg"],
-      x:44.49426,
-      y:11.3426,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.017510656729!2d11.340475380196715!3d44.49430800575374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd495860346b7%3A0x8ed55aa49aac8271!2sFountain%20of%20Neptune!5e0!3m2!1sen!2sit!4v1656663558455!5m2!1sen!2sit",
       address: "Piazza del Nettuno, 40124 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Fountain+of+Neptune/@44.494308,11.34047,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd495860346b7:0x8ed55aa49aac8271!8m2!3d44.4943042!4d11.3426587"
     },
@@ -50,8 +48,7 @@ export default async (models) => {
         "Un’ulteriore caratteristica di San Petronio è la meridiana che si trova al suo interno e che si estende nella pavimentazione per una lunghezza di circa 67 metri, rendendola la più lunga al mondo.\n" ,
       imgBackground: "sanPetronio06.jpg",
       imgArray:["sanPetronio05.jpg","sanPetronio07.jpg"],
-      x:44.49273,
-      y:11.34303,
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.0839163762785!2d11.340945880196655!3d44.49294730584299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd495860346b7%3A0xa17d71587906b0a5!2sBasilica%20di%20San%20Petronio!5e0!3m2!1sen!2sit!4v1656663616300!5m2!1sen!2sit",
       address: "Piazza Galvani 5, 40124 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Basilica+di+San+Petronio/@44.4929473,11.3409405,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd495860346b7:0xa17d71587906b0a5!8m2!3d44.4929435!4d11.3431292"
     },
@@ -63,8 +60,7 @@ export default async (models) => {
         "Il palazzo ha uno stile gotico-medievale frutto anche degli importanti restauri avvenuti nel 1905.\n" ,
       imgBackground: "palazzoReEnzo01.jpg",
       imgArray:["palazzoReEnzo02.jpg","palazzoReEnzo03.jpg"],
-      x:44.49491,
-      y:11.34317,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.006773930468!2d11.34084738019671!3d44.4945280057394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4be190446a5%3A0x45430544efddaa74!2sPalazzo%20Re%20Enzo!5e0!3m2!1sen!2sit!4v1656663680131!5m2!1sen!2sit",
       address:"Piazza del Nettuno 1/C, Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Palazzo+Re+Enzo/@44.494528,11.340842,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4be190446a5:0x45430544efddaa74!8m2!3d44.4945242!4d11.3430307"
     },
@@ -78,8 +74,7 @@ export default async (models) => {
         "All’interno si trovano numerose sale decorate ed in particolare La Collezione di Arte Comunale, tra cui si possono osservare le opere del pittore bolognese Giorgio Morandi.\n" ,
       imgBackground: "palazzoAccursio01.jpg",
       imgArray:["palazzoAccursio02.jpg","palazzoAccursio03.jpg"],
-      x:44.49399,
-      y:11.34217,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.0342549856077!2d11.340223780196641!3d44.49396490577632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4959b6b5b61%3A0x2059a5c0518cc24!2sPalazzo%20d&#39;Accursio!5e0!3m2!1sen!2sit!4v1656663714913!5m2!1sen!2sit",
       address: "Piazza Maggiore 6, 40121 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Palazzo+d'Accursio/@44.4939611,11.3424071,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4959b6b5b61:0x2059a5c0518cc24!8m2!3d44.4939611!4d11.3424071"
 
@@ -95,8 +90,7 @@ export default async (models) => {
         "La torre Garisenda invece fu sempre costruita per mano ghibellina, per il volere della famiglia omonima. Inizialmente alta 60 metri, venne ridotta a 48 per via di cedimenti strutturali insorti durante la realizzazione che ne conferirono la peculiare pendenza. La torre fu anche soggetto di paragone nella Divina Commedia, dove Dante la utilizzò come similitudine per indicare il Gigante Anteo nel canto XXXI dell’Inferno.\n" ,
       imgBackground: "torri01.jpg",
       imgArray:["torri02.jpg","torri03.jpg"],
-      x:44.49420,
-      y:11.34677,
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.0221371967395!2d11.344547880196698!3d44.494213205760026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4be8ea29f71%3A0x28631a8b221623ea!2sTwo%20Towers!5e0!3m2!1sen!2sit!4v1656663750962!5m2!1sen!2sit",
       address: "Piazza di Porta Ravegnana, 40126 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Two+Towers/@44.4942132,11.3445425,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4be8ea29f71:0x28631a8b221623ea!8m2!3d44.4942094!4d11.3467312"
     },
@@ -110,8 +104,7 @@ export default async (models) => {
         "L’Archiginnasio fu gravemente colpito dai bombardamenti della Seconda Guerra Mondiale. Oggi, tuttavia, lo si può ammirare in tutto il suo splendore grazie ai restauri e ricostruzioni effettuati nei decenni successivi.\n" ,
       imgBackground: "archiginnasio01.jpg",
       imgArray:["archiginnasio02.jpg","archiginnasio03.jpg"],
-      x:44.49205,
-      y:11.34341,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.1313271355293!2d11.34123668019664!3d44.49197580590689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4bfc278adc1%3A0x991786b52ce6d4bc!2sBiblioteca%20Comunale%20dell&#39;Archiginnasio!5e0!3m2!1sen!2sit!4v1656663785011!5m2!1sen!2sit",
       address: "Piazza Galvani 1, 40124 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Biblioteca+Comunale+dell'Archiginnasio/@44.4919758,11.3412313,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4bfc278adc1:0x991786b52ce6d4bc!8m2!3d44.491972!4d11.34342"
     },
@@ -124,8 +117,7 @@ export default async (models) => {
         "Nell’androne principale, il pavimento in vetro rivela delle rovine romane visitabili.\n" ,
       imgBackground: "salaBorsa06.jpg",
       imgArray:["salaBorsa01.jpg","salaBorsa04.jpg"],
-      x:44.49469,
-      y:11.34214,
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.0025280316945!2d11.340197280196739!3d44.494615005733586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4bfc278adc1%3A0xc266fcbe4097cdfd!2sBiblioteca%20Salaborsa!5e0!3m2!1sen!2sit!4v1656663820095!5m2!1sen!2sit",
       address: "Piazza del Nettuno 3, 40124 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Biblioteca+Salaborsa/@44.494615,11.3401919,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4bfc278adc1:0xc266fcbe4097cdfd!8m2!3d44.4946112!4d11.3423806"
     },
@@ -138,8 +130,7 @@ export default async (models) => {
         "La piazza è celebre anche per le manifestazioni ed il mercato di antiquariato che si svolge ogni primo week end del mese.\n" ,
       imgBackground: "piazzaSantoStefano01.jpg",
       imgArray:["piazzaSantoStefano02.jpg","piazzaSantoStefano03.jpg"],
-      x:44.49213,
-      y:11.34828,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.1166330597725!2d11.346082480196618!3d44.492276905887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4c79571fe61%3A0x30d8d5e8e9c7385!2sPiazza%20Santo%20Stefano!5e0!3m2!1sen!2sit!4v1656663854830!5m2!1sen!2sit",
       address: "Via Santo Stefano, 40125 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Piazza+Santo+Stefano/@44.4922769,11.3460771,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4c79571fe61:0x30d8d5e8e9c7385!8m2!3d44.4922731!4d11.3482658"
     },
@@ -152,8 +143,7 @@ export default async (models) => {
         "La chiesa del Crocefisso di origine longobarda si affaccia su Piazza Santo Stefano mentre all’interno si hanno cortili di stampo romano, come il cortile di Pilato ed il museo che conserva opere di diverse epoche.\n" ,
       imgBackground: "basilicaSantoStefano04.jpg",
       imgArray:["basilicaSantoStefano01.jpg","basilicaSantoStefano02.jpg"],
-      x:44.49207,
-      y:11.34877,
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.1228991581456!2d11.346309080196662!3d44.49214850589557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd5b452722fc1%3A0xe05c963953602828!2sBasilica%20Santo%20Stefano!5e0!3m2!1sen!2sit!4v1656663883343!5m2!1sen!2sit",
       address: "Via Santo Stefano 24, 40125 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Basilica+Santo+Stefano/@44.4921485,11.3463037,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd5b452722fc1:0xe05c963953602828!8m2!3d44.4921447!4d11.3484924"
     },
@@ -164,8 +154,7 @@ export default async (models) => {
       description: "A partire dalle prime ore del giorno un insieme di schiamazzi, odori, bancarelle e botteghe contenenti cibi di ogni genere fanno da sfondo al vivo brulicare di venditori e clienti che si accalcano nelle sinuose vie adiacenti a Piazza Maggiore denominate “il Quadrilatero”. Qui è possibile trovare le fresche pietanze bolognesi ricche di gusto e sapore. Dai salumi più pregiati al pesce fresco, pasta sfoglia e tortellini fatti a mano con cura. In questo mercato si può scorgere un lato più vero della città e meno turistico" ,
       imgBackground: "quadrilatero01.jpg",
       imgArray:["quadrilatero02.jpg","quadrilatero03.jpg"],
-      x:44.49353,
-      y:11.34518,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.0545032376617!2d11.342973680196714!3d44.49355000580356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4be4fe7c3b5%3A0xc59f4146c32c020f!2sVia%20Drapperie%2C%2040124%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656663931006!5m2!1sen!2sit",
       address: "Via Drapperie, Bologna, (BO)",
       mapLink: "https://www.google.com/maps/place/Via+Drapperie,+40124+Bologna+BO/@44.4935462,11.3429683,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4be4fe7c3b5:0xc59f4146c32c020f!8m2!3d44.4935462!4d11.345157"
     },
@@ -178,8 +167,7 @@ export default async (models) => {
         "Nella via vi è la dimora del defunto cantautore bolognese di fama internazionale Lucio Dalla. \n" ,
       imgBackground: "viaAzeglio02.jpg",
       imgArray:["viaAzeglio03.jpg", "viaAzeglio04.jpg"],
-      x:44.48856,
-      y:11.33986,
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.2276736231347!2d11.338898980196625!3d44.490001506036414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4eaa35e2ac7%3A0xb9dd04b1d9b5bb8e!2sVia%20d&#39;Azeglio%2C%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656663966428!5m2!1sen!2sit",
       address: "Via d'Azeglio, Bologna, (BO)",
       mapLink: "https://www.google.com/maps/place/Via+d'Azeglio,+Bologna+BO/@44.4899977,11.3388936,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4eaa35e2ac7:0xb9dd04b1d9b5bb8e!8m2!3d44.4899977!4d11.3410823"
     },
@@ -192,8 +180,7 @@ export default async (models) => {
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
       imgBackground: "cattedraleSanPietro04.jpg",
       imgArray:["cattedraleSanPietro06.jpg","cattedraleSanPietro05.jpg"],
-      x:44.49570,
-      y:11.34350,
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.9415181339973!2d11.340840280196709!3d44.49586510565173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4be0705c4a5%3A0xf8e25b961d073f1b!2sCattedrale%20Metropolitana%20di%20San%20Pietro!5e0!3m2!1sen!2sit!4v1656664032293!5m2!1sen!2sit",
       address: "Via dell'Indipendenza 7, 40125 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Cattedrale+Metropolitana+di+San+Pietro/@44.4957417,11.341203,17z/data=!4m9!1m2!2m1!1sLa+Cattedrale+di+San+Pietro!3m5!1s0x477fd4be0705c4a5:0xf8e25b961d073f1b!8m2!3d44.4956867!4d11.3444266!15sChtMYSBDYXR0ZWRyYWxlIGRpIFNhbiBQaWV0cm9aHSIbbGEgY2F0dGVkcmFsZSBkaSBzYW4gcGlldHJvkgEJY2F0aGVkcmFsmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU0wYUU1dGFFMW5FQUU"
     },
@@ -206,8 +193,7 @@ export default async (models) => {
         "Dai primi anni del Novecento, i canali furono tutti cementati, fatta eccezione per quello di via delle Moline, osservabile dalla suggestiva finestra.\n" ,
       imgBackground: "finestra01.jpg",
       imgArray:["finestra02.jpg","finestra03.jpg"],
-      x:44.49856,
-      y:11.34520,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.808141807058!2d11.343021380196731!3d44.49859790547212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4bd617e45e1%3A0x2929ff96df8e4709!2sFinestrella!5e0!3m2!1sen!2sit!4v1656664090359!5m2!1sen!2sit",
       address: "Via Piella 16, 40126 Bologna, (BO)",
       mapLink: "https://www.google.com/maps/place/Via+Piella,+40126+Bologna+BO/@44.4982823,11.3429643,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4bd7ce59bc1:0xab959bc78e33c6bf!8m2!3d44.4982823!4d11.345153"
     },
@@ -221,8 +207,7 @@ export default async (models) => {
         "Il complesso più celebre tuttavia è quello che, partendo da Porta Saragozza, conduce fino alla chiesa di San Luca, arroccata sul Colle della Guardia.\n" ,
       imgBackground: "portici01.jpg",
       imgArray:["portici02.jpg","portici03.jpg"],
-      x:44.49181,
-      y:11.34398,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.170182363322!2d11.350493880196673!3d44.49117960595906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4b83e58399b%3A0x5d7ec6eb7c812a94!2sPortico%20dei%20Servi%2C%20Str.%20Maggiore%2C%2043%2C%2040125%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656664125925!5m2!1sen!2sit",
       address: "Strada Maggiore 43, 40125 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Portico+dei+Servi,+Str.+Maggiore,+43,+40125+Bologna+BO/@44.4911796,11.3504885,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4b83e58399b:0x5d7ec6eb7c812a94!8m2!3d44.4911758!4d11.3526772"
     },
@@ -235,8 +220,7 @@ export default async (models) => {
         "Sull’altare sono inoltre presenti le pale di Guido Reni, Donato Creti e Guercino.\n" ,
       imgBackground: "porticiSanLuca04.jpg",
       imgArray:["porticiSanLuca01.jpg","porticiSanLuca02.jpg"],
-      x:44.47909,
-      y:11.29812,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.6365196471993!2d11.301729199999997!3d44.4816228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd44e11fd6079%3A0x8bd82fad98caafeb!2sVia%20di%20San%20Luca%20%26%20Portico%20di%20S.%20Luca%2C%2040135%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656664161281!5m2!1sen!2sit",
       address: "Via di San Luca & Portico di S. Luca 40135 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Via+di+San+Luca+%26+Portico+di+S.+Luca,+40135+Bologna+BO/@44.4816266,11.2995405,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd44e11fd6079:0x8bd82fad98caafeb!8m2!3d44.4816228!4d11.3017292"
     },
@@ -249,8 +233,7 @@ export default async (models) => {
         "Le porte sono uno degli ultimi baluardi delle antiche mura che dal III secolo d.C. hanno accerchiato e difeso la città. Si hanno in totale 12 porte, di cui due non sono più esistenti. Ogni porta, di stampo romano, ha uno stile diverso. Porta Castiglione, ad esempio è alta ed imponente, mentre Porta Saragozza, con le sue torri ha uno sviluppo più orizzontale che ne conferisce stabilità.\n" ,
       imgBackground: "porta01.jpg",
       imgArray:["porta02.jpg", "porta03.jpg"],
-      x:44.4470,
-      y:11.4138,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.20176098119!2d11.327807480196597!3d44.49053250600152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4ed62b0dd37%3A0x817981cbf64507ba!2sPorta%20Saragozza!5e0!3m2!1sen!2sit!4v1656664206964!5m2!1sen!2sit",
       address: "Mura di Porta Saragozza, 40123 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Porta+Saragozza/@44.4905287,11.3299908,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4ed62b0dd37:0x817981cbf64507ba!8m2!3d44.4905287!4d11.3299908"
     },
@@ -263,8 +246,7 @@ export default async (models) => {
         "Via Zamboni prosegue il suo corso tra gli edifici universitari fino a Porta San Donato.\n" ,
       imgBackground: "universita01.jpg",
       imgArray:["universita02.jpg", "universita03.jpg"],
-      x:44.49748,
-      y:11.35341,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.9221377765866!2d11.348484880196724!3d44.49626220562544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4bb8de1ba0d%3A0x7a39a7224d40275f!2sPiazza%20Giuseppe%20Verdi%2C%2040126%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656664243520!5m2!1sen!2sit",
       address: "Piazza Giuseppe Verdi 2a, 40126 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Piazza+Giuseppe+Verdi/@44.4962248,11.3508051,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd5c92e96d791:0x6e0ad24fb1f7ca56!8m2!3d44.4962248!4d11.3508051"
     },
@@ -279,8 +261,7 @@ export default async (models) => {
         "Tra i santuari arroccati sulle cime dei colli possiamo trovare San Michele in Bosco, ancora nella zona Urbana, la chiesa di Monte Donato e il più famoso Santuario della Madonna di San Luca\n",
       imgBackground: "colliBolognesi01.jpg",
       imgArray:["colliBolognesi02.jpg","colliBolognesi03.jpg"],
-      x:44.44354,
-      y:11.30372,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.498968679191!2d11.299848780195449!3d44.443438809090765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ad52af3494631%3A0x5e3d31db779fb292!2sVia%20Cavaioni%2C%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656664274561!5m2!1sen!2sit",
       address: "Via Cavaioni 3, 40136 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Parco+Cavaioni/@44.4440416,11.3037843,17z/data=!3m1!4b1!4m5!3m4!1s0x132ad4d3dbcff619:0xc6a8360d7a74ab0c!8m2!3d44.4440378!4d11.305973"
     },
@@ -292,8 +273,7 @@ export default async (models) => {
         "Lo stadio fu inaugurato durante l’epoca fascista, più precisamente nel 1927. La caratteristica più particolare è sicuramente la Torre di Maratona, che si erge con i suoi 42 metri di altezza a sostegno della tribuna est.\n" ,
       imgBackground: "stadio03.jpg",
       imgArray:["stadio02.jpg","stadio01.jpg"],
-      x:44.49229,
-      y:11.30997,
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.122040254544!2d11.307761480196616!3d44.49216610589434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd45d0f1547d1%3A0x6dbca3585c33186f!2sRenato%20Dall&#39;Ara%20Stadium!5e0!3m2!1sen!2sit!4v1656664299667!5m2!1sen!2sit",
       address: "Via Andrea Costa 174, 40134 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Renato+Dall'Ara+Stadium/@44.4921661,11.3077561,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd45d0f1547d1:0x6dbca3585c33186f!8m2!3d44.4921623!4d11.3099448"
     }

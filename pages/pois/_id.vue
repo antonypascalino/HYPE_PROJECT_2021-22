@@ -45,7 +45,7 @@
             </a>
         </div>
         </div>
-        <Map :x="x" :y="y" :name="name"> </Map>
+        <Map :googleLink="googleLink" :name="name"> </Map>
       </section>
 
       <!-- Information Section -->
@@ -89,8 +89,7 @@ export default {
       imgBackground: data.imgBackground,
       imgArray: data.imgArray,
       description: data.description,
-      x: data.x,
-      y: data.y,
+      googleLink: data.googleLink,
       address: data.address,
       mapLink: data.mapLink,
     }

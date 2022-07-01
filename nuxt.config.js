@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: false, // if true there is an error on leaflet component
+  ssr: true, // if true there is an error on leaflet component
   serverMiddleware: [
     {
       path: "/api",
@@ -34,16 +34,14 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Josefin+Sans' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' },
-      {rel:"stylesheet", href:"https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"}
     ],
     script: [
       { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"},
-      {src:"https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"}
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['leaflet/dist/leaflet.css'],
+  css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
