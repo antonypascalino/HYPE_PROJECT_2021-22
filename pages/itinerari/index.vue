@@ -1,3 +1,7 @@
+<!--
+  Page: Itinerari/index
+  Description: In this page is present the carousel of the 3 itineraries.
+-->
 <template>
   <div class="App">
     <TheHeader />
@@ -84,7 +88,6 @@ export default {
       visibleSlide: 0,
       direction: 'left',
       loading: false,
-
       scrollingDirection: 0,
       lastScroll: 9999,
       scrollIdleTime: 2200, // time interval that we consider a new scroll event: 80 is quite good
@@ -93,7 +96,7 @@ export default {
 
   async asyncData({ $axios }) {
     const { data } = await $axios.get('api/itineraries')
-  // const { data } = await $axios.get('http://localhost:3000/api/itineraries')
+    // const { data } = await $axios.get('http://localhost:3000/api/itineraries')
     return {
       itList: data,
     }
@@ -168,6 +171,13 @@ export default {
   head() {
     return {
       title: 'insideBO • Itinerari',
+      meta:[
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'This page groups some itinearies selected by the insideBO team.'
+        }
+      ]
     }
   },
   components: {
@@ -185,7 +195,6 @@ div.indicatorList.itineraries {
   margin-top: 35vh;
   height: 12vh;
 }
-
 .indicatorList.itineraries .carousel-indicator {
   height: 5vh;
 }

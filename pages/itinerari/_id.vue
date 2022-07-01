@@ -1,3 +1,7 @@
+<!--
+  Page: Itinerari/_id
+  Description: In this page is described a specific itinerary.
+-->
 <template>
   <main class="page-container">
     <div class="body-container">
@@ -36,21 +40,6 @@
         :img5="img5"
       />
 
-      <!--      <section class="section-description">-->
-      <!--        <div class="poi-card-container row mt-4">-->
-      <!--          <cardInfo-->
-      <!--            v-for="(poi, index) of poiList"-->
-      <!--            class="col-sm-1 m-2"-->
-      <!--            :key="`index-${index}`"-->
-      <!--            :name="poi.name"-->
-      <!--            :img="`../Poi/${poi.imgBackground}`"-->
-      <!--            :id="poi.id"-->
-      <!--            link="pois"-->
-      <!--          />-->
-      <!--        </div>-->
-      <!--        <p class="text-container"></p>-->
-      <!--      </section>-->
-
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
         <p class="text-container">{{ description }}</p>
@@ -64,26 +53,16 @@
         <div class="title-container">MAPPA ITINERARIO</div>
         <div class="map-container">
           <a target="_blank" :href="link">
-            <img
-              class="map-image"
-              :src="require(`@/static/Itineraries/${this.map}`)"
-            />
+            <img class="map-image" :src="require(`@/static/Itineraries/${this.map}`)"/>
           </a>
           <div class="map-text">
-            <a
-              target="_blank"
-              style="text-decoration: none; color: #c13939"
-              :href="link"
-            >
-              Apri in Maps</a
-            >
+            <a target="_blank" style="text-decoration: none; color: #c13939" :href="link">Apri in Maps</a>
           </div>
         </div>
       </section>
 
       <div class="button-container">
-        <baseButton title="Tutti gli itinerari" goto="/itinerari/">
-        </baseButton>
+        <baseButton title="Tutti gli itinerari" goto="/itinerari/"/>
       </div>
     </div>
   </main>
@@ -115,11 +94,6 @@ export default {
       $axios.get('api/itPoi/' + id),
     ])
 
-    // const { data } = await $axios.get('api/itineraries/'+ id)
-    // const { data } = await $axios.get(
-    // 'http://localhost:3000/api/itineraries/' + id
-    // )
-    // const data2 = await $axios.get('http://localhost:3000/api/itPoi/' + id)
     return {
       Itname: data1.data[0].name,
       duration: data1.data[0].duration,
@@ -144,11 +118,7 @@ export default {
       img5: data2.data[0].pois[4].imgBackground,
     }
   },
-  data() {
-    return {
-      crumbs: ['HOME', 'ITINERARI'],
-    }
-  },
+
   methods: {
     backToList() {
       this.$router.push('/itinerari/')
@@ -157,6 +127,13 @@ export default {
   head() {
     return {
       title: 'insideBO • ' + this.Itname,
+      meta:[
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'This page describes a particular itinerary'
+        }
+      ]
     }
   },
   mounted() {
@@ -292,6 +269,4 @@ export default {
     width: 100%;
   }
 }
-
-
 </style>
