@@ -1,6 +1,7 @@
 <!--
   Component: BaseButton
-  Description: This is the component for the design and the implementation of a button. The component receives th
+  Description: This is the component for the design and the implementation of a button. The component receives the name to insert inside the btn
+  and link where the button brings you.
 -->
 <template>
   <button type="button" class="btn btn-outline-secondary btn-lg" @click="gotoFunction">
@@ -43,6 +44,7 @@ export default {
   color: black;
   cursor: pointer;
 }
+/*Used to remove the grey border after the click (SPOILER: it doesn't work)*/
 .btn:active,
 .btn:focus {
   outline: none !important;;

@@ -19,26 +19,17 @@
 <script>
 export default {
   props: {
-    /** default-route: the default breadcrumb defined as an array of pairs (path,title). It's shown when no other alternative route is activated */
+    /* default-route: the default breadcrumb defined as an array of pairs (path,title). It's shown when no other alternative route is activated */
     defaultRoute: { type: Array, default: () => [] },
-    /** alt-routes: array of alternative breadcrumbs . The alternative to be shown at position 'route'. */
-    altRoutes: { type: Array, default: () => [] },
-    /** current-page: name of the current page to be shown in the breadcrumb */
+    /* current-page: name of the current page to be shown in the breadcrumb */
     currentPage: { type: String, default: () => '' },
   },
   data() {
     return {
-      /** Visibility flag for the breadcrumb */
+      /* Visibility flag for the breadcrumb */
       showRoute: this.defaultRoute.length > 0,
-      /** Route selected to be shown in the breadcrumb */
+      /* Route selected to be shown in the breadcrumb */
       selectedRoute: this.defaultRoute,
-    }
-  },
-  created() {
-    /** Fetch the selected route from the query parameters */
-    const index = this.$route.query.route
-    if (index > -1) {
-      this.selectedRoute = this.altRoutes[index]
     }
   },
 }
@@ -56,9 +47,8 @@ ul.breadcrumb {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
-
 }
-/* Apperence of the list elements  */
+/* Appearance of the list elements  */
 ul.breadcrumb li {
   display: inline;
 }
@@ -70,10 +60,10 @@ ul.breadcrumb li + li:before {
 ul.breadcrumb li a:hover {
   text-decoration: none;
 }
+/*Mobile visualization(reduce of the font size)*/
 @media screen and (max-width: 500px) {
   ul.breadcrumb{
     font-size:10px;
   }
 }
-
 </style>
