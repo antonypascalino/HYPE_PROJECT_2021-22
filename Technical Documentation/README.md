@@ -86,7 +86,10 @@ Here are shown some graphical instances where is possible to look at the differe
 
 ## **Components**
 
-We have developed the components of the website trying to maximize their _reusability_ on the various pages. This, in addition to allowing _modularity_, also has benefits on the _usability_ of the system. In fact, the user views familiar components while browsing the website. 
+We have developed the components of the website trying to maximize their _reusability_ on the various pages. 
+This, in addition to allowing _modularity_, also has benefits on the _usability_ of the system. 
+Indeed, the user views familiar components while browsing the website.  
+Here a brief description of each component in alphabetical order.
 
 ## **_BaseButton_**
 
@@ -118,7 +121,9 @@ We have developed the components of the website trying to maximize their _reusab
 
 - ## **_Breadcrumb_**
 
-  A dynamic breadcrumb. The route to be shown is defined by ***?????????***. It shows at most the three main levels of the website: from the homepage, to one of the main section, to one of the item of such section.
+A dynamic breadcrumb, with labels as links. The route to be shown is defined by ***?????????***.  
+**Actual usage on the website:** it shows, in (almost) every page, at most the three main levels of the website: from the homepage, to one of the main section, to one of the item of such section.
+Once user clicks on an upper level, the link brings it to the respective page
 
 |       Prop       |    Type    |  Default  | Note                                                                                                                                                                                                         |
 |:----------------:|:----------:|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -131,7 +136,7 @@ We have developed the components of the website trying to maximize their _reusab
     <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Eventi', path: '/eventi/' },]" :current-page="name"/>
 
 
-| <img src="./img/breadcrumb.png" height="64"> |
+| <img src="./img/breadcrumb.png" height="50"> |
 |:--------------------------------------------:|
 |         Breadcrumb of an event page          |
  
@@ -139,8 +144,8 @@ We have developed the components of the website trying to maximize their _reusab
 ***
 
 - ## **_Card_**
-
-It is a component used in the pages of the single itmes (single events, point of interest, itineraries) to show the photos of the gallery section. It contains an image that is shown in its full size once clicked
+It is a container with an image inside it.
+**Actual usage on the website:** used in the pages of the single items (single events, point of interest, itineraries) to show the photos of the gallery section. Its image is shown in its full size once clicked
 
 | Note                                                                                                        |
 |-------------------------------------------------------------------------------------------------------------|
@@ -155,7 +160,7 @@ It is a component used in the pages of the single itmes (single events, point of
             :img="`../Events/${img}`"
           />
 
-| <img src="./img/card.png" height="64"> |
+| <img src="./img/card.png" width="800"> |
 |:--------------------------------------:|
 |    Cards in tha gallery of an event    |
  
@@ -164,7 +169,9 @@ It is a component used in the pages of the single itmes (single events, point of
 
 - ## **_CardInfo_**
 
-It is a component composed by an image, its caption and a button. Used mainly in the homepage of the website to briefly show some items. The button brings to the item's page.  
+It is a component composed by an image, its caption and a button.
+**Actual usage on the website:** used mainly in the homepage of the website to briefly show some items. 
+The button brings to the item's page.  
 When the item is an event, it also shows in the caption the starting date and the location of the event.
 
 | Note                                                                                                  |
@@ -183,7 +190,7 @@ When the item is an event, it also shows in the caption the starting date and th
             link="pois"
           />
 
-|  <img src="./img/cardInfo.png" height="64">  | <img src="./img/cardInfo1.png" height="64"> |
+|  <img src="./img/cardInfo.png" width="500">  | <img src="./img/cardInfo1.png" width="500"> |
 |:--------------------------------------------:|:-------------------------------------------:|
 | Point of interest Info-cards in the homepage |      Events Info-cards in the homepage      |
  
@@ -192,7 +199,8 @@ When the item is an event, it also shows in the caption the starting date and th
 
 - ## **_CardService_**
 
-It is a component composed by a title and three different lines of text. It is used in the service type pages to list the available services.   
+It is a component composed by a title and three different lines of text.
+**Actual usage on the website:** it is used in the service type pages to list the available services.   
 The title is the service name and the three lines are respectively the address, the opening time, the phone number and the link to the service's website.
 
 | Note                                                                                                                   |
@@ -212,20 +220,21 @@ The title is the service name and the three lines are respectively the address, 
             :website="s.website"
           />
 
-| <img src="./img/CardService.png" height="128"> |
-|:----------------------------------------------:|
+| <img src="./img/CardService.png" width="500"> |
+|:---------------------------------------------:|
 |        Service cards of movie theaters        |
  
 
 ***
-- 
+
 - ## **_Carousel_**
 
-The Carousel component, complementary with CarouselSlide component, is the major member of the main sections of the website.
+It has two button and a container in it.
+**Actual usage on the website:** the Carousel component, complementary with [CarouselSlide](#CarouselSlide) component, is the major member of the main sections of the website.
 It allows to browse all the items through either the click of the two buttons (prec and next) or through the implemented single scroll gesture.  
-Noteworthy is its responsivness: other than adapt its size to the window, it drastically changes based on the viewport of 
+Noteworthy is its responsiveness: other than adapt its size to the window, it drastically changes based on the viewport of 
 the current device: on computers' browsers it shows an item per time allowing to browse all of them through single scroll gesture, 
-buttons and clickable list (see also CarouselIndicator ***LINK TO COMPONENT*** component); on mobile devices, with a vertically oriented screen, 
+buttons and clickable list (see also [CarouselIndicator](#CarouselIndicator) ***LINK TO COMPONENT*** component); on mobile devices, with a vertically oriented screen, 
 it shows all the items in column allowing the user to browse them scrolling up and down with the intuitive scroll touch gesture, 
 mainly used in most of the mobile oriented applications.
 
@@ -243,16 +252,16 @@ mainly used in most of the mobile oriented applications.
             @prev="prev" 
           >
 
-|    <img src="./img/carousel.png" width="256">    | <img src="./img/carousel1.png" height="150">   |
-|:------------------------------------------------:|------------------------------------------------|
-| Carousel component on horizontal oriented screen | Carousel component on vertical oriented screen |
+|    <img src="./img/carousel.png" width="800">    |   <img src="./img/carousel1.png" height="500">   |
+|:------------------------------------------------:|:------------------------------------------------:|
+| Carousel component on horizontal oriented screen |  Carousel component on vertical oriented screen  |
  
 
 ***
 
 - ## **_CarouselSlide_**
-
-The CarouselSlide component, is needed to fulfill the purpose of the Carousel component. This component is actually the single slide of the carousel. 
+It is simply a container.
+**Actual usage on the website:** it is needed to fulfill the purpose of the Carousel component. This component is actually the single slide of the carousel. 
 As a slide, it is used including an image inside it enriched with the name of the item and a brief description appearing on hover.
 
 |      Prop      | Note                                                                                                              |
@@ -279,16 +288,16 @@ As a slide, it is used including an image inside it enriched with the name of th
           :direction="direction"
         >
 
-| <img src="./img/carouselSlide.png" height="128"> |
-|:------------------------------------------------:|
-|        A single slide when hovering on it        |
+| <img src="./img/carouselSlide.png" width="800"> |
+|:-----------------------------------------------:|
+|       A single slide when hovering on it        |
  
 
 ***
 
 - ## **_CarouselIndicator_**
-
-This component provides a further method to browse the slide in a Carousel ***LINK***. It is a button linked to an items in a carousel: by clicking
+It is simply a button with a label.
+**Actual usage on the website:** this component provides a further method to browse the slide in a Carousel ***LINK***. It is a button linked to an items in a carousel: by clicking
 it the component set the visible slide of the carousel on the one associated to it. It is needed when it is wanted to jump from a slide to another without scroll them one by one.
 Obviously several Indicators are shown at the same time in column, in order to create a clickable list of items.
 
@@ -319,11 +328,192 @@ Obviously several Indicators are shown at the same time in column, in order to c
             @change="change(index)"
         />
 
-|                                     <img src="./img/carouselIndicator.png" height="128">                                     |
+|                                     <img src="./img/carouselIndicator.png" width="220">                                      |
 |:----------------------------------------------------------------------------------------------------------------------------:|
 | A list of carousel indicators in events section<br/>(Festival della mortadella is the current visible slide in the carousel) |
  
 
 ***
 
-  <br>
+- ## **_ItineraryPath_**
+
+It is composed of 5 items, each of them has an image, a title and a link to a page of the website.    
+**Actual usage on the website:** used in the single pages of itineraries to show the point of interest inside a specific itinerary
+in order to let the user know, in a graphical way, which will be the stops of the route; when the user hover on the item, the name of the 
+point of interest appears.
+It is noted that the component has an high level of responsiveness, indeed when the screen becomes vertical, also the items are
+shown in column and, in order to be used in a smartphone, the single titles appear near to each item, without needing of hover on them.
+
+|   Prop   | Note                                                  |
+|:--------:|:------------------------------------------------------|
+| `nameX`  | The name of the Xth item of the itinerary             |
+| `imageX` | The image of the Xth item of the itinerary            |
+|  `idX`   | The id on server of the the Xth item of the itinerary |
+
+
+
+#### Example
+
+       <ItineraryPath
+        line="/Itineraries/LineaDrittaPNG.png"
+        :name1="namePoi1"
+        :name2="namePoi2"
+        :name3="namePoi3"
+        :name4="namePoi4"
+        :name5="namePoi5"
+        :id1="idPoi1"
+        :id2="idPoi2"
+        :id3="idPoi3"
+        :id4="idPoi4"
+        :id5="idPoi5"
+        :img1="img1"
+        :img2="img2"
+        :img3="img3"
+        :img4="img4"
+        :img5="img5"
+      />
+
+|                 <img src="./img/itinerary.png" width="800">                 |  <img src="./img/itinerary1.png" height="500">  |
+|:---------------------------------------------------------------------------:|:-----------------------------------------------:|
+| Itinerary path on horizontal screen<br/>(While hovering on Palazzo re Enzo) |        Itinerary path on vertical screen        |
+
+***
+
+- ## **_Map_**
+It has an iframe with a link to a specific location on the map, shown on Google Maps website.  
+**Actual usage on the website:** it is used to show, in the single point of interest pages, the exact location of such item.
+The user can also click on the link to better explore the location directly on Google Maps website (or application).
+
+|     Prop     |   Type   |                        Note                        |
+|:------------:|:--------:|:--------------------------------------------------:|
+|    `name`    |   `/`    | The name of the point of interest shown in the map |
+| `googleLink` | `String` |  The link to the location on Google Maps website   |
+
+
+
+
+#### Example
+
+       <Map :googleLink="googleLink" :name="name"> </Map>
+
+| <img src="./img/map.png" width="220"> |
+|:-------------------------------------:|
+|    The location of Piazza Maggiore    |
+
+***
+
+- ## **_SelectFilter_**
+By mean of use of a select tag, this component shows a drop-list with 3 options.  
+**Actual usage on the website:** used on the Events section to filter the listed events based on the season of them. 
+It receives from the server all the events but shows only the corresponding ones.
+
+|      Method       |  Parameter Type   | Note                                                                                                                                      |
+|:-----------------:|:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------|
+| `onChange(event)` |        `/`        | Triggered by _click_ event on a specific option, emits the filter-change action which will filter the events based on the option selected |
+
+
+#### Example
+
+          <select-filter
+            class="select-filter"
+            @filter-change="filterBySeason"
+          />
+
+| <img src="./img/filter.png" width="200"> |   <img src="./img/filter1.png" height="300">   |
+|:----------------------------------------:|:----------------------------------------------:|
+|        The filter when set on All        | The drop-list shown once clicked on the filter |
+
+
+***
+
+- ## **_StaticFullImage_**
+An image with a text label and a button.  
+**Actual usage on the website:** used on the Homepage of the website to show the main image once opening for the first time the website.
+It also has an arrow shaped button which automatically scroll the page once clicked.
+
+|   Prop   |   Type   |            Note             |
+|:--------:|:--------:|:---------------------------:|
+| `slide`  | `String` |    The link to the image    |
+| `title1` | `String` | A string of the shown label |
+| `title2` | `String` | A string of the shown label |
+
+|      Method      | Parameter Type | Note                                                        |
+|:----------------:|:--------------:|:------------------------------------------------------------|
+| `updateScroll()` |      `/`       | Method on the arrow button to scroll the page once clicked  |
+
+
+#### Example
+
+    <StaticFullImage @scrollto="goto" slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA"/>
+
+
+| <img src="./img/StaticFullImage.png" width="800"> |
+|:-------------------------------------------------:|
+|             The image on the Homepage             |
+
+***
+
+- ## **_StaticHalfImage_**
+An image with a text label.  
+**Actual usage on the website:** used on the single item pages of the website as header of the page.
+
+|  Prop   |   Type   |            Note             |
+|:-------:|:--------:|:---------------------------:|
+| `slide` | `String` |    The link to the image    |
+| `title` | `String` | The name of the page's item |
+
+
+#### Example
+
+      <StaticHalfImage :slide="`../Events/${imgBackground}`" :title="name" />
+
+| <img src="./img/StaticHalfImage.png" width="800"> |
+|:-------------------------------------------------:|
+|             The image on the Homepage             |
+
+***
+
+- ## **_TheFooter_**
+A container with an image and several links.  
+**Actual usage on the website:** used on the bottom part of (almost) every page of the website. It has the website logo in it and
+several links: some of these to internal pages some on external pages.  
+It is also responsive, shrinking itself when the page width decrease.
+
+#### Example
+
+      <the-footer/>
+
+| <img src="./img/TheFooter.png" width="800"> |
+|:-------------------------------------------:|
+|                 The footer                  |
+
+***
+
+- ## **_TheHeader_**
+It is a container with an image and several labels.  
+**Actual usage on the website:** used on the upper part of all the pages, it is the header of the entire website.
+It has the logo of the website which brings to the homepage everytime it is clicked and the labels of the main sections of the website which
+brings to the respective pages when clicked. The labels are also underlined when the user is on its respective page, for a better orientation in the website.   
+It is noted that the component has a high level of responsiveness: when the page width is going to be low, like in a smartphone, the labels
+disappear, leaving its place to a menu icon that, once clicked, shows the dropdown menu with the same labels. Such menu could be closed again with
+the respective button.
+
+|             Method              | Parameter Type | Note                                           |
+|:-------------------------------:|:--------------:|:-----------------------------------------------|
+| `changeMobileMenuVisibility()`  |      `/`       | Changes the menu style based on the page width |
+
+
+#### Example
+
+    <the-header />
+
+|       <img src="./img/TheHeader.png" width="900">        |
+|:--------------------------------------------------------:|
+| The header when the user is on Punti di Interesse's page |
+|       <img src="./img/TheHeader2.png" width="400">       |
+|         The header when the page width is small          |
+|       <img src="./img/TheHeader1.png" width="400">       |
+|                The header drop-list menu                 |
+
+***
+
