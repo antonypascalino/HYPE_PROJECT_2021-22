@@ -98,7 +98,7 @@ export default {
     height : auto
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1100px) {
   .arrow-down{
     display: block;
   }
