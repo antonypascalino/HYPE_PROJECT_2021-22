@@ -93,8 +93,8 @@ Here a brief description of each component in alphabetical order.
 
 - ## **_BaseButton_**
 
-  A general purpose button, picking up the main colors of the website: red and white. On mouse hover the button is substituted with a version with white background.
-  **Actual usage on the website:** as button for links to other sections of the website or to external links.
+A general purpose button, picking up the main colors of the website: red and white. On mouse hover the button is substituted with a version with white background.
+**Actual usage on the website:** as button for links to other sections of the website or to external links.
 
 |  Prop   |   Type   | Note                                                       |
 |:-------:|:--------:|:-----------------------------------------------------------|
