@@ -13,22 +13,18 @@
 
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i></h6>
             <a href="/"><img class="logo" src="~/static/logoCompatto_bianco.png" alt="logo_compatto_bianco"></a>
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
           <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4"></h6>
             <p><a href="/contattaci" class="text">> Contattaci</a></p>
             <p><a href="/bolognainbreve" class="text">> Bologna in Breve</a></p>
           </div>
 
           <!-- Grid column -->
           <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <h6 class="text-uppercase fw-bold mb-4"></h6>
             <p><a target="_blank" href="https://www.bolognatoday.it/meteo/" class="text">> Meteo</a></p>
             <p><a target="_blank" href="https://www.skylinewebcams.com/en/webcam/italia/emilia-romagna/bologna/bologna-torre-degli-asinelli.html" class="text">> Webcam</a></p>
           </div>
@@ -36,7 +32,6 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4"></h6>
             <p><a title="areaLegale" href="/arealegale" class="text">> Area Legale</a></p>
             <p><a title="privacy" href="/privacy" class="text">> Informativa Privacy</a></p>
           </div>
