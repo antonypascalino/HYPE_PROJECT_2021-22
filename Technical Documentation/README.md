@@ -17,9 +17,9 @@ We developed the project by defining common guidelines for development. Each mem
 
 ## **Technologies and Motivations**
 
-- For the _server side_ development we have used **NodeJS with ??????????**.
+- For the _server side_ development we have used **Nuxt.js** that is a open source javaScript library based on Vue.js,Node.js, Webpack and Babel.js.
 - For the _hosting_ our application we have used **Heroku**. The website is accessible at [insideBO.herokuapp.com](https://insidebo.herokuapp.com/).
-- Since the website is data-base driven, for the _database implementation_ we have used **PostgreeSQL**.
+- Since the website is data-base driven, for the _database implementation_ we have used **PostgreeSQL** and **pgAdmin 4**.
 
 <br>
 
