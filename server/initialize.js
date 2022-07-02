@@ -251,7 +251,7 @@ export default async (models) => {
       mapLink: "https://www.google.com/maps/place/Piazza+Giuseppe+Verdi/@44.4962248,11.3508051,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd5c92e96d791:0x6e0ad24fb1f7ca56!8m2!3d44.4962248!4d11.3508051"
     },
     {
-      name: "I colli bolognesi",
+      name: "I Colli Bolognesi",
       visit_info:"E' sempre possibile visitare i colli!",
       carousel_desc: "Ma quanto è bello andare in giro per i colli bolognesi... Scoprili",
       description: "L’appennino bolognese si estende a partire dalla parte sud della città e fa da sfondo ai suggestivi palazzi medievali del centro.\n" +
@@ -273,7 +273,7 @@ export default async (models) => {
         "Lo stadio fu inaugurato durante l’epoca fascista, più precisamente nel 1927. La caratteristica più particolare è sicuramente la Torre di Maratona, che si erge con i suoi 42 metri di altezza a sostegno della tribuna est.\n" ,
       imgBackground: "stadio03.jpg",
       imgArray:["stadio02.jpg","stadio01.jpg"],
-      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.122040254544!2d11.307761480196616!3d44.49216610589434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd45d0f1547d1%3A0x6dbca3585c33186f!2sRenato%20Dall&#39;Ara%20Stadium!5e0!3m2!1sen!2sit!4v1656664299667!5m2!1sen!2sit",
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1423.05541644647!2d11.308563808306856!3d44.492395758112366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd45d067636a9%3A0x65e9f68b1959ad73!2sVia%20dello%20Sport%2C%206%2C%2040134%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656753428979!5m2!1sen!2sit",
       address: "Via Andrea Costa 174, 40134 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Renato+Dall'Ara+Stadium/@44.4921661,11.3077561,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd45d0f1547d1:0x6dbca3585c33186f!8m2!3d44.4921623!4d11.3099448"
     }
