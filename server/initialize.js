@@ -483,11 +483,11 @@ export default async (models) => {
         "Abbiamo stilato una lista delle banche del centro più comode da raggiungere. Potete trovarle il via Rizzoli, strada centrale che conduce alle due torri, oppure nelle zone adiacenti, in modo da non sviare dai vostri divertenti tour della città!\n"
     },
   ]
-  const servicetype0 = await models.ServiceType.create(serviceTypeList[0])
+  const servicetype0 = await models.ServiceType.create(serviceTypeList[4])
   const servicetype1 = await models.ServiceType.create(serviceTypeList[1])
   const servicetype2 = await models.ServiceType.create(serviceTypeList[2])
   const servicetype3 = await models.ServiceType.create(serviceTypeList[3])
-  const servicetype4 = await models.ServiceType.create(serviceTypeList[4])
+  const servicetype4 = await models.ServiceType.create(serviceTypeList[0])
 
   //Service Table
   const serviceList = [
