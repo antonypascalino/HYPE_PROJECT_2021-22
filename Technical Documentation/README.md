@@ -4,12 +4,12 @@
 
 We developed the project by defining common guidelines for development. Each member of the group was able to touch on all aspects relating to the development. In particular:
 
-|      Member       | Main focus                                            |
-|:-----------------:| ----------------------------------------------------- |
+|      Member       | Main focus                                     |
+|:-----------------:|------------------------------------------------|
 |   Davide Carini   | Focus on DB modeling and component development |
-| Daniele Casciani  |         |
-| Riccardo Pestrin  |         |
-| Antony Pascalino  |     Focus on component development and CSS styling       |
+| Daniele Casciani  |                                                |
+| Riccardo Pestrin  |                                                |
+| Antony Pascalino  | Focus on component development and CSS styling |
 
 <br>
 
@@ -76,11 +76,6 @@ Here are shown some graphical instances where is possible to look at the differe
 
 
 <br>
-
----
-
-## **Plugins**
-??????????????
 
 ---
 
@@ -380,6 +375,7 @@ shown in column and, in order to be used in a smartphone, the single titles appe
 ***
 
 - ## **_Map_**
+
 It has an iframe with a link to a specific location on the map, shown on Google Maps website.  
 **Actual usage on the website:** it is used to show, in the single point of interest pages, the exact location of such item.
 The user can also click on the link to better explore the location directly on Google Maps website (or application).
@@ -396,7 +392,7 @@ The user can also click on the link to better explore the location directly on G
 
        <Map :googleLink="googleLink" :name="name"> </Map>
 
-| <img src="./img/map.png" width="220"> |
+| <img src="./img/map.png" width="500"> |
 |:-------------------------------------:|
 |    The location of Piazza Maggiore    |
 

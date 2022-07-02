@@ -6,7 +6,10 @@
 <template>
   <div class="card" style="width: 25rem">
     <a>
-      <div class="card-image" :style="{ 'background-image': 'url(' + img + ')' }"></div>
+      <div
+        class="card-image"
+        :style="{ 'background-image': 'url(' + img + ')' }"
+      ></div>
       <div class="overlay">
         <a target="_blank" :href="img" class="icon" title="User Profile">
           <i class="mdi mdi-magnify-plus-outline"></i>
@@ -18,11 +21,9 @@
 
 <style scoped>
 .card {
-  border: 0px solid transparent;
-}
-.card {
-  border-color: transparent;
+  border: 0 solid transparent;
   background-color: transparent;
+  transition: 200ms;
 }
 .card-image {
   background-position: center;
@@ -51,7 +52,7 @@
   position: relative;
   top: 40%;
   transform: translateY(-50%);
-  color: black;
+  color: #c13939;
   font-size: 30px;
 }
 @media screen and (min-width: 600px) {
@@ -60,6 +61,7 @@
     -ms-transform: scale(1.5); /* IE 9 */
     transform: scale(1.5);
     z-index: 2;
+    transition: 200ms;
   }
   .card:hover .overlay {
     opacity: 1;
@@ -67,9 +69,10 @@
 }
 /*Mobile visualization(reduce of the font size)*/
 @media screen and (max-width: 500px) {
-.overlay{
-  background-color: rgba(255, 255, 255, 0);
-  opacity: 1;}
+  .overlay {
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 1;
+  }
 }
 </style>
 
