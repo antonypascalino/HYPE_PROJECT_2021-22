@@ -204,12 +204,12 @@ export default {
 }
 
 .section-la-nostra-missione {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   /*font-size: 17px;*/
   justify-content: center;
   align-items: center;
-  border: 2px blue solid;
+  /*border: 2px blue solid;*/
   display: flex;
   flex-direction: column;
   padding-left: 4vw;
@@ -225,7 +225,7 @@ p.bologna-paragraph {
   font-size: 1.5vw;
   text-align: justify;
   line-height: 2.7vw;
-  border: 2px solid orangered;
+  /*border: 2px solid orangered;*/
   width: 50%;
   height: 100%;
   margin-bottom: 0;
@@ -240,7 +240,7 @@ p.bologna-paragraph.last-paragraph {
 .container-fluid {
   margin-top: 10px;
   display: flex;
-  border: yellow 2px solid;
+  /*border: yellow 2px solid;*/
   gap: 4vw;
   padding-right: 0;
   padding-left: 0;
