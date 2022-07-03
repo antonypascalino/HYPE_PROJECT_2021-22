@@ -121,7 +121,7 @@ import staticHalfImage from '~/components/StaticHalfImage'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import Map from '~/components/Map'
 import baseButton from '~/components/BaseButton'
-import cardInfo from '~/components/cardInfo'
+import cardInfo from '~/components/CardInfo'
 
 export default {
   name: 'DetailsPage',
