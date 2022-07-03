@@ -6,7 +6,7 @@
   <div class="page-container" >
 
     <!--Homepage full page slide  -->
-    <StaticFullImage @scrollto="goto" slide="/Bologna_Homepage_1.jpg" title1="SCOPRI" title2="BOLOGNA"/>
+    <StaticFullImage @scrollto="goto" slide="/Bologna_Homepage_1.webp" title1="SCOPRI" title2="BOLOGNA"/>
     <!--Fake section used as anchor of the arrow down scroll  -->
     <section class="fake-section" ref="anchor"></section>
     <br><br><br>
