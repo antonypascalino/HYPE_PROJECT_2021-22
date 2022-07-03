@@ -17,6 +17,24 @@
         <p class="text-container">{{ description }}</p>
       </section>
 
+      <section class="section-container">
+        <div class="title-container">DOVE</div>
+        <!--Cards of Points of interest (Bootstrap)-->
+        <div class="">
+          <div class="poi-card-container row mt-4">
+            <cardInfo
+              v-for="(poi, index) of poiList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="poi.name"
+              :img="`../Poi/${poi.imgBackground}`"
+              :id="poi.id"
+              link="pois"
+            />
+          </div>
+        </div>
+      </section>
+
       <section class="section-description">
         <div class="title-container">GALLERY</div>
         <div class="row mt-1">
@@ -88,6 +106,7 @@ export default {
     const { id } = route.params
     // const { data } = await $axios.get('api/events/'+ id)
     const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
+    const pois = await $axios.get(`http://localhost:3000/api/4pois`)
     return {
       name: data.name,
       date: data.date,
@@ -97,6 +116,7 @@ export default {
       address: data.address,
       price: data.price,
       website: data.website,
+      poiList: pois.data,
     }
   },
 
@@ -213,10 +233,9 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-  .title-container{
+  .title-container {
     padding-left: 0px;
     text-align: center;
   }
-
 }
 </style>

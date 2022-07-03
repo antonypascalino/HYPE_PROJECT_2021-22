@@ -29,8 +29,6 @@
         </div>
       </section>
 
-
-
       <section class="section-description1 dove-si-trova">
         <div class="title-container">DOVE SI TROVA</div>
         <div class="poi-address-container">
@@ -41,13 +39,57 @@
             />
             {{ address }}
 
-
-          <a  target="_blank" :href="mapLink">
-            <baseButton style="margin-top: 20px;" title="Vedi su Google Maps" goto="" />
-          </a>
-        </div>
+            <a target="_blank" :href="mapLink">
+              <baseButton
+                style="margin-top: 20px"
+                title="Vedi su Google Maps"
+                goto=""
+              />
+            </a>
+          </div>
         </div>
         <Map :x="x" :y="y" :name="name"> </Map>
+      </section>
+
+      <section class="section-container">
+        <div class="title-container">EVENTI OSPITATI</div>
+        <!--Cards of events -->
+        <div class="events-container">
+          <div class="event-card-container row mt-4">
+            <cardInfo
+              v-for="(event, index) of eventList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="event.name"
+              :img="`../Events/${event.imgBackground}`"
+              :id="event.id"
+              link="eventi"
+              :first-day="event.firstDay"
+              :address="event.address"
+            />
+          </div>
+
+          <!--Button for display all the events -->
+          <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
+        </div>
+      </section>
+
+      <section class="section-container">
+        <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
+        <!--Cards of Points of interest (Bootstrap)-->
+        <div class="">
+          <div class="poi-card-container row mt-4">
+            <cardInfo
+              v-for="(poi, index) of poiList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="poi.name"
+              :img="`../Poi/${poi.imgBackground}`"
+              :id="poi.id"
+              link="pois"
+            />
+          </div>
+        </div>
       </section>
 
       <section class="section-description">
@@ -69,6 +111,7 @@ import staticHalfImage from '~/components/StaticHalfImage'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import Map from '~/components/Map'
 import baseButton from '~/components/BaseButton'
+import cardInfo from '~/components/cardInfo'
 
 export default {
   name: 'DetailsPage',
@@ -78,12 +121,14 @@ export default {
     Breadcrumb,
     Map,
     baseButton,
+    cardInfo,
   },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
     // const { data } = await $axios.get('api/pois/'+ id)
     const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
+    const events = await $axios.get(`http://localhost:3000/api/4events1`)
     return {
       name: data.name,
       visit_info: data.visit_info,
@@ -94,6 +139,7 @@ export default {
       y: data.y,
       address: data.address,
       mapLink: data.mapLink,
+      eventList: events.data,
     }
   },
   data() {
@@ -192,6 +238,18 @@ export default {
   background-color: #c13939;
 }
 
+.section-container {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 80px;
+  color: #c13939;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
 .text-container {
   padding-top: 10px;
   padding-left: 8vw;
@@ -214,21 +272,28 @@ export default {
   text-align: right;
 }
 
+.events-container {
+  width: 100%;
+  align-content: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .main-page {
   background-color: #f2f2f2;
 }
 
 @media screen and (max-width: 930px) {
- .poi-address-container{
-   display: none;
- }
+  .poi-address-container {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .title-container{
+  .title-container {
     padding-left: 0px;
     text-align: center;
   }
-
 }
 </style>
