@@ -15,81 +15,69 @@
       </div>
       <br /><br />
 
-      <section class="section-la-nostra-missione">
-        <p class="bologna-paragraph end-paragraph">
-          <span style="font-weight: bold; color: #C13939; font-style: italic">Capoluogo</span> della Città metropolitana e della regione Emilia-Romagna, Bologna è situata tra le montagne dell'Appennino
-          tosco-emiliano ed il cuore della <b>Pianura Padana</b>.
+      <section class="section-la-nostra-missione first-section">
+        <p class="bologna-paragraph first-paragraph">
+          Capoluogo della Città metropolitana e della regione Emilia-Romagna,
+          Bologna è situata tra le montagne dell'Appennino tosco-emiliano ed il
+          cuore della Pianura Padana.
         </p>
-        <p class="bologna-paragraph end-paragraph">
-        Punto d’incontro tra nord e sud, tra est e ovest, da Bologna si raggiungono
-        facilmente la Riviera Adriatica nonché Venezia, Firenze, Milano e
-        Roma.
+        <p class="bologna-paragraph first-paragraph">
+          Punto d’incontro tra nord e sud, tra est e ovest, da Bologna si
+          raggiungono facilmente la Riviera Adriatica nonché Venezia, Firenze,
+          Milano e Roma.
         </p>
-        <p class="bologna-paragraph end-paragraph">
-          La città, i cui primi insediamenti risalirebbero almeno al I
-        millennio a.C., fu un importante centro urbano dapprima sotto gli
-        Etruschi e i Celti, poi sotto i Romani e, nel Medioevo, come libero
-        comune. Capitale settentrionale dello Stato Pontificio a partire dal
-        Cinquecento, ebbe un ruolo molto importante durante il Risorgimento e,
-        durante la seconda guerra mondiale, fu uno dei fulcri della
-        Resistenza.
+        <p class="bologna-paragraph first-paragraph">
+          La città, fu un importante centro urbano dapprima sotto gli Etruschi e
+          i Celti, poi sotto i Romani e, nel Medioevo, come libero comune.
+          Capitale settentrionale dello Stato Pontificio a partire dal
+          Cinquecento, ebbe un ruolo molto importante durante il Risorgimento e,
+          durante la seconda guerra mondiale, fu uno dei fulcri della
+          Resistenza.
         </p>
       </section>
 
       <section class="section-la-nostra-missione">
         <div class="title-container">Perchè visitarla</div>
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <img
-                src="~/static/bolognaInBreve.jpg"
-                alt="responsive website"
-                class="img-fluid img1"
-              />
-            </div>
-            <div class="col-xl-6 col-lg-8 col-md-6">
-              <p class="bologna-paragraph">
-                <span style="font-size: 40px; font-style: italic; color: #C13939; opacity: 0.75"> "Città d’arte, cultura e commercio"</span>
-              </p>
-              <p class="bologna-paragraph">
-                con un'efficiente struttura
-                fieristica e una rinomata tradizione manifatturiera e
-                motoristica, Bologna è nota per i quasi 40 km di portici, i più
-                lunghi del mondo. Chiamata anche la <b>“Dotta”</b>, per via
-                della sua antica Università, e la “Grassa” per la sua
-                gastronomia, la città si fregia del titolo "Città creativa della
-                Musica UNESCO" e vanta un centro storico medievale tra i più
-                estesi e meglio conservati d’Europa, brulicante di locali,
-                osterie, teatri e botteghe.
-              </p>
-            </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 bib">
+            <img
+              src="~/static/bolognaInBreve.jpg"
+              alt="responsive website"
+              class="img-fluid img1"
+            />
           </div>
+          <p class="bologna-paragraph">
+            Città d’arte, cultura e commercio con un'efficiente struttura
+            fieristica e una rinomata tradizione manifatturiera e motoristica,
+            Bologna è nota per i quasi 40 km di portici, i più lunghi del mondo.
+            Chiamata anche la <b>“Dotta”</b>, per via della sua antica
+            Università, e la “Grassa” per la sua gastronomia, la città si fregia
+            del titolo "Città creativa della Musica UNESCO" e vanta un centro
+            storico medievale tra i più estesi e meglio conservati d’Europa,
+            brulicante di locali, osterie, teatri e botteghe.
+          </p>
         </div>
       </section>
 
       <section class="section-la-nostra-missione">
         <div class="title-container">Un po' di Storia</div>
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-xl-6 col-lg-8 col-md-6">
-              <p class="bologna-paragraph">
-                Nel VI secolo a.C. Bologna fu una delle più importanti città
-                etrusche della Padania e fu nota come Felsina. Nel IV secolo fu
-                occupata dai galli Boi e nei secoli seguenti arrivarono i romani
-                che mutarono il nome in Bononia. Sotto i Romani Bologna fu una
-                città fiorente, con ventimila abitanti, imponenti costruzioni ed
-                un vasto teatro. Mantenne il suo prestigio nei secoli imperiali,
-                ma dell'impero seguì il declino ed il suo perimetro si ridusse a
-                poco a poco.
-              </p>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <img
-                src="~/static/bolognaStoria01.jpg"
-                alt="responsive webite"
-                class="img-fluid img2"
-              />
-            </div>
+          <p class="bologna-paragraph">
+            Nel VI secolo a.C. Bologna fu una delle più importanti città
+            etrusche della Padania e fu nota come Felsina. Nel IV secolo fu
+            occupata dai galli Boi e nei secoli seguenti arrivarono i romani che
+            mutarono il nome in Bononia. Sotto i Romani Bologna fu una città
+            fiorente, con ventimila abitanti, imponenti costruzioni ed un vasto
+            teatro. Mantenne il suo prestigio nei secoli imperiali, ma
+            dell'impero seguì il declino ed il suo perimetro si ridusse a poco a
+            poco.
+          </p>
+          <div class="col-xl-3 col-lg-4 col-md-6 bib">
+            <img
+              src="~/static/bolognaStoria01.jpg"
+              alt="responsive webite"
+              class="img-fluid img2"
+            />
           </div>
         </div>
       </section>
@@ -97,75 +85,59 @@
       <section class="section-la-nostra-missione">
         <div class="title-container">Sulla Tavola</div>
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <img
-                src="~/static/aTavolaBologna.jpg"
-                alt="responsive webite"
-                class="img-fluid img3"
-              />
-            </div>
-            <div class="col-xl-6 col-lg-8 col-md-6">
-              <p class="bologna-paragraph">
-                <span style="font-size: 40px; font-style: italic; color: #C13939; opacity: 0.75"> "Mortadella, ragù, tortellini, lasagne e
-                  tagliatelle"</span>
-              </p>
-              <p class="bologna-paragraph">
-                Bologna è sinonimo di enogastronomia.
-                <b
-                  >Mortadella, "ragù alla Bolognese", tortellini, lasagne,
-                  tagliatelle, bollito, certosino</b
-                >, sono solo alcuni dei prodotti che l’hanno resa famosa nel
-                mondo insieme alle mitiche sfogline, i cui corsi di cucina sono
-                frequentati da visitatori di ogni continente. Altrettanto noti
-                sono i <b>Vini DOC </b> dei Colli Bolognesi, fra i quali il
-                tipico Pignoletto. La fama internazionale della cucina bolognese
-                risale al Medioevo: erano presenti in città potenti famiglie
-                signorili, presso le cui corti servivano i cuochi più celebrati,
-                come Giulio Cesare Tirelli e Bartolomeo Stefani.
-              </p>
-            </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 bib">
+            <img
+              src="~/static/aTavolaBologna.jpg"
+              alt="responsive webite"
+              class="img-fluid img3"
+            />
           </div>
+          <p class="bologna-paragraph">
+            Bologna è sinonimo di enogastronomia.
+            <b
+              >Mortadella, "ragù alla Bolognese", tortellini, lasagne,
+              tagliatelle, bollito, certosino</b
+            >, sono solo alcuni dei prodotti che l’hanno resa famosa nel mondo
+            insieme alle mitiche sfogline, i cui corsi di cucina sono
+            frequentati da visitatori di ogni continente. Altrettanto noti sono
+            i <b>Vini DOC </b> dei Colli Bolognesi, fra i quali il tipico
+            Pignoletto. La fama internazionale della cucina bolognese risale al
+            Medioevo: erano presenti in città potenti famiglie signorili, presso
+            le cui corti servivano i cuochi più celebrati, come Giulio Cesare
+            Tirelli e Bartolomeo Stefani.
+          </p>
         </div>
       </section>
 
       <section class="section-la-nostra-missione">
         <div class="title-container">Per Divertirsi</div>
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-xl-6 col-lg-8 col-md-6">
-              <p class="bologna-paragraph">
-                <span style="font-size: 40px; font-style: italic; color: #C13939; opacity: 0.75"> "La città pulsa di vita di giorno e di notte"</span>
-              </p>
-              <p class="bologna-paragraph">
-                La città pulsa di vita di giorno e di notte nelle
-                <b
-                  >numerose osterie, teatri, gallerie, librerie, piazze e
-                  negozi</b
-                >. Nelle suggestive stradine adiacenti Piazza Maggiore, dove si
-                snoda tra botteghe di prodotti tipici il vivace e pittoresco
-                mercato del Quadrilatero, i più golosi non possono rinunciare ad
-                una sosta nel più antico e rinomato laboratorio di cioccolato
-                della città e all’aperitivo in un'antica enoteca. La movida di
-                Bologna non delude mai e dura sino all’alba, animata soprattutto
-                dagli studenti universitari che ai libri alternano il
-                divertimento, una routine ben conosciuta da chi studia in città.
-              </p>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <img
-                src="~/static/divertimento01.jpeg"
-                alt="responsive webite"
-                class="img-fluid"
-              />
-            </div>
+          <p class="bologna-paragraph">
+            La città pulsa di vita di giorno e di notte nelle
+            <b>numerose osterie, teatri, gallerie, librerie, piazze e negozi</b
+            >. Nelle suggestive stradine adiacenti Piazza Maggiore, dove si
+            snoda tra botteghe di prodotti tipici il vivace e pittoresco mercato
+            del Quadrilatero, i più golosi non possono rinunciare ad una sosta
+            nel più antico e rinomato laboratorio di cioccolato della città e
+            all’aperitivo in un'antica enoteca. La movida di Bologna non delude
+            mai e dura sino all’alba, animata soprattutto dagli studenti
+            universitari che ai libri alternano il divertimento, una routine ben
+            conosciuta da chi studia in città.
+          </p>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 bib">
+            <img
+              src="~/static/divertimento01.jpeg"
+              alt="responsive webite"
+              class="img-fluid img4"
+            />
           </div>
         </div>
       </section>
 
       <section class="section-la-nostra-missione">
         <div class="title-container">Informazioni e consigli utili</div>
-        <p class="bologna-paragraph end-paragraph">
+        <p class="bologna-paragraph last-paragraph">
           Bologna è ancora una città a misura d’uomo e, almeno nella zona del
           centro storico, le distanze si coprono a piedi in poco tempo. Arrivati
           in città, è consigliabile lasciare la macchina in uno dei numerosi
@@ -178,7 +150,6 @@
           individuare i punti di riferimento e conoscere meglio la città.
         </p>
       </section>
-
     </div>
   </main>
 </template>
@@ -206,10 +177,8 @@ export default {
     }
   },
 }
-
 </script>
 <style scoped>
-
 .page-container {
   margin-top: -40px;
 }
@@ -223,12 +192,11 @@ export default {
 }
 
 .title-container {
-  margin-top: 40px;
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 2.5vw;
   line-height: 50px;
   display: flex;
   color: #c13939;
@@ -238,38 +206,102 @@ export default {
 .section-la-nostra-missione {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
-  font-size: 17px;
-  margin-left: 8px;
-  margin-right: 8px;
+  /*font-size: 17px;*/
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  border: 2px blue solid;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin-top: 80px;
+}
+
+.section-la-nostra-missione.first-section {
+  margin-top: 0;
 }
 
 p.bologna-paragraph {
-  padding-top: 10px;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  font-size: 20px;
+  font-size: 1.5vw;
   text-align: justify;
+  line-height: 2.7vw;
+  border: 2px solid orangered;
+  width: 50%;
+  height: 100%;
+  margin-bottom: 0;
 }
 
-p.bologna-paragraph.end-paragraph {
-  margin-left: 30px;
+p.bologna-paragraph.first-paragraph,
+p.bologna-paragraph.last-paragraph {
+  /*font-size: 20px;*/
+  width: 100%;
 }
 
 .container-fluid {
   margin-top: 10px;
-  justify-content: center;
-  align-content: center;
+  display: flex;
+  border: yellow 2px solid;
+  gap: 4vw;
+  padding-right: 0;
+  padding-left: 0;
+  height: auto;
 }
 
-.row {
-  align-content: center;
-  justify-content: center;
-}
+/*.row {*/
+/*  align-content: center;*/
+/*  justify-content: center;*/
+/*}*/
 
 .img-fluid {
-  width: 1500px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  aspect-ratio: auto;
+  object-fit: cover;
 }
 
+.img-fluid.img2 {
+  height: 20vw;
+}
+
+.img-fluid.img3 {
+  height: 25vw;
+}
+
+.img-fluid.img4 {
+  height: 26vw;
+}
+
+/*Image container*/
+.col-xl-3.col-lg-4.col-md-6.bib {
+  width: 50%;
+  padding: 0;
+  position: relative;
+  margin-top: 10px;
+  /*border: black 2px solid;*/
+}
+
+@media screen and (max-width: 630px) {
+  .container-fluid {
+    flex-direction: column;
+  }
+  p.bologna-paragraph {
+    line-height: 17px;
+    width: 100%;
+    font-size: 16px;
+  }
+  .col-xl-3.col-lg-4.col-md-6.bib {
+    width: 100%;
+  }
+
+  .title-container {
+    margin-top: 0;
+    /*height: 20px;*/
+    font-size: 30px;
+  }
+
+  .section-la-nostra-missione {
+    margin-top: 20px;
+  }
+}
 </style>
