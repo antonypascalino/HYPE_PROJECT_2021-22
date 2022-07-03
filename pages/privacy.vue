@@ -4,10 +4,12 @@
 -->
 <template>
   <main class="page-container">
-
     <!-- BreadCrumb Section -->
     <section class="breadcrumb-section">
-      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }]" current-page="Privacy" />
+      <breadcrumb
+        :default-route="[{ title: 'HOME', path: '/' }]"
+        current-page="Privacy"
+      />
     </section>
 
     <!-- Body Section -->
@@ -19,7 +21,9 @@
           insideBO fornisce le seguenti informazioni in merito alle modalità di
           gestione e ai trattamenti dei dati.
         </p>
-        <h4 class="privacy-title">1. Tipi di dati raccolti, finalità e base giuridica del trattamento </h4>
+        <h4 class="privacy-title">
+          1. Tipi di dati raccolti, finalità e base giuridica del trattamento
+        </h4>
         <p>
           sistemi informatici e le procedure software preposte al funzionamento
           del Sito acquisiscono, nel corso del loro normale esercizio, alcuni
@@ -84,13 +88,18 @@
           ai recapiti indicati al punto 9). I Dati non saranno diffusi.
         </p>
 
-        <h4 class="privacy-title">6. Trasferimento di Dati in Paesi che non fanno parte dell’Unione Europea o ad organizzazioni internazionali</h4>
+        <h4 class="privacy-title">
+          6. Trasferimento di Dati in Paesi che non fanno parte dell’Unione
+          Europea o ad organizzazioni internazionali
+        </h4>
         <p>
           insideBO non trasferisce i Dati in Paesi che non fanno parte
           dell’Unione Europea o ad organizzazioni internazionali.
         </p>
 
-        <h4 class="privacy-title">7. Collegamento a siti o servizi di soggetti terzi</h4>
+        <h4 class="privacy-title">
+          7. Collegamento a siti o servizi di soggetti terzi
+        </h4>
         <p>
           La presente informativa è resa solo per i trattamenti di dati
           personali effettuati attraverso il Sito o gli strumenti previsti dallo
@@ -113,7 +122,7 @@ export default {
   layout: 'default',
 
   components: {
-    Breadcrumb
+    Breadcrumb,
   },
 
   head() {
@@ -143,7 +152,7 @@ export default {
   margin-top: 60px;
 }
 .section-privacy {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;

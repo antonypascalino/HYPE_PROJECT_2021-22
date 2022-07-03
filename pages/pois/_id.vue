@@ -7,12 +7,17 @@
   <main class="page-container">
     <!-- Body Section -->
     <div class="body-container">
-
       <!-- Static Half image Section -->
       <StaticHalfImage :slide="`../Poi/${imgBackground}`" :title="name" />
       <!-- BreadCrumb Section -->
       <section class="breadcrumb-section1">
-        <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Punti di Interesse', path: '/pois/' },]" :current-page="name"/>
+        <breadcrumb
+          :default-route="[
+            { title: 'HOME', path: '/' },
+            { title: 'Punti di Interesse', path: '/pois/' },
+          ]"
+          :current-page="name"
+        />
       </section>
 
       <!-- Description Section -->
@@ -39,13 +44,62 @@
         <div class="title-container">DOVE SI TROVA</div>
         <div class="poi-address-container">
           <div class="poi-address">
-            <i class="mdi mdi-map-marker-check-outline" style="margin: 0; color: #c13939"/> {{ address }}
+            <i
+              class="mdi mdi-map-marker-check-outline"
+              style="margin: 0; color: #c13939"
+            />
+            {{ address }}
             <a target="_blank" :href="mapLink">
-            <baseButton style="margin-top: 20px;" title="Vedi su Google Maps" goto="" />
+              <baseButton
+                style="margin-top: 20px"
+                title="Vedi su Google Maps"
+                goto=""
+              />
             </a>
-        </div>
+          </div>
         </div>
         <Map :googleLink="googleLink"> </Map>
+      </section>
+
+      <section class="section-container">
+        <div class="title-container">EVENTI OSPITATI</div>
+        <!--Cards of events -->
+        <div class="events-container">
+          <div class="event-card-container row mt-4">
+            <cardInfo
+              v-for="(event, index) of eventList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="event.name"
+              :img="`../Events/${event.imgBackground}`"
+              :id="event.id"
+              link="eventi"
+              :first-day="event.firstDay"
+              :address="event.address"
+            />
+          </div>
+
+          <!--Button for display all the events -->
+          <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
+        </div>
+      </section>
+
+      <section class="section-container">
+        <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
+        <!--Cards of Points of interest (Bootstrap)-->
+        <div class="">
+          <div class="poi-card-container row mt-4">
+            <cardInfo
+              v-for="(poi, index) of poiList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="poi.name"
+              :img="`../Poi/${poi.imgBackground}`"
+              :id="poi.id"
+              link="pois"
+            />
+          </div>
+        </div>
       </section>
 
       <!-- Information Section -->
@@ -55,10 +109,9 @@
       </section>
 
       <div class="button-container">
-        <baseButton title="Tutti i Punti di interesse" goto="/pois/"/>
+        <baseButton title="Tutti i Punti di interesse" goto="/pois/" />
       </div>
     </div>
-
   </main>
 </template>
 
@@ -68,6 +121,7 @@ import staticHalfImage from '~/components/StaticHalfImage'
 import Breadcrumb from '~/components/Breadcrumb.vue'
 import Map from '~/components/Map'
 import baseButton from '~/components/BaseButton'
+import cardInfo from '~/components/cardInfo'
 
 export default {
   name: 'DetailsPage',
@@ -77,12 +131,14 @@ export default {
     Breadcrumb,
     Map,
     baseButton,
+    cardInfo,
   },
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const { data } = await $axios.get('api/pois/' + id)
     // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
+    const events = await $axios.get(`http://localhost:3000/api/4events1`)
     return {
       name: data.name,
       visit_info: data.visit_info,
@@ -92,6 +148,7 @@ export default {
       googleLink: data.googleLink,
       address: data.address,
       mapLink: data.mapLink,
+      eventList: events.data,
     }
   },
   data() {
@@ -121,7 +178,7 @@ export default {
   margin-top: -65px;
 }
 .section-description {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
@@ -188,19 +245,38 @@ export default {
   text-align: right;
 }
 
+.section-container {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 80px;
+  color: #c13939;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.events-container {
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
 @media screen and (max-width: 930px) {
- .poi-address-container{
-   display: none;
- }
+  .poi-address-container {
+    display: none;
+  }
 }
 
 /*Mobile visualization*/
 @media screen and (max-width: 500px) {
-  .title-container{
+  .title-container {
     padding-left: 0px;
     text-align: center;
   }
-  .text-container{
+  .text-container {
     font-size: 16px;
   }
 }

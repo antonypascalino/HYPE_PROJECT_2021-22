@@ -53,16 +53,24 @@
         <div class="title-container">MAPPA ITINERARIO</div>
         <div class="map-container">
           <a target="_blank" :href="link">
-            <img class="map-image" :src="require(`@/static/Itineraries/${this.map}`)"/>
+            <img
+              class="map-image"
+              :src="require(`@/static/Itineraries/${this.map}`)"
+            />
           </a>
           <div class="map-text">
-            <a target="_blank" style="text-decoration: none; color: #c13939" :href="link">Apri in Maps</a>
+            <a
+              target="_blank"
+              style="text-decoration: none; color: #c13939"
+              :href="link"
+              >Apri in Maps</a
+            >
           </div>
         </div>
       </section>
 
       <div class="button-container">
-        <baseButton title="Tutti gli itinerari" goto="/itinerari/"/>
+        <baseButton title="Tutti gli itinerari" goto="/itinerari/" />
       </div>
     </div>
   </main>
@@ -127,13 +135,13 @@ export default {
   head() {
     return {
       title: 'insideBO • ' + this.Itname,
-      meta:[
+      meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'This page describes a particular itinerary'
-        }
-      ]
+          content: 'This page describes a particular itinerary',
+        },
+      ],
     }
   },
   mounted() {
@@ -145,7 +153,7 @@ export default {
 </script>
 <style>
 .section-description {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
@@ -217,7 +225,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
-  border: 5px solid #C13939;
+  border: 5px solid #c13939;
 }
 
 .map-image {
@@ -252,15 +260,15 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-  .title-container{
+  .title-container {
     padding-left: 0px;
     text-align: center;
   }
-  .map-container{
+  .map-container {
     border: none;
     border-radius: 0;
   }
-  .text-container{
+  .text-container {
     font-size: 16px;
   }
 }

@@ -7,12 +7,35 @@
   <main class="page-container">
     <!-- Body Section -->
     <div class="body-container">
-
       <!-- Static Half image Section -->
       <StaticHalfImage :slide="`../Events/${imgBackground}`" :title="name" />
       <!-- BreadCrumb Section -->
       <section class="breadcrumb-section2">
-        <breadcrumb :default-route="[{ title: 'HOME', path: '/' },{ title: 'Eventi', path: '/eventi/' },]" :current-page="name"/>
+        <breadcrumb
+          :default-route="[
+            { title: 'HOME', path: '/' },
+            { title: 'Eventi', path: '/eventi/' },
+          ]"
+          :current-page="name"
+        />
+      </section>
+
+      <section class="section-container">
+        <div class="title-container">DOVE</div>
+        <!--Cards of Points of interest (Bootstrap)-->
+        <div class="">
+          <div class="poi-card-container row mt-4">
+            <cardInfo
+              v-for="(poi, index) of poiList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="poi.name"
+              :img="`../Poi/${poi.imgBackground}`"
+              :id="poi.id"
+              link="pois"
+            />
+          </div>
+        </div>
       </section>
 
       <!-- Description Section -->
@@ -37,36 +60,42 @@
       <!-- Information Section -->
       <section class="container4">
         <div class="title-container">INFORMAZIONI</div>
-        <br>
+        <br />
         <div class="row row1">
-
           <div class="col-sm-3">
             <h6 class="text-uppercase fw-bold mb-4 mdi mdi-tag">PREZZO</h6>
             <p>{{ price }}</p>
           </div>
           <div class="col-sm-3">
-            <h6 class="mdi mdi-map-marker-check-outline text-uppercase fw-bold mb-4">INDIRIZZO</h6>
+            <h6
+              class="mdi mdi-map-marker-check-outline text-uppercase fw-bold mb-4"
+            >
+              INDIRIZZO
+            </h6>
             <p>{{ address }}</p>
           </div>
 
           <div class="col-sm-3">
-            <h6 class="mdi mdi-calendar-blank text-uppercase fw-bold mb-4">DATA</h6>
+            <h6 class="mdi mdi-calendar-blank text-uppercase fw-bold mb-4">
+              DATA
+            </h6>
             <p>{{ date }}</p>
           </div>
 
           <div class="col-sm-4">
-            <br>
+            <br />
             <h6 class="mdi mdi-web text-uppercase fw-bold mb-4">SITO WEB</h6>
-            <a :href="website"><p class="p-website">{{ website }}</p></a>
+            <a :href="website"
+              ><p class="p-website">{{ website }}</p></a
+            >
           </div>
         </div>
       </section>
 
       <div class="button-container">
-        <baseButton title="Tutti gli eventi" goto="/eventi/"/>
+        <baseButton title="Tutti gli eventi" goto="/eventi/" />
       </div>
     </div>
-
   </main>
 </template>
 
@@ -85,8 +114,9 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/events/'+ id)
-     // const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
+    const { data } = await $axios.get('api/events/' + id)
+    // const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
+    const pois = await $axios.get(`http://localhost:3000/api/4pois`)
     return {
       name: data.name,
       date: data.date,
@@ -96,6 +126,7 @@ export default {
       address: data.address,
       price: data.price,
       website: data.website,
+      poiList: pois.data,
     }
   },
 
@@ -125,7 +156,7 @@ export default {
   margin-top: -65px;
 }
 .section-description {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
@@ -200,14 +231,14 @@ export default {
 
 /*Mobile visualization*/
 @media screen and (max-width: 500px) {
-  .title-container{
+  .title-container {
     padding-left: 0px;
     text-align: center;
   }
-  .p-website{
+  .p-website {
     font-size: 13px;
   }
-  .text-container{
+  .text-container {
     font-size: 16px;
   }
 }

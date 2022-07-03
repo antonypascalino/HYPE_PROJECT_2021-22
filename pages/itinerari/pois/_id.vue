@@ -39,9 +39,12 @@
             />
             {{ address }}
 
-
-            <a  target="_blank" :href="mapLink">
-              <baseButton style="margin-top: 20px;" title="Vedi su Google Maps" goto="" />
+            <a target="_blank" :href="mapLink">
+              <baseButton
+                style="margin-top: 20px"
+                title="Vedi su Google Maps"
+                goto=""
+              />
             </a>
           </div>
         </div>
@@ -80,7 +83,7 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/pois/'+ id)
+    const { data } = await $axios.get('api/pois/' + id)
     // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
     return {
       name: data.name,
@@ -117,7 +120,7 @@ export default {
 }
 
 .section-description {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
@@ -199,18 +202,17 @@ export default {
 }
 
 @media screen and (max-width: 930px) {
-  .poi-address-container{
+  .poi-address-container {
     display: none;
   }
 }
 @media screen and (max-width: 500px) {
-  .title-container{
+  .title-container {
     padding-left: 0px;
     text-align: center;
   }
-  .text-container{
+  .text-container {
     font-size: 16px;
   }
-
 }
 </style>

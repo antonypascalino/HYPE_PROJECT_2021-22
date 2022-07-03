@@ -8,12 +8,20 @@
     <!-- Body Section -->
     <div class="body-container">
       <!-- Static Half image Section -->
-      <StaticHalfImage :slide="`../Services/${imgTypeService}`" :title="nameTypeService"/>
+      <StaticHalfImage
+        :slide="`../Services/${imgTypeService}`"
+        :title="nameTypeService"
+      />
       <!-- BreadCrumb Section -->
       <section class="breadcrumb-section3">
-        <breadcrumb :default-route="[{ title: 'HOME', path: '/' }, { title: 'Servizi', path: '/servizi/' },]" :current-page="nameTypeService"/>
+        <breadcrumb
+          :default-route="[
+            { title: 'HOME', path: '/' },
+            { title: 'Servizi', path: '/servizi/' },
+          ]"
+          :current-page="nameTypeService"
+        />
       </section>
-
 
       <section class="container1">
         <div class="title-container">DESCRIZIONE</div>
@@ -38,9 +46,8 @@
       </section>
 
       <div class="button-container">
-        <baseButton title="Tutti i tipi di servizi" goto="/servizi/"/>
+        <baseButton title="Tutti i tipi di servizi" goto="/servizi/" />
       </div>
-
     </div>
   </main>
 </template>
@@ -80,13 +87,14 @@ export default {
   head() {
     return {
       title: 'insideBO • ' + this.nameTypeService,
-      meta:[
+      meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'This page contains all the services for a specific service type.',
-        }
-      ]
+          content:
+            'This page contains all the services for a specific service type.',
+        },
+      ],
     }
   },
   mounted() {
@@ -134,12 +142,12 @@ export default {
   height: 60px;
   padding: 20px;
 }
-.breadcrumb-section3{
+.breadcrumb-section3 {
   margin-right: 20px;
   margin-top: -5px;
 }
-.container1{
-  font-family: 'Raleway', sans-serif;
+.container1 {
+  font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
@@ -151,11 +159,11 @@ export default {
 
 /*Mobile visualization*/
 @media screen and (max-width: 500px) {
-  .title-container{
+  .title-container {
     padding-left: 0px;
     text-align: center;
   }
-  .text-container{
+  .text-container {
     font-size: 16px;
   }
 }
