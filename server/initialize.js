@@ -294,7 +294,8 @@ export default async (models) => {
       price:"Ingresso gratuito",
       website:"https://festival.ilcinemaritrovato.it/",
       type:0,
-      firstDay:'2022-06-25'
+      firstDay:'2022-06-25',
+      poiId:2
     },
     {
       name: "Cersaie",
@@ -307,7 +308,8 @@ export default async (models) => {
       price: "Ingresso gratuito",
       website: "https://www.cersaie.it/it/index.php",
       type: 0,
-      firstDay:'2022-09-26'
+      firstDay:'2022-09-26',
+      poiId:1
     },
     {
       name: "Festival della Mortadella",
@@ -320,7 +322,8 @@ export default async (models) => {
       price:"ingresso libero, ristorazione a pagamento",
       website:"www.mortadellaplease.eu/",
       type:0,
-      firstDay:'2022-09-20'
+      firstDay:'2022-09-20',
+      poiId:1
     },
     {
       name: "Arte Fiera",
@@ -335,7 +338,8 @@ export default async (models) => {
       price:"26 euro",
       website:"http://www.artefiera.it/home/776.html",
       type:0,
-      firstDay:'2022-05-13'
+      firstDay:'2022-05-13',
+      poiId:1
     },
     {
       name: "Fiera del Libro",
@@ -350,7 +354,8 @@ export default async (models) => {
       price:"Ingresso gratuito",
       website:"https://www.fieradellibrobologna.it/",
       type:0,
-      firstDay:'2022-03-18'
+      firstDay:'2022-03-18',
+      poiId:1
     },
     {
       name: "StraBologna",
@@ -365,7 +370,8 @@ export default async (models) => {
       price:"15 euro",
       website:"https://strabologna.it/",
       type:0,
-      firstDay:'2022-05-22'
+      firstDay:'2022-05-22',
+      poiId:1
     },
     {
       name: "roBOt",
@@ -380,7 +386,8 @@ export default async (models) => {
       price:"30 euro",
       website:"https://robotfestival.it/",
       type:0,
-      firstDay:'2022-09-23'
+      firstDay:'2022-09-23',
+      poiId:1
     },
     {
       name: "Cosmoprof",
@@ -393,7 +400,8 @@ export default async (models) => {
       price:"Ingresso gratuito",
       website:"https://www.cosmoprof.com/",
       type:0,
-      firstDay:'2022-03-16'
+      firstDay:'2022-03-16',
+      poiId:1
     },
     {
       name: "Cioccoshow",
@@ -406,7 +414,8 @@ export default async (models) => {
       price: "Ingresso gratuito, consumazioni a pagamento",
       website: "https://cioccoshow.it/",
       type:1,
-      firstDay:'2022-10-17'
+      firstDay:'2022-10-17',
+      poiId:1
     },
     {
       name: "BilBOlBul",
@@ -419,7 +428,8 @@ export default async (models) => {
       price:"Ingresso gratuito",
       website:"https://bilbolbul.net/BBB21",
       type:1,
-      firstDay:'2022-12-03'
+      firstDay:'2022-12-03',
+      poiId:1
     },
     {
       name: "Bologna Jazz Festival",
@@ -432,7 +442,8 @@ export default async (models) => {
       price:"10 euro",
       website:"https://www.bolognajazzfestival.com/",
       type:1,
-      firstDay:'2022-10-20'
+      firstDay:'2022-10-20',
+      poiId:1
     },
 
   ]

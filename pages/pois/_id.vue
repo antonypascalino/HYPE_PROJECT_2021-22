@@ -60,7 +60,7 @@
         </div>
         <Map :googleLink="googleLink"> </Map>
       </section>
-
+{{poiList}}
       <section class="section-container">
         <div class="title-container">EVENTI OSPITATI</div>
         <!--Cards of events -->
@@ -136,20 +136,25 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/pois/' + id)
-    // const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
-    // const events = await $axios.get(`http://localhost:3000/api/4events1`)
-    const events = await $axios.get('/api/4events1')
+    const [data1,data2] = await Promise.all([
+      $axios.get('http://localhost:3000/api/pois/' + id),
+     $axios.get('http://localhost:3000/api/eventInPoi/' +id),
+      // $axios.get('api/itineraries/' + id),
+      // $axios.get('api/itPoi/' + id),
+    ])
+    // const { data } = await $axios.get('api/pois/' + id)
+
+   // const events = await $axios.get('/api/4events1')
     return {
-      name: data.name,
-      visit_info: data.visit_info,
-      imgBackground: data.imgBackground,
-      imgArray: data.imgArray,
-      description: data.description,
-      googleLink: data.googleLink,
-      address: data.address,
-      mapLink: data.mapLink,
-      eventList: events.data,
+      name: data1.data.name,
+      visit_info: data1.data.visit_info,
+      imgBackground: data1.data.imgBackground,
+      imgArray: data1.data.imgArray,
+      description: data1.data.description,
+      googleLink: data1.data.googleLink,
+      address: data1.data.address,
+      mapLink: data1.data.mapLink,
+      eventList: data2.data
     }
   },
   data() {

@@ -10,17 +10,17 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development (use this when the DB is running in local)
-// const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
+const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
 
 // Production (use this code when deploying to production in Heroku)
-  const pg = require('pg')
-  pg.defaults.ssl = true
-  const database = new Sequelize(process.env.DATABASE_URL, {
-      ssl: true,
-      dialectOptions: {
-        ssl: { require: true, rejectUnauthorized: false }
-      },
-  })
+// const pg = require('pg')
+// pg.defaults.ssl = true
+// const database = new Sequelize(process.env.DATABASE_URL, {
+//     ssl: true,
+//     dialectOptions: {
+        //       ssl: { require: true, rejectUnauthorized: false }
+//   },
+//  })
 
 
 // Function that will initialize the connection to the database
@@ -321,6 +321,26 @@ async function runMainApi() {
     const id = +req.params.id
     const result = await models.Itinerary.findAll({where: { id: id },include: [{model: models.Poi}]})
     return res.json(result)
+  })
+
+  // HTTP GET api that returns all the services for a specific ServiceType
+  app.get('/eventInPoi/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Events.findAll({where: { poiId: id },include: [{model: models.Poi}]})
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgArray: element.imgArray,
+        address: element.address,
+        date:element.date,
+        id: element.id,
+        imgBackground:element.imgBackground,
+        firstDay:element.firstDay,
+        poiId:element.poiId
+      })
+    }
+    return res.json(filtered)
   })
 }
 runMainApi()

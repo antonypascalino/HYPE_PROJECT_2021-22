@@ -63,8 +63,7 @@
               target="_blank"
               style="text-decoration: none; color: #c13939"
               :href="link"
-              >Apri in Maps</a
-            >
+              >Apri in Maps</a>
           </div>
         </div>
       </section>
