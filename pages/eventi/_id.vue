@@ -116,7 +116,8 @@ export default {
     const { id } = route.params
     const { data } = await $axios.get('api/events/' + id)
     // const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
-    const pois = await $axios.get(`http://localhost:3000/api/4pois`)
+    // const pois = await $axios.get(`http://localhost:3000/api/4pois`)
+    const pois = await $axios.get('api/4pois')
     return {
       name: data.name,
       date: data.date,
