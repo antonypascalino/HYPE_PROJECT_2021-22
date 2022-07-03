@@ -56,21 +56,19 @@
         <!--Cards of events -->
         <div class="events-container">
           <div class="event-card-container row mt-4">
-            <cardInfo
-              v-for="(event, index) of eventList"
-              class="col-sm-1 m-2"
-              :key="`index-${index}`"
-              :name="event.name"
-              :img="`../Events/${event.imgBackground}`"
-              :id="event.id"
-              link="eventi"
-              :first-day="event.firstDay"
-              :address="event.address"
-            />
+            <!--            <cardInfo-->
+            <!--              v-for="(event, index) of eventList"-->
+            <!--              class="col-sm-1 m-2"-->
+            <!--              :key="`index-${index}`"-->
+            <!--              :name="event.name"-->
+            <!--              :img="`../Events/${event.imgBackground}`"-->
+            <!--              :id="event.id"-->
+            <!--              link="eventi"-->
+            <!--              :first-day="event.firstDay"-->
+            <!--              :address="event.address"-->
+            <!--            />-->
+            {{ eventList }}
           </div>
-
-          <!--Button for display all the events -->
-          <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
         </div>
       </section>
 
@@ -128,7 +126,7 @@ export default {
     const { id } = route.params
     // const { data } = await $axios.get('api/pois/'+ id)
     const { data } = await $axios.get('http://localhost:3000/api/pois/' + id)
-    const events = await $axios.get(`http://localhost:3000/api/4events1`)
+    const events = await $axios.get('http://localhost:3000/api/eventPoi' + id)
     return {
       name: data.name,
       visit_info: data.visit_info,

@@ -1,15 +1,16 @@
-
 const { Op, QueryTypes } = require('sequelize')
 const moment = require('moment')
 
 const express = require('express')
 const app = express()
-const { Sequelize, DataTypes } = require("sequelize")
+const { Sequelize, DataTypes } = require('sequelize')
 const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development
- const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
+const database = new Sequelize(
+  'postgres://postgres:postgres@localhost:5432/insideBO_DB'
+)
 
 // Production (use this code when deploying to production in Heroku)
 //  const pg = require('pg')
@@ -19,62 +20,60 @@ app.use(express.json())
 //    dialectOptions: { ssl: { require: true, rejectUnauthorized: false } },
 //  })
 
-
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
   await database.authenticate()
-  const Poi = database.define("poi", {
+  const Poi = database.define('poi', {
     name: DataTypes.STRING,
     description: DataTypes.TEXT,
     visit_info: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
-    x:DataTypes.FLOAT,
-    y:DataTypes.FLOAT,
-    carousel_desc:DataTypes.STRING,
-    address:DataTypes.STRING,
-    mapLink:DataTypes.TEXT
+    x: DataTypes.FLOAT,
+    y: DataTypes.FLOAT,
+    carousel_desc: DataTypes.STRING,
+    address: DataTypes.STRING,
+    mapLink: DataTypes.TEXT,
   })
 
-  const Events = database.define("event", {
+  const Events = database.define('event', {
     name: DataTypes.STRING,
     description: DataTypes.TEXT,
     date: DataTypes.STRING,
     address: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
     imgArray: DataTypes.ARRAY(DataTypes.STRING),
-    website:DataTypes.STRING,
-    price:DataTypes.STRING,
-    type:DataTypes.INTEGER,
-    firstDay:DataTypes.DATEONLY,
-    carousel_desc:DataTypes.STRING
+    website: DataTypes.STRING,
+    price: DataTypes.STRING,
+    type: DataTypes.INTEGER,
+    firstDay: DataTypes.DATEONLY,
+    carousel_desc: DataTypes.STRING,
+    // poiId: DataTypes.INTEGER
   })
 
-  const Itinerary = database.define("itinerary", {
+  const Itinerary = database.define('itinerary', {
     name: DataTypes.STRING,
     description: DataTypes.TEXT,
     imgBackground: DataTypes.STRING,
     map: DataTypes.STRING,
     duration: DataTypes.STRING,
-    carousel_desc:DataTypes.STRING,
-    link: DataTypes.TEXT
-
+    carousel_desc: DataTypes.STRING,
+    link: DataTypes.TEXT,
   })
-  const ServiceType = database.define("servicetype", {
+  const ServiceType = database.define('servicetype', {
     name: DataTypes.STRING,
     imgBackground: DataTypes.STRING,
-    carousel_desc:DataTypes.STRING,
+    carousel_desc: DataTypes.STRING,
     service_desc: DataTypes.TEXT,
   })
 
-  const Service = database.define("service", {
+  const Service = database.define('service', {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     opening_hours: DataTypes.STRING,
     website: DataTypes.STRING,
-    phone_number: DataTypes.STRING
+    phone_number: DataTypes.STRING,
   })
-
 
   const Itinerary_Poi = database.define('Itinerary_Poi', {})
   Itinerary.belongsToMany(Poi, {
@@ -86,7 +85,6 @@ async function initializeDatabaseConnection() {
     foreignKey: 'PoiId',
   }) // to show poi in itinerary page
 
-
   // Creating the 1 -> N association between POI and Event
   Poi.hasMany(Events)
   Events.belongsTo(Poi)
@@ -95,8 +93,6 @@ async function initializeDatabaseConnection() {
   ServiceType.hasMany(Service)
   Service.belongsTo(ServiceType)
 
-
-
   await database.sync({ force: true })
   return {
     Poi,
@@ -104,18 +100,16 @@ async function initializeDatabaseConnection() {
     Itinerary,
     ServiceType,
     Service,
-    Itinerary_Poi
+    Itinerary_Poi,
   }
 }
-
 
 async function runMainApi() {
   const models = await initializeDatabaseConnection()
   await initialize(models)
 
-
   // HTTP GET api that returns all the point of interest
-  app.get("/pois", async (req, res) => {
+  app.get('/pois', async (req, res) => {
     const result = await models.Poi.findAll()
     const filtered = []
     for (const element of result) {
@@ -124,44 +118,44 @@ async function runMainApi() {
         imgBackground: element.imgBackground,
         visit_info: element.visit_info,
         id: element.id,
-        imgArray:element.imgArray,
-        x:element.x,
-        y:element.y,
-        carousel_desc:element.carousel_desc,
-        address:element.address,
-        mapLink:element.mapLink
+        imgArray: element.imgArray,
+        x: element.x,
+        y: element.y,
+        carousel_desc: element.carousel_desc,
+        address: element.address,
+        mapLink: element.mapLink,
       })
     }
     return res.json(filtered)
   })
 
   // HTTP GET api that returns all the point of interest
-  app.get("/4pois", async (req, res) => {
-    const result = await models.Poi.findAll({ order: Sequelize.literal('random()'), limit: 4 })
+  app.get('/4pois', async (req, res) => {
+    const result = await models.Poi.findAll({
+      order: Sequelize.literal('random()'),
+      limit: 4,
+    })
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         imgBackground: element.imgBackground,
         id: element.id,
-        imgArray:element.imgArray
+        imgArray: element.imgArray,
       })
     }
     return res.json(filtered)
   })
 
-
   // HTTP GET api that returns a specific point of interest
   app.get('/pois/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Poi.findOne({ where: { id }})
+    const result = await models.Poi.findOne({ where: { id } })
     return res.json(result)
   })
 
-
-
   // HTTP GET api that returns all the events in our actual database
-  app.get("/events", async (req, res) => {
+  app.get('/events', async (req, res) => {
     const result = await models.Events.findAll()
     const filtered = []
     for (const element of result) {
@@ -169,51 +163,55 @@ async function runMainApi() {
         name: element.name,
         imgArray: element.imgArray,
         address: element.address,
-        date:element.date,
+        date: element.date,
         id: element.id,
-        imgBackground:element.imgBackground,
-        price:element.price,
-        website:element.website,
-        type:element.type,
-        carousel_desc:element.carousel_desc
+        imgBackground: element.imgBackground,
+        price: element.price,
+        website: element.website,
+        type: element.type,
+        carousel_desc: element.carousel_desc,
       })
     }
     return res.json(filtered)
   })
 
   // HTTP GET api that returns 4 events in our actual database
-  app.get("/4events", async (req, res) => {
-    const result = await models.Events.findAll({ order: Sequelize.literal('random()'), limit: 4 })
-    const filtered = []
-    for (const element of result) {
-      filtered.push({
-        name: element.name,
-        imgArray: element.imgArray,
-        address: element.address,
-        date:element.date,
-        id: element.id,
-        imgBackground:element.imgBackground,
-      })
-    }
-    return res.json(filtered)
-  })
-
-  // HTTP GET api that returns 4 events in our actual database
-  app.get("/4events1", async (req, res) => {
-    const result = await models.Events.findAll(  {where: { firstDay: { [Op.gte]: moment().toDate() } },
-    order: [['firstDay', 'ASC']],
+  app.get('/4events', async (req, res) => {
+    const result = await models.Events.findAll({
+      order: Sequelize.literal('random()'),
       limit: 4,
-  })
+    })
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         imgArray: element.imgArray,
         address: element.address,
-        date:element.date,
+        date: element.date,
         id: element.id,
-        imgBackground:element.imgBackground,
-        firstDay:element.firstDay
+        imgBackground: element.imgBackground,
+      })
+    }
+    return res.json(filtered)
+  })
+
+  // HTTP GET api that returns 4 events in our actual database
+  app.get('/4events1', async (req, res) => {
+    const result = await models.Events.findAll({
+      where: { firstDay: { [Op.gte]: moment().toDate() } },
+      order: [['firstDay', 'ASC']],
+      limit: 4,
+    })
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgArray: element.imgArray,
+        address: element.address,
+        date: element.date,
+        id: element.id,
+        imgBackground: element.imgBackground,
+        firstDay: element.firstDay,
       })
     }
     return res.json(filtered)
@@ -222,21 +220,21 @@ async function runMainApi() {
   // HTTP GET api that returns a specific point of interest
   app.get('/events/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Events.findOne({ where: { id }})
+    const result = await models.Events.findOne({ where: { id } })
     return res.json(result)
   })
 
   // HTTP GET api that returns all the services in our actual database
-  app.get("/services", async (req, res) => {
+  app.get('/services', async (req, res) => {
     const result = await models.ServiceType.findAll()
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         id: element.id,
-        imgBackground:element.imgBackground,
-        service_desc:element.service_desc,
-        carousel_desc:element.carousel_desc
+        imgBackground: element.imgBackground,
+        service_desc: element.service_desc,
+        carousel_desc: element.carousel_desc,
       })
     }
     return res.json(filtered)
@@ -244,54 +242,55 @@ async function runMainApi() {
   // HTTP GET api that returns a specific point of interest
   app.get('/specificService/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.ServiceType.findAll({ where: { id }})
+    const result = await models.ServiceType.findAll({ where: { id } })
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         id: element.id,
-        imgBackground:element.imgBackground,
-        service_desc:element.service_desc,
-        carousel_desc:element.carousel_desc
+        imgBackground: element.imgBackground,
+        service_desc: element.service_desc,
+        carousel_desc: element.carousel_desc,
       })
     }
     return res.json(filtered)
   })
 
-
   // HTTP GET api that returns a specific point of interest
   app.get('/Services/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Service.findAll({ where: { servicetypeId: id },include: [{model: models.ServiceType}]})
+    const result = await models.Service.findAll({
+      where: { servicetypeId: id },
+      include: [{ model: models.ServiceType }],
+    })
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         address: element.address,
-        opening_hours:element.opening_hours,
+        opening_hours: element.opening_hours,
         id: element.id,
-        website:element.website,
-        phone_number:element.phone_number
+        website: element.website,
+        phone_number: element.phone_number,
       })
     }
     return res.json(filtered)
   })
 
-
   // HTTP GET api that returns all the services in our actual database
-  app.get("/itineraries", async (req, res) => {
+  app.get('/itineraries', async (req, res) => {
     const result = await models.Itinerary.findAll()
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         address: element.visit_info,
-        map:element.map,
+        map: element.map,
         id: element.id,
-        imgBackground:element.imgBackground,
-        description:element.description,
-        carousel_desc:element.carousel_desc,
-        link:element.link
+        imgBackground: element.imgBackground,
+        description: element.description,
+        carousel_desc: element.carousel_desc,
+        link: element.link,
       })
     }
     return res.json(filtered)
@@ -300,17 +299,17 @@ async function runMainApi() {
   // HTTP GET api that returns a specific point of interest
   app.get('/itineraries/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Itinerary.findAll({ where: { id }})
+    const result = await models.Itinerary.findAll({ where: { id } })
     const filtered = []
     for (const element of result) {
       filtered.push({
         name: element.name,
         id: element.id,
-        duration:element.duration,
-        description:element.description,
-        map:element.map,
-        link:element.link,
-        imgBackground:element.imgBackground
+        duration: element.duration,
+        description: element.description,
+        map: element.map,
+        link: element.link,
+        imgBackground: element.imgBackground,
       })
     }
     return res.json(filtered)
@@ -319,11 +318,35 @@ async function runMainApi() {
   // HTTP GET api that returns a specific point of interest
   app.get('/itPoi/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Itinerary.findAll({where: { id: id },include: [{model: models.Poi}]})
+    const result = await models.Itinerary.findAll({
+      where: { id: id },
+      include: [{ model: models.Poi }],
+    })
     return res.json(result)
+  })
+  //
+  app.get('/eventPoi/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Events.findAll({
+      where: { poiId: id },
+      // include: [{ model: models.Poi }],
+    })
+    const filtered = []
+    for (const element of result) {
+      filtered.push({
+        name: element.name,
+        imgArray: element.imgArray,
+        address: element.address,
+        date: element.date,
+        id: element.id,
+        imgBackground: element.imgBackground,
+        firstDay: element.firstDay,
+        poiId: element.poiId,
+      })
+    }
+    return res.json(filtered)
   })
 }
 runMainApi()
-
 
 export default app
