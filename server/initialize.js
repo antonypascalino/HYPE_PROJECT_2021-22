@@ -135,19 +135,6 @@ export default async (models) => {
       mapLink: "https://www.google.com/maps/place/Piazza+Santo+Stefano/@44.4922769,11.3460771,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4c79571fe61:0x30d8d5e8e9c7385!8m2!3d44.4922731!4d11.3482658"
     },
     {
-      name: "Basilica di Santo Stefano",
-      visit_info:"Aperta tutti i giorni 8.00 – 19.00 (durante le funzioni religiose la visita turistica potrebbe essere limitata o sospesa).",
-      carousel_desc: "Un complesso di chiese antichissimo e ricco di storia.",
-      description: "Conosciuto anche come il complesso delle “Sette Chiese”, si affaccia sul lato sud-est della piazza omonima.\n" +
-        "Fondata in epoca romana intorno al 100 d.C., la basilica, inizialmente tempio pagano dedicato ad Iside, fu soggetto di numerose ricostruzioni ed ampliamenti che passano dall’epoca romana alle prime invasioni longobarde. Gli ultimi edifici risalgono al periodo tra il X e il XIII secolo e furono edificati dall’organo dei Benedettini.\n" +
-        "La chiesa del Crocefisso di origine longobarda si affaccia su Piazza Santo Stefano mentre all’interno si hanno cortili di stampo romano, come il cortile di Pilato ed il museo che conserva opere di diverse epoche.\n" ,
-      imgBackground: "basilicaSantoStefano04.jpg",
-      imgArray:["basilicaSantoStefano01.jpg","basilicaSantoStefano02.jpg"],
-      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.1228991581456!2d11.346309080196662!3d44.49214850589557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd5b452722fc1%3A0xe05c963953602828!2sBasilica%20Santo%20Stefano!5e0!3m2!1sen!2sit!4v1656663883343!5m2!1sen!2sit",
-      address: "Via Santo Stefano 24, 40125 Bologna (BO)",
-      mapLink: "https://www.google.com/maps/place/Basilica+Santo+Stefano/@44.4921485,11.3463037,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd5b452722fc1:0xe05c963953602828!8m2!3d44.4921447!4d11.3484924"
-    },
-    {
       name: "Il Mercato del Quadrilatero",
       visit_info:"Segue gli abituali orari di apertura dei negozi.",
       carousel_desc: "Il cuore della 'Grassa', il mercato nel centro di Bologna.",
@@ -264,6 +251,18 @@ export default async (models) => {
       googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.498968679191!2d11.299848780195449!3d44.443438809090765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ad52af3494631%3A0x5e3d31db779fb292!2sVia%20Cavaioni%2C%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656664274561!5m2!1sen!2sit",
       address: "Via Cavaioni 3, 40136 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Parco+Cavaioni/@44.4440416,11.3037843,17z/data=!3m1!4b1!4m5!3m4!1s0x132ad4d3dbcff619:0xc6a8360d7a74ab0c!8m2!3d44.4440378!4d11.305973"
+    },
+    {
+      name: "BolognaFiere",
+      visit_info:"Orario variabile a seconda degli eventi programmati",
+      carousel_desc: "Uno dei complessi fieristici più importanti al mondo!",
+      description: "Il gruppo BolognaFiere è uno dei quartieri espositivi più importanti al mondo. Luogo di fiere internazionali come Arte Fiera che espone l’arte contemporanea internazionale, Cersaie, salone della ceramica per l’architettura e arredobagno o il Motorshow.\n" +
+        "Il complesso fieristico del quartiere San Donato, ammodernato a partire dagli anni 70 è complessivamente esteso per 375.000 mq e consente lo svolgimento di circa 30 manifestazioni l’anno.\n" ,
+      imgBackground: "bolognaFiere01.jpg",
+      imgArray:["bolognaFiere02.jpg","bolognaFiere03.jpg"],
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.2701785141053!2d11.360217826953122!3d44.5096191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd35654de2b6f%3A0xf541c7be0c17941a!2sBolognaFiere!5e0!3m2!1sit!2sit!4v1656920819477!5m2!1sit!2sit",
+      address: "Viale Aldo Moro, 40128 Bologna (BO)",
+      mapLink: "https://www.google.it/maps/place/BolognaFiere/@44.5096191,11.3602178,17z/data=!4m9!1m2!2m1!1sbolognafiere!3m5!1s0x477fd35654de2b6f:0xf541c7be0c17941a!8m2!3d44.5096191!4d11.3643377!15sCgxib2xvZ25hZmllcmWSARJleGhpYml0aW9uX3BsYW5uZXI"
     },
     {
       name: "Stadio Renato Dall’Ara ",
