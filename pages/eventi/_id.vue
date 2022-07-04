@@ -20,24 +20,6 @@
         />
       </section>
 
-      <section class="section-description">
-        <div class="title-container">DOVE</div>
-        <!--Cards of Points of interest (Bootstrap)-->
-        <div class="">
-          <div class="poi-card-container row mt-4">
-            <cardInfo
-
-              class="col-sm-1 m-2"
-              :key="`index-${index}`"
-              :name="poiList.name"
-              :img="`../Poi/${poiList.imgBackground}`"
-              :id="poiList.id"
-              link="pois"
-            />
-          </div>
-        </div>
-      </section>
-
       <!-- Description Section -->
       <section class="section-description">
         <div class="title-container">DESCRIZIONE</div>
@@ -54,6 +36,25 @@
             :key="index"
             :img="`../Events/${img}`"
           />
+        </div>
+      </section>
+
+      <!--Dov'è section-->
+      <section class="section-container bib">
+        <div class="title-container">LUOGO DELL'EVENTO</div>
+
+        <!--Cards of Points of interest (Bootstrap)-->
+        <div class="card-poi">
+          <div class="poi-card-container row mt-4 poiEv">
+            <cardInfo
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="poiList.name"
+              :img="`../Poi/${poiList.imgBackground}`"
+              :id="poiList.id"
+              link="pois"
+            />
+          </div>
         </div>
       </section>
 
@@ -114,22 +115,21 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const [data1,data2] = await Promise.all([
+    const [data1, data2] = await Promise.all([
       $axios.get('http://localhost:3000/api/events/' + id),
-      ($axios.get('http://localhost:3000/api/poiGuestsEvent/' +id)),
+      $axios.get('http://localhost:3000/api/poiGuestsEvent/' + id),
     ])
     return {
       name: data1.data.name,
-      date:  data1.data.date,
-      imgBackground:  data1.data.imgBackground,
-      imgArray:  data1.data.imgArray,
-      description:  data1.data.description,
-      address:  data1.data.address,
-      price:  data1.data.price,
-      website:  data1.data.website,
+      date: data1.data.date,
+      imgBackground: data1.data.imgBackground,
+      imgArray: data1.data.imgArray,
+      description: data1.data.description,
+      address: data1.data.address,
+      price: data1.data.price,
+      website: data1.data.website,
       poiList: data2.data[0].poi,
     }
-
   },
 
   methods: {
@@ -166,6 +166,19 @@ export default {
   text-align: justify;
   text-justify: inter-word;
 }
+
+.section-container.bib {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 80px;
+  color: #c13939;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
 .title-container {
   margin-top: 50px;
   width: 100%;
@@ -178,6 +191,11 @@ export default {
   background-color: #f2f2f2;
   padding-left: 80px;
 }
+.poi-card-container.row.mt-4.poiEv {
+  justify-content: flex-start;
+  margin-left: 7vw;
+}
+
 .button-container {
   width: 100%;
   height: 60px;

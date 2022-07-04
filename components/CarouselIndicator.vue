@@ -20,7 +20,7 @@ export default {
   data() {
     return {}
   },
-  props: ['title', 'selected', 'index', 'visibleSlide'],
+  props: ['title', 'index', 'visibleSlide'],
   methods: {
     change() {
       this.$emit('change')

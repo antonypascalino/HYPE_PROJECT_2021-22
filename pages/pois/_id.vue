@@ -61,10 +61,11 @@
         <Map :googleLink="googleLink"> </Map>
       </section>
 
-
-      <section class="section-description">
+      <section class="section-description itPoi">
         <div class="title-container">EVENTI OSPITATI</div>
-        <div v-if="eventList.length === 0" >Nessun evento è ospitato qui. Nuovi eventi in arrivo!</div>
+        <div v-if="eventList.length === 0">
+          Nessun evento è ospitato qui. Nuovi eventi in arrivo!
+        </div>
         <!--Cards of events -->
         <div class="events-container">
           <div class="event-card-container row mt-4">
@@ -83,12 +84,14 @@
         </div>
       </section>
 
-      <section class="section-description">
+      <section class="section-description itPoi">
         <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="">
           <div class="poi-card-container row mt-4">
-            <div v-if="itineraryList.length === 0" >Nessun Itinerario passa ancora da qui. Nuovi itinerari in arrivo!</div>
+            <div v-if="itineraryList.length === 0">
+              Nessun Itinerario passa ancora da qui. Nuovi itinerari in arrivo!
+            </div>
             <cardInfo
               v-for="(poi, index) of itineraryList"
               class="col-sm-1 m-2"
@@ -136,16 +139,16 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const [data1,data2, data3] = await Promise.all([
+    const [data1, data2, data3] = await Promise.all([
       $axios.get('http://localhost:3000/api/pois/' + id),
-     $axios.get('http://localhost:3000/api/eventInPoi/' +id),
-      $axios.get('http://localhost:3000/api/poiInItinerary/' +id),
+      $axios.get('http://localhost:3000/api/eventInPoi/' + id),
+      $axios.get('http://localhost:3000/api/poiInItinerary/' + id),
       // $axios.get('api/itineraries/' + id),
       // $axios.get('api/itPoi/' + id),
     ])
     // const { data } = await $axios.get('api/pois/' + id)
 
-   // const events = await $axios.get('/api/4events1')
+    // const events = await $axios.get('/api/4events1')
     return {
       name: data1.data.name,
       visit_info: data1.data.visit_info,
@@ -156,7 +159,7 @@ export default {
       address: data1.data.address,
       mapLink: data1.data.mapLink,
       eventList: data2.data,
-      itineraryList: data3.data
+      itineraryList: data3.data,
     }
   },
   data() {
@@ -218,7 +221,7 @@ export default {
   height: 40vh;
   /*border: 2px solid #c13939;*/
   /*z-index: 2;*/
-  right: 5vw;
+  right: 2vw;
   margin-top: 1vw;
   vertical-align: middle;
   gap: 5px;
@@ -253,7 +256,7 @@ export default {
   text-align: right;
 }
 
-.section-container {
+.section-description.itPoi {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;
