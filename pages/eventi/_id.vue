@@ -22,11 +22,11 @@
 
       <section class="section-description">
         <div class="title-container">DOVE</div>
+      </section>
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="">
           <div class="poi-card-container row mt-4">
             <cardInfo
-
               class="col-sm-1 m-2"
               :key="`index-${index}`"
               :name="poiList.name"
@@ -36,7 +36,7 @@
             />
           </div>
         </div>
-      </section>
+
 
       <!-- Description Section -->
       <section class="section-description">
@@ -115,8 +115,10 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const [data1,data2] = await Promise.all([
-      $axios.get('http://localhost:3000/api/events/' + id),
-      ($axios.get('http://localhost:3000/api/poiGuestsEvent/' +id)),
+      // $axios.get('http://localhost:3000/api/events/' + id),
+      // $axios.get('http://localhost:3000/api/poiGuestsEvent/' +id),
+      $axios.get('api/events/' + id),
+      $axios.get('api/poiGuestsEvent/' + id)
     ])
     return {
       name: data1.data.name,
@@ -127,7 +129,7 @@ export default {
       address:  data1.data.address,
       price:  data1.data.price,
       website:  data1.data.website,
-      poiList: data2.data[0].poi,
+      poiList: data2.data[0].poi
     }
 
   },
