@@ -41,7 +41,7 @@
 
       <!--Dov'è section-->
       <section class="section-description"><div class="title-container">LUOGO DELL'EVENTO</div></section>
-      <section class="section-container bib">
+      <section class="section-description bib">
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="card-poi">
           <div class="poi-card-container row mt-4 poiEv">
@@ -169,7 +169,7 @@ export default {
   text-justify: inter-word;
 }
 
-.section-container.bib {
+.section-description.bib {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;
