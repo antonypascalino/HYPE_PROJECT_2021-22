@@ -74,7 +74,7 @@ export default async (models) => {
         "All’interno si trovano numerose sale decorate ed in particolare La Collezione di Arte Comunale, tra cui si possono osservare le opere del pittore bolognese Giorgio Morandi.\n" ,
       imgBackground: "palazzoAccursio01.jpg",
       imgArray:["palazzoAccursio02.jpg","palazzoAccursio03.jpg"],
-      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.0342549856077!2d11.340223780196641!3d44.49396490577632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4959b6b5b61%3A0x2059a5c0518cc24!2sPalazzo%20d&#39;Accursio!5e0!3m2!1sen!2sit!4v1656663714913!5m2!1sen!2sit",
+      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d711.5079165028601!2d11.34181682925718!3d44.494017955335565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x76eeea7c23e86a60!2zNDTCsDI5JzM4LjUiTiAxMcKwMjAnMzIuNSJF!5e0!3m2!1sen!2sit!4v1656923437893!5m2!1sen!2sit",
       address: "Piazza Maggiore 6, 40121 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Palazzo+d'Accursio/@44.4939611,11.3424071,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4959b6b5b61:0x2059a5c0518cc24!8m2!3d44.4939611!4d11.3424071"
 
@@ -104,7 +104,7 @@ export default async (models) => {
         "L’Archiginnasio fu gravemente colpito dai bombardamenti della Seconda Guerra Mondiale. Oggi, tuttavia, lo si può ammirare in tutto il suo splendore grazie ai restauri e ricostruzioni effettuati nei decenni successivi.\n" ,
       imgBackground: "archiginnasio01.jpg",
       imgArray:["archiginnasio02.jpg","archiginnasio03.jpg"],
-      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.1313271355293!2d11.34123668019664!3d44.49197580590689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4bfc278adc1%3A0x991786b52ce6d4bc!2sBiblioteca%20Comunale%20dell&#39;Archiginnasio!5e0!3m2!1sen!2sit!4v1656663785011!5m2!1sen!2sit",
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.1022437896816!2d11.343393674640739!3d44.49192785813044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x77fcbdf97e684701!2zNDTCsDI5JzMwLjgiTiAxMcKwMjAnMzYuMiJF!5e0!3m2!1sen!2sit!4v1656923520176!5m2!1sen!2sit",
       address: "Piazza Galvani 1, 40124 Bologna (BO)",
       mapLink:"https://www.google.com/maps/place/Biblioteca+Comunale+dell'Archiginnasio/@44.4919758,11.3412313,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4bfc278adc1:0x991786b52ce6d4bc!8m2!3d44.491972!4d11.34342"
     },
@@ -167,7 +167,7 @@ export default async (models) => {
         "Il campanile è la seconda torre più alta di Bologna con ben 70 metri.\n" ,
       imgBackground: "cattedraleSanPietro04.jpg",
       imgArray:["cattedraleSanPietro06.jpg","cattedraleSanPietro05.jpg"],
-      googleLink:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.9415181339973!2d11.340840280196709!3d44.49586510565173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4be0705c4a5%3A0xf8e25b961d073f1b!2sCattedrale%20Metropolitana%20di%20San%20Pietro!5e0!3m2!1sen!2sit!4v1656664032293!5m2!1sen!2sit",
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d711.4870687834167!2d11.343794129257205!3d44.49572665530754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd56f5779b935%3A0xd126f9f1360a70db!2sDivus%20Petronius%20Protector%20et%20Pater!5e0!3m2!1sen!2sit!4v1656923687713!5m2!1sen!2sit",
       address: "Via dell'Indipendenza 7, 40125 Bologna (BO)",
       mapLink: "https://www.google.com/maps/place/Cattedrale+Metropolitana+di+San+Pietro/@44.4957417,11.341203,17z/data=!4m9!1m2!2m1!1sLa+Cattedrale+di+San+Pietro!3m5!1s0x477fd4be0705c4a5:0xf8e25b961d073f1b!8m2!3d44.4956867!4d11.3444266!15sChtMYSBDYXR0ZWRyYWxlIGRpIFNhbiBQaWV0cm9aHSIbbGEgY2F0dGVkcmFsZSBkaSBzYW4gcGlldHJvkgEJY2F0aGVkcmFsmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU0wYUU1dGFFMW5FQUU"
     },
@@ -294,7 +294,7 @@ export default async (models) => {
       website:"https://festival.ilcinemaritrovato.it/",
       type:0,
       firstDay:'2022-06-25',
-      poiId:2
+      poiId:1
     },
     {
       name: "Cersaie",
@@ -308,7 +308,7 @@ export default async (models) => {
       website: "https://www.cersaie.it/it/index.php",
       type: 0,
       firstDay:'2022-09-26',
-      poiId:9
+      poiId:19
     },
     {
       name: "Festival della Mortadella",
@@ -322,7 +322,7 @@ export default async (models) => {
       website:"www.mortadellaplease.eu/",
       type:0,
       firstDay:'2022-09-20',
-      poiId:1
+      poiId:18
     },
     {
       name: "Arte Fiera",
@@ -338,7 +338,7 @@ export default async (models) => {
       website:"http://www.artefiera.it/home/776.html",
       type:0,
       firstDay:'2022-05-13',
-      poiId:1
+      poiId:19
     },
     {
       name: "Fiera del Libro",
@@ -354,7 +354,7 @@ export default async (models) => {
       website:"https://www.fieradellibrobologna.it/",
       type:0,
       firstDay:'2022-03-18',
-      poiId:1
+      poiId:15
     },
     {
       name: "StraBologna",
@@ -370,7 +370,7 @@ export default async (models) => {
       website:"https://strabologna.it/",
       type:0,
       firstDay:'2022-05-22',
-      poiId:1
+      poiId:13
     },
     {
       name: "roBOt",
@@ -386,7 +386,7 @@ export default async (models) => {
       website:"https://robotfestival.it/",
       type:0,
       firstDay:'2022-09-23',
-      poiId:1
+      poiId:11
     },
     {
       name: "Cosmoprof",
@@ -400,7 +400,7 @@ export default async (models) => {
       website:"https://www.cosmoprof.com/",
       type:0,
       firstDay:'2022-03-16',
-      poiId:1
+      poiId:19
     },
     {
       name: "Cioccoshow",
@@ -414,7 +414,7 @@ export default async (models) => {
       website: "https://cioccoshow.it/",
       type:1,
       firstDay:'2022-10-17',
-      poiId:1
+      poiId:2
     },
     {
       name: "BilBOlBul",
@@ -428,7 +428,7 @@ export default async (models) => {
       website:"https://bilbolbul.net/BBB21",
       type:1,
       firstDay:'2022-12-03',
-      poiId:1
+      poiId:17
     },
     {
       name: "Bologna Jazz Festival",
@@ -442,7 +442,7 @@ export default async (models) => {
       website:"https://www.bolognajazzfestival.com/",
       type:1,
       firstDay:'2022-10-20',
-      poiId:1
+      poiId:12
     },
 
   ]
