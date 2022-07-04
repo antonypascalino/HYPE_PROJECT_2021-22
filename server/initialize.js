@@ -864,19 +864,15 @@ export default async (models) => {
     },
     {
       ItineraryId: 1,
-      PoiId: 2,
-    },
-    {
-      ItineraryId: 1,
       PoiId: 4,
     },
     {
       ItineraryId: 1,
-      PoiId: 5,
+      PoiId: 2,
     },
     {
-      ItineraryId: 2,
-      PoiId: 15,
+      ItineraryId: 1,
+      PoiId: 6,
     },
     {
       ItineraryId: 2,
@@ -884,15 +880,19 @@ export default async (models) => {
     },
     {
       ItineraryId: 2,
-      PoiId: 17,
-    },
-    {
-      ItineraryId: 2,
-      PoiId: 19,
+      PoiId: 14,
     },
     {
       ItineraryId: 2,
       PoiId: 20,
+    },
+    {
+      ItineraryId: 2,
+      PoiId: 18,
+    },
+    {
+      ItineraryId: 2,
+      PoiId: 15,
     },
     {
       ItineraryId: 3,
@@ -904,15 +904,15 @@ export default async (models) => {
     },
     {
       ItineraryId: 3,
+      PoiId: 12,
+    },
+    {
+      ItineraryId: 3,
       PoiId: 13,
     },
     {
       ItineraryId: 3,
-      PoiId: 14,
-    },
-    {
-      ItineraryId: 3,
-      PoiId: 18,
+      PoiId: 17,
     },
   ]
   await models.Itinerary_Poi.bulkCreate(Itinerary_PoiList)
