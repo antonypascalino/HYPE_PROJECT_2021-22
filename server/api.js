@@ -10,10 +10,10 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development (use this when the DB is running in local)
-const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
+// const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
 
 // Production (use this code when deploying to production in Heroku)
-/*
+
  const pg = require('pg')
  pg.defaults.ssl = true
  const database = new Sequelize(process.env.DATABASE_URL, {
@@ -22,8 +22,6 @@ const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insi
      ssl: { require: true, rejectUnauthorized: false }
    },
 })
-*/
-
 
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
