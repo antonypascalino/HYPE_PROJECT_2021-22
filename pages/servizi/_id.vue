@@ -69,7 +69,7 @@ export default {
     const serviceType = await $axios.get('api/specificService/' + id)
     const service = await $axios.get('api/Services/' + id)
 
-   // const serviceType = await $axios.get('http://localhost:3000/api/specificService/' + id)
+    // const serviceType = await $axios.get('http://localhost:3000/api/specificService/' + id)
     // const service = await $axios.get('http://localhost:3000/api/Services/' + id)
     return {
       nameTypeService: serviceType.data[0].name,
@@ -151,7 +151,6 @@ export default {
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
-  font-weight: 500;
   background-color: #f2f2f2;
   text-align: justify;
   text-justify: inter-word;

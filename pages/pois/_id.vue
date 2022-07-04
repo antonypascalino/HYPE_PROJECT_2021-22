@@ -61,48 +61,49 @@
         <Map :googleLink="googleLink"> </Map>
       </section>
 
-
       <section class="section-description">
         <div class="title-container">EVENTI OSPITATI</div>
       </section>
-        <div class="text-container" v-if="eventList.length === 0" >Nessun evento è ospitato qui. Nuovi eventi in arrivo!</div>
-        <!--Cards of events -->
-        <div class="events-container">
-          <div class="event-card-container row mt-4">
-            <cardInfo
-              v-for="(event, index) of eventList"
-              class="col-sm-1 m-2"
-              :key="`index-${index}`"
-              :name="event.name"
-              :img="`../Events/${event.imgBackground}`"
-              :id="event.id"
-              link="eventi"
-              :first-day="event.firstDay"
-              :address="event.address"
-            />
-          </div>
+      <div class="text-container" v-if="eventList.length === 0">
+        Nessun evento è ospitato qui. Nuovi eventi in arrivo!
+      </div>
+      <!--Cards of events -->
+      <div class="events-container">
+        <div class="event-card-container row mt-4">
+          <cardInfo
+            v-for="(event, index) of eventList"
+            class="col-sm-1 m-2"
+            :key="`index-${index}`"
+            :name="event.name"
+            :img="`../Events/${event.imgBackground}`"
+            :id="event.id"
+            link="eventi"
+            :first-day="event.firstDay"
+            :address="event.address"
+          />
         </div>
-
+      </div>
 
       <section class="section-description">
         <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
       </section>
-        <!--Cards of Points of interest (Bootstrap)-->
-        <div class="">
-          <div class="poi-card-container row mt-4">
-            <div class="text-container" v-if="itineraryList.length === 0" >Nessun Itinerario passa ancora da qui. Nuovi itinerari in arrivo!</div>
-            <cardInfo
-              v-for="(poi, index) of itineraryList"
-              class="col-sm-1 m-2"
-              :key="`index-${index}`"
-              :name="poi.name"
-              :img="`../Itineraries/${poi.imgBackground}`"
-              :id="poi.id"
-              link="itinerari"
-            />
+      <!--Cards of Points of interest (Bootstrap)-->
+      <div class="">
+        <div class="poi-card-container row mt-4">
+          <div class="text-container" v-if="itineraryList.length === 0">
+            Nessun Itinerario passa ancora da qui. Nuovi itinerari in arrivo!
           </div>
+          <cardInfo
+            v-for="(poi, index) of itineraryList"
+            class="col-sm-1 m-2"
+            :key="`index-${index}`"
+            :name="poi.name"
+            :img="`../Itineraries/${poi.imgBackground}`"
+            :id="poi.id"
+            link="itinerari"
+          />
         </div>
-
+      </div>
 
       <!-- Information Section -->
       <section class="section-description">
@@ -138,7 +139,7 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const [data1,data2, data3] = await Promise.all([
+    const [data1, data2, data3] = await Promise.all([
       // $axios.get('http://localhost:3000/api/pois/' + id),
       // $axios.get('http://localhost:3000/api/eventInPoi/' +id),
       // $axios.get('http://localhost:3000/api/poiInItinerary/' +id),
@@ -156,7 +157,7 @@ export default {
       address: data1.data.address,
       mapLink: data1.data.mapLink,
       eventList: data2.data,
-      itineraryList: data3.data
+      itineraryList: data3.data,
     }
   },
   data() {
@@ -190,7 +191,6 @@ export default {
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
-  font-weight: 500;
   background-color: #f2f2f2;
   text-align: justify;
   text-justify: inter-word;

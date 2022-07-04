@@ -156,7 +156,6 @@ export default {
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
-  font-weight: 500;
   text-align: justify;
   text-justify: inter-word;
 }
