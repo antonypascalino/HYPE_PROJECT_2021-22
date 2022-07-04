@@ -40,6 +40,9 @@
       <!--Cards of events -->
       <div class="events-container">
         <div class="event-card-container row mt-4">
+          <div v-if="eventList.length === 0">
+            Nessun evento in programma! Aggiorneremo al più presto!
+          </div>
           <cardInfo
             v-for="(event, index) of eventList"
             class="col-sm-1 m-2"
