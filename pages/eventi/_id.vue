@@ -40,9 +40,8 @@
       </section>
 
       <!--Dov'è section-->
+      <section class="section-description"><div class="title-container">LUOGO DELL'EVENTO</div></section>
       <section class="section-container bib">
-        <div class="title-container">LUOGO DELL'EVENTO</div>
-
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="card-poi">
           <div class="poi-card-container row mt-4 poiEv">

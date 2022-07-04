@@ -61,8 +61,8 @@
         <Map :googleLink="googleLink"> </Map>
       </section>
 
+      <section class="section-description"> <div class="title-container">EVENTI OSPITATI</div></section>
       <section class="section-description itPoi">
-        <div class="title-container">EVENTI OSPITATI</div>
         <div v-if="eventList.length === 0">
           Nessun evento è ospitato qui. Nuovi eventi in arrivo!
         </div>
@@ -84,8 +84,9 @@
         </div>
       </section>
 
+      <!--itinerari in poi -->
+      <section class="section-description"><div class="title-container">ITINERARI CHE PASSANO DA QUI</div></section>
       <section class="section-description itPoi">
-        <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="">
           <div class="poi-card-container row mt-4">
@@ -99,7 +100,7 @@
               :name="poi.name"
               :img="`../Itineraries/${poi.imgBackground}`"
               :id="poi.id"
-              link="pois"
+              link="itinerari"
             />
           </div>
         </div>
