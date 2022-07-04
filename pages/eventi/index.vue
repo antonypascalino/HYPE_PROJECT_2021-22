@@ -4,13 +4,15 @@
 -->
 <template>
   <main class="App">
-
     <!-- Header Section -->
     <TheHeader />
 
     <!-- BreadCrumb Section -->
     <section class="breadcrumb-section">
-      <breadcrumb :default-route="[{ title: 'HOME', path: '/' }]" current-page="Eventi"/>
+      <breadcrumb
+        :default-route="[{ title: 'HOME', path: '/' }]"
+        current-page="Eventi"
+      />
     </section>
 
     <div class="carouselDiv">
@@ -44,7 +46,11 @@
         >
           <div class="imageContainer" @wheel="wheel($event.deltaY)">
             <nuxt-link :to="`/eventi/${ev.id}`">
-              <img class="carouselImg" :src="require(`@/static/Events/${ev.imgBackground}`)" :alt="ev.name"/>
+              <img
+                class="carouselImg"
+                :src="require(`@/static/Events/${ev.imgBackground}`)"
+                :alt="ev.name"
+              />
               <div class="textContainer-carousel">{{ ev.name }}</div>
               <div class="hoverText">{{ ev.carousel_desc }}</div>
             </nuxt-link>
@@ -59,7 +65,11 @@
       >
         <div class="imageContainer container-scroll">
           <nuxt-link :to="`/eventi/${ev.id}`">
-            <img class="carouselImg image-scroll" :src="require(`@/static/Events/${ev.imgBackground}`)" :alt="ev.name"/>
+            <img
+              class="carouselImg image-scroll"
+              :src="require(`@/static/Events/${ev.imgBackground}`)"
+              :alt="ev.name"
+            />
           </nuxt-link>
           <div class="textContainer-scroll">{{ ev.name }}</div>
           <div class="hoverText scroll">{{ ev.carousel_desc }}</div>
@@ -201,6 +211,179 @@ export default {
 </script>
 
 <style>
+.breadcrumb-section {
+  margin-top: 70px;
+  background: transparent;
+}
+.carouselDiv {
+  padding-top: 2%;
+  padding-left: 4%;
+  width: 100%;
+  height: 90vh;
+}
+.imageContainer {
+  position: relative;
+  width: 70vw;
+  height: 74vh;
+  margin-top: 7vh;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.35);
+  filter: brightness(90%);
+}
+.imageContainer:hover .hoverText,
+.imageContainer.hover .hoverText {
+  visibility: visible;
+  opacity: 1;
+  bottom: 5%;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
+}
+.imageContainer:hover .carouselImg,
+.imageContainer.hover .carouselImg {
+  -webkit-filter: blur(4px) brightness(70%);
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
+}
+.imageContainer:hover .carouselImg.image-scroll,
+.imageContainer.hover .carouselImg.image-scroll {
+  -webkit-filter: blur(4px) brightness(70%);
+  cursor: pointer;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
+}
+.imageContainer:hover .textContainer-carousel,
+.imageContainer.hover .textContainer-carousel {
+  bottom: 20%;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
+}
+.imageContainer:hover .textContainer-scroll,
+.imageContainer.hover .textContainer-scroll {
+  bottom: 20%;
+  transition: 400ms ease-in-out;
+  transition-delay: 200ms;
+}
+.carouselImg {
+  display: block;
+  margin-left: 0;
+  width: 100%;
+  height: 74vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+  transition: 400ms ease-in-out;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.carouselScroll {
+  width: auto;
+  left: 0;
+  margin-right: 0;
+}
+.imageContainer.container-scroll {
+  position: relative;
+  height: 38vh;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  margin-left: 15vw;
+  margin-right: 0;
+}
+img.carouselImg.image-scroll {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: 0;
+  width: 70vw;
+  height: 38vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+div.textContainer-scroll {
+  color: white;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 56%;
+  margin-bottom: 0;
+  bottom: 0;
+  transition: 400ms ease-in-out;
+}
+div.textContainer-carousel {
+  color: white;
+  font-size: 5vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  float: left;
+  position: absolute;
+  width: 56%;
+  margin-bottom: 0;
+  bottom: 0;
+  transition: 400ms ease-in-out;
+}
+div.hoverText {
+  color: white;
+  font-size: 2vw;
+  line-height: normal;
+  font-family: 'Josefin Sans';
+  font-style: italic;
+  float: left;
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 0;
+  height: auto;
+  left: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 400ms ease-in-out;
+  width: 70vw;
+}
+div.hoverText.scroll {
+  width: 70vw;
+}
+span {
+  top: 50%;
+  /*border: solid 2px yellow;*/
+}
+.App {
+  background-color: #f2f2f2;
+  height: auto;
+}
+body {
+  overscroll-behavior-y: none;
+  background-color: #f2f2f2;
+}
+div.indicatorList {
+  /*border: solid 2px blue;*/
+  width: 20vw;
+  height: 76vh;
+  position: relative;
+  float: right;
+  margin-top: 4%;
+  margin-right: 2%;
+  padding: 0;
+  font-size: 20px;
+}
+/* Mobile visualization without indicator list*/
+@media screen and (max-width: 880px) {
+  .indicatorList {
+    display: none;
+  }
+  .carousel {
+    display: none !important;
+  }
+
+  .carouselDiv {
+    padding-left: 0;
+  }
+}
+
+/* Desktop visualization */
+@media screen and (min-width: 881px) {
+  .carouselScroll {
+    display: none;
+  }
+}
+
 div.indicatorList.events {
   margin-top: 7%;
   display: flex;
@@ -224,6 +407,5 @@ div.list.events {
   div.indicatorList.events {
     display: none;
   }
-
 }
 </style>

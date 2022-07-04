@@ -54,7 +54,7 @@ During the development of the system, all principles of good practice were follo
 > **NOTICE: The performance score on some pages is negatively affected by the presence of several images, but conisdering that the hosting application limits the download bandwidth and that the 
 > nowadays connection are fast enough, it is not been considered as a problem.**.
 
-| <img src="./img/wave.JPG" width="600"> | <img src="./img/lighthouse.png" width="800"> |
+| <img src="./img/wave.png" width="600"> | <img src="./img/lighthouse.png" width="800"> |
 |:--------------------------------------:|:--------------------------------------------:|
 |              Wave report               |           Google Lighthouse report           |
 

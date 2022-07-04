@@ -347,7 +347,7 @@ div.indicatorList {
     display: none;
   }
   .carousel {
-    display: none;
+    display: none !important;
   }
 
   .carouselDiv {
