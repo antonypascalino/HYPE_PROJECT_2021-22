@@ -424,7 +424,7 @@ export default async (models) => {
       website: 'https://www.fieradellibrobologna.it/',
       type: 0,
       firstDay: '2022-03-18',
-      poiId: 15,
+      poiId: 16,
     },
     {
       name: 'StraBologna',
@@ -441,7 +441,7 @@ export default async (models) => {
       website: 'https://strabologna.it/',
       type: 0,
       firstDay: '2022-05-22',
-      poiId: 13,
+      poiId: 1,
     },
     {
       name: 'roBOt',
@@ -459,7 +459,7 @@ export default async (models) => {
       website: 'https://robotfestival.it/',
       type: 0,
       firstDay: '2022-09-23',
-      poiId: 11,
+      poiId: 17,
     },
     {
       name: 'Cosmoprof',
@@ -491,7 +491,7 @@ export default async (models) => {
       website: 'https://cioccoshow.it/',
       type: 1,
       firstDay: '2022-10-17',
-      poiId: 2,
+      poiId: 16,
     },
     {
       name: 'BilBOlBul',
@@ -507,7 +507,7 @@ export default async (models) => {
       website: 'https://bilbolbul.net/BBB21',
       type: 1,
       firstDay: '2022-12-03',
-      poiId: 17,
+      poiId: 8,
     },
     {
       name: 'Bologna Jazz Festival',
@@ -523,7 +523,7 @@ export default async (models) => {
       website: 'https://www.bolognajazzfestival.com/',
       type: 1,
       firstDay: '2022-10-20',
-      poiId: 12,
+      poiId: 9,
     },
   ]
   await models.Events.bulkCreate(eventList)
