@@ -323,7 +323,7 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  // HTTP GET api that returns all the services for a specific ServiceType
+  // HTTP GET api that returns all the events associated to a POI
   app.get('/eventInPoi/:id', async (req, res) => {
     const id = +req.params.id
     const result = await models.Events.findAll({where: { poiId: id },include: [{model: models.Poi}]})
@@ -341,6 +341,20 @@ async function runMainApi() {
       })
     }
     return res.json(filtered)
+  })
+
+  // HTTP GET api that returns all the itineraries associated to a Poi
+  app.get('/poiInItinerary/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Itinerary.findAll({where: { id: id },include: [{model: models.Poi}]})
+    return res.json(result)
+  })
+
+  // HTTP GET api that returns the single poi associated to the event
+  app.get('/poiGuestsEvent/:id', async (req, res) => {
+    const id = +req.params.id
+    const result = await models.Events.findAll({where: {id:id},include: [{model: models.Poi}]})
+    return res.json(result)
   })
 }
 runMainApi()

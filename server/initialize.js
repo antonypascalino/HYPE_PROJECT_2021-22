@@ -309,7 +309,7 @@ export default async (models) => {
       website: "https://www.cersaie.it/it/index.php",
       type: 0,
       firstDay:'2022-09-26',
-      poiId:1
+      poiId:9
     },
     {
       name: "Festival della Mortadella",

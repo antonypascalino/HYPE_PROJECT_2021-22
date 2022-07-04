@@ -20,18 +20,18 @@
         />
       </section>
 
-      <section class="section-container">
+      <section class="section-description">
         <div class="title-container">DOVE</div>
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="">
           <div class="poi-card-container row mt-4">
             <cardInfo
-              v-for="(poi, index) of poiList"
+
               class="col-sm-1 m-2"
               :key="`index-${index}`"
-              :name="poi.name"
-              :img="`../Poi/${poi.imgBackground}`"
-              :id="poi.id"
+              :name="poiList.name"
+              :img="`../Poi/${poiList.imgBackground}`"
+              :id="poiList.id"
               link="pois"
             />
           </div>
@@ -114,21 +114,22 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('api/events/' + id)
-    // const { data } = await $axios.get('http://localhost:3000/api/events/' + id)
-    // const pois = await $axios.get(`http://localhost:3000/api/4pois`)
-    const pois = await $axios.get('api/4pois')
+    const [data1,data2] = await Promise.all([
+      $axios.get('http://localhost:3000/api/events/' + id),
+      ($axios.get('http://localhost:3000/api/poiGuestsEvent/' +id)),
+    ])
     return {
-      name: data.name,
-      date: data.date,
-      imgBackground: data.imgBackground,
-      imgArray: data.imgArray,
-      description: data.description,
-      address: data.address,
-      price: data.price,
-      website: data.website,
-      poiList: pois.data,
+      name: data1.data.name,
+      date:  data1.data.date,
+      imgBackground:  data1.data.imgBackground,
+      imgArray:  data1.data.imgArray,
+      description:  data1.data.description,
+      address:  data1.data.address,
+      price:  data1.data.price,
+      website:  data1.data.website,
+      poiList: data2.data[0].poi,
     }
+
   },
 
   methods: {
@@ -161,7 +162,6 @@ export default {
   font-style: normal;
   margin-left: 8px;
   margin-right: 8px;
-  font-weight: 500;
   background-color: #f2f2f2;
   text-align: justify;
   text-justify: inter-word;

@@ -60,9 +60,11 @@
         </div>
         <Map :googleLink="googleLink"> </Map>
       </section>
-{{poiList}}
-      <section class="section-container">
+
+
+      <section class="section-description">
         <div class="title-container">EVENTI OSPITATI</div>
+        <div v-if="eventList.length === 0" >Nessun evento è ospitato qui. Nuovi eventi in arrivo!</div>
         <!--Cards of events -->
         <div class="events-container">
           <div class="event-card-container row mt-4">
@@ -78,23 +80,21 @@
               :address="event.address"
             />
           </div>
-
-          <!--Button for display all the events -->
-          <baseButton title="Tutti gli eventi" goto="eventi"></baseButton>
         </div>
       </section>
 
-      <section class="section-container">
+      <section class="section-description">
         <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="">
           <div class="poi-card-container row mt-4">
+            <div v-if="itineraryList.length === 0" >Nessun Itinerario passa ancora da qui. Nuovi itinerari in arrivo!</div>
             <cardInfo
-              v-for="(poi, index) of poiList"
+              v-for="(poi, index) of itineraryList"
               class="col-sm-1 m-2"
               :key="`index-${index}`"
               :name="poi.name"
-              :img="`../Poi/${poi.imgBackground}`"
+              :img="`../Itineraries/${poi.imgBackground}`"
               :id="poi.id"
               link="pois"
             />
@@ -136,9 +136,10 @@ export default {
 
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const [data1,data2] = await Promise.all([
+    const [data1,data2, data3] = await Promise.all([
       $axios.get('http://localhost:3000/api/pois/' + id),
      $axios.get('http://localhost:3000/api/eventInPoi/' +id),
+      $axios.get('http://localhost:3000/api/poiInItinerary/' +id),
       // $axios.get('api/itineraries/' + id),
       // $axios.get('api/itPoi/' + id),
     ])
@@ -154,7 +155,8 @@ export default {
       googleLink: data1.data.googleLink,
       address: data1.data.address,
       mapLink: data1.data.mapLink,
-      eventList: data2.data
+      eventList: data2.data,
+      itineraryList: data3.data
     }
   },
   data() {

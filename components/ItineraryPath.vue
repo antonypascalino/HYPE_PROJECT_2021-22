@@ -7,7 +7,7 @@
     <img class="dashed-line" :src="line" alt="image" />
 
     <div class="poi-and-label">
-      <nuxt-link :to="`/itinerari/pois/${this.id1}`">
+      <nuxt-link :to="`/pois/${this.id1}`">
         <div class="round-container round-poi-1">
           <img class="round-image poi1" :src="`../Poi/${img1}`" alt="image" />
           <div class="round-text">{{ name1 }}</div>
@@ -17,7 +17,7 @@
     </div>
 
     <div class="poi-and-label">
-      <nuxt-link :to="`/itinerari/pois/${this.id2}`">
+      <nuxt-link :to="`/pois/${this.id2}`">
         <div class="round-container round-poi-2">
           <img class="round-image poi2" :src="`../Poi/${img2}`" alt="image" />
           <div class="round-text">{{ name2 }}</div>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="poi-and-label">
-      <nuxt-link :to="`/itinerari/pois/${this.id3}`">
+      <nuxt-link :to="`/pois/${this.id3}`">
         <div class="round-container round-poi-3">
           <img class="round-image poi3" :src="`../Poi/${img3}`" alt="image" />
           <div class="round-text">{{ name3 }}</div>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="poi-and-label">
-      <nuxt-link :to="`/itinerari/pois/${this.id4}`">
+      <nuxt-link :to="`/pois/${this.id4}`">
         <div class="round-container round-poi-4">
           <img class="round-image poi4" :src="`../Poi/${img4}`" alt="image" />
           <div class="round-text">{{ name4 }}</div>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="poi-and-label">
-      <nuxt-link :to="`/itinerari/pois/${this.id5}`">
+      <nuxt-link :to="`/pois/${this.id5}`">
         <div class="round-container round-poi-5">
           <img class="round-image poi5" :src="`../Poi/${img5}`" alt="image" />
           <div class="round-text">{{ name5 }}</div>
