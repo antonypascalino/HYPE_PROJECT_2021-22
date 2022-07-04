@@ -61,49 +61,49 @@
         <Map :googleLink="googleLink"> </Map>
       </section>
 
-      <section class="section-description">
+      <section class="section-description itPoi">
         <div class="title-container">EVENTI OSPITATI</div>
-      </section>
-      <div class="text-container" v-if="eventList.length === 0">
-        Nessun evento è ospitato qui. Nuovi eventi in arrivo!
-      </div>
-      <!--Cards of events -->
-      <div class="events-container">
-        <div class="event-card-container row mt-4">
-          <cardInfo
-            v-for="(event, index) of eventList"
-            class="col-sm-1 m-2"
-            :key="`index-${index}`"
-            :name="event.name"
-            :img="`../Events/${event.imgBackground}`"
-            :id="event.id"
-            link="eventi"
-            :first-day="event.firstDay"
-            :address="event.address"
-          />
+        <div v-if="eventList.length === 0">
+          Nessun evento è ospitato qui. Nuovi eventi in arrivo!
         </div>
-      </div>
-
-      <section class="section-description">
-        <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
-      </section>
-      <!--Cards of Points of interest (Bootstrap)-->
-      <div class="">
-        <div class="poi-card-container row mt-4">
-          <div class="text-container" v-if="itineraryList.length === 0">
-            Nessun Itinerario passa ancora da qui. Nuovi itinerari in arrivo!
+        <!--Cards of events -->
+        <div class="events-container">
+          <div class="event-card-container row mt-4">
+            <cardInfo
+              v-for="(event, index) of eventList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="event.name"
+              :img="`../Events/${event.imgBackground}`"
+              :id="event.id"
+              link="eventi"
+              :first-day="event.firstDay"
+              :address="event.address"
+            />
           </div>
-          <cardInfo
-            v-for="(poi, index) of itineraryList"
-            class="col-sm-1 m-2"
-            :key="`index-${index}`"
-            :name="poi.name"
-            :img="`../Itineraries/${poi.imgBackground}`"
-            :id="poi.id"
-            link="itinerari"
-          />
         </div>
-      </div>
+      </section>
+
+      <section class="section-description itPoi">
+        <div class="title-container">ITINERARI CHE PASSANO DA QUI</div>
+        <!--Cards of Points of interest (Bootstrap)-->
+        <div class="">
+          <div class="poi-card-container row mt-4">
+            <div v-if="itineraryList.length === 0">
+              Nessun Itinerario passa ancora da qui. Nuovi itinerari in arrivo!
+            </div>
+            <cardInfo
+              v-for="(poi, index) of itineraryList"
+              class="col-sm-1 m-2"
+              :key="`index-${index}`"
+              :name="poi.name"
+              :img="`../Itineraries/${poi.imgBackground}`"
+              :id="poi.id"
+              link="pois"
+            />
+          </div>
+        </div>
+      </section>
 
       <!-- Information Section -->
       <section class="section-description">
@@ -218,7 +218,7 @@ export default {
   height: 40vh;
   /*border: 2px solid #c13939;*/
   /*z-index: 2;*/
-  right: 5vw;
+  right: 2vw;
   margin-top: 1vw;
   vertical-align: middle;
   gap: 5px;
@@ -253,7 +253,7 @@ export default {
   text-align: right;
 }
 
-.section-container {
+.section-description.itPoi {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;

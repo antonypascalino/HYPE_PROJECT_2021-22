@@ -30,7 +30,7 @@ We developed the project by defining common guidelines for development. Each mem
 During the development of the system, all principles of good practice were followed. In particular:
 
 - Every relevant aspect of the code has been **highly commented** (html structure, components, server, database structure) in order to facilitate reading.
-- All the principles of **accessibility** have been scrupulously followed. In particular, the W3C-WAI ?????????? standards were followed. Some of the measures adopted:
+- All the principles of **accessibility** have been scrupulously followed. In particular, the W3C-WAI standards were followed. Some of the measures adopted:
   - [x] Brief descriptions of non-text content (such as images) are provided
   - [x] Labels for form controls, input, and other user interface components are provided
   - [x] Headings, lists, input fields, and content structures are marked-up properly
@@ -44,17 +44,19 @@ During the development of the system, all principles of good practice were follo
   - [x] Buttons, links, and other active components are large enough to make them easier to activate by touch
 
 - The website has been developed with attention to **SEO ranking**. In addition to what is listed above, all pages have been provided with appropriate meta tags.
-- Reusable and modular Nuxt components **????????**
+- Reusable and modular Nuxt components
 
 > All the pages of the website have been analyzed with the following tools:
 >
-> - **??????WAVE??????**: no errors, warning or contrast error have been detected
+> - **WAVE**: no errors, some irrelevant warning have been detected.
 > - **Google Lighthouse**: all Performance, Best Practices and Accessibility tests have been successfully passed with an average score of 100-95.
 
-> **NOTICE: The performance score on some pages is negatively affected by them ???????????**.
+> **NOTICE: The performance score on some pages is negatively affected by the presence of several images, but conisdering that the hosting application limits the download bandwidth and that the 
+> nowadays connection are fast enough, it is not been considered as a problem.**.
 
-[//]: # (Here include the image fo analysis tools for performance and accessibility)
-**????????**
+| <img src="./img/lighthouse.png" width="800"> |
+|:--------------------------------------------:|
+|           Google Lighthouse report           |
 
 ---
 
@@ -62,9 +64,9 @@ During the development of the system, all principles of good practice were follo
 
 The entire website was developed with responsiveness in mind. Each component is therefore able to adapt and change its appearance based on the screen size of current device.  
 Some of the most notable responisive adaptions are:
-- The Header component, showing the complete navigation bar, is hidden and replaced by a burger menu on tight screen devices. (See more in the Components section **???METTERE LINK??**)
-- The Carousel component, used to show the items in Punti di interesse, Eventi, Itinerari and Servizi sections, drastically changes its design based on the viewport of the current device allowing to browse the items using the most intuitive method for each device's screen. (See more in the Components section **???METTERE LINK??**)
-- The ItineraryPath component used to show the points of interest belonging to a particular itinerary, is horizontally oriented on horizontally oriented screens, vertically oriented on vertically oriented screens. (See more in the Components section **???METTERE LINK??**)
+- The Header component, showing the complete navigation bar, is hidden and replaced by a burger menu on tight screen devices. (See more in the [Components](#Components) section)
+- The Carousel component, used to show the items in Punti di interesse, Eventi, Itinerari and Servizi sections, drastically changes its design based on the viewport of the current device allowing to browse the items using the most intuitive method for each device's screen. (See more in the [Components](#Components) section)
+- The ItineraryPath component used to show the points of interest belonging to a particular itinerary, is horizontally oriented on horizontally oriented screens, vertically oriented on vertically oriented screens. (See more in the [Components](#Components) section)
 - The font size of paragraphs and headers is always adaptive to the screen size, in order to allow a comfortable reading from the user.
 
 Here are shown some graphical instances where is possible to look at the differences just explained. 
@@ -116,14 +118,13 @@ A general purpose button, picking up the main colors of the website: red and whi
 
 - ## **_Breadcrumb_**
 
-A dynamic breadcrumb, with labels as links. The route to be shown is defined by ***?????????***.  
+A dynamic breadcrumb. The route to be shown is defined by the query-parameter 'route' in the URL.
 **Actual usage on the website:** it shows, in (almost) every page, at most the three main levels of the website: from the homepage, to one of the main section, to one of the item of such section.
-Once user clicks on an upper level, the link brings it to the respective page
+Once user clicks on an upper level, the link brings it to the respective page.
 
 |       Prop       |    Type    |  Default  | Note                                                                                                                                                                                                         |
 |:----------------:|:----------:|:---------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  `defaultRoute`  |  `Array`   |   `[]`    | (Required) The default breadcrumb defined as an array of pairs (path,title). It's the route shown when no other alternative route is activated. E.g., `[{ title: 'Areas', path: '/areas' }]`                 |
-|   `altRoutes`    |  `Array`   |   `[]`    | Array of alternative breadcrumbs . The alternative to be shown is at position 'route'. Each route is specified as an array of pairs (path, title). E.g., `[[{ title: 'Our Services', path: '/services' }]]`  |
 |  `currentPage`   |  `String`  |   `""`    | Name of the current page. E.g., `Service XYZ`                                                                                                                                                                |
 
   #### Example
@@ -139,6 +140,7 @@ Once user clicks on an upper level, the link brings it to the respective page
 ***
 
 - ## **_Card_**
+
 It is a container with an image inside it.
 **Actual usage on the website:** used in the pages of the single items (single events, point of interest, itineraries) to show the photos of the gallery section. Its image is shown in its full size once clicked
 
@@ -169,9 +171,9 @@ It is a component composed by an image, its caption and a button.
 The button brings to the item's page.  
 When the item is an event, it also shows in the caption the starting date and the location of the event.
 
-| Note                                                                                                  |
-|-------------------------------------------------------------------------------------------------------|
-| Since in the homepage several cards are shown, the component is always used through a v-for construct |
+| Note                                                                                                                 |
+|----------------------------------------------------------------------------------------------------------------------|
+| Since in some pages, such as the homepage, several cards are shown, the component is used through a v-for construct  |
 
   #### Example
 
@@ -300,7 +302,6 @@ Obviously several Indicators are shown at the same time in column, in order to c
 |:--------------:|:-------------------------------------------------------------|
 |    `index`     | The index that each slide has given to iterate them.         |
 | `visibleSlide` | The index of the slide to show in the carousel once clicked. |
-|   `selected`   | ***???????DON'T KNOW WHAT IS NEEEDED FOR????????***          |
 |    `title`     | The name of the item shown once clicked.                     |
 
 |               Method               |  Parameter Type   | Note                                                                                                            |

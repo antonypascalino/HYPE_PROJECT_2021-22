@@ -15,7 +15,7 @@
       </div>
       <br /><br />
 
-      <section class="section-la-nostra-missione first-section">
+      <section class="section-la-nostra-missione first-section bib">
         <p class="bologna-paragraph first-paragraph">
           Capoluogo della Città metropolitana e della regione Emilia-Romagna,
           Bologna è situata tra le montagne dell'Appennino tosco-emiliano ed il
@@ -36,8 +36,8 @@
         </p>
       </section>
 
-      <section class="section-la-nostra-missione">
-        <div class="title-container">Perchè visitarla</div>
+      <section class="section-la-nostra-missione bib">
+        <div class="title-container bib">Perchè visitarla</div>
         <div class="container-fluid">
           <div class="col-xl-3 col-lg-4 col-md-6 bib">
             <img
@@ -59,8 +59,8 @@
         </div>
       </section>
 
-      <section class="section-la-nostra-missione">
-        <div class="title-container">Un po' di Storia</div>
+      <section class="section-la-nostra-missione bib">
+        <div class="title-container bib">Un po' di Storia</div>
         <div class="container-fluid">
           <p class="bologna-paragraph">
             Nel VI secolo a.C. Bologna fu una delle più importanti città
@@ -82,8 +82,8 @@
         </div>
       </section>
 
-      <section class="section-la-nostra-missione">
-        <div class="title-container">Sulla Tavola</div>
+      <section class="section-la-nostra-missione bib">
+        <div class="title-container bib">Sulla Tavola</div>
         <div class="container-fluid">
           <div class="col-xl-3 col-lg-4 col-md-6 bib">
             <img
@@ -109,8 +109,8 @@
         </div>
       </section>
 
-      <section class="section-la-nostra-missione">
-        <div class="title-container">Per Divertirsi</div>
+      <section class="section-la-nostra-missione bib">
+        <div class="title-container bib">Per Divertirsi</div>
         <div class="container-fluid">
           <p class="bologna-paragraph">
             La città pulsa di vita di giorno e di notte nelle
@@ -135,8 +135,8 @@
         </div>
       </section>
 
-      <section class="section-la-nostra-missione">
-        <div class="title-container">Informazioni e consigli utili</div>
+      <section class="section-la-nostra-missione bib">
+        <div class="title-container bib">Informazioni e consigli utili</div>
         <p class="bologna-paragraph last-paragraph">
           Bologna è ancora una città a misura d’uomo e, almeno nella zona del
           centro storico, le distanze si coprono a piedi in poco tempo. Arrivati
@@ -191,7 +191,7 @@ export default {
   margin-top: 10px;
 }
 
-.title-container {
+.title-container.bib {
   width: 100%;
   font-family: 'Josefin Sans';
   font-style: normal;
@@ -201,9 +201,11 @@ export default {
   display: flex;
   color: #c13939;
   text-transform: uppercase;
+  padding-left: 0;
+  margin-top: 0;
 }
 
-.section-la-nostra-missione {
+.section-la-nostra-missione.bib {
   font-family: 'Raleway', 'Avenir', sans-serif;
   font-style: normal;
   /*font-size: 17px;*/
@@ -212,8 +214,8 @@ export default {
   /*border: 2px blue solid;*/
   display: flex;
   flex-direction: column;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
   margin-top: 80px;
 }
 
@@ -294,13 +296,13 @@ p.bologna-paragraph.last-paragraph {
     width: 100%;
   }
 
-  .title-container {
+  .title-container.bib {
     margin-top: 0;
     /*height: 20px;*/
     font-size: 30px;
   }
 
-  .section-la-nostra-missione {
+  .section-la-nostra-missione.bib {
     margin-top: 20px;
   }
 }
