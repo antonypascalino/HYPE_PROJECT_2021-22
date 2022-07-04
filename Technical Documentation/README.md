@@ -7,7 +7,7 @@ We developed the project by defining common guidelines for development. Each mem
 |      Member       | Main focus                                     |
 |:-----------------:|------------------------------------------------|
 |   Davide Carini   | Focus on DB modeling and component development |
-| Daniele Casciani  |                                                |
+| Daniele Casciani  | Focus on component development and documentation |                                                |
 | Riccardo Pestrin  | Focus on component development and UI Design   |
 | Antony Pascalino  | Focus on component development and CSS styling |
 
