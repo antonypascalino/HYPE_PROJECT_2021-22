@@ -4,12 +4,12 @@
 
 We developed the project by defining common guidelines for development. Each member of the group was able to touch on all aspects relating to the development. In particular:
 
-|      Member       | Main focus                                     |
-|:-----------------:|------------------------------------------------|
-|   Davide Carini   | Focus on DB modeling and component development |
-| Daniele Casciani  | Focus on component development and documentation |                                                |
-| Riccardo Pestrin  | Focus on component development and UI Design   |
-| Antony Pascalino  | Focus on component development and CSS styling |
+|      Member       | Main focus                                       |
+|:-----------------:|--------------------------------------------------|
+|   Davide Carini   | Focus on DB modeling and component development   |
+| Daniele Casciani  | Focus on component development and documentation |
+| Riccardo Pestrin  | Focus on component development and UI Design     |
+| Antony Pascalino  | Focus on component development and CSS styling   |
 
 <br>
 
@@ -17,8 +17,8 @@ We developed the project by defining common guidelines for development. Each mem
 
 ## **Technologies and Motivations**
 
-- For the _server side_ development we have used **Nuxt.js** that is a open source javaScript library based on Vue.js,Node.js, Webpack and Babel.js.
-- For the _hosting_ our application we have used **Heroku**. The website is accessible at [insideBO.herokuapp.com](https://insidebo.herokuapp.com/).
+- For the _server side_ development it has been used **Nuxt.js** that is a open source javaScript library based on Vue.js,Node.js, Webpack and Babel.js.
+- For _hosting_ the application it has been used **Heroku**. The website is accessible at [insideBO.herokuapp.com](https://insidebo.herokuapp.com/).
 - Since the website is data-base driven, for the _database implementation_ we have used **PostgreeSQL** and **pgAdmin 4**.
 
 <br>
@@ -33,14 +33,14 @@ During the development of the system, all principles of good practice were follo
 - All the principles of **accessibility** have been scrupulously followed. In particular, the W3C-WAI standards were followed. Some of the measures adopted:
   - [x] Brief descriptions of non-text content (such as images) are provided
   - [x] Labels for form controls, input, and other user interface components are provided
-  - [x] Headings, lists, input fields, and content structures are marked-up properly
+  - [x] Headings, lists, and content structures are marked-up properly
   - [x] Sequences of information or instructions are independent of any presentation
   - [x] Default foreground, background color combinations and images provide sufficient contrast
   - [x] Images of text are completely avoided
   - [x] Pages are organized using descriptive section headings
   - [x] There is more than one way to find relevant pages within a set of web pages
   - [x] Users are informed about their current location within a set of related pages
-  - [x] The purpose of links is evident
+  - [x] The purpose of links and buttons is evident
   - [x] Buttons, links, and other active components are large enough to make them easier to activate by touch
 
 - The website has been developed with attention to **SEO ranking**. In addition to what is listed above, all pages have been provided with appropriate meta tags.
@@ -48,15 +48,15 @@ During the development of the system, all principles of good practice were follo
 
 > All the pages of the website have been analyzed with the following tools:
 >
-> - **WAVE**: no errors, some irrelevant warning have been detected.
+> - **WAVE**: no errors and no contrast errors, some minor warnings have been detected.
 > - **Google Lighthouse**: all Performance, Best Practices and Accessibility tests have been successfully passed with an average score of 100-95.
 
 > **NOTICE: The performance score on some pages is negatively affected by the presence of several images, but conisdering that the hosting application limits the download bandwidth and that the 
 > nowadays connection are fast enough, it is not been considered as a problem.**.
 
-| <img src="./img/lighthouse.png" width="800"> |
-|:--------------------------------------------:|
-|           Google Lighthouse report           |
+| <img src="./img/wave.JPG" width="600"> | <img src="./img/lighthouse.png" width="800"> |
+|:--------------------------------------:|:--------------------------------------------:|
+|              Wave report               |           Google Lighthouse report           |
 
 ---
 
