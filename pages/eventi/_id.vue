@@ -41,7 +41,7 @@
 
       <!--Dov'è section-->
       <section class="section-description"><div class="title-container">LUOGO DELL'EVENTO</div></section>
-      <section class="section-description bib">
+      <section class="section-container bib">
         <!--Cards of Points of interest (Bootstrap)-->
         <div class="card-poi">
           <div class="poi-card-container row mt-4 poiEv">
@@ -56,6 +56,7 @@
           </div>
         </div>
       </section>
+
 
       <!-- Information Section -->
       <section class="container4">
@@ -86,7 +87,7 @@
             <br />
             <h6 class="mdi mdi-web text-uppercase fw-bold mb-4">SITO WEB</h6>
             <a :href="website"
-              ><p class="p-website">{{ website }}</p></a
+            ><p class="p-website">{{ website }}</p></a
             >
           </div>
         </div>
@@ -169,7 +170,7 @@ export default {
   text-justify: inter-word;
 }
 
-.section-description.bib {
+.section-container.bib {
   font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;
@@ -193,9 +194,8 @@ export default {
   background-color: #f2f2f2;
   padding-left: 80px;
 }
-.poi-card-container.row.mt-4.poiEv {
-  justify-content: flex-start;
-  margin-left: 7vw;
+.poiEv {
+  margin-bottom: 20px;
 }
 
 .button-container {
@@ -262,5 +262,7 @@ export default {
   .text-container {
     font-size: 16px;
   }
+
+
 }
 </style>
