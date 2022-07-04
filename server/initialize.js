@@ -187,7 +187,7 @@ export default async (models) => {
         'Nella via vi è la dimora del defunto cantautore bolognese di fama internazionale Lucio Dalla. \n',
       imgBackground: 'viaAzeglio02.jpg',
       imgArray: ['viaAzeglio03.jpg', 'viaAzeglio04.jpg'],
-      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2143.6758695069607!2d11.340333299383964!3d44.49114050446837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4ea64830f1d%3A0x8850d3eba1310226!2sVia%20d&#39;Azeglio%2C%2062%2C%2040123%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656946666244!5m2!1sen!2sit",
+      googleLink: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d996.6270289221981!2d11.340124860385089!3d44.49011116781068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4c0178c1e73%3A0x9fb3334d204d6ead!2sVia%20Marsili%2C%204%2C%2040124%20Bologna%20BO!5e0!3m2!1sen!2sit!4v1656948222787!5m2!1sen!2sit",
       address: "Via d'Azeglio, Bologna, (BO)",
       mapLink:
         "https://www.google.com/maps/place/Via+d'Azeglio,+Bologna+BO/@44.4899977,11.3388936,17z/data=!3m1!4b1!4m5!3m4!1s0x477fd4eaa35e2ac7:0xb9dd04b1d9b5bb8e!8m2!3d44.4899977!4d11.3410823",
