@@ -141,12 +141,12 @@ export default {
   async asyncData({ route, $axios }) {
     const { id } = route.params
     const [data1, data2, data3] = await Promise.all([
-      $axios.get('http://localhost:3000/api/pois/' + id),
-       $axios.get('http://localhost:3000/api/eventInPoi/' +id),
-      $axios.get('http://localhost:3000/api/poiInItinerary/' +id),
-      // $axios.get('api/pois/' + id),
-      // $axios.get('api/eventInPoi/' + id),
-      // $axios.get('api/poiInItinerary/' + id),
+      // $axios.get('http://localhost:3000/api/pois/' + id),
+       // $axios.get('http://localhost:3000/api/eventInPoi/' +id),
+      // $axios.get('http://localhost:3000/api/poiInItinerary/' +id),
+       $axios.get('api/pois/' + id),
+       $axios.get('api/eventInPoi/' + id),
+       $axios.get('api/poiInItinerary/' + id),
     ])
     return {
       name: data1.data.name,
