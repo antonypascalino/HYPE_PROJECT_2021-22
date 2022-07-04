@@ -10,9 +10,10 @@ const initialize = require('./initialize').default
 app.use(express.json())
 
 // Development (use this when the DB is running in local)
-// const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
+const database = new Sequelize("postgres://postgres:postgres@localhost:5432/insideBO_DB")
 
 // Production (use this code when deploying to production in Heroku)
+/*
  const pg = require('pg')
  pg.defaults.ssl = true
  const database = new Sequelize(process.env.DATABASE_URL, {
@@ -21,6 +22,7 @@ app.use(express.json())
      ssl: { require: true, rejectUnauthorized: false }
    },
 })
+*/
 
 
 // Function that will initialize the connection to the database
@@ -346,7 +348,7 @@ async function runMainApi() {
   // HTTP GET api that returns all the itineraries associated to a Poi
   app.get('/poiInItinerary/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.Itinerary.findAll({where: { id: id },include: [{model: models.Poi}]})
+    const result = await models.Poi.findAll({where: { id: id },include: [{model: models.Itinerary}]})
     return res.json(result)
   })
 
