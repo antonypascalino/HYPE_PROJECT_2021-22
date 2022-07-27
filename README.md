@@ -3,11 +3,9 @@ Project for the Hypermedia Applications (Web and Multimedia) course A.Y. 2021-20
 Professor: Franca Garzotto
 
 **Group name: DARD**
-
 <br>
 
 **Grade: 30/30**
-
 <br>
 
 ### **Authors** 
