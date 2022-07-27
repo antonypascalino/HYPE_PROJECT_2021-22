@@ -13,7 +13,8 @@ Professor: Franca Garzotto
 | Riccardo | Pestrin |10617370|riccardo.pestrin@mail.polimi.it|
 
   <br>
- ***Grade: 30/30***
+  
+ **Grade: 30/30**
   <br>
   
 ## **Usability Evaluation**
