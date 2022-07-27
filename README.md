@@ -12,7 +12,7 @@ Professor: Franca Garzotto
 | Daniele | Casciani |10638165|daniele.casciani@mail.polimi.it|
 | Riccardo | Pestrin |10617370|riccardo.pestrin@mail.polimi.it|
   <br>
-  
+ 
 ## **Usability Evaluation**
 This part of the project consists in evaluating the usability of the [CourmayeurMontBlanc.it](https://www.courmayeurmontblanc.it/it) web application.
  <br>
