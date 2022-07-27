@@ -4,6 +4,12 @@ Professor: Franca Garzotto
 
 **Group name: DARD**
 
+<br>
+
+**Grade: 30/30**
+
+<br>
+
 ### **Authors** 
 | Name     | Surname    | Person Code | Email|
 |------------|-------------| ----------| ----------|
@@ -12,9 +18,6 @@ Professor: Franca Garzotto
 | Daniele | Casciani |10638165|daniele.casciani@mail.polimi.it|
 | Riccardo | Pestrin |10617370|riccardo.pestrin@mail.polimi.it|
 
-  <br>
-  
- **Grade: 30/30**
   <br>
   
 ## **Usability Evaluation**
